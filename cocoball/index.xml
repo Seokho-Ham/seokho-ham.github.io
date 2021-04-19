@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cocoball on 코코볼의 블로그</title>
-    <link>https://example.com/cocoball/</link>
+    <link>https://cocoball02.github.io/cocoball/</link>
     <description>Recent content in Cocoball on 코코볼의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright><atom:link href="https://example.com/cocoball/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Cocoball</copyright><atom:link href="https://cocoball02.github.io/cocoball/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
