@@ -2,36 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cocoball02.github.io/author/</loc>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://cocoball02.github.io/categories/</loc>
-    <lastmod>2021-04-19T23:08:20+09:00</lastmod>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/</loc>
-    <lastmod>2021-04-19T23:08:20+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/post/test4/</loc>
-    <lastmod>2021-04-19T23:08:20+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2021-04-19T23:08:20+09:00</lastmod>
+    <loc>https://cocoball02.github.io/author/cocoball/</loc>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/</loc>
-    <lastmod>2021-04-19T23:08:20+09:00</lastmod>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/author/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/author/cocoball/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <loc>https://cocoball02.github.io/categories/</loc>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/series/</loc>
