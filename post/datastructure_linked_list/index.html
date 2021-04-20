@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [자료구조] Linked List | 
+    코코볼의 블로그
+  
+</title><meta name="description" content="블로그 이전중입니다."><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/post/datastructure_linked_list/"><meta property="og:title" content="[자료구조] Linked List" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Linked List에 대해 학습한 내용을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/post/datastructure_linked_list/" /><meta property="og:image" content="https://cocoball02.github.io/images/datastructure.jpg" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-09-02T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-09-02T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[자료구조] Linked List">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Linked List에 대해 학습한 내용을 정리합니다."><meta itemprop="datePublished" content="2020-09-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="447"><meta itemprop="image" content="https://cocoball02.github.io/images/datastructure.jpg">
+<meta itemprop="keywords" content="자료구조,Javascript," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/datastructure.jpg"/>
+
+<meta name="twitter:title" content="[자료구조] Linked List"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Linked List에 대해 학습한 내용을 정리합니다."/>
+
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="meta text-muted mb-3">
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">September 2, 2020</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>447 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>3 mins read</span>
+                        </div>
+
+                        <h1>[자료구조] Linked List</h1>
+
+                        <ul class="authors list-inline"></ul>
+                    </div>
+                </div><div class="row justify-content-center mb-3">
+                                <div class="col-lg-10">
+                                    <img data-src="/images/datastructure_huee2a4deeb8e9dc0320733d6a1fbc4d5f_29473_900x500_fit_q75_box.jpg" class="img-fluid rounded mx-auto d-block" alt="[자료구조] Linked List">
+                                </div>
+                            </div><div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 Linked List에 대해 학습한 내용을 정리합니다.</p>
+<h2 id="자료구조와-알고리즘">자료구조와 알고리즘</h2>
+<p>본격적으로 공부하기에 앞서 프로그래밍을 한다고 하면 필수로 여겨지는 자료구조와 알고리즘이란 무엇일까?</p>
+<h4 id="자료구조란">자료구조란?</h4>
+<blockquote>
+<p>데이터에 편리하게 접근하고 변경하기 위해 데이터를 저장, 조작하는 방법이다.</p>
+</blockquote>
+<ul>
+<li>자료구조의 종류는 여러 종류가 있으며 각각의 장점과 한계를 명확히 알아야한다. 그래야 각 연산에 필요한 자료구조를 사용할 수 있기 때문이다.</li>
+</ul>
+<h4 id="알고리즘이란">알고리즘이란?</h4>
+<blockquote>
+<p>어떠한 문제를 해결하기 위해 정해진 일련의 절차다. 즉, 주어진 값을 사용해 우리가 원하는 결과를 효과적으로 도출해내는 절차를 의미한다.</p>
+</blockquote>
+<!-- more -->
+<h4 id="자료구조와-알고리즘의-관계는">자료구조와 알고리즘의 관계는?</h4>
+<p>자료구조는 데이터를 편리하게 사용하기 위한 저장, 조작 방법이라면 알고리즘은 그 데이터와 관계된 문제를 해결하는 방법을 의미한다.
+한가지 예시를 들자면 아래는 <code>배열</code>이라는 자료구조이다.</p>
+<pre><code class="language-js">let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+</code></pre>
+<p>아래는 배열이라는 자료구조를 가지고 원하는 값을 도출해내는 알고리즘이다.</p>
+<pre><code class="language-js">//조건 : 짝수만 보여주세요
+let result = [];
+for (let i = 0; i &lt; array.length; i++) {
+  if (array[i] % 2 === 0) {
+    result.push(array[i]);
+  }
+}
+return result;
+</code></pre>
+<p>문제를 해결하기 위한 가장 좋은 알고리즘을 짜기 위해서는 보통은 그에 맞는 자료구조를 먼저 정해야한다. 그렇기 때문에 이 둘은 밀접한 관계를 가지고 있으며 개발자들 사이에서도 필수 요소로 여겨지고 있다.</p>
+<h2 id="linked-list-란">Linked List 란?</h2>
+<blockquote>
+<p>여러개의 노드로 구성되어 있으며 한줄로 연결되는 방식으로 데이터를 저장하는 자료구조.
+이 설명만 봐서는 감이 잡히지 않을것이다. 더 간단한 그림을 통해 알아보자.
+<img src="https://user-images.githubusercontent.com/57708971/92004245-f330a300-ed7c-11ea-8665-dbdde016bede.png" alt="linkedlist" title="Linked List">;
+위 그림과 같이 가장 첫번째 노드를 가리키는 <code>Head</code>와 마지막 노드를 가리키는 <code>Tail</code>이 존재하며 각 노드들이 다음 노드를 가리킨다. *객체 지향 언어에서는 객체를 사용하여 표현한다.</p>
+</blockquote>
+<h4 id="노드의-구성">노드의 구성</h4>
+<p>각 노드는 <code>Data Field</code>와 <code>Link Field</code>로 구성된다.</p>
+<ul>
+<li>Data Field : 실제 데이터가 담겨있다.</li>
+<li>Link Field : 다음 노드를 가리킨다.</li>
+</ul>
+<h4 id="linked-list-code">Linked List Code</h4>
+<p>이번에는 Javascript를 사용하여 한번 구현해보겠다.</p>
+<pre><code class="language-js">//노드 객체를 만들 때 사용하는 클래스
+function Node(value) {
+  this.value = value;
+  this.next = null;
+}
+
+function LinkedList() {
+  let list = {};
+  list.head = null;
+  list.tail = null;
+
+  list.addToTail = function(value) {
+    if (list.head === null &amp;&amp; list.tail === null) {
+      let no = new Node(value);
+      list.head = no;
+      list.tail = no;
+    } else {
+      let newNode = new Node(value);
+      this.tail.next = newNode;
+      list.tail = newNode;
+    }
+  };
+
+  list.removeHead = function() {
+    let result = list.head.value;
+    list.head = this.head.next;
+    return result;
+  };
+
+  list.contains = function(target) {
+    let cur = list.head;
+    while (cur) {
+      if (cur.value === target) {
+        return true;
+      }
+      cur = cur.next;
+    }
+    return false;
+  };
+
+  return list;
+};
+}
+</code></pre>
+<h3 id="array-list-vs-linked-list">Array List VS Linked List</h3>
+<p>Array는 여러개의 데이터가 순차적으로 저장되어 있고 Linked List는 각자 다른 위치에 있으며 서로 연결되어 있다.
+<img src="https://user-images.githubusercontent.com/57708971/92004305-093e6380-ed7d-11ea-8451-06b7f917c5ad.png" alt="array&linked">
+[출처: 생활코딩 - <a href="https://opentutorials.org/module/1335/8821">https://opentutorials.org/module/1335/8821</a>]</p>
+<p>글의 초반에 이야기한것처럼 각각의 자료구조는 장점과 한계가 있다.<br>
+특정 인덱스가 주어져 관련된 값을 찾아야 하는거라면 Array를 사용할 때 좋은 성능을 나타낼 것이다.<br>
+데이터를 중간에 추가하거나 삭제할 경우 Array를 사용하면 삭제한 후 일일이 데이터를 빈자리없이 앞으로 끌어와야 할것이다. 하지만 이때 Linked List를 사용한다면 그럴 필요 없이 데이터를 삭제해주고 나머지 데이터를 연결만 해주면 된다.</p>
+                        </div><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">
+                                    <i class="fas fa-tag mr-2"></i>자료구조
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/javascript">
+                                    <i class="fas fa-tag mr-2"></i>Javascript
+                                </a></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <script src="https://utteranc.es/client.js"
+                                repo="cocoball02/blog-comments"
+                                issue-term="title"
+                                label="✨💬✨"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+            
+            </article>
+           
+        </div>
+    </div>
+
+    
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

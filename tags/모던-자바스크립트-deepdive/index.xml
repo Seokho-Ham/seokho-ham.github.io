@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>모던 자바스크립트 DeepDive on 코코볼의 블로그</title>
+    <link>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</link>
+    <description>Recent content in 모던 자바스크립트 DeepDive on 코코볼의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2021 Cocoball</copyright>
+    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Javascript] this</title>
+      <link>https://cocoball02.github.io/post/javascript-this/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript-this/</guid>
+      <description>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+ 아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
+ 객체의 메서드는 객체의 프로퍼티를 참조하고 조작할 수 있어야 한다.
+객체 리터럴 방식으로 객체를 생성할 경우, 메서드를 호출하는 시점에는 이미 변수에 객체가 할당된 시점이기 때문에 참조가 가능하다.
+하지만 생성자 함수로 객체를 생성할 경우 생성될 인스턴스의 식별자를 모르기 때문에 참조가 불가능해진다.
+이러한 문제를 해결하기 위해 javascript에서는 this 식별자를 제공한다.
+this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 가리키는 자기 참조 변수다.</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 프로토타입(Prototype)</title>
+      <link>https://cocoball02.github.io/post/javascript_prototype/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_prototype/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 19장 프토토타입을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 함수는 일급객체라는데, 일급객체란?</title>
+      <link>https://cocoball02.github.io/post/javascript_first_class_object/</link>
+      <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_first_class_object/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 생성자 함수를 사용해 생성한 객체는 어떻게 다를까?</title>
+      <link>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 17장을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 스코프(Scope)</title>
+      <link>https://cocoball02.github.io/post/javascript_scope/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_scope/</guid>
+      <description>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+ 아래 내용은 모던 자바스크립트 DeepDive 13장 스코프를 학습하며 정리한 내용입니다.
+ 1. 스코프란?   식별자가 유효한 범위
+  모든 식별자는 다른 코드에서 자신을 참조할 수 있는 유효범위를 가진다.  var x = &#39;global&#39;; function foo() { var x = &#39;local&#39;; console.log(x); } foo(); //&#39;local&#39; console.log(x); //&#39;global&#39;   식별자 결정 : 자바스크립트에서 어떤 변수를 참조해야할지 결정하는 작업 ⇒ 스코프를 통해 이뤄진다.</description>
+    </item>
+    
+  </channel>
+</rss>

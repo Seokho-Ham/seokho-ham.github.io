@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [프로그래머스] 다리를 지나는 트럭 | 
+    코코볼의 블로그
+  
+</title><meta name="description" content="블로그 이전중입니다."><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/post/programmers_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EC%A7%80%EB%82%98%EB%8A%94_%ED%8A%B8%EB%9F%AD/"><meta property="og:title" content="[프로그래머스] 다리를 지나는 트럭" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 프로그래머스 Level2의 &lsquo;다리를 지나는 트럭&rsquo; 을 풀어봅니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/post/programmers_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EC%A7%80%EB%82%98%EB%8A%94_%ED%8A%B8%EB%9F%AD/" /><meta property="og:image" content="https://cocoball02.github.io/images/programmers.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-01-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-19T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[프로그래머스] 다리를 지나는 트럭">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 프로그래머스 Level2의 &lsquo;다리를 지나는 트럭&rsquo; 을 풀어봅니다."><meta itemprop="datePublished" content="2021-01-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-01-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="246"><meta itemprop="image" content="https://cocoball02.github.io/images/programmers.png">
+<meta itemprop="keywords" content="프로그래머스,알고리즘," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/programmers.png"/>
+
+<meta name="twitter:title" content="[프로그래머스] 다리를 지나는 트럭"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 프로그래머스 Level2의 &lsquo;다리를 지나는 트럭&rsquo; 을 풀어봅니다."/>
+
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="meta text-muted mb-3">
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">January 19, 2021</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>246 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>2 mins read</span>
+                        </div>
+
+                        <h1>[프로그래머스] 다리를 지나는 트럭</h1>
+
+                        <ul class="authors list-inline"></ul>
+                    </div>
+                </div><div class="row justify-content-center mb-3">
+                                <div class="col-lg-10">
+                                    <img data-src="/images/programmers_huea95bb72b613bc297f70c00bae25b676_204599_900x500_fit_box_2.png" class="img-fluid rounded mx-auto d-block" alt="[프로그래머스] 다리를 지나는 트럭">
+                                </div>
+                            </div><div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 프로그래머스 Level2의 &lsquo;다리를 지나는 트럭&rsquo; 을 풀어봅니다.</p>
+<h3 id="문제-설명">문제 설명</h3>
+<blockquote>
+<p>트럭 여러 대가 강을 가로지르는 일 차선 다리를 정해진 순으로 건너려 합니다. 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 알아내야 합니다. 트럭은 1초에 1만큼 움직이며, 다리 길이는 bridge_length이고 다리는 무게 weight까지 견딥니다.<br>
+※ 트럭이 다리에 완전히 오르지 않은 경우, 이 트럭의 무게는 고려하지 않습니다.<br>
+예를 들어, 길이가 2이고 10kg 무게를 견디는 다리가 있습니다. 무게가 [7, 4, 5, 6]kg인 트럭이 순서대로 최단 시간 안에 다리를 건너려면 다음과 같이 건너야 합니다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>경과 시간</th>
+<th>다리를 지난 트럭</th>
+<th>다리를 건너는 트럭</th>
+<th>대기 트럭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>[]</td>
+<td>[]</td>
+<td>[7,4,5,6]</td>
+</tr>
+<tr>
+<td>1~2</td>
+<td>[]</td>
+<td>[7]</td>
+<td>[4,5,6]</td>
+</tr>
+<tr>
+<td>3 [7]</td>
+<td>[4]</td>
+<td>[5,6]</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>[7]</td>
+<td>[4,5]</td>
+<td>[6]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[7,4]</td>
+<td>[5]</td>
+<td>[6]</td>
+</tr>
+<tr>
+<td>6~7</td>
+<td>[7,4,5]</td>
+<td>[6]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>[7,4,5,6]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>따라서, 모든 트럭이 다리를 지나려면 최소 8초가 걸립니다.<br>
+solution 함수의 매개변수로 다리 길이 bridge_length, 다리가 견딜 수 있는 무게 weight, 트럭별 무게 truck_weights가 주어집니다. 이때 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 return 하도록 solution 함수를 완성하세요.</p>
+</blockquote>
+<br>
+<h3 id="나의-풀이">나의 풀이</h3>
+<pre><code class="language-js">function solution(bridge_length, weight, truck_weights) {
+  let answer = 0;
+
+  let trucks = truck_weights.slice(); //트럭들의 목록
+  let sum = 0; //현재 트럭들의 무게의 합
+  let passed = []; //지나간 트럭
+  let passing = []; //다리위에 있는 트럭
+
+  while (passed.length !== truck_weights.length) {
+    answer++;
+    if (passing.length) {
+      if (passing[0].time + bridge_length === answer) {
+        passed.push(passing[0].value);
+        sum -= passing[0].value;
+        passing.shift();
+      }
+    }
+    if (sum + trucks[0] &lt;= weight) {
+      sum += trucks[0];
+      passing.push({ value: trucks.shift(), time: answer });
+    }
+  }
+
+  return answer;
+}
+</code></pre>
+                        </div><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4">
+                                    <i class="fas fa-tag mr-2"></i>프로그래머스
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">
+                                    <i class="fas fa-tag mr-2"></i>알고리즘
+                                </a></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <script src="https://utteranc.es/client.js"
+                                repo="cocoball02/blog-comments"
+                                issue-term="title"
+                                label="✨💬✨"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+            
+            </article>
+           
+        </div>
+    </div>
+
+    <div class="related-content row mt-5 row-cols-1 row-cols-lg-3"><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/programmers_level1_day3/" class="d-block"><img data-src="/images/programmers_huea95bb72b613bc297f70c00bae25b676_204599_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="[프로그래머스] level1 day3"><div class="card-body">
+            <h4 class="card-title">[프로그래머스] level1 day3</h4>
+            <p class="card-text text-muted text-uppercase">October 30, 2020</p>
+            <div class="card-text">
+                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 프로그래머스에서 푼 알고리즘 문제를 정리합니다.</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/programmers_level1_day2/" class="d-block"><img data-src="/images/programmers_huea95bb72b613bc297f70c00bae25b676_204599_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="[프로그래머스] level1 day2"><div class="card-body">
+            <h4 class="card-title">[프로그래머스] level1 day2</h4>
+            <p class="card-text text-muted text-uppercase">October 29, 2020</p>
+            <div class="card-text">
+                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 프로그래머스에서 푼 문제들을 정리합니다.</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/programmers_level1_day1/" class="d-block"><img data-src="/images/programmers_huea95bb72b613bc297f70c00bae25b676_204599_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="[프로그래머스] level1 day1"><div class="card-body">
+            <h4 class="card-title">[프로그래머스] level1 day1</h4>
+            <p class="card-text text-muted text-uppercase">October 28, 2020</p>
+            <div class="card-text">
+                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.<br>
+오늘은 프로그래머스에서 푼 문제들을 정리합니다.
+<br>
+<br></p>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div></div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

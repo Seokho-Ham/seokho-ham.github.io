@@ -6,6 +6,124 @@
     <description>Recent content in Tags on 코코볼의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Cocoball</copyright>
+    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>https://cocoball02.github.io/tags/javascript/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>모던 자바스크립트 DeepDive</title>
+      <link>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leetcode</title>
+      <link>https://cocoball02.github.io/tags/leetcode/</link>
+      <pubDate>Wed, 31 Mar 2021 12:54:43 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>알고리즘</title>
+      <link>https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+      <pubDate>Wed, 31 Mar 2021 12:54:43 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DynamicProgramming</title>
+      <link>https://cocoball02.github.io/tags/dynamicprogramming/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/dynamicprogramming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>자료구조</title>
+      <link>https://cocoball02.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frontend</title>
+      <link>https://cocoball02.github.io/tags/frontend/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redux</title>
+      <link>https://cocoball02.github.io/tags/redux/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/redux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React-Hooks</title>
+      <link>https://cocoball02.github.io/tags/react-hooks/</link>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/react-hooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>프로그래머스</title>
+      <link>https://cocoball02.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>https://cocoball02.github.io/tags/queue/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/queue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stack</title>
+      <link>https://cocoball02.github.io/tags/stack/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://cocoball02.github.io/tags/react/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

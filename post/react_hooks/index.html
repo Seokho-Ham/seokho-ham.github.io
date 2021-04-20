@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     React Hooks를 알아보자! | 
+    코코볼의 블로그
+  
+</title><meta name="description" content="블로그 이전중입니다."><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/post/react_hooks/"><meta property="og:title" content="React Hooks를 알아보자!" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 React에 대해 학습한 내용을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/post/react_hooks/" /><meta property="og:image" content="https://cocoball02.github.io/images/react.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-02-05T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-02-05T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="React Hooks를 알아보자!">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 React에 대해 학습한 내용을 정리합니다."><meta itemprop="datePublished" content="2021-02-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="507"><meta itemprop="image" content="https://cocoball02.github.io/images/react.png">
+<meta itemprop="keywords" content="React-Hooks,Frontend," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/react.png"/>
+
+<meta name="twitter:title" content="React Hooks를 알아보자!"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 React에 대해 학습한 내용을 정리합니다."/>
+
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="meta text-muted mb-3">
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">February 5, 2021</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>507 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>3 mins read</span>
+                        </div>
+
+                        <h1>React Hooks를 알아보자!</h1>
+
+                        <ul class="authors list-inline"></ul>
+                    </div>
+                </div><div class="row justify-content-center mb-3">
+                                <div class="col-lg-10">
+                                    <img data-src="/images/react_huf957eb7cc0803733802fcc4099cfd7cb_85076_900x500_fit_box_2.png" class="img-fluid rounded mx-auto d-block" alt="React Hooks를 알아보자!">
+                                </div>
+                            </div><div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 React에 대해 학습한 내용을 정리합니다.</p>
+<blockquote>
+<p><em>이 글은 React 공식문서의 Hook 부분을 학습하며 정리한 내용입니다.</em></p>
+</blockquote>
+<p><strong>React 16.8</strong>버전부터 Hook이 추가 되었다.<br>
+Hook이 나오기 전에는 함수형 컴포넌트에서 할 수 있는 작업은 한계가 있었다. 특히 상태관리와 생명주기 메서드의 사용이 불가능 해서 대부분의 컴포넌트는 클래스 컴포넌트로 작성되었다.
+<br><br>
+하지만 Hook의 도입은 useState, useEffect등의 메서드를 통해 함수형 컴포넌트에서도 상태관리를 할 수 있도록 만들었다. 지금부터 React Hook에 대해 학습한 내용을 정리해본다.</p>
+<h3 id="hook이란">Hook이란?</h3>
+<hr>
+<p>함수 컴포넌트 내에서 state와 생명주기 기능을 연동할 수 있게 해주는 함수</p>
+<h3 id="hook의-장점">Hook의 장점</h3>
+<hr>
+<ol>
+<li>상태관리와 관련된 로직을 컴포넌트로부터 분리 및 재사용할 수 있다.</li>
+<li>클래스 컴포넌트에 비해 직관적이며 복잡하지 않다.</li>
+</ol>
+<h3 id="hook의-규칙">Hook의 규칙</h3>
+<hr>
+<ol>
+<li>컴포넌트의 최상위에서만 Hook을 호출해야 한다.
+<ul>
+<li>React는 hook의 호출 순서에 의지한다</li>
+</ul>
+</li>
+<li>React 함수 내에서만 호출해야 한다.(일반 JS 함수에서는 호출하면 안된다.)</li>
+</ol>
+<h3 id="usestate">useState</h3>
+<hr>
+<ul>
+<li>컴포넌트에 <strong>state</strong>와 <strong>state를 업데이트 하는 메서드</strong>를 주는 hook이다.</li>
+<li>문법 : const [state, state를 업데이트 하는 메서드] = useState(초기값);
+<ul>
+<li>state와 state를 업데이트하는 메서드를 가진 배열이 생성된다.</li>
+<li>배열 구조 분해 문법을 사용해서 변수명을 자유롭게 작성할 수 있다.</li>
+</ul>
+</li>
+<li>하나의 컴포넌트 내에 여러개의 state hook을 사용할 수 있다. (클래스 컴포넌트처럼 하나의 state 객체안에 모든 값을 가지고 있지 않는다.)</li>
+<li>this.setState 와의 차이
+<ol>
+<li>이전의 state값에 새로운 값을 합치지 않는다는 점이다.</li>
+<li>인자가 객체일 필요가 없다.</li>
+</ol>
+</li>
+</ul>
+<pre><code class="language-jsx">import React, { useState } from 'react';
+
+const App = () =&gt; {
+  const [count, setCount] = useState(0);
+  const onClickHandler = () =&gt; {
+    setCount(count + 1);
+  };
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={onClickHandler}&gt;Click&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<h3 id="useeffect">useEffect</h3>
+<hr>
+<p>클래스 컴포넌트에서는 사이드 이펙트를(외부 api를 통해 데이터를 가져오거나, dom을 직접 조작하는 작업) 모두 componentDidMount와 같은 생명주기 메서드 내에서 사용했다.
+<br><br>
+React Hooks에서는 useEffect라는 메서드를 사용해서 사이드 이펙트를 동작하도록 한다.<br>
+(기존의 생명주기 메서드와 동일한 목적으로 사용하지만 하나의 API로 통합된것이다.)</p>
+<ul>
+<li>문법 : useEffect(func, 의존값);</li>
+<li>컴포넌트가 렌더링 된 이후, 실행해야 할 함수가 useEffect의 인자로 들어간 함수다.</li>
+<li>하나의 컴포넌트 내에서 여러개의 useEffect를 사용할 수 있다.</li>
+<li>사이드 이펙트를 해제하려면 useEffect 함수 내에서 return을 통해 해제하면 된다.
+<ul>
+<li>clean up 이 실행되는 시점은 컴포넌트가 언마운트 될때, effect가 다시 실행되기 전이다.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-jsx">import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+	const onClickHandler = ()=&gt;{
+		setCount(count+1);
+	}
+
+	// componentDidMount, componentDidUpdate와 비슷합니다
+  useEffect(() =&gt; {
+    // 브라우저 API를 이용해 문서의 타이틀을 업데이트합니다
+    document.title = `You clicked ${count} times`;
+		return (()=&gt;{...이펙트 해제})
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={onClickHandler}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="custom-hook">Custom Hook</h3>
+<hr>
+<p>서버에 요청을 보내는 로직이 있다고 가정해보자. 앱의 규모가 커지면 요청을 보내는 코드가 여러개의 컴포넌트에서 필요할 것이다. <br>하지만 그 로직을 모든 컴포넌트에 복사 붙여넣기 하는것은 비효율적이다.
+<br><br>
+Custom Hook을 사용하면 위와 같은 불편함을 해결할 수 있다. 자신만의 훅을 만드는 것이다.</p>
+<pre><code class="language-jsx">const useGetApi = ()=&gt;{
+	const [data, setData] = useState('');
+	const [code, setCode] = useState(0);
+	const [loading, setLoading] = useState(false);
+
+	useEffect(()=&gt;{
+		const getData = async ()=&gt;{
+			setLoading(true);
+			let {data} = await axios.get(url);
+			if(data.result_body){
+				setData(data.result_body;
+			}
+			setCode(data.result_code);
+			setLoading(false);
+		}
+
+		getData();
+	},[])
+
+	return [data, code, loading];
+}
+</code></pre>
+<p>위 예시는 서버에 get요청을 보내는 Hook이다. 이렇게 CustomHook을 사용하면 필요한 컴포넌트에서 임포트해서 사용할 수 있게된다.
+<br><br>
+CustomHook의 특징</p>
+<ul>
+<li>use로 시작해야 한다.</li>
+<li>각각 다른 컴포넌트에서 사용할때 개별적인 state와 effect를 가진다.</li>
+</ul>
+<hr>
+<p>여기까지 React Hooks의 핵심 개념들을 정리해봤다.
+<br>
+useCallback, useContext, useMemo와 같은 다른 훅들은 직접 사용해보고 따로 정리해보려고 한다.</p>
+<h3 id="references">References</h3>
+<hr>
+<p><a href="https://ko.reactjs.org/docs/hooks-reference.html">React 공식문서</a></p>
+                        </div><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/react-hooks">
+                                    <i class="fas fa-tag mr-2"></i>React-Hooks
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/frontend">
+                                    <i class="fas fa-tag mr-2"></i>Frontend
+                                </a></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <script src="https://utteranc.es/client.js"
+                                repo="cocoball02/blog-comments"
+                                issue-term="title"
+                                label="✨💬✨"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+            
+            </article>
+           
+        </div>
+    </div>
+
+    <div class="related-content row mt-5 row-cols-1 row-cols-lg-3"><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/react_summary_2/" class="d-block"><img data-src="/images/react_huf957eb7cc0803733802fcc4099cfd7cb_85076_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="React에 대해 알아보자 - 2편"><div class="card-body">
+            <h4 class="card-title">React에 대해 알아보자 - 2편</h4>
+            <p class="card-text text-muted text-uppercase">October 19, 2020</p>
+            <div class="card-text">
+                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.<br>
+오늘은 Inflearn에 있는 김민준 님의 &ldquo;누구든지 하는 React&rdquo; 강의를 통해 학습한 부분을 정리합니다.</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/react_summary_1/" class="d-block"><img data-src="/images/react_huf957eb7cc0803733802fcc4099cfd7cb_85076_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="React에 대해 알아보자 - 1편"><div class="card-body">
+            <h4 class="card-title">React에 대해 알아보자 - 1편</h4>
+            <p class="card-text text-muted text-uppercase">October 16, 2020</p>
+            <div class="card-text">
+                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 React에 대해 학습한 내용을 정리합니다.</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div></div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

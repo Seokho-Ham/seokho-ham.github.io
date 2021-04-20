@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [LeetCode] Array Part | 
+    코코볼의 블로그
+  
+</title><meta name="description" content="블로그 이전중입니다."><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/post/leetcode_array/"><meta property="og:title" content="[LeetCode] Array Part" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘 풀어본 알고리즘 문제를 기록합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/post/leetcode_array/" /><meta property="og:image" content="https://cocoball02.github.io/images/leetcode.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-10-13T14:04:19&#43;09:00" />
+<meta property="article:modified_time" content="2020-10-13T14:04:19&#43;09:00" />
+
+<meta itemprop="name" content="[LeetCode] Array Part">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘 풀어본 알고리즘 문제를 기록합니다."><meta itemprop="datePublished" content="2020-10-13T14:04:19&#43;09:00" />
+<meta itemprop="dateModified" content="2020-10-13T14:04:19&#43;09:00" />
+<meta itemprop="wordCount" content="567"><meta itemprop="image" content="https://cocoball02.github.io/images/leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/leetcode.png"/>
+
+<meta name="twitter:title" content="[LeetCode] Array Part"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘 풀어본 알고리즘 문제를 기록합니다."/>
+
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="meta text-muted mb-3">
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">October 13, 2020</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>567 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>3 mins read</span>
+                        </div>
+
+                        <h1>[LeetCode] Array Part</h1>
+
+                        <ul class="authors list-inline"></ul>
+                    </div>
+                </div><div class="row justify-content-center mb-3">
+                                <div class="col-lg-10">
+                                    <img data-src="/images/leetcode_hub8d6499ffbd28bdc8446c655c4540217_32201_900x500_fit_box_2.png" class="img-fluid rounded mx-auto d-block" alt="[LeetCode] Array Part">
+                                </div>
+                            </div><div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘 풀어본 알고리즘 문제를 기록합니다.</p>
+<h3 id="1-intersection-of-two-arrays-2">1. Intersection of Two Arrays 2</h3>
+<p>문제 : 2개의 배열에서 교집합을 찾아내고 배열로 반환하는 문제.
+<br></p>
+<ul>
+<li>반복되는 횟수만큼 배열에 담아야 한다.</li>
+</ul>
+<pre><code class="language-js">//Ex1
+Input: (nums1 = [1, 2, 2, 1]), (nums2 = [2, 2]);
+Output: [2, 2];
+
+//Ex2
+Input: (nums1 = [4, 9, 5]), (nums2 = [9, 4, 9, 8, 4]);
+Output: [4, 9];
+</code></pre>
+<p>나의 풀이:</p>
+<pre><code class="language-js">var intersect = function (nums1, nums2) {
+  let result = [];
+  let n1 = nums1.slice();
+  let n2 = nums2.slice();
+  if (nums1.length &gt; nums2.length) {
+    n1 = nums2.slice();
+    n2 = nums1.slice();
+  }
+
+  for (let i = 0; i &lt; n1.length; i++) {
+    if (n2.includes(n1[i])) {
+      result.push(n1[i]);
+      delete n2[n2.indexOf(n1[i])];
+    }
+  }
+  return result;
+};
+</code></pre>
+<p>인자로 들어온 배열의 복사본을 생성하였고 둘 중 더 짧은 배열의 길이만큼 반복문을 돌렸다.
+<br>
+긴 배열에서 그 값을 가지고 있는지 검사하였고 가지고 있다면 결과값에 저장하였다. 동시에 중복 저장을 피하기 위해 긴 배열에서 그 값을 삭제 하였다.</p>
+<h3 id="2-plus-one">2. Plus One</h3>
+<p>문제 : 배열로 주어진 숫자에 1을 더해서 반환하는 문제.</p>
+<pre><code class="language-js">//Ex1
+Input: digits = [1, 2, 3];
+Output: [1, 2, 4];
+//Ex2
+Input: digits = [4, 3, 2, 1];
+Output: [4, 3, 2, 2];
+</code></pre>
+<p>나의 풀이 :</p>
+<pre><code class="language-js">var plusOne = function (digits) {
+  for (let i = digits.length - 1; i &gt;= 0; i--) {
+    digits[i]++;
+    if (digits[i] &gt; 9) {
+      digits[i] = 0;
+    } else {
+      return digits;
+    }
+  }
+  digits.unshift(1);
+  return digits;
+};
+</code></pre>
+<p>처음에는 배열로 주어진 값을 join 함수를 사용해 Number로 바꾸는 방식을 사용했다.
+<br>
+하지만 숫자의 길이가 15자리를 넘어가는 케이스에서는 정확한 값이 안나오길래 검새해보니 Javascript에서는 64비트 부동 소수점 방식으로 저장하기 때문에 정수는 15자리까지 정밀도가 유지된다는것을 발견했다.
+<br><br>
+그래서 for문을 사용해 뒤에서부터 값에 1을 더해 그 숫자가 9를 넘어가면 다음 숫자로 넘어가고 아니라면 현재의 값을 반환해주는 방식으로 풀었다.
+<br>
+unshift 메소드를 사용한 이유는 케이스 중 하나의 값만 존재하는 경우가 있었고 그 값이 9였다. 기존에 짠 코드로만 실행하면 0만을 반환하기 때문에 맨 앞에 1을 추가해주는 용도로 사용하였다.</p>
+<h3 id="3-move-zeroes">3. Move Zeroes</h3>
+<p>문제 : 주어진 배열에 존재하는 0을 모두 배열의 뒤로 이동시키는 문제.
+<br></p>
+<ul>
+<li>새로운 배열을 만들지 않고 해결해야 한다.
+나의 풀이 :</li>
+</ul>
+<pre><code class="language-js">var moveZeroes = function (nums) {
+  for (let i = nums.length - 1; i &gt;= 0; i--) {
+    if (nums[i] === 0) {
+      nums.push(0);
+      nums.splice(i, 1);
+    }
+  }
+};
+</code></pre>
+<p>처음에는 for문을 오름차순으로 실행시켰다.
+<br>
+하지만 이렇게 푸니까 splice 메소드를 씀에 따라 원하는 결과가 나오지 않았다. 그래서 뒤에서부터 반복문을 돌리는 방식으로 바꿔서 풀었다.
+<br>
+뒤에서부터 해당 값이 0이면 push 메소드를 사용해 배열의 가장 뒤에 0을 추가시키고 기존에 있는 0은 splice 메소드를 사용해 삭제 하였다.</p>
+<h3 id="4-rotate-image">4. Rotate Image</h3>
+<p>문제 : n x n 형태의 2D Matrix가 주어지고 오른쪽으로 90도 회전하는 문제.
+<br></p>
+<ul>
+<li>새로운 배열을 생성하지 않고, 기존의 배열만을 사용해 문제를 풀어야한다.</li>
+</ul>
+<pre><code class="language-js">//Ex1
+Input: matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+Output: [
+  [7, 4, 1],
+  [8, 5, 2],
+  [9, 6, 3],
+];
+</code></pre>
+<p>나의 풀이 :</p>
+<pre><code class="language-js">var rotate = function (matrix) {
+  if (matrix.length === 1) {
+    return matrix;
+  }
+  let result = [];
+  for (let i = 0; i &lt; matrix.length; i++) {
+    let arr = [];
+    for (let j = matrix.length - 1; j &gt;= 0; j--) {
+      arr.push(matrix[j][i]);
+    }
+    result.push(arr);
+  }
+  for (let i = 0; i &lt; result.length; i++) {
+    matrix[i] = result[i];
+  }
+};
+</code></pre>
+<p>사실 이 문제는 문제에서 제시하는 조건을 충족시키지 못했다.
+<br>
+기존 배열에서 값만 바꿔가면서 푸는 방식이 생각이 나지 않아 새로운 배열을 만들고 그 배열을 기존의 배열에 복사하는 방식으로 풀었다.</p>
+<h2 id="오늘의-총평">오늘의 총평</h2>
+<ul>
+<li>아직 생각의 유연성이 부족하다. 여태까지 풀던 방식과 틀에서 벗어날 필요가 있다.</li>
+<li>성능면까지 생각하는 연습이 필요하다.</li>
+</ul>
+                        </div><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">
+                                    <i class="fas fa-tag mr-2"></i>알고리즘
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/leetcode">
+                                    <i class="fas fa-tag mr-2"></i>Leetcode
+                                </a></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <script src="https://utteranc.es/client.js"
+                                repo="cocoball02/blog-comments"
+                                issue-term="title"
+                                label="✨💬✨"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+            
+            </article>
+           
+        </div>
+    </div>
+
+    
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

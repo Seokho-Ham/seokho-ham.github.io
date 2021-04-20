@@ -18,6 +18,373 @@
     </item>
     
     <item>
+      <title>[Javascript] this</title>
+      <link>https://cocoball02.github.io/post/javascript-this/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript-this/</guid>
+      <description>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+ 아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
+ 객체의 메서드는 객체의 프로퍼티를 참조하고 조작할 수 있어야 한다.
+객체 리터럴 방식으로 객체를 생성할 경우, 메서드를 호출하는 시점에는 이미 변수에 객체가 할당된 시점이기 때문에 참조가 가능하다.
+하지만 생성자 함수로 객체를 생성할 경우 생성될 인스턴스의 식별자를 모르기 때문에 참조가 불가능해진다.
+이러한 문제를 해결하기 위해 javascript에서는 this 식별자를 제공한다.
+this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 가리키는 자기 참조 변수다.</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Add Two Numbers</title>
+      <link>https://cocoball02.github.io/post/leetcode_add_two_numbers/</link>
+      <pubDate>Wed, 31 Mar 2021 12:54:43 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_add_two_numbers/</guid>
+      <description>&lt;p&gt;Leetcode의 Linked List 관련 문제를 풀이한 글입니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 프로토타입(Prototype)</title>
+      <link>https://cocoball02.github.io/post/javascript_prototype/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_prototype/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 19장 프토토타입을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 함수는 일급객체라는데, 일급객체란?</title>
+      <link>https://cocoball02.github.io/post/javascript_first_class_object/</link>
+      <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_first_class_object/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 생성자 함수를 사용해 생성한 객체는 어떻게 다를까?</title>
+      <link>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 17장을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Javascript] 스코프(Scope)</title>
+      <link>https://cocoball02.github.io/post/javascript_scope/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/javascript_scope/</guid>
+      <description>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+ 아래 내용은 모던 자바스크립트 DeepDive 13장 스코프를 학습하며 정리한 내용입니다.
+ 1. 스코프란?   식별자가 유효한 범위
+  모든 식별자는 다른 코드에서 자신을 참조할 수 있는 유효범위를 가진다.  var x = &#39;global&#39;; function foo() { var x = &#39;local&#39;; console.log(x); } foo(); //&#39;local&#39; console.log(x); //&#39;global&#39;   식별자 결정 : 자바스크립트에서 어떤 변수를 참조해야할지 결정하는 작업 ⇒ 스코프를 통해 이뤄진다.</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Shuffle an Array</title>
+      <link>https://cocoball02.github.io/post/leetcode_shuffle_an_array/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_shuffle_an_array/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Shuffle an Array를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] House Robber</title>
+      <link>https://cocoball02.github.io/post/leetcode_house_robber/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_house_robber/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 House Robber를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Dynamic Programming</title>
+      <link>https://cocoball02.github.io/post/leetcode_dynamic_programming_3q/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_dynamic_programming_3q/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+Dynamic Programming 관련 3문제를 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[자료구조] 동적 프로그래밍(DynamicProgramming)</title>
+      <link>https://cocoball02.github.io/post/datastructure_dp/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/datastructure_dp/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 동적 프로그래밍(DynamicProgramming)에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] First Bad Version</title>
+      <link>https://cocoball02.github.io/post/leetcode_first_bad_version/</link>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_first_bad_version/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Merge Sorted Array</title>
+      <link>https://cocoball02.github.io/post/leetcode_merge_sorted_array/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_merge_sorted_array/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Merge Sorted Array를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Reverse Linked List</title>
+      <link>https://cocoball02.github.io/post/leetcode_reverse_linked_list/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_reverse_linked_list/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Reverse Linked List를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Redux에 대해 알아보자!</title>
+      <link>https://cocoball02.github.io/post/redux/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/redux/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Redux에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] Count and Say</title>
+      <link>https://cocoball02.github.io/post/leetcode_count_and_say/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_count_and_say/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Implement strStr()</title>
+      <link>https://cocoball02.github.io/post/leetcode_implement_strstr/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_implement_strstr/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Implement strStr()를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>React Hooks를 알아보자!</title>
+      <link>https://cocoball02.github.io/post/react_hooks/</link>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/react_hooks/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 React에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] String to Integer (atoi)</title>
+      <link>https://cocoball02.github.io/post/leetcode_string_to_integer_atoi/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_string_to_integer_atoi/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Reverse Integer</title>
+      <link>https://cocoball02.github.io/post/leetcode_reverse_integer/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_reverse_integer/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Reverse Integer를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] 스킬트리</title>
+      <link>https://cocoball02.github.io/post/programmers_skill_tree/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/programmers_skill_tree/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스 Level2의 &amp;lsquo;스킬트리&amp;rsquo; 를 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] 프린터</title>
+      <link>https://cocoball02.github.io/post/programmers_printer/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/programmers_printer/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스 Level2의 &amp;lsquo;프린터&amp;rsquo; 를 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] 다리를 지나는 트럭</title>
+      <link>https://cocoball02.github.io/post/programmers_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EC%A7%80%EB%82%98%EB%8A%94_%ED%8A%B8%EB%9F%AD/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/programmers_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EC%A7%80%EB%82%98%EB%8A%94_%ED%8A%B8%EB%9F%AD/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스 Level2의 &amp;lsquo;다리를 지나는 트럭&amp;rsquo; 을 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[자료구조] Stack &amp; Queue</title>
+      <link>https://cocoball02.github.io/post/datastructure_stack_queue/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/datastructure_stack_queue/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Stack &amp;amp; Queue에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Group Anagrams</title>
+      <link>https://cocoball02.github.io/post/leetcode_group_anagrams/</link>
+      <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_group_anagrams/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Set Matrix Zeroes</title>
+      <link>https://cocoball02.github.io/post/leetcode_set_matrix_zeroes/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_set_matrix_zeroes/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Set Matrix Zeroes를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] 3Sum</title>
+      <link>https://cocoball02.github.io/post/leetcode_3sum/</link>
+      <pubDate>Tue, 10 Nov 2020 11:01:44 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_3sum/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode 3sum 문제를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] level1 day3</title>
+      <link>https://cocoball02.github.io/post/programmers_level1_day3/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/programmers_level1_day3/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스에서 푼 알고리즘 문제를 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] level1 day2</title>
+      <link>https://cocoball02.github.io/post/programmers_level1_day2/</link>
+      <pubDate>Thu, 29 Oct 2020 13:58:56 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/programmers_level1_day2/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스에서 푼 문제들을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] level1 day1</title>
+      <link>https://cocoball02.github.io/post/programmers_level1_day1/</link>
+      <pubDate>Wed, 28 Oct 2020 12:04:46 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/programmers_level1_day1/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;br&gt;
+오늘은 프로그래머스에서 푼 문제들을 정리합니다.
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>React에 대해 알아보자 - 2편</title>
+      <link>https://cocoball02.github.io/post/react_summary_2/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/react_summary_2/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;br&gt;
+오늘은 Inflearn에 있는 김민준 님의 &amp;ldquo;누구든지 하는 React&amp;rdquo; 강의를 통해 학습한 부분을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>React에 대해 알아보자 - 1편</title>
+      <link>https://cocoball02.github.io/post/react_summary_1/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/react_summary_1/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 React에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] Array Part</title>
+      <link>https://cocoball02.github.io/post/leetcode_array/</link>
+      <pubDate>Tue, 13 Oct 2020 14:04:19 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/leetcode_array/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[자료구조] Linked List</title>
+      <link>https://cocoball02.github.io/post/datastructure_linked_list/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/datastructure_linked_list/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Linked List에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://cocoball02.github.io/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
