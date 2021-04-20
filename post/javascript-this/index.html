@@ -7,9 +7,9 @@
 <title>
   
      [Javascript] this | 
-    코코볼의 블로그
+    코코볼의 개발 블로그
   
-</title><meta name="description" content="블로그 이전중입니다."><meta name="author" content="Cocoball">
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
 <meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
@@ -37,12 +37,9 @@
 
 <link rel="canonical" href="https://cocoball02.github.io/post/javascript-this/"><meta property="og:title" content="[Javascript] this" />
 <meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
- 아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
- 객체의 메서드는 객체의 프로퍼티를 참조하고 조작할 수 있어야 한다.
-객체 리터럴 방식으로 객체를 생성할 경우, 메서드를 호출하는 시점에는 이미 변수에 객체가 할당된 시점이기 때문에 참조가 가능하다.
-하지만 생성자 함수로 객체를 생성할 경우 생성될 인스턴스의 식별자를 모르기 때문에 참조가 불가능해진다.
-이러한 문제를 해결하기 위해 javascript에서는 this 식별자를 제공한다.
-this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 가리키는 자기 참조 변수다." />
+
+아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cocoball02.github.io/post/javascript-this/" /><meta property="og:image" content="https://cocoball02.github.io/images/javascript-cover.png" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-04-14T00:00:00&#43;00:00" />
@@ -50,12 +47,9 @@ this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 �
 
 <meta itemprop="name" content="[Javascript] this">
 <meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
- 아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
- 객체의 메서드는 객체의 프로퍼티를 참조하고 조작할 수 있어야 한다.
-객체 리터럴 방식으로 객체를 생성할 경우, 메서드를 호출하는 시점에는 이미 변수에 객체가 할당된 시점이기 때문에 참조가 가능하다.
-하지만 생성자 함수로 객체를 생성할 경우 생성될 인스턴스의 식별자를 모르기 때문에 참조가 불가능해진다.
-이러한 문제를 해결하기 위해 javascript에서는 this 식별자를 제공한다.
-this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 가리키는 자기 참조 변수다."><meta itemprop="datePublished" content="2021-04-14T00:00:00&#43;00:00" />
+
+아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
+"><meta itemprop="datePublished" content="2021-04-14T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-04-14T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="414"><meta itemprop="image" content="https://cocoball02.github.io/images/javascript-cover.png">
 <meta itemprop="keywords" content="Javascript,모던 자바스크립트 DeepDive," /><meta name="twitter:card" content="summary_large_image"/>
@@ -63,19 +57,21 @@ this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 �
 
 <meta name="twitter:title" content="[Javascript] this"/>
 <meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
- 아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
- 객체의 메서드는 객체의 프로퍼티를 참조하고 조작할 수 있어야 한다.
-객체 리터럴 방식으로 객체를 생성할 경우, 메서드를 호출하는 시점에는 이미 변수에 객체가 할당된 시점이기 때문에 참조가 가능하다.
-하지만 생성자 함수로 객체를 생성할 경우 생성될 인스턴스의 식별자를 모르기 때문에 참조가 불가능해진다.
-이러한 문제를 해결하기 위해 javascript에서는 this 식별자를 제공한다.
-this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 가리키는 자기 참조 변수다."/>
 
+아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.
+"/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
 </head>
 <body>
     
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
     <div class="container">
-        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 블로그</a>
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -124,7 +120,6 @@ this란?   자신이 속한 객체 또는 자신이 생성할 인스터스를 �
 <blockquote>
 <p>아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.</p>
 </blockquote>
-<!-- more -->
 <p>객체의 메서드는 객체의 프로퍼티를 참조하고 조작할 수 있어야 한다.<br>
 객체 리터럴 방식으로 객체를 생성할 경우, 메서드를 호출하는 시점에는 이미 변수에 객체가 할당된 시점이기 때문에 참조가 가능하다.<br>
 하지만 생성자 함수로 객체를 생성할 경우 생성될 인스턴스의 식별자를 모르기 때문에 참조가 불가능해진다.<br>
@@ -275,7 +270,6 @@ getBinding.bind(obj);
 </tr>
 </tbody>
 </table>
-
                         </div><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/javascript">
                                     <i class="fas fa-tag mr-2"></i>Javascript
                                 </a><a class="badge badge-pill badge-light border mr-2" href="/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive">

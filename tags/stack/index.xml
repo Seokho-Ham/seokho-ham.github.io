@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stack on 코코볼의 블로그</title>
+    <title>Stack on 코코볼의 개발 블로그</title>
     <link>https://cocoball02.github.io/tags/stack/</link>
-    <description>Recent content in Stack on 코코볼의 블로그</description>
+    <description>Recent content in Stack on 코코볼의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
