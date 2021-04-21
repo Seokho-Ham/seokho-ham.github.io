@@ -2,6 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cocoball02.github.io/post/javascript_execution_context/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/javascript/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/javascript/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-04-21T11:34:34+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://cocoball02.github.io/author/</loc>
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -14,35 +46,7 @@
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/</loc>
-    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
     <loc>https://cocoball02.github.io/post/javascript-this/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/javascript/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/javascript/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/post/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</loc>
     <lastmod>2021-04-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
