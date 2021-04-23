@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Wed, 21 Apr 2021 11:34:34 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 13:07:36 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Javascript</title>
       <link>https://cocoball02.github.io/tags/javascript/</link>
-      <pubDate>Wed, 21 Apr 2021 11:34:34 +0900</pubDate>
+      <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/javascript/</guid>
       <description></description>
@@ -20,9 +20,27 @@
     <item>
       <title>모던 자바스크립트 DeepDive</title>
       <link>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</link>
-      <pubDate>Wed, 21 Apr 2021 11:34:34 +0900</pubDate>
+      <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>클로저</title>
+      <link>https://cocoball02.github.io/tags/%ED%81%B4%EB%A1%9C%EC%A0%80/</link>
+      <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%ED%81%B4%EB%A1%9C%EC%A0%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>실행 컨텍스트</title>
+      <link>https://cocoball02.github.io/tags/%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Wed, 21 Apr 2021 11:34:34 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</guid>
       <description></description>
     </item>
     

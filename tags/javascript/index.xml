@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Wed, 21 Apr 2021 11:34:34 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 13:07:36 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Javascript] 클로저(Closure)</title>
+      <link>https://cocoball02.github.io/post/closure/</link>
+      <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/closure/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 24장을 학습하며 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>[Javascript] 실행 컨텍스트에 대해 알아보자!</title>
       <link>https://cocoball02.github.io/post/javascript_execution_context/</link>
