@@ -49,7 +49,7 @@
 
 오늘은 React에 대해 학습한 내용을 정리합니다."><meta itemprop="datePublished" content="2020-10-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-10-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="474"><meta itemprop="image" content="https://cocoball02.github.io/images/react.png">
+<meta itemprop="wordCount" content="550"><meta itemprop="image" content="https://cocoball02.github.io/images/react.png">
 <meta itemprop="keywords" content="React,Frontend," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://cocoball02.github.io/images/react.png"/>
 
@@ -98,7 +98,7 @@
                     <div class="col-lg-8">
                         <div class="meta text-muted mb-3">
                             <p class="created text-muted text-uppercase font-weight-bold mb-1">October 16, 2020</p>
-                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>474 words</span>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>550 words</span>
                             <span><i class="fas fa-clock mr-2"></i>3 mins read</span>
                         </div>
 
@@ -195,7 +195,11 @@
 <p>JSX내에서는 If 문을 사용할 수 없다.</p>
 <ul>
 <li><strong>삼항 연산자</strong>를 사용해서 렌더링 내용을 정할 수 있다.</li>
-<li>**&amp;&amp;**를 사용해서 조건에 따라 렌더링을 할 수 있다.</li>
+<li>&ldquo;<strong>&amp;&amp;</strong>&ldquo;를 사용해서 조건에 따라 렌더링을 할 수 있다.
+<ul>
+<li>falsy한 값인 0은 화면에 나타난다.</li>
+</ul>
+</li>
 <li><strong>즉시 실행 함수</strong>를 통해 사용할 수도 있다.</li>
 </ul>
 </li>
@@ -263,6 +267,7 @@
 <p><strong>클래스 컴포넌트</strong></p>
 <ul>
 <li>state와 lifcycle API가 존재한다.</li>
+<li>반드시 render 메서드를 통해 JSX를 반환해야 한다.</li>
 <li>event를 적용시킬 때 arrow function을 사용하지 않으면 this 바인딩이 필요하다.</li>
 </ul>
 <pre><code class="language-jsx">class MyName extends React.Components {
@@ -274,8 +279,31 @@
   }
 }
 </code></pre>
+<br>
 </li>
 </ol>
+<h5 id="두가지-방식의-장단점">두가지 방식의 장단점</h5>
+<table>
+<thead>
+<tr>
+<th>장/단</th>
+<th>함수형</th>
+<th>클래스형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>장점</td>
+<td>- 클래스에 비해 선언이 간단하다. <br>- 메모리 자원을 덜 사용한다.</td>
+<td>- state와 lifcycle API가 존재한다</td>
+</tr>
+<tr>
+<td>단점</td>
+<td>-state와 lifcycle API를 사용할 수 없다.<br>(hooks가 나오면서 해결)</td>
+<td>함수형의 장점의 반대</td>
+</tr>
+</tbody>
+</table>
 <h3 id="props"><strong>Props</strong></h3>
 <ul>
 <li>부모 컴포넌트가 자식 컴포넌트에게 값을 전달할 때 사용된다 .</li>
@@ -283,15 +311,23 @@
 <li>읽기전용이다.</li>
 <li>컴포넌트를 호출할 때 props를 함께 넘겨준다.</li>
 <li><strong>static defaultProps</strong>를 설정하면 props가 넘어오지 않을 경우를 대비해 기본값을 설정해 둘 수 있다.</li>
+<li><strong>props.children</strong>을 사용하면 컴포넌트 사이에 있는 문자열을 사용할 수 있다.</li>
+<li><strong>propTypes</strong>를 사용해 넘겨 받을 prop의 타입을 미리 지정할 수 있다.</li>
 </ul>
-<pre><code class="language-jsx">class MyName extends Component {
+<pre><code class="language-jsx">import PropTypes from 'prop-types';
+
+class MyName extends Component {
   static defaultProps = {
     name: 'basic name',
   };
+  static propTypes={
+    name : PropTypes.string;
+  }
   render() {
     return &lt;div&gt;안녕하세요 저는 {this.props.name}이라고 합니다.&lt;/div&gt;;
   }
 }
+
 
 &lt;MyName name='coco' /&gt;; //-&gt; props = {name: 'coco'}
 </code></pre>

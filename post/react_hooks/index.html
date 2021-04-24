@@ -49,7 +49,7 @@
 
 오늘은 React에 대해 학습한 내용을 정리합니다."><meta itemprop="datePublished" content="2021-02-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="507"><meta itemprop="image" content="https://cocoball02.github.io/images/react.png">
+<meta itemprop="wordCount" content="800"><meta itemprop="image" content="https://cocoball02.github.io/images/react.png">
 <meta itemprop="keywords" content="React-Hooks,Frontend," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://cocoball02.github.io/images/react.png"/>
 
@@ -98,8 +98,8 @@
                     <div class="col-lg-8">
                         <div class="meta text-muted mb-3">
                             <p class="created text-muted text-uppercase font-weight-bold mb-1">February 5, 2021</p>
-                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>507 words</span>
-                            <span><i class="fas fa-clock mr-2"></i>3 mins read</span>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>800 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>4 mins read</span>
                         </div>
 
                         <h1>React Hooks를 알아보자!</h1>
@@ -184,10 +184,13 @@ React Hooks에서는 useEffect라는 메서드를 사용해서 사이드 이펙�
 <ul>
 <li>문법 : useEffect(func, 의존값);</li>
 <li>컴포넌트가 렌더링 된 이후, 실행해야 할 함수가 useEffect의 인자로 들어간 함수다.</li>
+<li>첫 렌더링에만 실행되도록 하려면 빈배열을 의존값에 넣으면 된다.</li>
+<li>의존값이 변할때만 실행되도록 하려면 배열안에 의존값을 넣어서 인자로 넣으면 된다.</li>
 <li>하나의 컴포넌트 내에서 여러개의 useEffect를 사용할 수 있다.</li>
 <li>사이드 이펙트를 해제하려면 useEffect 함수 내에서 return을 통해 해제하면 된다.
 <ul>
 <li>clean up 이 실행되는 시점은 컴포넌트가 언마운트 될때, effect가 다시 실행되기 전이다.</li>
+<li>언마운트 될때만 실행시키고 싶으면 2번째 인자로 배열을 넣어주면 된다.</li>
 </ul>
 </li>
 </ul>
@@ -204,8 +207,8 @@ function Example() {
   useEffect(() =&gt; {
     // 브라우저 API를 이용해 문서의 타이틀을 업데이트합니다
     document.title = `You clicked ${count} times`;
-		return (()=&gt;{...이펙트 해제})
-  });
+		return (()=&gt;{...이펙트 해제},[])
+  },[count]);
 
   return (
     &lt;div&gt;
@@ -216,6 +219,67 @@ function Example() {
     &lt;/div&gt;
   );
 }
+</code></pre>
+<h3 id="usereducer">useReducer</h3>
+<hr>
+<p>현재상태와 업데이트에 필요한 정보가 담긴 액션값을 전달받아 새로운 상태를 반환하는 함수다.</p>
+<ul>
+<li>상태를 변경하는 로직을 외부로 뺄 수 있다.</li>
+<li>새로운 상태를 만들때는 반드시 불변성을 지켜줘야 한다.</li>
+<li>첫번째 인자는 리듀서 함수, 두번째 인자는 리듀서의 기본값을 넣어준다.</li>
+</ul>
+<pre><code class="language-js">function reducer(state, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { value: state.value + 1 };
+    case 'DECREMENT':
+      return { value: state.value - 1 };
+    default:
+      return state;
+  }
+}
+const Counter = () =&gt; {
+  const [state, dispatch] = useReducer(reducer, { value: 0 });
+  return (
+    &lt;div&gt;
+      &lt;div&gt;{state.value}&lt;/div&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'INCREMENT' })}&gt;+1&lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'DECREMENT' })}&gt;-1&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<h3 id="usememo">useMemo</h3>
+<hr>
+<p>컴포넌트 내부에 특정 연산을 담당하는 로직이 있다고 가정했을때, 연산값에는 영향을 주지 않는 정보가 업데이트 될때도 계속 연산을 실행한다면 이것을 메모리의 낭비일것이다.
+useMemo를 사용한다면 이런 현상을 방지할 수 있다.
+연산값에 영향을 주는 데이터가 변경이 되었을때만 실행되고, 아니라면 이전에 가지고 있던 연산값을 그대로 사용하는 방식이다.</p>
+<pre><code class="language-js">const avg = useMemo(() =&gt; getAverage(list), [list]);
+</code></pre>
+<ul>
+<li>list의 값이 바뀔때만 첫번째 인자로 들어온 함수가 실행되도록 작동한다.</li>
+</ul>
+<h3 id="usecallback">useCallback</h3>
+<hr>
+<p>useMemo와 비슷한 기능으로, 주로 렌더링 성능의 최적화를 위해 사용한다.
+useMemo는 연산값을 기억하고 있었다면 useCallback은 생성한 함수 자체를 기억하고 있다.
+일반적으로 컴포넌트가 리렌더링 되면 그 안에 생성한 함수들은 재생성 되는데, useCallback을 사용해 함수를 만들경우 의존값으로 들어온 데이터가 바뀌지 않는 이상 기존에 만들어두었던 함수를 재사용한다.</p>
+<ul>
+<li>빈 배열을 넣을 경우 렌더링 시 만든 함수를 계속 재사용한다.</li>
+<li>상태값에 의존하고 있는 함수라면 두번째 인자에 반드시 넣어줘야 한다.</li>
+</ul>
+<pre><code class="language-js">const onChange = useCallback(e =&gt; {
+  setNumber(e.target.value);
+}, []);
+</code></pre>
+<h3 id="useref">useRef</h3>
+<hr>
+<p>함수형 컴포넌트에서 더 쉽게 ref를 사용할 수 있도록 하는 함수.</p>
+<ul>
+<li>컴포넌트 내에서 로컬 변수를 사용할 때 활용할 수 있다.</li>
+<li>이렇게 사용할 경우 num의 값이 변경되어도 리렌더링 하지 않는다.</li>
+</ul>
+<pre><code class="language-js">const num = useRef(1);
 </code></pre>
 <h3 id="custom-hook">Custom Hook</h3>
 <hr>
