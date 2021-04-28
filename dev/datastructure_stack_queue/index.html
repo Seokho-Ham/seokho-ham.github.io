@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [자료구조] Stack &amp; Queue | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/dev/datastructure_stack_queue/"><meta property="og:title" content="[자료구조] Stack &amp; Queue" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Stack &amp; Queue에 대해 학습한 내용을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/dev/datastructure_stack_queue/" /><meta property="og:image" content="https://cocoball02.github.io/images/datastructure.jpg" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-01-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-15T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[자료구조] Stack &amp; Queue">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Stack &amp; Queue에 대해 학습한 내용을 정리합니다."><meta itemprop="datePublished" content="2021-01-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-01-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="143"><meta itemprop="image" content="https://cocoball02.github.io/images/datastructure.jpg">
+<meta itemprop="keywords" content="자료구조,Stack,Queue,Javascript," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/datastructure.jpg"/>
+
+<meta name="twitter:title" content="[자료구조] Stack &amp; Queue"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Stack &amp; Queue에 대해 학습한 내용을 정리합니다."/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[자료구조] Stack &amp; Queue</h2>
+
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 Stack &amp; Queue에 대해 학습한 내용을 정리합니다.</p>
+<h2 id="스택">스택</h2>
+<hr>
+<ul>
+<li>
+<p>데이터를 집어넣을 수 있는 선형 자료형.</p>
+</li>
+<li>
+<p>push, pop, peek등의 작업을 통해 데이터를 삽입, 추출, 확인 할 수 있다.</p>
+</li>
+<li>
+<p>후입 선출(LIFO)의 구조를 가지고 있다.</p>
+<p><img src="https://user-images.githubusercontent.com/57708971/104723135-2004b600-5772-11eb-9635-42a01c36cf1a.png" alt="Stack"></p>
+</li>
+<li>
+<p>Javascript를 통한 구현</p>
+<pre><code class="language-jsx">function Stack() {
+  this.data = [];
+}
+Stack.prototype.push = function (data) {
+  this.data.push(data);
+};
+Stack.prototype.pop = function () {
+  this.data.pop();
+};
+Stack.prototype.peek = function () {
+  return this.data[this.data.length - 1];
+};
+
+let stack = new Stack();
+stack.push(1);
+stack.push(2);
+stack.pop();
+stack.peek();
+</code></pre>
+</li>
+</ul>
+<h2 id="큐">큐</h2>
+<hr>
+<ul>
+<li>
+<p>데이터를 집어 넣을 수 있는 선형 자료형.</p>
+</li>
+<li>
+<p>enqueue, dequeue등의 작업을 통해 데이터를 삽입, 추출할 수 있다.</p>
+</li>
+<li>
+<p>선입 선출(FIFO)의 구조를 가지고 있다.</p>
+<p><img src="https://user-images.githubusercontent.com/57708971/104723142-23983d00-5772-11eb-87d3-f90adad92493.png" alt="Queue"></p>
+</li>
+<li>
+<p>javascript를 통한 구현</p>
+<pre><code class="language-jsx">function Queue() {
+  this.data = [];
+}
+Queue.prototype.enqueue = function (el) {
+  this.data.push(el);
+};
+Queue.prototype.dequeue = function () {
+  this.data.shift();
+};
+
+let q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+q.dequeue();
+q.dequeue();
+q.dequeue();
+</code></pre>
+</li>
+</ul>
+<h2 id="참고자료">참고자료</h2>
+<hr>
+<p><a href="https://helloworldjavascript.net/pages/282-data-structures.html">https://helloworldjavascript.net/pages/282-data-structures.html</a>
+<a href="https://velog.io/@sbinha/%EC%8A%A4%ED%83%9D-%ED%81%90">https://velog.io/@sbinha/%EC%8A%A4%ED%83%9D-%ED%81%90</a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

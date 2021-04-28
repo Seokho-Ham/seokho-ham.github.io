@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [Javascript] 실행 컨텍스트에 대해 알아보자! | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/dev/javascript_execution_context/"><meta property="og:title" content="[Javascript] 실행 컨텍스트에 대해 알아보자!" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+아래 내용은 모던 자바스크립트 DeepDive 23장을 학습하며 정리한 내용입니다.
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/dev/javascript_execution_context/" /><meta property="og:image" content="https://cocoball02.github.io/images/javascript-cover.png" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-04-21T11:34:34&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-21T11:34:34&#43;09:00" />
+
+<meta itemprop="name" content="[Javascript] 실행 컨텍스트에 대해 알아보자!">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+아래 내용은 모던 자바스크립트 DeepDive 23장을 학습하며 정리한 내용입니다.
+
+"><meta itemprop="datePublished" content="2021-04-21T11:34:34&#43;09:00" />
+<meta itemprop="dateModified" content="2021-04-21T11:34:34&#43;09:00" />
+<meta itemprop="wordCount" content="945"><meta itemprop="image" content="https://cocoball02.github.io/images/javascript-cover.png">
+<meta itemprop="keywords" content="Javascript,모던 자바스크립트 DeepDive,실행 컨텍스트," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/javascript-cover.png"/>
+
+<meta name="twitter:title" content="[Javascript] 실행 컨텍스트에 대해 알아보자!"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+아래 내용은 모던 자바스크립트 DeepDive 23장을 학습하며 정리한 내용입니다.
+
+"/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Javascript] 실행 컨텍스트에 대해 알아보자!</h2>
+
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.</p>
+<blockquote>
+<p>아래 내용은 모던 자바스크립트 DeepDive 23장을 학습하며 정리한 내용입니다.</p>
+</blockquote>
+<br>
+<h3 style='color:#01c501'> 소스코드부터 알아보자</h3>
+<hr>
+<p>실행 컨텍스트를 알아보기 전에 알아두어야 할 <code>소스코드</code>에 대해 먼저 설명하겠다.
+<code>소스코드</code>란 다른 말로 실행 가능한 코드를 의미한다.
+<br><br>
+ECMAScript 에서는 소스코드를 4자기 타입으로 구분한다.
+<br>
+그 이유는 소스코드별로 생성하는 실행 컨텍스트가 다르기 때문이다.
+<br>
+<em>(각 소스코드는 코드 내에 정의된 함수, 클래스의 내부 코드는 포함되지 않는다.)</em></p>
+<table>
+<thead>
+<tr>
+<th>소스코드 타입</th>
+<th>설명</th>
+<th>생성하는 컨텍스트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>전역 코드</td>
+<td>전역에 존재하는 코드</td>
+<td>전역 실행 컨텍스트</td>
+</tr>
+<tr>
+<td>함수 코드</td>
+<td>함수 내부에 존재하는 코드</td>
+<td>함수 실행 컨텍스트</td>
+</tr>
+<tr>
+<td>eval 코드</td>
+<td>eval 함수에 인수로 전달되어 실행되는 코드</td>
+<td>eval 실행 컨텍스트</td>
+</tr>
+<tr>
+<td>모듈 코드</td>
+<td>모듈 내부에 존재하는 코드</td>
+<td>모듈 실행 컨텍스트</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>모든 소스코드는 2가지 과정을 거친다.
+<strong>평가</strong> 와 <strong>실행</strong> 단계다.</p>
+<h5 style='color:rgb(15,123,108)'>1. 평가 과정</h5>
+<ul>
+<li>실행 컨텍스트를 생성한다.</li>
+<li>변수, 함수 등의 선언문만 먼저 실행한다.</li>
+<li>생성된 변수나 함수의 식별자를 키로 실행 컨텍스트가 관리하는 스코프에 등록한다.</li>
+</ul>
+<h5 style='color:rgb(15,123,108)'>2. 실행 과정</h5>
+<ul>
+<li>런타임이 시작된다. 선언문을 제외한 소스코드가 실행된다.</li>
+<li>변수에 할당이 시작되고, 호출되는 함수나 변수는 실행 컨텍스트가 관리하는 스코프에서 검색해서 사용한다.</li>
+</ul>
+<p>아래 코드로 예시를 들겠다.</p>
+<pre><code class="language-js">var x;
+x = 1;
+// 평가 과정 : 변수 x의 선언이 실행된다. 스코프에 x가 저장된다.
+// 실행 과정 : 스코프에서 x라는 변수가 있는지 확인한다. 이후, 변수 x에 1이라는 값이 할당된다.
+</code></pre>
+<br>
+<h3 style='color:#01c501'> 실행 컨텍스트? 그게 뭔데?</h3>
+<hr>
+<blockquote>
+<p>소스코드를 실행하는데 필요한 환경을 제공하고 코드의 실행 결과를 실제로 관리하는 영역이다.</p>
+</blockquote>
+<br>
+아래 코드를 통해 설명을 이어가겠다.
+<pre><code class="language-js">const x = 1;
+const y = 2;
+
+function foo(a) {
+  const x = 10;
+  const y = 20;
+
+  console.log(a + x + y);
+}
+foo(100);
+
+console.log(x + y);
+</code></pre>
+<p>이 코드의 실행 과정은 어떻게 될까?</p>
+<br>
+<h6 id="1이-소스코드는-전역-코드이기-때문에-전역-실행-컨텍스트가-생성된다">1.이 소스코드는 전역 코드이기 때문에 <strong>전역 실행 컨텍스트</strong>가 생성된다.</h6>
+<h6 id="2-평가-단계가-시작된다">2. 평가 단계가 시작된다.</h6>
+<ul>
+<li>변수 x, y와 foo 함수의 선언문이 실행된다.</li>
+</ul>
+<h6 id="3-실행-단계가-시작된다">3. 실행 단계가 시작된다.</h6>
+<ul>
+<li>전역변수 x, y에 값이 할당된다.</li>
+<li>foo함수가 호출된다.</li>
+</ul>
+<h6 id="4-함수가-호출되면-코드의-실행이-중단되고-코드의-실행이-함수의-내부로-이동하게-된다">4. 함수가 호출되면 코드의 실행이 중단되고 코드의 실행이 함수의 내부로 이동하게 된다.</h6>
+<h6 id="5-foo-함수가-실행되며-함수-실행-컨텍스트가-생성된다">5. foo 함수가 실행되며 <strong>함수 실행 컨텍스트</strong>가 생성된다.</h6>
+<h6 id="6-마찬가지로-평가-단계가-시작된다">6. 마찬가지로 평가 단계가 시작된다.</h6>
+<ul>
+<li>지역변수 x,y, 매개변수 a, arguments 객체가 함수 실행 컨텍스트에 저장된다.</li>
+<li>this의 바인딩이 결정된다. (this 바인딩은 함수 호출 시점에 따라 동적으로 결정되기 때문에)</li>
+</ul>
+<h6 id="7-실행-단계">7. 실행 단계</h6>
+<ul>
+<li>x,y,a에 값이 할당되고 console.log 함수가 실행된다.</li>
+</ul>
+<h6 id="8-foo함수에는-더이상-실행할-코드가-없기-때문에-전역코드로-돌아가고-남아있는-전역-코드가-실행된다">8. foo함수에는 더이상 실행할 코드가 없기 때문에 전역코드로 돌아가고 남아있는 전역 코드가 실행된다.</h6>
+<p><br><br></p>
+<h3 style='color:#01c501'> 실행 컨텍스트는 어디서 관리되는걸까?</h3>
+<hr>
+<p>이 흐름을 보다보면 궁금한 점이 하나 생긴다. 코드의 실행 순서가 이동하는데, 이건 어떻게 관리될까?<br>
+바로 <strong>실행 컨텍스트 스택</strong>에서 관리된다. 더 익숙한 이름으로는 <strong>Call Stack</strong> 이라고 불린다.</p>
+<pre><code class="language-js">const x = 1;
+
+function foo() {
+  const y = 2;
+  function bar() {
+    const z = 3;
+    console.log(x + y + z);
+  }
+  bar();
+}
+
+foo();
+</code></pre>
+<p>이 코드를 통하여 CallStack에 실행 컨텍스트들이 관리되는 과정을 알아보자.
+<br>
+<br>
+<img src='https://user-images.githubusercontent.com/57708971/115492454-cf36b900-a29c-11eb-918a-a8e14601a6c6.png' alt='CallStack' width='500' height='300'>
+<br>
+<img src='https://user-images.githubusercontent.com/57708971/115492463-d231a980-a29c-11eb-9817-77feecb3fe5f.png' alt='CallStack' width='600' height='300'></p>
+<h6 id="1-전역-실행-컨텍스트가-생성되고-callstack에-쌓인다">1. 전역 실행 컨텍스트가 생성되고 CallStack에 쌓인다.</h6>
+<ul>
+<li>평가와 실행 단계가 진행된다.</li>
+</ul>
+<h6 id="2-실행-단계-중-foo함수가-호출되어-코드의-제어권이-foo-함수-내부로-이동한다">2. 실행 단계 중 foo함수가 호출되어 코드의 제어권이 foo 함수 내부로 이동한다.</h6>
+<ul>
+<li>평가와 실행 단계가 진행된다.</li>
+</ul>
+<h6 id="3-실행-단계-중-bar함수가-호출되어-코드의-제어권이-bar-함수-내부로-이동한다">3. 실행 단계 중 bar함수가 호출되어 코드의 제어권이 bar 함수 내부로 이동한다.</h6>
+<ul>
+<li>평가와 실행 단계가 진행된다.</li>
+</ul>
+<h6 id="4-bar함수가-종료되고-foo함수로-복귀한다">4. bar함수가 종료되고 foo함수로 복귀한다.</h6>
+<ul>
+<li>bar 함수 실행 컨텍스트는 CallStack에서 제거된다.</li>
+</ul>
+<h6 id="5-foo함수가-종료되고-전역코드로-마지막으로-전역-코드까지-종료된다">5. foo함수가 종료되고 전역코드로, 마지막으로 전역 코드까지 종료된다.</h6>
+<ul>
+<li>foo 함수 실행 컨텍스트, 전역 실행 컨텍스트가 순차적으로 CallStack에서 제거된다.</li>
+</ul>
+<p><br><br></p>
+<h3 style='color:#01c501'> 실행 컨텍스트 내에서 변수, 함수의 참조는 어떻게 동작하는걸까?</h3>
+<hr>
+<p>여태까지 변수의 참조는 <code>스코프체인</code> 이라는 개념으로 인해 가능하다고 알고 있었다. 그럼 이 스코프는 어디에 저장되어있으며 어떻게 연결되어 있을까?
+바로 <strong>렉시컬 환경</strong>에 모든 정보가 담겨있다.</p>
+<br>
+<p>소스코드가 평가되는 시점에 실행 컨텍스트가 생성된다.
+동시에 <strong>렉시컬 환경</strong>이 함께 생성되며 실행 컨텍스트에 바인딩된다.</p>
+<h4 style='color:rgb(15,123,108)'>렉시컬 환경이란?</h4>
+<ul>
+<li>식별자와 식별자에 바인딩된 값</li>
+<li>상위 스코프에 대한 참조</li>
+</ul>
+<p>를 기록하는 자료구조다.<br><br>
+<strong>렉시컬 환경</strong>는 2가지 컴포넌트로 구성된다.</p>
+<ol>
+<li>
+<p><strong>환경 레코드</strong> : 스코프에 포함된 식별자를 등록하고, 식별자에 바인딩 된 값을 관리하는 저장소다.</p>
+</li>
+<li>
+<p><strong>외부 렉시컬 환경에 대한 참조</strong> : 상위 스코프를 가리킨다.</p>
+</li>
+</ol>
+<p>이제 코드를 통해 식별자의 참조와 결정이 어떻게 이루어지는지 자세하게 살펴보자.</p>
+<pre><code class="language-js">var x = 1;
+const y = 2;
+
+function foo(a) {
+  var x = 3;
+  const y = 4;
+
+  function bar(b) {
+    const z = 5;
+    console.log(a + b + x + y + z);
+  }
+  bar(10);
+}
+
+foo(20);
+</code></pre>
+<h5 id="1-전역코드의-평가-이전에-전역-객체가-먼저-생성되고-이후-전역-코드의-평가가-이루어진다">1. 전역코드의 평가 이전에 전역 객체가 먼저 생성되고 이후 전역 코드의 평가가 이루어진다.</h5>
+<p>평가 과정에서 <strong>전역 실행 컨텍스트</strong>와 <strong>전역 렉시컬 환경</strong> 이 생성된다.<br>
+그리고 전역 렉시컬 환경 내부에는</p>
+<ul>
+<li>전역 환경 레코드</li>
+<li>외부 렉시컬 환경에 대한 참조</li>
+</ul>
+<p>가 생성된다.</p>
+<p>여기서 알아두어야 할것은 전역 환경 레코드 내부는 <strong>2가지 레코드</strong>로 나뉘게 된다.<br>
+<em>(함수 환경 레코드는 이렇게 나누어지지 않는다.)</em></p>
+<ul>
+<li><strong>객체 환경 레코드</strong> : var키워드로 선언된 전역 변수와 함수선언문으로 생성된 전역함수, 빌트인 전역 프로퍼티, 빌트인 전역 함수, 표준 빌트인 객체를 관리한다.</li>
+<li><strong>선언적 환경 레코드</strong> : let, const 키워드로 선언한 전역 변수를 따로 관리한다.</li>
+</ul>
+<p>이것을 이해하면 호이스팅이 발생하는 이유도 이해할 수 있게 된다.
+객체 환경 레코드 내에는 맨처음 생성한 전역 객체가 연결된다.</p>
+<h5 id="1-1-전역-환경-레코드">1-1. 전역 환경 레코드</h5>
+<ul>
+<li>객체 환경 레코드의 생성 : 변수 x와 foo 함수가 저장된다.
+<ul>
+<li>var로 선언한 변수는 선언과 초기화가 동시에 발생한다. 즉, 평가 단계부터 이미 undefined 값이 할당되어있는 것이다. <br> <strong>이것이 변수 호이스팅이 발생하는 이유다.</strong></li>
+</ul>
+</li>
+<li>선언적 환경 레코드의 생성 : 변수 y가 저장된다.
+<ul>
+<li>let, const도 호이스팅이 발생하지만, 초기화 단계는 런타임 시 진행되기 때문에 일시적 사각지대에 빠져 호이스팅이 되지 않는것처럼 작동한다.</li>
+</ul>
+</li>
+</ul>
+<h5 id="1-2-외부-렉시컬-환경에-대한-참조">1-2. 외부 렉시컬 환경에 대한 참조</h5>
+<ul>
+<li>전역코드를 포함하는 소스코드는 없기 때문에 null 값이 할당된다.</li>
+</ul>
+<h5 id="2-전역-코드의-실행">2. 전역 코드의 실행</h5>
+<ul>
+<li>식별자 결정 작업이 이루어진다.</li>
+<li>현재 실행중인 실행 컨텍스트를 확인해 참조한다.</li>
+</ul>
+<h5 id="3-foo-함수-코드-평가">3. foo 함수 코드 평가</h5>
+<p>평가 과정을 거치며 함수 실행 컨텍스트와 함수 렉시컬 환경이 생성된다.</p>
+<h5 id="3-1-함수-환경-레코드">3-1. 함수 환경 레코드</h5>
+<ul>
+<li>매개변수 a, arguments 객체, 지역변수 x,y, 중첩함수 bar이 저장된다.</li>
+</ul>
+<h5 id="3-2-함수-외부-렉시컬-환경에-대한-참조">3-2. 함수 외부 렉시컬 환경에 대한 참조</h5>
+<ul>
+<li>함수에 대한 정의 평가된 시점에 실행중이었던 실행 컨텍스트가 저장된다.<br>
+즉, 전역 실행 컨텍스트가 저장된다.</li>
+</ul>
+<h5 id="4-함수-코드-실행">4. 함수 코드 실행</h5>
+<ul>
+<li>bar 함수가 실행된다.</li>
+</ul>
+<h5 id="5-bar-함수-코드의-평가가-이루어지고-foo-함수에서-실행된-작업들이-동일하게-실행된다">5. bar 함수 코드의 평가가 이루어지고 foo 함수에서 실행된 작업들이 동일하게 실행된다.</h5>
+<h5 id="6-코드가-종료되면-순차적으로-callstack에서-제거된다">6. 코드가 종료되면 순차적으로 CallStack에서 제거된다.</h5>
+<br>
+<br>
+<h3 style='color:#01c501'>블록 레벨 스코프는 어떻게 동작하는걸까?</h3>
+<hr>
+<p>블록 레벨 스코프의 경우</p>
+<ul>
+<li>선언적 환경 레코드를 갖는 렉시컬 환경을 새롭게 생성하여 기존의 렉시컬 환경을 대체한다.</li>
+<li>외부 렉시컬 환경에 대한 참조는 이전의 전역 렉시컬 환경을 가리킨다.</li>
+</ul>
+<p>그리고 블록의 코드가 끝나게 되면 다시 이전의 렉시컬 환경을 가리키게 된다.</p>
+<br>
+<br>
+<h3 style='color:#01c501'> 마무리</h3>
+<hr>
+<p>처음에는 너무 복잡했지만 이 내용을 알고나니 스코프 체인의 동작원리, 호이스팅의 원리, 클로저의 동작원리들이 더 명확하게 다가오게 된다.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

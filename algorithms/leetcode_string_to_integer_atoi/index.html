@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [Leetcode] String to Integer (atoi) | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_string_to_integer_atoi/"><meta property="og:title" content="[Leetcode] String to Integer (atoi)" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘 풀어본 알고리즘 문제를 기록합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_string_to_integer_atoi/" /><meta property="og:image" content="https://cocoball02.github.io/images/leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-02-04T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-02-04T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[Leetcode] String to Integer (atoi)">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘 풀어본 알고리즘 문제를 기록합니다."><meta itemprop="datePublished" content="2021-02-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="302"><meta itemprop="image" content="https://cocoball02.github.io/images/leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/leetcode.png"/>
+
+<meta name="twitter:title" content="[Leetcode] String to Integer (atoi)"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘 풀어본 알고리즘 문제를 기록합니다."/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Leetcode] String to Integer (atoi)</h2>
+
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘 풀어본 알고리즘 문제를 기록합니다.</p>
+<h3 id="문제">문제</h3>
+<blockquote>
+<p>Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++&rsquo;s atoi function).
+<br>
+The algorithm for myAtoi(string s) is as follows:</p>
+</blockquote>
+<h3 id="제한조건">제한조건</h3>
+<blockquote>
+<ol>
+<li>Read in and ignore any leading whitespace.</li>
+<li>Check if the next character (if not already at the end of the string) is &lsquo;-&rsquo; or &lsquo;+&rsquo;. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.</li>
+<li>Read in next the characters until the next non-digit charcter or the end of the input is reached. The rest of the string is ignored.</li>
+<li>Convert these digits into an integer (i.e. &ldquo;123&rdquo; -&gt; 123, &ldquo;0032&rdquo; -&gt; 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).</li>
+<li>If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1.</li>
+<li>Return the integer as the final result.</li>
+</ol>
+</blockquote>
+<h3 id="note">Note:</h3>
+<blockquote>
+<p>Only the space character ' ' is considered a whitespace character.
+<br>
+Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.</p>
+</blockquote>
+<h3 id="나의-풀이"><strong>나의 풀이</strong></h3>
+<pre><code class="language-js">let checkRange = num =&gt; {
+  let max = Math.pow(2, 31) - 1;
+  let min = Math.pow(-2, 31);
+  if (num &gt; max) {
+    return max;
+  }
+  if (num &lt; min) {
+    return min;
+  }
+  return num;
+};
+
+var myAtoi = function (s) {
+  let result = s.split(' ').filter(el =&gt; el !== '')[0];
+
+  if (isNaN(parseInt(filteredString))) {
+    return 0;
+  }
+
+  return checkRange(parseInt(result));
+};
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

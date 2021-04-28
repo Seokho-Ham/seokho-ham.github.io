@@ -10,10 +10,10 @@
     <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[자료구조] Stack &amp; Queue</title>
-      <link>https://cocoball02.github.io/post/datastructure_stack_queue/</link>
+      <link>https://cocoball02.github.io/dev/datastructure_stack_queue/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/datastructure_stack_queue/</guid>
+      <guid>https://cocoball02.github.io/dev/datastructure_stack_queue/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 Stack &amp;amp; Queue에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>

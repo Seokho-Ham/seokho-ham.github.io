@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [Leetcode] Add Two Numbers | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_add_two_numbers/"><meta property="og:title" content="[Leetcode] Add Two Numbers" />
+<meta property="og:description" content="Leetcode의 Linked List 관련 문제를 풀이한 글입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_add_two_numbers/" /><meta property="og:image" content="https://cocoball02.github.io/images/leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-03-31T12:54:43&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-31T12:54:43&#43;09:00" />
+
+<meta itemprop="name" content="[Leetcode] Add Two Numbers">
+<meta itemprop="description" content="Leetcode의 Linked List 관련 문제를 풀이한 글입니다."><meta itemprop="datePublished" content="2021-03-31T12:54:43&#43;09:00" />
+<meta itemprop="dateModified" content="2021-03-31T12:54:43&#43;09:00" />
+<meta itemprop="wordCount" content="229"><meta itemprop="image" content="https://cocoball02.github.io/images/leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/leetcode.png"/>
+
+<meta name="twitter:title" content="[Leetcode] Add Two Numbers"/>
+<meta name="twitter:description" content="Leetcode의 Linked List 관련 문제를 풀이한 글입니다."/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Leetcode] Add Two Numbers</h2>
+
+                        <div class="content">
+                            <p>Leetcode의 Linked List 관련 문제를 풀이한 글입니다.</p>
+<h3 id="문제">문제</h3>
+<blockquote>
+<p>2개의 양수의 값이 담겨있는 linked list가 주어집니다. 해당 리스트는 값이 역순으로 담겨있습니다.<br>
+2개의 리스트의 값을 더한 값을 새로운 리스트에 역순으로 담아 결과로 반환해야합니다.<br>
+아래 예시가 있습니다.</p>
+</blockquote>
+<pre><code class="language-js">l1 = [2, 4, 3];
+l2 = [5, 6, 4];
+//342 + 465= 807
+output = [7, 0, 8];
+</code></pre>
+<h3 id="나의-풀이">나의 풀이</h3>
+<ol>
+<li>결과값으로 사용할 새로운 list node를 result라는 변수에 담았습니다.</li>
+</ol>
+<ul>
+<li>cur : 현재 가리키는 list node</li>
+<li>num1 : 더하기를 한 후 10을 넘어가면 10의자리 값을 저장하는 변수</li>
+</ul>
+<ol start="2">
+<li>while문을 사용해 list의 next값이 존재하지 않을때까지 반복작업을 하도록 했습니다.</li>
+<li>각 value 값을 더한 결과를 sum이라는 변수에 담습니다. 이때 Math.floor 함수를 사용해 정수값만 할당했습니다.
+이후 sum값이 10을 넘어갈경우, 1의 자리는 현재 노드의 value값으로 저장하고 10의 자리는 num1변수에 저장합니다.</li>
+<li>주어진 리스트들에서 다음 리스트 노드가 존재할 경우에만 cur.next값에 새로운 리스트 노드를 생성했습니다.</li>
+</ol>
+<pre><code class="language-js">var addTwoNumbers = function (l1, l2) {
+  //(1)
+  let result = new ListNode();
+  let cur = result;
+  let num1 = 0;
+
+  //(2)
+  while (l1 || l2 || num1) {
+    //(3)
+    let sum = Math.floor((l1 ? l1.val : 0) + (l2 ? l2.val : 0) + num1);
+    cur.val = sum &gt;= 10 ? sum % 10 : sum;
+    num1 = sum &gt;= 10 ? sum / 10 : 0;
+    //(4)
+    if ((l1 &amp;&amp; l1.next) || (l2 &amp;&amp; l2.next) || num1) cur.next = new ListNode();
+    cur = cur.next;
+    if (l1) l1 = l1.next;
+    if (l2) l2 = l2.next;
+  }
+  return result;
+};
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

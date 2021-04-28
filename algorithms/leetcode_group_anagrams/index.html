@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [Leetcode] Group Anagrams | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_group_anagrams/"><meta property="og:title" content="[Leetcode] Group Anagrams" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_group_anagrams/" /><meta property="og:image" content="https://cocoball02.github.io/images/leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2020-12-14T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-12-14T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[Leetcode] Group Anagrams">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다."><meta itemprop="datePublished" content="2020-12-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-12-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="206"><meta itemprop="image" content="https://cocoball02.github.io/images/leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode,Javascript," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/leetcode.png"/>
+
+<meta name="twitter:title" content="[Leetcode] Group Anagrams"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다."/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Leetcode] Group Anagrams</h2>
+
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다.</p>
+<h4 id="문제">문제</h4>
+<blockquote>
+<p>Given an array of strings strs, group the anagrams together. You can return the answer in any order.<br>
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
+</blockquote>
+<h4 id="example">example</h4>
+<pre><code class="language-js">// Example 1:
+Input: strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+Output: [['bat'], ['nat', 'tan'], ['ate', 'eat', 'tea']];
+
+// Example 2:
+Input: strs = [''];
+Output: [['']];
+
+// Example 3:
+Input: strs = ['a'];
+Output: [['a']];
+</code></pre>
+<h4 id="나의-풀이">나의 풀이</h4>
+<pre><code class="language-js">var groupAnagrams = function (strs) {
+  const obj = {};
+  const result = [];
+  for (let i = 0; i &lt; strs.length; i++) {
+    let word = strs[i].split('').sort().join('');
+    if (!obj[word]) {
+      obj[word] = new Array(strs[i]);
+    } else {
+      obj[word].push(strs[i]);
+    }
+  }
+  for (let i in obj) {
+    result.push(obj[i]);
+  }
+  return result;
+};
+</code></pre>
+<ol>
+<li>빈 객체와 배열을 만들었다.</li>
+<li>strs의 길이만큼 반복문을 돌렸고 word라는 변수에 각 단어의 알파벳을 정렬해서 저장했다.</li>
+<li>obj에 word라는 키가 있는지 확인</li>
+</ol>
+<ul>
+<li>있을 경우 : 순서만 다른 동일한 단어이기 때문에 해당 키의 배열에 push.</li>
+<li>없을 경우 : 새로운 키를 만들고 값으로 현재 단어를 담은 배열을 넣음.</li>
+</ul>
+<ol start="4">
+<li>for in 문을 통해 result라는 배열에 객체가 가진 각 배열을 담아서 리턴.</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [Javascript] 함수는 일급객체라는데, 일급객체란? | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.37ab3f61b95417873748.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/dev/javascript_first_class_object/"><meta property="og:title" content="[Javascript] 함수는 일급객체라는데, 일급객체란?" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/dev/javascript_first_class_object/" /><meta property="og:image" content="https://cocoball02.github.io/images/javascript-cover.png" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-03-03T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-03T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[Javascript] 함수는 일급객체라는데, 일급객체란?">
+<meta itemprop="description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.
+"><meta itemprop="datePublished" content="2021-03-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="305"><meta itemprop="image" content="https://cocoball02.github.io/images/javascript-cover.png">
+<meta itemprop="keywords" content="Javascript,모던 자바스크립트 DeepDive," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/javascript-cover.png"/>
+
+<meta name="twitter:title" content="[Javascript] 함수는 일급객체라는데, 일급객체란?"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.
+"/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#01c501 !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Javascript] 함수는 일급객체라는데, 일급객체란?</h2>
+
+                        <div class="content">
+                            <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.</p>
+<blockquote>
+<p>아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.</p>
+</blockquote>
+<h3 id="1-일급-객체">1. 일급 객체</h3>
+<hr>
+<ul>
+<li>아래는 일급 객체의 조건이다.</li>
+<li>함수는 객체와 다르게 호출이 가능하며 함수 고유의 프로퍼티를 가지고 있다.</li>
+</ul>
+<ol>
+<li>
+<p>무명의 리터럴로 생성이 가능하다. (런타임에 생성 가능)</p>
+</li>
+<li>
+<p>변수나 자료구조(객체, 배열 등)에 저장할 수 있다.</p>
+<pre><code class="language-jsx">//1,2번 모두 해당.
+//이렇게 함수를 생성할 경우 런타임 이전에 increase라는 변수가 선언이 되고
+//런타임 시 함수가 생성 및 할당이 된다.
+const increase = function (num) {
+  return ++num;
+};
+const obj = { increase };
+</code></pre>
+</li>
+<li>
+<p>함수의 매개변수에 전달할 수 있다.</p>
+<pre><code class="language-jsx">const makeCounter = function (func) {
+  let num = 0;
+  num = func(num);
+  return num;
+};
+</code></pre>
+</li>
+<li>
+<p>함수의 반환값으로 사용할 수 있다.</p>
+<pre><code class="language-jsx">const makeCounter = function (func) {
+  let num = 0;
+  return function () {
+    num = func(num);
+    return num;
+  };
+};
+let increaser = makeCounter(obj.increase);
+console.log(increaser());
+</code></pre>
+</li>
+</ol>
+<h3 id="2-함수-객체의-프로퍼티">2. 함수 객체의 프로퍼티</h3>
+<hr>
+<p><strong>데이터 프로퍼티</strong></p>
+<ol>
+<li>
+<p>length : 지정된 매개변수의 개수를 나타낸다.(arguments.length는 들어온 인자의 개수! 차이를 알아둘것!)</p>
+</li>
+<li>
+<p>name : 함수의 이름을 나타낸다.</p>
+<ul>
+<li>함수의 이름이 없을 경우 - ES5 : 빈 문자열 / ES6 : 함수를 가리키는 식별자를 값으로 가짐</li>
+</ul>
+</li>
+<li>
+<p>arguments</p>
+<ul>
+<li>매개변수로 받은 값들의 정보를 가진 arguments 객체 ⇒ 매개변수의 개수를 확정할 수 없는 <strong>가변 인자 함수</strong>를 생성할 때 유용하다.</li>
+<li>arguments객체가 가진 callee는 호출한 함수 자신을 가리킨다.</li>
+<li><strong>유사 배열 객체</strong>이다. ⇒ <strong>length 프로퍼티를 가지며 for 문으로 순회할 수 있는 객체</strong></li>
+<li>ES6부터는 Rest 파라미터를 도입!! ⇒ 배열 메서드를 바인딩 없이 사용할 수 있게 됨.</li>
+</ul>
+<pre><code class="language-jsx">const func1 = function () {
+  console.log(arguments);
+};
+
+//Rest Parameter =&gt;
+const func1 = function (...args) {
+  args.forEach(el =&gt; console.log(el));
+};
+</code></pre>
+</li>
+<li>
+<p>caller</p>
+<ul>
+<li>자신을 호출한 함수를 가리킨다.</li>
+</ul>
+<pre><code class="language-jsx">function func1(func) {
+  return func();
+}
+function func2() {
+  return func2.caller;
+}
+console.log(func1(func2)); //function func1(func){...}
+console.log(func2()); //null
+</code></pre>
+</li>
+<li>
+<p>prototype : 생성자 함수로 호출할 수 있는 함수 객체만 가지고 있는 속성.</p>
+<ul>
+<li>함수가 생성하게 될 인스턴스의 프로토타입 객체를 가리킨다.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Object.prototype 객체의 프로퍼티를 상속받음</strong></p>
+<ul>
+<li><strong>proto</strong> : [[Prototype]] 내부 슬롯이 가리키는 프로토타입 객체에 접근하기 위한 접근자 프로퍼티.</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.d608eadfe5ac0688902e.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

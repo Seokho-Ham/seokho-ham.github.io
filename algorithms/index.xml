@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>코코볼의 개발 블로그</title>
+    <link>https://cocoball02.github.io/algorithms/</link>
+    <description>Recent content on 코코볼의 개발 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2021 Cocoball</copyright>
+    <lastBuildDate>Wed, 31 Mar 2021 12:54:43 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Leetcode] Add Two Numbers</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_add_two_numbers/</link>
+      <pubDate>Wed, 31 Mar 2021 12:54:43 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_add_two_numbers/</guid>
+      <description>&lt;p&gt;Leetcode의 Linked List 관련 문제를 풀이한 글입니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Shuffle an Array</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_shuffle_an_array/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_shuffle_an_array/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Shuffle an Array를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] House Robber</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_house_robber/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_house_robber/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 House Robber를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Dynamic Programming</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_dynamic_programming_3q/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_dynamic_programming_3q/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+Dynamic Programming 관련 3문제를 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] First Bad Version</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_first_bad_version/</link>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_first_bad_version/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Merge Sorted Array</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_merge_sorted_array/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_merge_sorted_array/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Merge Sorted Array를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Reverse Linked List</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_reverse_linked_list/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_reverse_linked_list/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Reverse Linked List를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] Count and Say</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_count_and_say/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_count_and_say/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Implement strStr()</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_implement_strstr/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_implement_strstr/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Implement strStr()를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] String to Integer (atoi)</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_string_to_integer_atoi/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_string_to_integer_atoi/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Reverse Integer</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_reverse_integer/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_reverse_integer/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Reverse Integer를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] 스킬트리</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_skill_tree/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_skill_tree/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스 Level2의 &amp;lsquo;스킬트리&amp;rsquo; 를 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] 프린터</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_printer/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_printer/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스 Level2의 &amp;lsquo;프린터&amp;rsquo; 를 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] 다리를 지나는 트럭</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EC%A7%80%EB%82%98%EB%8A%94_%ED%8A%B8%EB%9F%AD/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EC%A7%80%EB%82%98%EB%8A%94_%ED%8A%B8%EB%9F%AD/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스 Level2의 &amp;lsquo;다리를 지나는 트럭&amp;rsquo; 을 풀어봅니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Group Anagrams</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_group_anagrams/</link>
+      <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_group_anagrams/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] Set Matrix Zeroes</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_set_matrix_zeroes/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_set_matrix_zeroes/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode에서 Set Matrix Zeroes를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Leetcode] 3Sum</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_3sum/</link>
+      <pubDate>Tue, 10 Nov 2020 11:01:44 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_3sum/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 Leetcode 3sum 문제를 풀어봤습니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] level1 day3</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_level1_day3/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_level1_day3/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스에서 푼 알고리즘 문제를 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] level1 day2</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_level1_day2/</link>
+      <pubDate>Thu, 29 Oct 2020 13:58:56 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_level1_day2/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br&gt;
+오늘은 프로그래머스에서 푼 문제들을 정리합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스] level1 day1</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_level1_day1/</link>
+      <pubDate>Wed, 28 Oct 2020 12:04:46 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_level1_day1/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;br&gt;
+오늘은 프로그래머스에서 푼 문제들을 정리합니다.
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] Array Part</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_array/</link>
+      <pubDate>Tue, 13 Oct 2020 14:04:19 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_array/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
