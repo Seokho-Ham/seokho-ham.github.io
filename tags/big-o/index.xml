@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big-O on 코코볼의 개발 블로그</title>
+    <link>https://cocoball02.github.io/tags/big-o/</link>
+    <description>Recent content in Big-O on 코코볼의 개발 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2021 Cocoball</copyright>
+    <lastBuildDate>Tue, 11 May 2021 14:04:43 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/big-o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>시간 복잡도(Big-O 표기법)</title>
+      <link>https://cocoball02.github.io/dev/bigo/</link>
+      <pubDate>Tue, 11 May 2021 14:04:43 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/dev/bigo/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+&lt;br/&gt;
+오늘은 &lt;strong&gt;시간 복잡도&lt;/strong&gt;에 대해 학습한 내용을 정리합니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
