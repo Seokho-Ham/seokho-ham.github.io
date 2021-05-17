@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Wed, 31 Mar 2021 12:54:43 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 May 2021 15:35:57 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode_Remove Duplicates from Sorted Array</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_remove_duplicates_from_sorted_array/</link>
+      <pubDate>Mon, 17 May 2021 15:35:57 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_remove_duplicates_from_sorted_array/</guid>
+      <description>&lt;br/&gt;
+&lt;p&gt;Leetcode의 Array Easy 문제를 풀이한 글입니다.&lt;/p&gt;
+&lt;br/&gt;</description>
+    </item>
+    
     <item>
       <title>[Leetcode] Add Two Numbers</title>
       <link>https://cocoball02.github.io/algorithms/leetcode_add_two_numbers/</link>

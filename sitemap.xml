@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cocoball02.github.io/algorithms/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/leetcode/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/algorithms/leetcode_remove_duplicates_from_sorted_array/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-05-17T15:35:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://cocoball02.github.io/dev/</loc>
     <lastmod>2021-05-11T14:04:43+09:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://cocoball02.github.io/tags/big-o/</loc>
-    <lastmod>2021-05-11T14:04:43+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/</loc>
-    <lastmod>2021-05-11T14:04:43+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/</loc>
     <lastmod>2021-05-11T14:04:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -31,10 +55,6 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</loc>
-    <lastmod>2021-05-11T14:04:43+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/</loc>
     <lastmod>2021-05-11T14:04:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -70,23 +90,7 @@
     <lastmod>2021-04-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/algorithms/</loc>
-    <lastmod>2021-03-31T12:54:43+09:00</lastmod>
-    <priority>0</priority>
-  </url><url>
     <loc>https://cocoball02.github.io/algorithms/leetcode_add_two_numbers/</loc>
-    <lastmod>2021-03-31T12:54:43+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/leetcode/</loc>
-    <lastmod>2021-03-31T12:54:43+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2021-03-31T12:54:43+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
     <lastmod>2021-03-31T12:54:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>

@@ -6,7 +6,7 @@
 
 <title>
   
-    
+     Leetcode_Remove Duplicates from Sorted Array | 
     코코볼의 개발 블로그
   
 </title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
@@ -35,17 +35,28 @@
 
 
 
-<link rel="canonical" href="https://cocoball02.github.io/categories/">
-  <link href="https://cocoball02.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="코코볼의 개발 블로그">
-  <link href="https://cocoball02.github.io/categories/index.xml" rel="feed" type="application/rss+xml" title="코코볼의 개발 블로그"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="Frontend Developer" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cocoball02.github.io/categories/" />
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_remove_duplicates_from_sorted_array/"><meta property="og:title" content="Leetcode_Remove Duplicates from Sorted Array" />
+<meta property="og:description" content="
+Leetcode의 Array Easy 문제를 풀이한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_remove_duplicates_from_sorted_array/" /><meta property="og:image" content="https://cocoball02.github.io/images/leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-05-17T15:35:57&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-17T15:35:57&#43;09:00" />
 
-<meta itemprop="name" content="Categories">
-<meta itemprop="description" content="Frontend Developer"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Frontend Developer"/>
+<meta itemprop="name" content="Leetcode_Remove Duplicates from Sorted Array">
+<meta itemprop="description" content="
+Leetcode의 Array Easy 문제를 풀이한 글입니다.
+"><meta itemprop="datePublished" content="2021-05-17T15:35:57&#43;09:00" />
+<meta itemprop="dateModified" content="2021-05-17T15:35:57&#43;09:00" />
+<meta itemprop="wordCount" content="156"><meta itemprop="image" content="https://cocoball02.github.io/images/leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/leetcode.png"/>
+
+<meta name="twitter:title" content="Leetcode_Remove Duplicates from Sorted Array"/>
+<meta name="twitter:description" content="
+Leetcode의 Array Easy 문제를 풀이한 글입니다.
+"/>
 
     <style>
         .nav-item.active .nav-link{
@@ -72,7 +83,7 @@
                 
                     <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
                 
-                    <li class="nav-item active"><a class="nav-link" href="/categories/">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
                 
             
             </ul>
@@ -82,86 +93,60 @@
 
 
     
-<main class="list container py-6"><div class="row py-3">
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
         <div class="col">
-            <h3 class="display-4">Categories</h3></div>
-    </div><div class="row row-cols-1 row-cols-lg-3">
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" class="d-block"><div class="card-body">
-            <h4 class="card-title">알고리즘</h4>
-            <p class="card-text text-muted text-uppercase">May 17, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">Leetcode_Remove Duplicates from Sorted Array</h2>
 
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/" class="d-block"><div class="card-body">
-            <h4 class="card-title">자료구조</h4>
-            <p class="card-text text-muted text-uppercase">May 11, 2021</p>
-            <div class="card-text">
-                
-            </div>
+                        <div class="content">
+                            <br/>
+<p>Leetcode의 Array Easy 문제를 풀이한 글입니다.</p>
+<br/>
+<h3 id="문제">문제</h3>
+<hr>
+<ul>
+<li>인자로 들어온 배열에서 동일한 값은 한번만 나오도록 해야한다.</li>
+<li>추가적인 배열을 생성하지 않고 기존배열의 값을 대체해야한다.</li>
+<li>return 값으로는 중복되지 않는 배열의 길이.</li>
+<li>배열의 길이 이후 인덱스의 값들은 중복되도 상관없다.</li>
+</ul>
+<br/>
+<h3 id="예시">예시</h3>
+<hr>
+<pre><code class="language-js">Input: nums = [1, 1, 2];
+Output: 2, (nums = [1, 2]);
+//0,1 인덱스 이후의 값은 무엇이 오든 상관없다.
+</code></pre>
+<pre><code class="language-js">Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+Output: 5, (nums = [0, 1, 2, 3, 4]);
+//0,1,2,3,4 인덱스 이후의 값은 무엇이 오든 상관없다.
+</code></pre>
+<br/>
+<h3 id="나의-풀이">나의 풀이</h3>
+<hr>
+<ul>
+<li>처음에는 기존 배열에서 값을 하나씩 삭제해나가는 방식을 생각했다.</li>
+<li>그렇게 될 경우 2중 for문을 돌려야해서 배열이 길어질수록 성능이 떨어질것이라고 생각되어 포기했다.</li>
+<li>문제에서 리턴값 이후의 인덱스에는 어떤값이 와도 상관없다는 조건을 보고 값을 차라리 대체하는게 낫겠다는 생각을 가지고 코드를 작성했다.</li>
+</ul>
+<pre><code class="language-js">var removeDuplicates = function (nums) {
+  let point = 0;
+  for (let i = 1; i &lt; nums.length; i++) {
+    if (nums[point] !== nums[i]) {
+      nums[++point] = nums[i];
+    }
+  }
+  return ++point;
+};
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/javascript/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Javascript</h4>
-            <p class="card-text text-muted text-uppercase">April 23, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/redux/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Redux</h4>
-            <p class="card-text text-muted text-uppercase">February 9, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/react/" class="d-block"><div class="card-body">
-            <h4 class="card-title">React</h4>
-            <p class="card-text text-muted text-uppercase">February 5, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
     </div>
 </main>
 
