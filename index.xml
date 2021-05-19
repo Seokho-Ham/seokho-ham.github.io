@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Mon, 17 May 2021 15:35:57 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 May 2021 18:16:44 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>05_19</title>
+      <link>https://cocoball02.github.io/til/05_19/</link>
+      <pubDate>Wed, 19 May 2021 18:16:44 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/til/05_19/</guid>
+      <description>&lt;h3 style=&#39;color:#01c501&#39;&gt;Today I learned&lt;/h3&gt;
+&lt;br&gt;</description>
+    </item>
+    
+    <item>
+      <title>Webpack 학습하기</title>
+      <link>https://cocoball02.github.io/dev/webpack/</link>
+      <pubDate>Wed, 19 May 2021 17:51:52 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/dev/webpack/</guid>
+      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+오늘은 Webpack에 대해 학습한 내용을 정리했습니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>Leetcode_Remove Duplicates from Sorted Array</title>
       <link>https://cocoball02.github.io/algorithms/leetcode_remove_duplicates_from_sorted_array/</link>
