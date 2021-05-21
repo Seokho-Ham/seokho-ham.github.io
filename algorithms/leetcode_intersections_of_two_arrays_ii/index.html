@@ -6,7 +6,7 @@
 
 <title>
   
-    
+     [Leetcode] Intersections of Two Arrays II | 
     코코볼의 개발 블로그
   
 </title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
@@ -35,17 +35,25 @@
 
 
 
-<link rel="canonical" href="https://cocoball02.github.io/categories/">
-  <link href="https://cocoball02.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="코코볼의 개발 블로그">
-  <link href="https://cocoball02.github.io/categories/index.xml" rel="feed" type="application/rss+xml" title="코코볼의 개발 블로그"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="Frontend Developer" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cocoball02.github.io/categories/" />
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/"><meta property="og:title" content="[Leetcode] Intersections of Two Arrays II" />
+<meta property="og:description" content="Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/" /><meta property="og:image" content="https://cocoball02.github.io/images/Leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-05-21T11:39:04&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-21T11:39:04&#43;09:00" />
 
-<meta itemprop="name" content="Categories">
-<meta itemprop="description" content="Frontend Developer"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Frontend Developer"/>
+<meta itemprop="name" content="[Leetcode] Intersections of Two Arrays II">
+<meta itemprop="description" content="Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
+"><meta itemprop="datePublished" content="2021-05-21T11:39:04&#43;09:00" />
+<meta itemprop="dateModified" content="2021-05-21T11:39:04&#43;09:00" />
+<meta itemprop="wordCount" content="226"><meta itemprop="image" content="https://cocoball02.github.io/images/Leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode,Programmers," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/Leetcode.png"/>
+
+<meta name="twitter:title" content="[Leetcode] Intersections of Two Arrays II"/>
+<meta name="twitter:description" content="Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
+"/>
 
     <style>
         .nav-item.active .nav-link{
@@ -72,7 +80,7 @@
                 
                     <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
                 
-                    <li class="nav-item active"><a class="nav-link" href="/categories/">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
                 
             
             </ul>
@@ -82,116 +90,90 @@
 
 
     
-<main class="list container py-6"><div class="row py-3">
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
         <div class="col">
-            <h3 class="display-4">Categories</h3></div>
-    </div><div class="row row-cols-1 row-cols-lg-3">
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" class="d-block"><div class="card-body">
-            <h4 class="card-title">알고리즘</h4>
-            <p class="card-text text-muted text-uppercase">May 21, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Leetcode] Intersections of Two Arrays II</h2>
 
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/til/" class="d-block"><div class="card-body">
-            <h4 class="card-title">TIL</h4>
-            <p class="card-text text-muted text-uppercase">May 20, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
+                        <div class="content">
+                            <p>Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
+<br></p>
+<h3 id="문제">문제</h3>
+<hr>
+<ul>
+<li>2개의 배열을 인자로 받아 중복된 값들을 중복된 개수만큼 새로운 배열에 담아서 반환한다.</li>
+</ul>
+<br>
+<h3 id="예시">예시</h3>
+<hr>
+<p>Example 1:</p>
+<pre><code>Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2,2]
+</code></pre>
+<p>Example 2:</p>
+<pre><code>Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [4,9]
+Explanation: [9,4] is also accepted.
+</code></pre>
+<br>
+<h3 id="나의-풀이">나의 풀이</h3>
+<hr>
+<p>2가지 방식을 사용해서 풀었다.</p>
+<h6 id="1-2개의-배열을-복사하여-더-긴-배열을-반복문을-돌렸다">1. 2개의 배열을 복사하여 더 긴 배열을 반복문을 돌렸다.</h6>
+<ul>
+<li>다른 한쪽의 배열에서 해당 값을 포함하고 있으면 결과값 배열에 push후 기존의 값은 delete를 통해 삭제했다.</li>
+</ul>
+<pre><code class="language-js">var intersect = function (nums1, nums2) {
+  let result = [];
+  let n1 = nums1.slice();
+  let n2 = nums2.slice();
+  if (nums1.length &gt; nums2.length) {
+    n1 = nums2.slice();
+    n2 = nums1.slice();
+  }
 
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/webpack/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Webpack</h4>
-            <p class="card-text text-muted text-uppercase">May 19, 2021</p>
-            <div class="card-text">
-                
-            </div>
+  for (let i = 0; i &lt; n1.length; i++) {
+    if (n2.includes(n1[i])) {
+      result.push(n1[i]);
+      delete n2[n2.indexOf(n1[i])];
+    }
+  }
+  return result;
+};
+</code></pre>
+<h6 id="2-인자로-들어온-배열을-sort메서드로-정렬한-후-포인터를-사용하였다">2. 인자로 들어온 배열을 sort메서드로 정렬한 후 포인터를 사용하였다.</h6>
+<ul>
+<li>2개의 point를 두고 값이 같으면 결과값에 push</li>
+<li>값을 비교하여 작은쪽의 point를 하나씩 늘려가며 비교했다.</li>
+</ul>
+<pre><code class="language-js">var intersect = function (nums1, nums2) {
+  nums1 = nums1.sort((a, b) =&gt; a - b);
+  nums2 = nums2.sort((a, b) =&gt; a - b);
+  const result = [];
+  let point1 = 0,
+    point2 = 0;
+  while (point1 &lt; nums1.length &amp;&amp; point2 &lt; nums2.length) {
+    if (nums1[point1] === nums2[point2]) {
+      result.push(nums1[point1]);
+      point1++;
+      point2++;
+    } else if (nums1[point1] &gt; nums2[point2]) {
+      point2++;
+    } else if (nums1[point1] &lt; nums2[point2]) {
+      point1++;
+    }
+  }
+  return result;
+};
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/" class="d-block"><div class="card-body">
-            <h4 class="card-title">자료구조</h4>
-            <p class="card-text text-muted text-uppercase">May 11, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/javascript/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Javascript</h4>
-            <p class="card-text text-muted text-uppercase">April 23, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/redux/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Redux</h4>
-            <p class="card-text text-muted text-uppercase">February 9, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/react/" class="d-block"><div class="card-body">
-            <h4 class="card-title">React</h4>
-            <p class="card-text text-muted text-uppercase">February 5, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
     </div>
 </main>
 

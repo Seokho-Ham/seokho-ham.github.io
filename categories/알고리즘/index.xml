@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Thu, 20 May 2021 12:45:57 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 11:39:04 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Leetcode] Intersections of Two Arrays II</title>
+      <link>https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</link>
+      <pubDate>Fri, 21 May 2021 11:39:04 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</guid>
+      <description>&lt;p&gt;Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>[Leetcode] Best Time to Buy and Sell Stock II</title>
       <link>https://cocoball02.github.io/algorithms/leetcode_best_time_to_buy_and_sell_stock_ii/</link>
@@ -245,16 +255,6 @@ Dynamic Programming 관련 3문제를 풀어봅니다.&lt;/p&gt;</description>
 오늘은 프로그래머스에서 푼 문제들을 정리합니다.
 &lt;br&gt;
 &lt;br&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[LeetCode] Array Part</title>
-      <link>https://cocoball02.github.io/algorithms/leetcode_array/</link>
-      <pubDate>Tue, 13 Oct 2020 14:04:19 +0900</pubDate>
-      
-      <guid>https://cocoball02.github.io/algorithms/leetcode_array/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
     </item>
     
   </channel>
