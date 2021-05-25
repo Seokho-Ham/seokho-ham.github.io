@@ -10,10 +10,10 @@
     <lastBuildDate>Fri, 21 May 2021 11:39:04 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/programmers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Leetcode] Intersections of Two Arrays II</title>
-      <link>https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</link>
+      <link>https://cocoball02.github.io/post/leetcode_intersections_of_two_arrays_ii/</link>
       <pubDate>Fri, 21 May 2021 11:39:04 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</guid>
+      <guid>https://cocoball02.github.io/post/leetcode_intersections_of_two_arrays_ii/</guid>
       <description>&lt;p&gt;Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
 &lt;br&gt;&lt;/p&gt;</description>
     </item>

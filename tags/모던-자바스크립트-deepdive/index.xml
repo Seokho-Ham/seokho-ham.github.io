@@ -10,10 +10,10 @@
     <lastBuildDate>Fri, 23 Apr 2021 13:07:36 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Javascript] 클로저(Closure)</title>
-      <link>https://cocoball02.github.io/dev/closure/</link>
+      <link>https://cocoball02.github.io/post/closure/</link>
       <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/closure/</guid>
+      <guid>https://cocoball02.github.io/post/closure/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 24장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>[Javascript] 실행 컨텍스트에 대해 알아보자!</title>
-      <link>https://cocoball02.github.io/dev/javascript_execution_context/</link>
+      <link>https://cocoball02.github.io/post/javascript_execution_context/</link>
       <pubDate>Wed, 21 Apr 2021 11:34:34 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/javascript_execution_context/</guid>
+      <guid>https://cocoball02.github.io/post/javascript_execution_context/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 23장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>[Javascript] this</title>
-      <link>https://cocoball02.github.io/dev/javascript-this/</link>
+      <link>https://cocoball02.github.io/post/javascript-this/</link>
       <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/javascript-this/</guid>
+      <guid>https://cocoball02.github.io/post/javascript-this/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -48,10 +48,10 @@
     
     <item>
       <title>[Javascript] 프로토타입(Prototype)</title>
-      <link>https://cocoball02.github.io/dev/javascript_prototype/</link>
+      <link>https://cocoball02.github.io/post/javascript_prototype/</link>
       <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/javascript_prototype/</guid>
+      <guid>https://cocoball02.github.io/post/javascript_prototype/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 19장 프토토타입을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>[Javascript] 함수는 일급객체라는데, 일급객체란?</title>
-      <link>https://cocoball02.github.io/dev/javascript_first_class_object/</link>
+      <link>https://cocoball02.github.io/post/javascript_first_class_object/</link>
       <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/javascript_first_class_object/</guid>
+      <guid>https://cocoball02.github.io/post/javascript_first_class_object/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>[Javascript] 생성자 함수를 사용해 생성한 객체는 어떻게 다를까?</title>
-      <link>https://cocoball02.github.io/dev/javascript_difference_of_making_instance_by_newfunc/</link>
+      <link>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</link>
       <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/javascript_difference_of_making_instance_by_newfunc/</guid>
+      <guid>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 17장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -84,10 +84,10 @@
     
     <item>
       <title>[Javascript] 스코프(Scope)</title>
-      <link>https://cocoball02.github.io/dev/javascript_scope/</link>
+      <link>https://cocoball02.github.io/post/javascript_scope/</link>
       <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/javascript_scope/</guid>
+      <guid>https://cocoball02.github.io/post/javascript_scope/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 13장 스코프를 학습하며 정리한 내용입니다.&lt;/p&gt;

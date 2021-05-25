@@ -10,10 +10,10 @@
     <lastBuildDate>Wed, 19 May 2021 17:51:52 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Webpack 학습하기</title>
-      <link>https://cocoball02.github.io/dev/webpack/</link>
+      <link>https://cocoball02.github.io/post/webpack/</link>
       <pubDate>Wed, 19 May 2021 17:51:52 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/webpack/</guid>
+      <guid>https://cocoball02.github.io/post/webpack/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 오늘은 Webpack에 대해 학습한 내용을 정리했습니다.&lt;/p&gt;
 &lt;br&gt;</description>
@@ -21,10 +21,10 @@
     
     <item>
       <title>Redux에 대해 알아보자!</title>
-      <link>https://cocoball02.github.io/dev/redux/</link>
+      <link>https://cocoball02.github.io/post/redux/</link>
       <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/redux/</guid>
+      <guid>https://cocoball02.github.io/post/redux/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 Redux에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -32,10 +32,10 @@
     
     <item>
       <title>React Hooks를 알아보자!</title>
-      <link>https://cocoball02.github.io/dev/react_hooks/</link>
+      <link>https://cocoball02.github.io/post/react_hooks/</link>
       <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/react_hooks/</guid>
+      <guid>https://cocoball02.github.io/post/react_hooks/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 React에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -43,20 +43,20 @@
     
     <item>
       <title>React에 대해 알아보자 - 2편</title>
-      <link>https://cocoball02.github.io/dev/react_summary_2/</link>
+      <link>https://cocoball02.github.io/post/react_summary_2/</link>
       <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/react_summary_2/</guid>
+      <guid>https://cocoball02.github.io/post/react_summary_2/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;br&gt;
 오늘은 Inflearn에 있는 김민준 님의 &amp;ldquo;누구든지 하는 React&amp;rdquo; 강의를 통해 학습한 부분을 정리합니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>React에 대해 알아보자 - 1편</title>
-      <link>https://cocoball02.github.io/dev/react_summary_1/</link>
+      <link>https://cocoball02.github.io/post/react_summary_1/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/dev/react_summary_1/</guid>
+      <guid>https://cocoball02.github.io/post/react_summary_1/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 React에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
