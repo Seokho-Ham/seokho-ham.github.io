@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Fri, 21 May 2021 11:39:04 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 17:00:53 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5월 22일~24일 TIL</title>
+      <link>https://cocoball02.github.io/post/05_22_24/</link>
+      <pubDate>Wed, 26 May 2021 17:00:53 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/05_22_24/</guid>
+      <description>&lt;h3 style=&#39;color:#01c501&#39;&gt;Today I learned&lt;/h3&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>[Leetcode] Intersections of Two Arrays II</title>
       <link>https://cocoball02.github.io/post/leetcode_intersections_of_two_arrays_ii/</link>
@@ -16,6 +26,16 @@
       <guid>https://cocoball02.github.io/post/leetcode_intersections_of_two_arrays_ii/</guid>
       <description>&lt;p&gt;Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
 &lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>5월 21일 TIL</title>
+      <link>https://cocoball02.github.io/post/05_21/</link>
+      <pubDate>Fri, 21 May 2021 10:37:38 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/05_21/</guid>
+      <description>&lt;h3 style=&#39;color:#01c501&#39;&gt;Today I learned&lt;/h3&gt;
+&lt;br&gt;</description>
     </item>
     
     <item>
