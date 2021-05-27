@@ -96,35 +96,29 @@
     
     <item>
       <title>[Leetcode] Shuffle an Array</title>
-      <link>https://cocoball02.github.io/post/leetcode_shuffle_an_array/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_shuffle_an_array/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_shuffle_an_array/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Shuffle an Array를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_shuffle_an_array/</guid>
+      <description>&lt;p&gt;Leetcode의 Shuffle an Array를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] House Robber</title>
-      <link>https://cocoball02.github.io/post/leetcode_house_robber/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_house_robber/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_house_robber/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 House Robber를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_house_robber/</guid>
+      <description>&lt;p&gt;Leetcode의 House Robber를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Dynamic Programming</title>
-      <link>https://cocoball02.github.io/post/leetcode_dynamic_programming_3q/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_dynamic_programming_3q/</link>
       <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_dynamic_programming_3q/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-Dynamic Programming 관련 3문제를 풀어봅니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_dynamic_programming_3q/</guid>
+      <description>&lt;p&gt;Leetcode의 Easy 파트에서 Dynamic Programming 관련 3문제를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -140,67 +134,56 @@ Dynamic Programming 관련 3문제를 풀어봅니다.&lt;/p&gt;</description>
     
     <item>
       <title>[Leetcode] First Bad Version</title>
-      <link>https://cocoball02.github.io/post/leetcode_first_bad_version/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_first_bad_version/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_first_bad_version/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_first_bad_version/</guid>
+      <description>&lt;p&gt;Leetcode의 First Bad Version을 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Merge Sorted Array</title>
-      <link>https://cocoball02.github.io/post/leetcode_merge_sorted_array/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_merge_sorted_array/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_merge_sorted_array/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Merge Sorted Array를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_merge_sorted_array/</guid>
+      <description>&lt;p&gt;Leetcode의 Merge Sorted Array를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Reverse Linked List</title>
-      <link>https://cocoball02.github.io/post/leetcode_reverse_linked_list/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_reverse_linked_list/</link>
       <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_reverse_linked_list/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Reverse Linked List를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_reverse_linked_list/</guid>
+      <description>&lt;p&gt;Leetcode의 Reverse Linked List를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[LeetCode] Count and Say</title>
-      <link>https://cocoball02.github.io/post/leetcode_count_and_say/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_count_and_say/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_count_and_say/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘 풀어본 알고리즘 문제를 기록합니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_count_and_say/</guid>
+      <description>&lt;p&gt;Leetcode의 Count and Say를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Implement strStr()</title>
-      <link>https://cocoball02.github.io/post/leetcode_implement_strstr/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_implement_strstr/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_implement_strstr/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Implement strStr()를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_implement_strstr/</guid>
+      <description>&lt;p&gt;Leetcode의 Implement strStr()를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Reverse Integer</title>
-      <link>https://cocoball02.github.io/post/leetcode_reverse_integer/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_reverse_integer/</link>
       <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_reverse_integer/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Reverse Integer를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_reverse_integer/</guid>
+      <description>&lt;p&gt;Leetcode의 Reverse Integer를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -216,24 +199,20 @@ Dynamic Programming 관련 3문제를 풀어봅니다.&lt;/p&gt;</description>
     
     <item>
       <title>[Leetcode] Group Anagrams</title>
-      <link>https://cocoball02.github.io/post/leetcode_group_anagrams/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_group_anagrams/</link>
       <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_group_anagrams/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Group Anagrams를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_group_anagrams/</guid>
+      <description>&lt;p&gt;Leetcode의 Group Anagrams를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Set Matrix Zeroes</title>
-      <link>https://cocoball02.github.io/post/leetcode_set_matrix_zeroes/</link>
+      <link>https://cocoball02.github.io/algorithms/leetcode_set_matrix_zeroes/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/leetcode_set_matrix_zeroes/</guid>
-      <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-&lt;br&gt;
-오늘은 Leetcode에서 Set Matrix Zeroes를 풀어봤습니다.&lt;/p&gt;</description>
+      <guid>https://cocoball02.github.io/algorithms/leetcode_set_matrix_zeroes/</guid>
+      <description>&lt;p&gt;Leetcode의 Set Matrix Zeroes를 풀이한 글입니다.&lt;/p&gt;</description>
     </item>
     
     <item>

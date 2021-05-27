@@ -6,7 +6,7 @@
 
 <title>
   
-     Big-O | 
+     [Leetcode] Plus One | 
     코코볼의 개발 블로그
   
 </title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
@@ -35,17 +35,25 @@
 
 
 
-<link rel="canonical" href="https://cocoball02.github.io/tags/big-o/">
-  <link href="https://cocoball02.github.io/tags/big-o/index.xml" rel="alternate" type="application/rss+xml" title="코코볼의 개발 블로그">
-  <link href="https://cocoball02.github.io/tags/big-o/index.xml" rel="feed" type="application/rss+xml" title="코코볼의 개발 블로그"><meta property="og:title" content="Big-O" />
-<meta property="og:description" content="Frontend Developer" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cocoball02.github.io/tags/big-o/" />
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_plus_one/"><meta property="og:title" content="[Leetcode] Plus One" />
+<meta property="og:description" content="Leetcode의 Plus One을 풀이한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_plus_one/" /><meta property="og:image" content="https://cocoball02.github.io/images/Leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-05-27T13:43:43&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-27T13:43:43&#43;09:00" />
 
-<meta itemprop="name" content="Big-O">
-<meta itemprop="description" content="Frontend Developer"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Big-O"/>
-<meta name="twitter:description" content="Frontend Developer"/>
+<meta itemprop="name" content="[Leetcode] Plus One">
+<meta itemprop="description" content="Leetcode의 Plus One을 풀이한 글입니다.
+"><meta itemprop="datePublished" content="2021-05-27T13:43:43&#43;09:00" />
+<meta itemprop="dateModified" content="2021-05-27T13:43:43&#43;09:00" />
+<meta itemprop="wordCount" content="143"><meta itemprop="image" content="https://cocoball02.github.io/images/Leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/Leetcode.png"/>
+
+<meta name="twitter:title" content="[Leetcode] Plus One"/>
+<meta name="twitter:description" content="Leetcode의 Plus One을 풀이한 글입니다.
+"/>
 
     <style>
         .nav-item.active .nav-link{
@@ -80,29 +88,60 @@
 
 
     
-<main class="list container py-6"><div class="row py-3">
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
         <div class="col">
-            <h3 class="display-4">Big-O</h3></div>
-    </div><div class="row row-cols-1 row-cols-lg-3">
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/post/bigo/" class="d-block"><img data-src="/images/datastructure_huee2a4deeb8e9dc0320733d6a1fbc4d5f_29473_700x350_fill_q75_box_smart1.jpg" class="card-img-top mx-auto d-block" alt="시간 복잡도(Big-O 표기법)"><div class="card-body">
-            <h4 class="card-title">시간 복잡도(Big-O 표기법)</h4>
-            <p class="card-text text-muted text-uppercase">May 11, 2021</p>
-            <div class="card-text">
-                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
-<br/>
-오늘은 <strong>시간 복잡도</strong>에 대해 학습한 내용을 정리합니다.</p>
-<br>
-            </div>
-        </div>
-    </a>
-</div>
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Leetcode] Plus One</h2>
 
-            </div>
-        
+                        <div class="content">
+                            <p>Leetcode의 Plus One을 풀이한 글입니다.</p>
+<br>
+<h4 id="문제">문제</h4>
+<hr>
+<ul>
+<li>배열로 주어진 숫자에 1을 더해서 반환하는 문제.</li>
+</ul>
+<br>
+<h4 id="예시">예시</h4>
+<hr>
+<pre><code class="language-js">//Ex1
+Input: digits = [1, 2, 3];
+Output: [1, 2, 4];
+//Ex2
+Input: digits = [4, 3, 2, 1];
+Output: [4, 3, 2, 2];
+</code></pre>
+<br>
+<h4 id="나의-풀이-">나의 풀이 :</h4>
+<hr>
+<pre><code class="language-js">var plusOne = function (digits) {
+  for (let i = digits.length - 1; i &gt;= 0; i--) {
+    if (digits[i] !== 9) {
+      digits[i]++;
+      return digits;
+    } else {
+      digits[i] = 0;
+    }
+  }
+  digits.unshift(1);
+  return digits;
+};
+</code></pre>
+<p>처음에는 배열로 주어진 값을 join 함수를 사용해 Number로 바꾸는 방식을 사용했다.
+<br>
+하지만 숫자의 길이가 15자리를 넘어가는 케이스에서는 정확한 값이 안나오길래 검새해보니 Javascript에서는 64비트 부동 소수점 방식으로 저장하기 때문에 정수는 15자리까지 정밀도가 유지된다는것을 발견했다.
+<br><br>
+그래서 for문을 사용해 뒤에서부터 값이 9가 아니면 1을 더하고 digits를 리턴, 아니면 현재 값을 0으로 변경.
+<br>
+unshift 메소드는 for문이 끝까지 돌았을 경우, 모든 숫자가 9였다는 의미이기 때문에 1을 앞에 추가해주도록 사용했다.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
     </div>
 </main>
 
