@@ -6,7 +6,7 @@
 
 <title>
   
-    
+     Leetcode_Two_Sum | 
     코코볼의 개발 블로그
   
 </title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
@@ -35,17 +35,25 @@
 
 
 
-<link rel="canonical" href="https://cocoball02.github.io/categories/">
-  <link href="https://cocoball02.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="코코볼의 개발 블로그">
-  <link href="https://cocoball02.github.io/categories/index.xml" rel="feed" type="application/rss+xml" title="코코볼의 개발 블로그"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="Frontend Developer" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cocoball02.github.io/categories/" />
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_two_sum/"><meta property="og:title" content="Leetcode_Two_Sum" />
+<meta property="og:description" content="Leetcode의 Two Sum을 풀이한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_two_sum/" /><meta property="og:image" content="https://cocoball02.github.io/images/Leetcode.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-05-29T12:44:02&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-29T12:44:02&#43;09:00" />
 
-<meta itemprop="name" content="Categories">
-<meta itemprop="description" content="Frontend Developer"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Frontend Developer"/>
+<meta itemprop="name" content="Leetcode_Two_Sum">
+<meta itemprop="description" content="Leetcode의 Two Sum을 풀이한 글입니다.
+"><meta itemprop="datePublished" content="2021-05-29T12:44:02&#43;09:00" />
+<meta itemprop="dateModified" content="2021-05-29T12:44:02&#43;09:00" />
+<meta itemprop="wordCount" content="155"><meta itemprop="image" content="https://cocoball02.github.io/images/Leetcode.png">
+<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/Leetcode.png"/>
+
+<meta name="twitter:title" content="Leetcode_Two_Sum"/>
+<meta name="twitter:description" content="Leetcode의 Two Sum을 풀이한 글입니다.
+"/>
 
     <style>
         .nav-item.active .nav-link{
@@ -70,7 +78,7 @@
                 
                     <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
                 
-                    <li class="nav-item active"><a class="nav-link" href="/categories/">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
                 
             
             </ul>
@@ -80,116 +88,67 @@
 
 
     
-<main class="list container py-6"><div class="row py-3">
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
         <div class="col">
-            <h3 class="display-4">Categories</h3></div>
-    </div><div class="row row-cols-1 row-cols-lg-3">
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/" class="d-block"><div class="card-body">
-            <h4 class="card-title">자료구조</h4>
-            <p class="card-text text-muted text-uppercase">May 29, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">Leetcode_Two_Sum</h2>
 
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" class="d-block"><div class="card-body">
-            <h4 class="card-title">알고리즘</h4>
-            <p class="card-text text-muted text-uppercase">May 29, 2021</p>
-            <div class="card-text">
-                
-            </div>
+                        <div class="content">
+                            <p>Leetcode의 Two Sum을 풀이한 글입니다.</p>
+<br>
+<h3 id="문제">문제</h3>
+<hr>
+<ul>
+<li>nums라는 배열과 target 이라는 숫자를 인자로 받는다.</li>
+<li>nums에서 2개의 값을 더해서 target값이 되는 elements들의 index값을 담은 배열을 반환해라.</li>
+</ul>
+<br>
+<h3 id="예시">예시</h3>
+<hr>
+<pre><code>//Ex1
+Input: nums = [2, 7, 13, 15], target = 9;
+Output: [0, 1];
+//Ex2
+Input: nums = [3, 2, 4], target = 6;
+Output: [1, 2];
+</code></pre>
+<br>
+<h5 id="나의-풀이-">나의 풀이 :</h5>
+<hr>
+<ul>
+<li>첫번째 방식은 2차원 배열을 사용했다.</li>
+</ul>
+<pre><code class="language-js">var twoSum = function (nums, target) {
+  for (let i = 0; i &lt; nums.length; i++) {
+    for (let j = i + 1; j &lt; nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+};
+</code></pre>
+<ul>
+<li>두번째 방식은 추가 제한사항에 시간복잡도를 O(n^2)이하로 만들어보라는 조건이 있어서 hash의 개념을 사용해서 풀었다.</li>
+</ul>
+<pre><code class="language-js">var twoSum = function (nums, target) {
+  let obj = {};
+  for (let i = 0; i &lt; nums.length; i++) {
+    if (obj[target - nums[i]] !== undefined) {
+      return [obj[target - nums[i]], i];
+    }
+    obj[nums[i]] = i;
+  }
+};
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/til/" class="d-block"><div class="card-body">
-            <h4 class="card-title">TIL</h4>
-            <p class="card-text text-muted text-uppercase">May 26, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/webpack/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Webpack</h4>
-            <p class="card-text text-muted text-uppercase">May 19, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/javascript/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Javascript</h4>
-            <p class="card-text text-muted text-uppercase">April 23, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/redux/" class="d-block"><div class="card-body">
-            <h4 class="card-title">Redux</h4>
-            <p class="card-text text-muted text-uppercase">February 9, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/categories/react/" class="d-block"><div class="card-body">
-            <h4 class="card-title">React</h4>
-            <p class="card-text text-muted text-uppercase">February 5, 2021</p>
-            <div class="card-text">
-                
-            </div>
-        </div>
-    </a>
-</div>
-
-            </div>
-        
     </div>
 </main>
 

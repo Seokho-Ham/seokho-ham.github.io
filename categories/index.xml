@@ -7,11 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Thu, 27 May 2021 13:43:43 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 May 2021 12:45:58 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>자료구조</title>
+      <link>https://cocoball02.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
+      <pubDate>Sat, 29 May 2021 12:45:58 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>알고리즘</title>
       <link>https://cocoball02.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
-      <pubDate>Thu, 27 May 2021 13:43:43 +0900</pubDate>
+      <pubDate>Sat, 29 May 2021 12:44:02 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
       <description></description>
@@ -32,15 +41,6 @@
       <pubDate>Wed, 19 May 2021 17:51:52 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/categories/webpack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>자료구조</title>
-      <link>https://cocoball02.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
-      <pubDate>Tue, 11 May 2021 14:04:43 +0900</pubDate>
-      
-      <guid>https://cocoball02.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
       <description></description>
     </item>
     
