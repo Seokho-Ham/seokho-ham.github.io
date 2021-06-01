@@ -6,7 +6,7 @@
 
 <title>
   
-     [Leetcode] Best Time to Buy and Sell Stock II | 
+     5월 31일 TIL | 
     코코볼의 개발 블로그
   
 </title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
@@ -35,24 +35,24 @@
 
 
 
-<link rel="canonical" href="https://cocoball02.github.io/algorithms/leetcode_best_time_to_buy_and_sell_stock_ii/"><meta property="og:title" content="[Leetcode] Best Time to Buy and Sell Stock II" />
-<meta property="og:description" content="Leetcode의 Best Time to Buy and Sell Stock II를 풀이한 글입니다.
+<link rel="canonical" href="https://cocoball02.github.io/til/05_31/"><meta property="og:title" content="5월 31일 TIL" />
+<meta property="og:description" content="Today I learned
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cocoball02.github.io/algorithms/leetcode_best_time_to_buy_and_sell_stock_ii/" /><meta property="og:image" content="https://cocoball02.github.io/images/Leetcode.png" /><meta property="article:section" content="algorithms" />
-<meta property="article:published_time" content="2021-05-20T12:45:57&#43;09:00" />
-<meta property="article:modified_time" content="2021-05-20T12:45:57&#43;09:00" />
+<meta property="og:url" content="https://cocoball02.github.io/til/05_31/" /><meta property="og:image" content="https://cocoball02.github.io/images/TIL.png" /><meta property="article:section" content="TIL" />
+<meta property="article:published_time" content="2021-05-31T14:26:05&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-31T14:26:05&#43;09:00" />
 
-<meta itemprop="name" content="[Leetcode] Best Time to Buy and Sell Stock II">
-<meta itemprop="description" content="Leetcode의 Best Time to Buy and Sell Stock II를 풀이한 글입니다.
-"><meta itemprop="datePublished" content="2021-05-20T12:45:57&#43;09:00" />
-<meta itemprop="dateModified" content="2021-05-20T12:45:57&#43;09:00" />
-<meta itemprop="wordCount" content="202"><meta itemprop="image" content="https://cocoball02.github.io/images/Leetcode.png">
-<meta itemprop="keywords" content="알고리즘,Leetcode," /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://cocoball02.github.io/images/Leetcode.png"/>
+<meta itemprop="name" content="5월 31일 TIL">
+<meta itemprop="description" content="Today I learned
+"><meta itemprop="datePublished" content="2021-05-31T14:26:05&#43;09:00" />
+<meta itemprop="dateModified" content="2021-05-31T14:26:05&#43;09:00" />
+<meta itemprop="wordCount" content="86"><meta itemprop="image" content="https://cocoball02.github.io/images/TIL.png">
+<meta itemprop="keywords" content="TIL," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/TIL.png"/>
 
-<meta name="twitter:title" content="[Leetcode] Best Time to Buy and Sell Stock II"/>
-<meta name="twitter:description" content="Leetcode의 Best Time to Buy and Sell Stock II를 풀이한 글입니다.
+<meta name="twitter:title" content="5월 31일 TIL"/>
+<meta name="twitter:description" content="Today I learned
 "/>
 
     <style>
@@ -96,47 +96,36 @@
             <article>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="mb-3">[Leetcode] Best Time to Buy and Sell Stock II</h2>
+                        <h2 class="mb-3">5월 31일 TIL</h2>
 
                         <div class="content">
-                            <p>Leetcode의 Best Time to Buy and Sell Stock II를 풀이한 글입니다.
-<br></p>
-<h3 id="문제">문제</h3>
+                            <h3 style='color:#01c501'>Today I learned</h3>
+<br>
+<h4 id="학습한-내용">학습한 내용</h4>
+<hr>
+<p>오늘부터 코드스테이츠 네이버 특별 심화반이 시작되었다. 한달간 취준생활에 추진력이 생기도록 열심히 해보자.</p>
+<h5 id="1-인성면접-준비">1. 인성면접 준비.</h5>
+<ul>
+<li>인성면접 리스트를 주셨는데 생각보다 작성하는게 어려웠다. 금요일까지 다 채워서 제출..!</li>
+</ul>
+<br>
+<h5 id="2-알고리즘-특강">2. 알고리즘 특강</h5>
+<ul>
+<li>알고리즘 중 BFS, DFS 문제를 푸는 방법과 템플릿을 알려주셨다. 한번에 이해가 되지는 않았지만 다시 복습해서 따라가야겠다.</li>
+<li>시간 복잡도와 공간 복잡도를 계산하는 방법에 대해 다시한번 학습해야겠다.</li>
+</ul>
+<br>
+<h5 id="3-stack--queue-학습">3. Stack &amp; Queue 학습</h5>
+<ul>
+<li>stack 과 queue에 대해 학습하고 프로그래머스 2문제를 풀었다.</li>
+<li>올바른 괄호, 기능개발</li>
+</ul>
+<br>
+<h4 id="아쉬운-점">아쉬운 점</h4>
 <hr>
 <ul>
-<li>각 stock의 가격이 담긴 prices 배열을 인자로 받는다.</li>
-<li>각 날짜는 해당 element의 index다.</li>
-<li>stock을 사고 팔아서 남길수 있는 최대의 이윤을 반환한다.</li>
-<li>stock을 사기전에 반드시 팔아야하며, 같은 날에 사고 파는게 가능하다.</li>
+<li>체해서 두통때문에 일정 이후 시간을 제대로 사용을 못했다.. 몸관리도 필수!</li>
 </ul>
-<br/>
-<h3 id="예시">예시</h3>
-<hr>
-<p>Example 1</p>
-<pre><code class="language-js">Input: prices = [7, 1, 5, 3, 6, 4];
-Output: 7;
-//Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
-//Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
-</code></pre>
-<p>Example 2</p>
-<pre><code class="language-js">Input: prices = [1, 2, 3, 4, 5];
-Output: 4;
-//Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
-//Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
-</code></pre>
-<p>Example 3</p>
-<pre><code class="language-js">Input: prices = [7, 6, 4, 3, 1];
-Output: 0;
-// Explanation: In this case, no transaction is done, i.e., max profit = 0.
-</code></pre>
-<br/>
-<h3 id="나의-풀이">나의 풀이</h3>
-<hr>
-<ul>
-<li>현재값보다 다음날의 값이 크면 그 차이를 결과값에 순차적으로 더해주는 방식으로 풀었다.</li>
-</ul>
-<br/>
-<img src='https://user-images.githubusercontent.com/57708971/118916870-b9371980-b96a-11eb-9f37-19627f185135.png' width='730px' height='400px'/>
                         </div>
                     </div>
                 </div>

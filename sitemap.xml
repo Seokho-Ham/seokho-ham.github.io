@@ -2,11 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cocoball02.github.io/post/datastructure_hash_table/</loc>
-    <lastmod>2021-05-29T12:45:58+09:00</lastmod>
+    <loc>https://cocoball02.github.io/til/05_31/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/til/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/til/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/til/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-05-31T14:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/datastructure_hash_table/</loc>
     <lastmod>2021-05-29T12:45:58+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -22,19 +46,11 @@
     <lastmod>2021-05-29T12:45:58+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/tags/</loc>
-    <lastmod>2021-05-29T12:45:58+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
     <loc>https://cocoball02.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</loc>
     <lastmod>2021-05-29T12:45:58+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</loc>
-    <lastmod>2021-05-29T12:45:58+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/</loc>
     <lastmod>2021-05-29T12:45:58+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -62,15 +78,11 @@
     <lastmod>2021-05-27T13:43:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/05_22_24/</loc>
-    <lastmod>2021-05-26T17:00:53+09:00</lastmod>
+    <loc>https://cocoball02.github.io/til/05_27/</loc>
+    <lastmod>2021-05-27T11:48:19+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/tags/til/</loc>
-    <lastmod>2021-05-26T17:00:53+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/til/</loc>
+    <loc>https://cocoball02.github.io/til/05_22_24/</loc>
     <lastmod>2021-05-26T17:00:53+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -82,7 +94,7 @@
     <lastmod>2021-05-21T11:39:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/05_21/</loc>
+    <loc>https://cocoball02.github.io/til/05_21/</loc>
     <lastmod>2021-05-21T10:37:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -90,11 +102,11 @@
     <lastmod>2021-05-20T12:45:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/05_20/</loc>
+    <loc>https://cocoball02.github.io/til/05_20/</loc>
     <lastmod>2021-05-20T10:31:32+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/05_19/</loc>
+    <loc>https://cocoball02.github.io/til/05_19/</loc>
     <lastmod>2021-05-19T18:16:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
