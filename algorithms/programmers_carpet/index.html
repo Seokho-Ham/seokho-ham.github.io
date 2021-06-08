@@ -47,7 +47,7 @@
 <meta itemprop="description" content="프로그래머스의 &ldquo;Programmers_Carpet&quot;을 풀이한 글입니다.
 "><meta itemprop="datePublished" content="2021-06-08T09:55:29&#43;09:00" />
 <meta itemprop="dateModified" content="2021-06-08T09:55:29&#43;09:00" />
-<meta itemprop="wordCount" content="249"><meta itemprop="image" content="https://cocoball02.github.io/images/programmers.png">
+<meta itemprop="wordCount" content="330"><meta itemprop="image" content="https://cocoball02.github.io/images/programmers.png">
 <meta itemprop="keywords" content="알고리즘,Programmers," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://cocoball02.github.io/images/programmers.png"/>
 
@@ -130,7 +130,7 @@ Input: 24	24
 Output:[8, 6]
 </code></pre>
 <br>
-<h5 id="나의-풀이-">나의 풀이 :</h5>
+<h3 id="나의-풀이-">나의 풀이 :</h3>
 <hr>
 <ul>
 <li>brown + yellow의 값이 size(총면적)를 나타낸다.</li>
@@ -160,6 +160,27 @@ Output:[8, 6]
 // 노란색의 가로 길이 = 가로 -2
 // 노란색의 세로 길이 = 세로 - 2
 // 두개를 곱한 값이 yellow의 길이와 같으면 정답.
+</code></pre>
+<br>
+<h5 id="추가">추가</h5>
+<hr>
+<ul>
+<li>페어분이 작성하신 코드를 보고 더 깔끔한 것 같아 추가한다.</li>
+<li>for문을 사용할때 증가하는 값을 세로축으로 생각하고 사용하면 굳이 값을 비교하지 않아도 가로가 무조건 더 큰값이 된다.</li>
+</ul>
+<pre><code class="language-js">function solution(brown, yellow) {
+  let size = brown + yellow;
+  for (let i = 2; i &lt;= size; i++) {
+    if (size % i === 0) {
+      let width = size / i;
+      let height = i;
+
+      if ((width - 2) * (height - 2) === yellow) {
+        return [width, height];
+      }
+    }
+  }
+}
 </code></pre>
                         </div>
                     </div>
