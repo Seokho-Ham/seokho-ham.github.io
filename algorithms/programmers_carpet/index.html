@@ -6,7 +6,7 @@
 
 <title>
   
-     Programmers | 
+     [Programmers] 완전탐색 - 카펫 | 
     코코볼의 개발 블로그
   
 </title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
@@ -35,17 +35,25 @@
 
 
 
-<link rel="canonical" href="https://cocoball02.github.io/tags/programmers/">
-  <link href="https://cocoball02.github.io/tags/programmers/index.xml" rel="alternate" type="application/rss+xml" title="코코볼의 개발 블로그">
-  <link href="https://cocoball02.github.io/tags/programmers/index.xml" rel="feed" type="application/rss+xml" title="코코볼의 개발 블로그"><meta property="og:title" content="Programmers" />
-<meta property="og:description" content="Frontend Developer" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cocoball02.github.io/tags/programmers/" />
+<link rel="canonical" href="https://cocoball02.github.io/algorithms/programmers_carpet/"><meta property="og:title" content="[Programmers] 완전탐색 - 카펫" />
+<meta property="og:description" content="프로그래머스의 &ldquo;Programmers_Carpet&quot;을 풀이한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/algorithms/programmers_carpet/" /><meta property="og:image" content="https://cocoball02.github.io/images/programmers.png" /><meta property="article:section" content="algorithms" />
+<meta property="article:published_time" content="2021-06-08T09:55:29&#43;09:00" />
+<meta property="article:modified_time" content="2021-06-08T09:55:29&#43;09:00" />
 
-<meta itemprop="name" content="Programmers">
-<meta itemprop="description" content="Frontend Developer"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Programmers"/>
-<meta name="twitter:description" content="Frontend Developer"/>
+<meta itemprop="name" content="[Programmers] 완전탐색 - 카펫">
+<meta itemprop="description" content="프로그래머스의 &ldquo;Programmers_Carpet&quot;을 풀이한 글입니다.
+"><meta itemprop="datePublished" content="2021-06-08T09:55:29&#43;09:00" />
+<meta itemprop="dateModified" content="2021-06-08T09:55:29&#43;09:00" />
+<meta itemprop="wordCount" content="249"><meta itemprop="image" content="https://cocoball02.github.io/images/programmers.png">
+<meta itemprop="keywords" content="알고리즘,Programmers," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/programmers.png"/>
+
+<meta name="twitter:title" content="[Programmers] 완전탐색 - 카펫"/>
+<meta name="twitter:description" content="프로그래머스의 &ldquo;Programmers_Carpet&quot;을 풀이한 글입니다.
+"/>
 
     <style>
         .nav-item.active .nav-link{
@@ -82,43 +90,82 @@
 
 
     
-<main class="list container py-6"><div class="row py-3">
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
         <div class="col">
-            <h3 class="display-4">Programmers</h3></div>
-    </div><div class="row row-cols-1 row-cols-lg-3">
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/algorithms/programmers_carpet/" class="d-block"><img data-src="/images/programmers_huea95bb72b613bc297f70c00bae25b676_204599_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="[Programmers] 완전탐색 - 카펫"><div class="card-body">
-            <h4 class="card-title">[Programmers] 완전탐색 - 카펫</h4>
-            <p class="card-text text-muted text-uppercase">June 8, 2021</p>
-            <div class="card-text">
-                <p>프로그래머스의 &ldquo;Programmers_Carpet&quot;을 풀이한 글입니다.</p>
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[Programmers] 완전탐색 - 카펫</h2>
+
+                        <div class="content">
+                            <p>프로그래머스의 &ldquo;Programmers_Carpet&quot;을 풀이한 글입니다.</p>
 <br>
-            </div>
-        </div>
-    </a>
-</div>
+<h3 id="문제">문제</h3>
+<hr>
+<ul>
+<li>카펫이 주어지며 테두리는 갈색, 가운데는 노란색으로 채워져있다.</li>
+<li>갈색 카펫의 개수, 노란색 카펫이 input으로 주어진다.</li>
+<li>카펫의 가로, 세로를 배열에 담아 반환해야한다.</li>
+</ul>
+<br>
+<h3 id="제한사항">제한사항</h3>
+<hr>
+<ul>
+<li>갈색 격자의 수 brown은 8 이상 5,000 이하인 자연수입니다.</li>
+<li>노란색 격자의 수 yellow는 1 이상 2,000,000 이하인 자연수입니다.</li>
+<li>카펫의 가로 길이는 세로 길이와 같거나, 세로 길이보다 깁니다.</li>
+</ul>
+<br>
+<h3 id="예시">예시</h3>
+<hr>
+<pre><code class="language-js">//Ex1
+Input: 10, 2
+Output:[4, 3]
+//Ex2
+Input: 8, 1
+Output:[3, 3]
+//Ex3
+Input: 24	24
+Output:[8, 6]
+</code></pre>
+<br>
+<h5 id="나의-풀이-">나의 풀이 :</h5>
+<hr>
+<ul>
+<li>brown + yellow의 값이 size(총면적)를 나타낸다.</li>
+<li>size의 약수들이 정답이 되는데 가로&gt;=세로 이다.</li>
+<li>for문을 사용해 size를 i로 나눈 나머지가 0일 경우 약수다.</li>
+<li>약수일 경우 width, height 변수에 각 가로, 세로 길이를 담는다.</li>
+<li>테두리가 모두 갈색이기 때문에 노란 카펫의 가로 세로는 각 값에서 -2를 한 것의 곱이다.</li>
+</ul>
+<pre><code class="language-js">function solution(brown, yellow) {
+  let size = brown + yellow;
+  for (let i = 2; i &lt;= size; i++) {
+    if (size % i === 0) {
+      let width = size / i &gt; i ? size / i : i;
+      let height = size / i &gt; i ? i : size / i;
 
-            </div>
-        
-            <div class="col mb-3">
-                <div class="card h-100">
-    
-    <a href="/algorithms/leetcode_intersections_of_two_arrays_ii/" class="d-block"><img data-src="/images/leetcode_hub8d6499ffbd28bdc8446c655c4540217_32201_700x350_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="[Leetcode] Intersections of Two Arrays II"><div class="card-body">
-            <h4 class="card-title">[Leetcode] Intersections of Two Arrays II</h4>
-            <p class="card-text text-muted text-uppercase">May 21, 2021</p>
-            <div class="card-text">
-                <p>Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
-<br></p>
-            </div>
+      if ((width - 2) * (height - 2) === yellow) {
+        return [width, height];
+      }
+    }
+  }
+}
+// 수도 코드
+// brown + yellow = 가로 * 세로 = 총면적
+// brown + yellow의 약수들이 곧 정답.
+// for문 사용해서 전체 크기를 i로 나눈다.
+// 나머지가 0일 경우 약수에 해당
+// 노란색의 가로 길이 = 가로 -2
+// 노란색의 세로 길이 = 세로 - 2
+// 두개를 곱한 값이 yellow의 길이와 같으면 정답.
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-    </a>
-</div>
-
-            </div>
-        
     </div>
 </main>
 

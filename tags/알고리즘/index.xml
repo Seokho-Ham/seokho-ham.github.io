@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Sat, 29 May 2021 12:44:02 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jun 2021 09:55:29 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Programmers] 완전탐색 - 카펫</title>
+      <link>https://cocoball02.github.io/algorithms/programmers_carpet/</link>
+      <pubDate>Tue, 08 Jun 2021 09:55:29 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/algorithms/programmers_carpet/</guid>
+      <description>&lt;p&gt;프로그래머스의 &amp;ldquo;Programmers_Carpet&amp;quot;을 풀이한 글입니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>Leetcode_Two_Sum</title>
       <link>https://cocoball02.github.io/algorithms/leetcode_two_sum/</link>
