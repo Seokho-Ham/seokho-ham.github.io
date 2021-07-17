@@ -40,14 +40,14 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cocoball02.github.io/post/korello_01/" /><meta property="og:image" content="https://cocoball02.github.io/images/korello.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-07-16T14:08:24&#43;09:00" />
-<meta property="article:modified_time" content="2021-07-16T14:08:24&#43;09:00" />
+<meta property="article:published_time" content="2021-07-17T14:08:24&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-17T14:08:24&#43;09:00" />
 
 <meta itemprop="name" content="[Korello 프로젝트] Refactoring Day1">
 <meta itemprop="description" content="한달간 기존의 Korello 프로젝트를 새로운 레포를 만들어 처음부터 다시 개발하기로 했다.
-"><meta itemprop="datePublished" content="2021-07-16T14:08:24&#43;09:00" />
-<meta itemprop="dateModified" content="2021-07-16T14:08:24&#43;09:00" />
-<meta itemprop="wordCount" content="87"><meta itemprop="image" content="https://cocoball02.github.io/images/korello.png">
+"><meta itemprop="datePublished" content="2021-07-17T14:08:24&#43;09:00" />
+<meta itemprop="dateModified" content="2021-07-17T14:08:24&#43;09:00" />
+<meta itemprop="wordCount" content="251"><meta itemprop="image" content="https://cocoball02.github.io/images/korello.png">
 <meta itemprop="keywords" content="Javascript,React,프로젝트," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://cocoball02.github.io/images/korello.png"/>
 
@@ -98,9 +98,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="meta text-muted mb-3">
-                            <p class="created text-muted text-uppercase font-weight-bold mb-1">July 16, 2021</p>
-                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>87 words</span>
-                            <span><i class="fas fa-clock mr-2"></i>1 min read</span>
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">July 17, 2021</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>251 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>2 mins read</span>
                         </div>
 
                         <h1>[Korello 프로젝트] Refactoring Day1</h1>
@@ -125,6 +125,7 @@
 <li>CRA를 사용해서 만들었다.</li>
 </ul>
 <p>등등 이외에도 아쉬운 부분이 너무 많다.</p>
+<br>
 <h5 id="그래서-이번에는"><strong>그래서 이번에는?</strong></h5>
 <ul>
 <li>재사용성을 먼저 고민하며 코드를 작성할 것.</li>
@@ -132,11 +133,47 @@
 <li>React와 Javascript에서 사용하는 패턴들을 학습하고 사용할 것.</li>
 <li><code>Create-React-App</code>이 아닌 직접 Webpack 설정을 해볼것.</li>
 </ul>
+<br>
 <h5 id="설계">설계</h5>
+<p>설계 원칙</p>
+<ul>
+<li><code>확장성</code> 있고 <code>재사용성</code> 있는 코드를 만들어야 한다.
+-&gt; 컴포넌트는 확장성과 재사용성을 위해서 개발되어야한다.</li>
+<li><code>관심사</code>에 따라 코드를 분리하고 <code>단일 책임</code>을 가지는 컴포넌트를 만들어야 한다.
+-&gt; 컴포넌트는 props를 받으면 같은 JSX를 리턴하는 순수함수로 작성한다.</li>
+<li>외부에 <code>제어를 위임</code> 시켜야 한다.</li>
+</ul>
+<br>
+<h5 id="프로젝트-구조-설계">프로젝트 구조 설계</h5>
+<p>Presentational &amp; Container 패턴과 아토믹 디자인 패턴을 후보에 두고 고민했다.
+프로젝트의 구조가 깔끔하고 작은 단위에서 부터 개발을 해 재사용성이 높은 <strong>아토믹 디자인 패턴</strong>을 사용하기로 했다.</p>
+<pre><code>|-- src
+|     |- components
+|           |-atoms
+|           |-molecules
+|           |-organics
+|           |-templates
+|     |- hooks
+|     |- pages
+|     |- reducer
+|     |- store
+|     |- App.js
+|     |- index.js
+|-- package.json
+|-- README.MD
+</code></pre>
+<br>
+<h5 id="테스팅-라이브러리">테스팅 라이브러리</h5>
+<p><strong>Jest를 사용한다.</strong></p>
+<p>최근 &ldquo;자바스크립트 패턴과 테스트&quot;를 읽으며 Jasmine을 처음 사용해보았다. 또한 이전 프로젝트에서 Mocha와 Chai를 사용해 테스트를 작성한 경험 또한 있다.
+하지만 Jasmine, Mocha 모두 매처와 목 프레임워크까지 설치를 해야했다면 Jest 하나의 라이브러리만 설치하면 모두 동작한다고 한다.
+또한 Typescript, React에서도 모두 동작이 잘 된다고 하여 이번에는 Jest를 사용해보기로 했다.</p>
+<h5 id="진행-상황">진행 상황</h5>
 <ul>
 <li>요구사항들을 자세하게 정리했다.</li>
 <li>주차별로 개발 목표를 설정했다.</li>
 <li>커밋 규칙과 린트를 정했다.</li>
+<li>프로젝트 구조는 <strong>아토믹 디자인 패턴</strong>, 테스팅 라이브러리는 <strong>Jest</strong>를 사용한다.</li>
 </ul>
                         </div>
                         <br><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/javascript">
