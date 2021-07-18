@@ -2,11 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cocoball02.github.io/post/korello_01/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
+    <loc>https://cocoball02.github.io/categories/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/categories/</loc>
+    <loc>https://cocoball02.github.io/tags/jest/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/tdd/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/jest/</loc>
+    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/til/07_18/</loc>
+    <lastmod>2021-07-18T20:22:28+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/til/</loc>
+    <lastmod>2021-07-18T20:22:28+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/til/</loc>
+    <lastmod>2021-07-18T20:22:28+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/til/</loc>
+    <lastmod>2021-07-18T20:22:28+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/korello_01/</loc>
     <lastmod>2021-07-17T14:08:24+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -14,23 +58,7 @@
     <lastmod>2021-07-17T14:08:24+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
     <loc>https://cocoball02.github.io/tags/react/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/</loc>
     <lastmod>2021-07-17T14:08:24+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -38,19 +66,11 @@
     <lastmod>2021-07-17T14:08:24+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
+    <loc>https://cocoball02.github.io/til/07_17/</loc>
+    <lastmod>2021-07-17T13:27:38+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://cocoball02.github.io/til/07_16/</loc>
-    <lastmod>2021-07-16T09:10:38+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/til/</loc>
-    <lastmod>2021-07-16T09:10:38+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/til/</loc>
-    <lastmod>2021-07-16T09:10:38+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/til/</loc>
     <lastmod>2021-07-16T09:10:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>

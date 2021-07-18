@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     테스트 프레임워크 - Jest | 
+    코코볼의 개발 블로그
+  
+</title><meta name="description" content="Frontend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.30def14a4b4c06784e58.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://cocoball02.github.io/post/jest/"><meta property="og:title" content="테스트 프레임워크 - Jest" />
+<meta property="og:description" content="이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cocoball02.github.io/post/jest/" /><meta property="og:image" content="https://cocoball02.github.io/images/Jest.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-18T20:26:05&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-18T20:26:05&#43;09:00" />
+
+<meta itemprop="name" content="테스트 프레임워크 - Jest">
+<meta itemprop="description" content="이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.
+"><meta itemprop="datePublished" content="2021-07-18T20:26:05&#43;09:00" />
+<meta itemprop="dateModified" content="2021-07-18T20:26:05&#43;09:00" />
+<meta itemprop="wordCount" content="388"><meta itemprop="image" content="https://cocoball02.github.io/images/Jest.png">
+<meta itemprop="keywords" content="TDD,Jest," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cocoball02.github.io/images/Jest.png"/>
+
+<meta name="twitter:title" content="테스트 프레임워크 - Jest"/>
+<meta name="twitter:description" content="이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.
+"/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#004eff !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://cocoball02.github.io">코코볼의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/til/">TIL</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/algorithms/">Algorithms</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="meta text-muted mb-3">
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">July 18, 2021</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>388 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>2 mins read</span>
+                        </div>
+
+                        <h1>테스트 프레임워크 - Jest</h1>
+
+                        <ul class="authors list-inline"></ul>
+                    </div>
+                </div><div class="row justify-content-center mb-3" >
+                                <div class="col-lg-10">
+                                    <img data-src="/images/Jest_hu8bb12ddb1422c11d1ff9888079f5734f_13896_900x500_fit_box_2.png" class="img-fluid rounded mx-auto d-block" alt="테스트 프레임워크 - Jest" width='700px' height="500px">
+                                </div>
+                            </div><div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <p>이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.</p>
+<br>
+<h3 id="jest란">Jest란?</h3>
+<hr>
+<ul>
+<li>페이스북에서 만든 자바스크립트 테스트 프레임워크다.</li>
+<li>Jasmine을 기반으로 만들었다.</li>
+</ul>
+<br>
+<h3 id="다른-테스트-라이브러리와의-차이점">다른 테스트 라이브러리와의 차이점</h3>
+<hr>
+<p>이전의 라이브러리들은 여러가지를 조합해서 사용해야 했다.
+테스트 러너, 매처, 목을 조합해서 사용하는 방식.</p>
+<ul>
+<li>Jest는 테스트 러너, 매처, 목 프레임워크를 한번에 제공하는 All-in-one 방식이다.</li>
+<li>Babel, Webpack, Typescript 등과 함께 사용 가능하다.</li>
+</ul>
+<br>
+<h3 id="사용법">사용법</h3>
+<hr>
+<ol>
+<li>
+<p>Dev-Dependencies에 jest 설치</p>
+<p><code>npm install -D jest</code></p>
+</li>
+<li>
+<p>test 파일에 test 추가하기</p>
+<ul>
+<li>test메서드
+<ul>
+<li>첫번째 인자 : 테스트 내용을 문장으로 작성</li>
+<li>두번째 인자 : 함수</li>
+</ul>
+</li>
+<li>expect 와 toBe : 결과값과 기대값을 작성.</li>
+</ul>
+<pre><code class="language-jsx">test('sum함수를 사용해서 1+2를 더할경우 3이어야한다.', () =&gt; {
+  expect(sum(1, 2)).toBe(3);
+});
+</code></pre>
+</li>
+<li>
+<p>test 실행</p>
+<ul>
+<li>
+<p>package.json에 scripts에 다음을 추가한다.</p>
+<p><code>&quot;test&quot; : &quot;jest&quot;</code></p>
+</li>
+<li>
+<p>test를 실행한다.</p>
+<p><code>npm run test</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<br>
+<h3 id="매처">매처</h3>
+<hr>
+<ul>
+<li>
+<p>기본적으로 정확한 일치비교를 위해 expect - toBe 를 사용한다.</p>
+</li>
+<li>
+<p>expect는 예상되는 객체를 반환한다. 이 이상의 역할은 안한다.</p>
+</li>
+<li>
+<p><strong>toBe가 매처 역할이다.</strong></p>
+<ul>
+<li>객체 내의 필드들을 검사하기 위해서는 <strong>toEqual</strong>을 사용한다. (객체 혹은 배열의 모든 필드를 재귀적으로 확인한다.)</li>
+<li><strong>not.toBe</strong>도 사용 가능.</li>
+</ul>
+<pre><code class="language-jsx">test('sum함수를 사용해서 1+2를 더할경우 3이어야한다.', ()=&gt;{
+	//일반 값
+	expect(sum(1,2))ㄴ.toBe(3);
+	expect(sum(1,2)).not.toBe(4);
+	//객체
+	let data = {name:'kiki'};
+	expect(data).toEqual({name:'kiki'});
+})
+</code></pre>
+</li>
+<li>
+<p>toBeNull : null에만 일치</p>
+</li>
+<li>
+<p>toBeUndefined : undefined에만 일치</p>
+</li>
+<li>
+<p>toBeDefined : undefined 아닐경우에만 일치</p>
+</li>
+<li>
+<p>toBeTruthy : true</p>
+</li>
+<li>
+<p>toBeFalsy : false</p>
+</li>
+</ul>
+<p>이외의 자료 : <a href="https://mulder21c.github.io/jest/docs/en/next/using-matchers">https://mulder21c.github.io/jest/docs/en/next/using-matchers</a></p>
+<br>
+<h3 id="비동기-처리">비동기 처리</h3>
+<hr>
+<h5 id="콜백"><strong>콜백</strong></h5>
+<ul>
+<li>done이라는 인자를 사용한다. → 테스트가 끝나기 전에 done 콜백이 호출될 때를 기다린다.</li>
+</ul>
+<pre><code class="language-jsx">test('the data is peanut butter', done=&gt;{
+	function callback(data){
+		try {
+			expect(data).toBe('peanut butter');
+			done();
+		} catch (error) {
+			done(error);
+		}
+	}
+
+	fetchData(callback);
+}
+</code></pre>
+<br>
+<h5 id="프로미스"><strong>프로미스</strong></h5>
+<ul>
+<li>프로미스는 resolve, reject가 있어서 간단하다.</li>
+<li>테스트에서 <strong>프로미스를 반환</strong>시키면 jest는 resolve를 기다린다. → reject되면 실패한 것.</li>
+<li><strong>.resolves / .rejects 매처</strong>를 사용할 수 있다.</li>
+</ul>
+<pre><code class="language-jsx">test('the data is peanut butter', () =&gt; {
+  return fetchData().then(data =&gt; {
+    expect(data).toBe('peanut butter');
+  });
+});
+
+// .resolves/.rejects 매처를 사용할 경우
+test('the data is peanut butter', () =&gt; {
+  return expect(fetchData()).resolves.toBe('peanut butter');
+});
+test('the fetch fails with an error', () =&gt; {
+  return expect(fetchData()).rejects.toMatch('error');
+});
+</code></pre>
+<br>
+<h5 id="async--await"><strong>Async / Await</strong></h5>
+<ul>
+<li>test 내에서 async/await을 사용할 수 있다.</li>
+<li>test의 두번째 인자에 전달되는 함수에 async 사용.</li>
+<li><strong>.resolves / .rejects 매처</strong>를 사용할 수 있다.</li>
+</ul>
+<pre><code class="language-jsx">test('the data is peanut butter', async () =&gt; {
+  const data = await fetchData();
+  expect(data).toBe('peanut butter');
+});
+
+test('the fetch fails with an error', async () =&gt; {
+  expect.assertions(1);
+  try {
+    await fetchData();
+  } catch (e) {
+    expect(e).toMatch('error');
+  }
+});
+
+test('the data is peanut butter', async () =&gt; {
+  await expect(fetchData()).resolves.toBe('peanut butter');
+});
+
+test('the fetch fails with an error', async () =&gt; {
+  await expect(fetchData()).rejects.toThrow('error');
+});
+</code></pre>
+<h3 id="references">References</h3>
+<p><a href="https://jestjs.io/docs/getting-started">Jest 공식 문서</a>
+<a href="https://mulder21c.github.io/jest/docs/en/next/getting-started">Jest 공식 문서 번역본</a></p>
+                        </div>
+                        <br><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/tdd">
+                                    <i class="fas fa-tag mr-2"></i>TDD
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/jest">
+                                    <i class="fas fa-tag mr-2"></i>Jest
+                                </a></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <script src="https://utteranc.es/client.js"
+                                repo="cocoball02/blog-comments"
+                                issue-term="title"
+                                label="✨💬✨"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+            
+            </article>
+           
+        </div>
+    </div>
+
+    
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://cocoball02.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/cocoball02" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li><li class="list-inline-item">
+                            <a href="https://stackoverflow.com" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Cocoball
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.ef8a332e7804b9e7be27.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

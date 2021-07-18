@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Sat, 17 Jul 2021 14:08:24 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jul 2021 20:26:05 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>테스트 프레임워크 - Jest</title>
+      <link>https://cocoball02.github.io/post/jest/</link>
+      <pubDate>Sun, 18 Jul 2021 20:26:05 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/jest/</guid>
+      <description>&lt;p&gt;이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>[Korello 프로젝트] Refactoring Day1</title>
       <link>https://cocoball02.github.io/post/korello_01/</link>
