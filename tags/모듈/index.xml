@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>모듈 on 코코볼의 개발 블로그</title>
+    <link>https://cocoball02.github.io/tags/%EB%AA%A8%EB%93%88/</link>
+    <description>Recent content in 모듈 on 코코볼의 개발 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2021 Cocoball</copyright>
+    <lastBuildDate>Tue, 20 Jul 2021 13:44:27 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EB%AA%A8%EB%93%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>자바스크립트의 모듈 시스템</title>
+      <link>https://cocoball02.github.io/post/module_jsmodule/</link>
+      <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/module_jsmodule/</guid>
+      <description>&lt;p&gt;이 글은 자바스크립트 모듈 시스템에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

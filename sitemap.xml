@@ -3,30 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cocoball02.github.io/categories/</loc>
-    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/javascript/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/%EB%AA%A8%EB%93%88/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/module_jsmodule/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/jest/</loc>
     <lastmod>2021-07-18T20:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://cocoball02.github.io/post/</loc>
-    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/</loc>
-    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
     <loc>https://cocoball02.github.io/tags/tdd/</loc>
-    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2021-07-18T20:26:05+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/</loc>
     <lastmod>2021-07-18T20:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -51,10 +63,6 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/post/korello_01/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/javascript/</loc>
     <lastmod>2021-07-17T14:08:24+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>

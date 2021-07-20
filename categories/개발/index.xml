@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Sun, 18 Jul 2021 20:26:05 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 13:44:27 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>자바스크립트의 모듈 시스템</title>
+      <link>https://cocoball02.github.io/post/module_jsmodule/</link>
+      <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/module_jsmodule/</guid>
+      <description>&lt;p&gt;이 글은 자바스크립트 모듈 시스템에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>테스트 프레임워크 - Jest</title>
       <link>https://cocoball02.github.io/post/jest/</link>

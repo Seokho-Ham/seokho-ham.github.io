@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Sun, 18 Jul 2021 20:26:05 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 13:44:27 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>https://cocoball02.github.io/tags/javascript/</link>
+      <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>모듈</title>
+      <link>https://cocoball02.github.io/tags/%EB%AA%A8%EB%93%88/</link>
+      <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/%EB%AA%A8%EB%93%88/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Jest</title>
       <link>https://cocoball02.github.io/tags/jest/</link>
@@ -32,15 +50,6 @@
       <pubDate>Sun, 18 Jul 2021 20:22:28 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/til/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://cocoball02.github.io/tags/javascript/</link>
-      <pubDate>Sat, 17 Jul 2021 14:08:24 +0900</pubDate>
-      
-      <guid>https://cocoball02.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
