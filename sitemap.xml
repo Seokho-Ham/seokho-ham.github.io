@@ -2,24 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cocoball02.github.io/tags/babel/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/develop_environment_setting/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://cocoball02.github.io/categories/</loc>
-    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/javascript/</loc>
-    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/post/</loc>
-    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/</loc>
-    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/tags/webpack/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/%EB%AA%A8%EB%93%88/</loc>
@@ -27,10 +43,6 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/post/module_jsmodule/</loc>
-    <lastmod>2021-07-20T13:44:27+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/</loc>
     <lastmod>2021-07-20T13:44:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -263,10 +275,6 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/webpack/</loc>
-    <lastmod>2021-05-19T17:51:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://cocoball02.github.io/tags/webpack/</loc>
     <lastmod>2021-05-19T17:51:52+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>

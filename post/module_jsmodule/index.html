@@ -143,17 +143,15 @@
 <p><strong>사용법</strong></p>
 <ul>
 <li>script 태그에 type을 module로 설정하면 된다.</li>
-</ul>
-<pre><code class="language-html">&lt;script type=&quot;module&quot; src=&quot;app.mjs&quot;&gt;&lt;/script&gt;
-</code></pre>
-<ul>
 <li>ESM임을 명확하게 하기 위해 확장자는 mjs로 하는것이 권장된다.</li>
 <li>독자적인 모듈 스코프를 가진다.</li>
 </ul>
+<pre><code class="language-html">&lt;script type=&quot;module&quot; src=&quot;app.mjs&quot;&gt;&lt;/script&gt;
+</code></pre>
 <br>
 <h3 id="키워드">키워드</h3>
 <hr>
-<p><strong>export</strong></p>
+<h5 id="export">export</h5>
 <ul>
 <li>다른 외부 모듈에서 접근할 때 사용하는 키워드</li>
 </ul>
@@ -188,7 +186,8 @@ export { pi, square, Person };
 </ul>
 <pre><code class="language-jsx">export default x =&gt; x * x;
 </code></pre>
-<p><strong>import</strong></p>
+<br>
+<h5 id="import">import</h5>
 <ul>
 <li>다른 모듈의 자산을 참조할 때 사용하는 키워드</li>
 <li>참조하려는 모듈이 export한 식별자 이름으로 import해야한다.</li>
@@ -222,7 +221,7 @@ console.log(square(3));
 <h3 id="references">References</h3>
 <hr>
 <ul>
-<li>모던 자바스크립트 Deep Dive (저자 : 이웅모 / 출판사 : 위키북스)</li>
+<li><a href="http://www.yes24.com/Product/Goods/92742567">모던 자바스크립트 Deep Dive (저자 : 이웅모 / 출판사 : 위키북스)</a></li>
 </ul>
                         </div>
                         <br><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/javascript">

@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 20 Jul 2021 13:44:27 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 15:11:54 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Babel과 Webpack을 이용한 개발 환경 세팅</title>
+      <link>https://cocoball02.github.io/post/develop_environment_setting/</link>
+      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/develop_environment_setting/</guid>
+      <description>&lt;p&gt;이 글은 모던 자바스크립트 Deep Dive 49장 &amp;ldquo;Babel과 Webpack을 이용한 개발환경 세팅&amp;rdquo; 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>자바스크립트의 모듈 시스템</title>
       <link>https://cocoball02.github.io/post/module_jsmodule/</link>
