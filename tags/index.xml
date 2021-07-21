@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 20 Jul 2021 15:11:54 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 22:52:01 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Babel</title>
       <link>https://cocoball02.github.io/tags/babel/</link>
-      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
+      <pubDate>Wed, 21 Jul 2021 22:52:01 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/babel/</guid>
       <description></description>
@@ -20,18 +20,36 @@
     <item>
       <title>Javascript</title>
       <link>https://cocoball02.github.io/tags/javascript/</link>
-      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
+      <pubDate>Wed, 21 Jul 2021 22:52:01 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>React</title>
+      <link>https://cocoball02.github.io/tags/react/</link>
+      <pubDate>Wed, 21 Jul 2021 22:52:01 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Webpack</title>
       <link>https://cocoball02.github.io/tags/webpack/</link>
-      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
+      <pubDate>Wed, 21 Jul 2021 22:52:01 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/webpack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIL</title>
+      <link>https://cocoball02.github.io/tags/til/</link>
+      <pubDate>Wed, 21 Jul 2021 22:46:26 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/til/</guid>
       <description></description>
     </item>
     
@@ -59,24 +77,6 @@
       <pubDate>Sun, 18 Jul 2021 20:26:05 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/tdd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TIL</title>
-      <link>https://cocoball02.github.io/tags/til/</link>
-      <pubDate>Sun, 18 Jul 2021 20:22:28 +0900</pubDate>
-      
-      <guid>https://cocoball02.github.io/tags/til/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>https://cocoball02.github.io/tags/react/</link>
-      <pubDate>Sat, 17 Jul 2021 14:08:24 +0900</pubDate>
-      
-      <guid>https://cocoball02.github.io/tags/react/</guid>
       <description></description>
     </item>
     

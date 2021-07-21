@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 20 Jul 2021 15:11:54 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 22:52:01 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Korello 프로젝트] Refactoring Day2</title>
+      <link>https://cocoball02.github.io/post/korello_02/</link>
+      <pubDate>Wed, 21 Jul 2021 22:52:01 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/korello_02/</guid>
+      <description>&lt;p&gt;Korello 프로젝트의 Webpack &amp;amp; Babel 설정을 직접 했다.&lt;/p&gt;
+&lt;p&gt;혼자하다가 막혀서 여러 블로그의 도움을 받았다.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>Babel과 Webpack을 이용한 개발 환경 세팅</title>
       <link>https://cocoball02.github.io/post/develop_environment_setting/</link>
