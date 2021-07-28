@@ -7,14 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Mon, 26 Jul 2021 15:48:09 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jul 2021 19:05:57 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Korello 프로젝트] Refactoring Day4</title>
+      <link>https://cocoball02.github.io/post/korello_04/</link>
+      <pubDate>Tue, 27 Jul 2021 19:05:57 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/post/korello_04/</guid>
+      <description>&lt;p&gt;Korello 개발 4일차의 기록&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>[Korello 프로젝트] Refactoring Day3</title>
       <link>https://cocoball02.github.io/post/korello_03/</link>
       <pubDate>Mon, 26 Jul 2021 15:48:09 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/post/korello_03/</guid>
-      <description>&lt;p&gt;Korello 개발 3일차의 기록.&lt;/p&gt;
+      <description>&lt;p&gt;Korello 개발 3일차의 기록&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     

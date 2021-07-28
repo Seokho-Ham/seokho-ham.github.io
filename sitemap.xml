@@ -2,35 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cocoball02.github.io/post/korello_03/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <loc>https://cocoball02.github.io/post/korello_04/</loc>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/javascript/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/post/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/react/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/tags/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://cocoball02.github.io/</loc>
+    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://cocoball02.github.io/post/korello_03/</loc>
     <lastmod>2021-07-26T15:48:09+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
