@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 27 Jul 2021 19:05:57 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 23:43:15 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TIL</title>
+      <link>https://cocoball02.github.io/tags/til/</link>
+      <pubDate>Sat, 31 Jul 2021 23:43:15 +0900</pubDate>
+      
+      <guid>https://cocoball02.github.io/tags/til/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Javascript</title>
       <link>https://cocoball02.github.io/tags/javascript/</link>
@@ -23,15 +32,6 @@
       <pubDate>Tue, 27 Jul 2021 19:05:57 +0900</pubDate>
       
       <guid>https://cocoball02.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TIL</title>
-      <link>https://cocoball02.github.io/tags/til/</link>
-      <pubDate>Sat, 24 Jul 2021 15:41:32 +0900</pubDate>
-      
-      <guid>https://cocoball02.github.io/tags/til/</guid>
       <description></description>
     </item>
     
