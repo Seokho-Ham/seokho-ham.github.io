@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>개발 on 코코볼의 개발 블로그</title>
-    <link>https://cocoball02.github.io/tags/%EA%B0%9C%EB%B0%9C/</link>
-    <description>Recent content in 개발 on 코코볼의 개발 블로그</description>
+    <title>개발 on 함석호의 개발 블로그</title>
+    <link>https://seokho-ham.github.io/tags/%EA%B0%9C%EB%B0%9C/</link>
+    <description>Recent content in 개발 on 함석호의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 14:46:39 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Seokho Ham</copyright>
+    <lastBuildDate>Thu, 08 Jul 2021 14:46:39 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2021 상반기 회고</title>
-      <link>https://cocoball02.github.io/post/2021_firsthalf/</link>
+      <link>https://seokho-ham.github.io/post/2021_firsthalf/</link>
       <pubDate>Thu, 08 Jul 2021 14:46:39 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/2021_firsthalf/</guid>
+      <guid>https://seokho-ham.github.io/post/2021_firsthalf/</guid>
       <description>&lt;p&gt;2021년 상반기 회고글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>

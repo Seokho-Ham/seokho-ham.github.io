@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>시간복잡도 on 코코볼의 개발 블로그</title>
-    <link>https://cocoball02.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</link>
-    <description>Recent content in 시간복잡도 on 코코볼의 개발 블로그</description>
+    <title>시간복잡도 on 함석호의 개발 블로그</title>
+    <link>https://seokho-ham.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</link>
+    <description>Recent content in 시간복잡도 on 함석호의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 11 May 2021 14:04:43 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Seokho Ham</copyright>
+    <lastBuildDate>Tue, 11 May 2021 14:04:43 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>시간 복잡도(Big-O 표기법)</title>
-      <link>https://cocoball02.github.io/post/bigo/</link>
+      <link>https://seokho-ham.github.io/post/bigo/</link>
       <pubDate>Tue, 11 May 2021 14:04:43 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/bigo/</guid>
+      <guid>https://seokho-ham.github.io/post/bigo/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br/&gt;
 오늘은 &lt;strong&gt;시간 복잡도&lt;/strong&gt;에 대해 학습한 내용을 정리합니다.&lt;/p&gt;

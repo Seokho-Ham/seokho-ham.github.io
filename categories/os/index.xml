@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OS on 코코볼의 개발 블로그</title>
-    <link>https://cocoball02.github.io/categories/os/</link>
-    <description>Recent content in OS on 코코볼의 개발 블로그</description>
+    <title>OS on 함석호의 개발 블로그</title>
+    <link>https://seokho-ham.github.io/categories/os/</link>
+    <description>Recent content in OS on 함석호의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Sat, 05 Jun 2021 18:17:37 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Seokho Ham</copyright>
+    <lastBuildDate>Sat, 05 Jun 2021 18:17:37 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[OS] 프로세스와 스레드</title>
-      <link>https://cocoball02.github.io/post/os_process_thread/</link>
+      <link>https://seokho-ham.github.io/post/os_process_thread/</link>
       <pubDate>Sat, 05 Jun 2021 18:17:37 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/os_process_thread/</guid>
+      <guid>https://seokho-ham.github.io/post/os_process_thread/</guid>
       <description>&lt;p&gt;네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 코코볼의 개발 블로그</title>
-    <link>https://cocoball02.github.io/post/</link>
-    <description>Recent content in Posts on 코코볼의 개발 블로그</description>
+    <title>Posts on 함석호의 개발 블로그</title>
+    <link>https://seokho-ham.github.io/post/</link>
+    <description>Recent content in Posts on 함석호의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 27 Jul 2021 19:05:57 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Seokho Ham</copyright>
+    <lastBuildDate>Tue, 27 Jul 2021 19:05:57 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Korello 프로젝트] Refactoring Day4</title>
-      <link>https://cocoball02.github.io/post/korello_04/</link>
+      <link>https://seokho-ham.github.io/post/korello_04/</link>
       <pubDate>Tue, 27 Jul 2021 19:05:57 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/korello_04/</guid>
+      <guid>https://seokho-ham.github.io/post/korello_04/</guid>
       <description>&lt;p&gt;Korello 개발 4일차의 기록&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>[Korello 프로젝트] Refactoring Day3</title>
-      <link>https://cocoball02.github.io/post/korello_03/</link>
+      <link>https://seokho-ham.github.io/post/korello_03/</link>
       <pubDate>Mon, 26 Jul 2021 15:48:09 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/korello_03/</guid>
+      <guid>https://seokho-ham.github.io/post/korello_03/</guid>
       <description>&lt;p&gt;Korello 개발 3일차의 기록&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>[Korello 프로젝트] Refactoring Day2</title>
-      <link>https://cocoball02.github.io/post/korello_02/</link>
+      <link>https://seokho-ham.github.io/post/korello_02/</link>
       <pubDate>Wed, 21 Jul 2021 22:52:01 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/korello_02/</guid>
+      <guid>https://seokho-ham.github.io/post/korello_02/</guid>
       <description>&lt;p&gt;Korello 프로젝트의 Webpack &amp;amp; Babel 설정을 직접 했다.&lt;/p&gt;
 &lt;p&gt;혼자하다가 막혀서 여러 블로그의 도움을 받았다.&lt;/p&gt;
 &lt;br&gt;</description>
@@ -41,110 +41,110 @@
     
     <item>
       <title>Babel과 Webpack을 이용한 개발 환경 세팅</title>
-      <link>https://cocoball02.github.io/post/develop_environment_setting/</link>
+      <link>https://seokho-ham.github.io/post/develop_environment_setting/</link>
       <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/develop_environment_setting/</guid>
+      <guid>https://seokho-ham.github.io/post/develop_environment_setting/</guid>
       <description>&lt;p&gt;이 글은 모던 자바스크립트 Deep Dive 49장 &amp;ldquo;Babel과 Webpack을 이용한 개발환경 세팅&amp;rdquo; 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>자바스크립트의 모듈 시스템</title>
-      <link>https://cocoball02.github.io/post/module_jsmodule/</link>
+      <link>https://seokho-ham.github.io/post/module_jsmodule/</link>
       <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/module_jsmodule/</guid>
+      <guid>https://seokho-ham.github.io/post/module_jsmodule/</guid>
       <description>&lt;p&gt;이 글은 자바스크립트 모듈 시스템에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>테스트 프레임워크 - Jest</title>
-      <link>https://cocoball02.github.io/post/jest/</link>
+      <link>https://seokho-ham.github.io/post/jest/</link>
       <pubDate>Sun, 18 Jul 2021 20:26:05 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/jest/</guid>
+      <guid>https://seokho-ham.github.io/post/jest/</guid>
       <description>&lt;p&gt;이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>[Korello 프로젝트] Refactoring Day1</title>
-      <link>https://cocoball02.github.io/post/korello_01/</link>
+      <link>https://seokho-ham.github.io/post/korello_01/</link>
       <pubDate>Sat, 17 Jul 2021 14:08:24 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/korello_01/</guid>
+      <guid>https://seokho-ham.github.io/post/korello_01/</guid>
       <description>&lt;p&gt;한달간 기존의 Korello 프로젝트를 새로운 레포를 만들어 처음부터 다시 개발하기로 했다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>2021 상반기 회고</title>
-      <link>https://cocoball02.github.io/post/2021_firsthalf/</link>
+      <link>https://seokho-ham.github.io/post/2021_firsthalf/</link>
       <pubDate>Thu, 08 Jul 2021 14:46:39 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/2021_firsthalf/</guid>
+      <guid>https://seokho-ham.github.io/post/2021_firsthalf/</guid>
       <description>&lt;p&gt;2021년 상반기 회고글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>자바스크립트 엔진과 구동원리</title>
-      <link>https://cocoball02.github.io/post/javascript_engine/</link>
+      <link>https://seokho-ham.github.io/post/javascript_engine/</link>
       <pubDate>Thu, 10 Jun 2021 14:00:33 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_engine/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_engine/</guid>
       <description>&lt;p&gt;이 글은 Javascript 엔진인 V8엔진과 Javascript의 런타임에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>호이스팅(Hoisting)과 일시적 사각지대(Temporal Dead Zone</title>
-      <link>https://cocoball02.github.io/post/javascript_hoisting/</link>
+      <link>https://seokho-ham.github.io/post/javascript_hoisting/</link>
       <pubDate>Mon, 07 Jun 2021 16:44:41 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_hoisting/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_hoisting/</guid>
       <description>&lt;p&gt;이 글은 호이스팅의 발생 이유와 일시적 사각지대에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>[OS] 프로세스와 스레드</title>
-      <link>https://cocoball02.github.io/post/os_process_thread/</link>
+      <link>https://seokho-ham.github.io/post/os_process_thread/</link>
       <pubDate>Sat, 05 Jun 2021 18:17:37 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/os_process_thread/</guid>
+      <guid>https://seokho-ham.github.io/post/os_process_thread/</guid>
       <description>&lt;p&gt;네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>함수형 프로그래밍 (Functional Programming)</title>
-      <link>https://cocoball02.github.io/post/functionalprogramming/</link>
+      <link>https://seokho-ham.github.io/post/functionalprogramming/</link>
       <pubDate>Thu, 03 Jun 2021 15:34:20 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/functionalprogramming/</guid>
+      <guid>https://seokho-ham.github.io/post/functionalprogramming/</guid>
       <description>&lt;p&gt;함수형 프로그래밍에 대해 학습하고 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>[자료구조] 해시 테이블(Hash Table)</title>
-      <link>https://cocoball02.github.io/post/datastructure_hash_table/</link>
+      <link>https://seokho-ham.github.io/post/datastructure_hash_table/</link>
       <pubDate>Tue, 01 Jun 2021 15:25:09 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/datastructure_hash_table/</guid>
+      <guid>https://seokho-ham.github.io/post/datastructure_hash_table/</guid>
       <description>&lt;p&gt;해시 테이블(Hash Table)에 대해 학습한 내용을 정리합니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>Webpack 학습하기</title>
-      <link>https://cocoball02.github.io/post/webpack/</link>
+      <link>https://seokho-ham.github.io/post/webpack/</link>
       <pubDate>Wed, 19 May 2021 17:51:52 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/webpack/</guid>
+      <guid>https://seokho-ham.github.io/post/webpack/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 오늘은 Webpack에 대해 학습한 내용을 정리했습니다.&lt;/p&gt;
 &lt;br&gt;</description>
@@ -152,10 +152,10 @@
     
     <item>
       <title>시간 복잡도(Big-O 표기법)</title>
-      <link>https://cocoball02.github.io/post/bigo/</link>
+      <link>https://seokho-ham.github.io/post/bigo/</link>
       <pubDate>Tue, 11 May 2021 14:04:43 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/bigo/</guid>
+      <guid>https://seokho-ham.github.io/post/bigo/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br/&gt;
 오늘은 &lt;strong&gt;시간 복잡도&lt;/strong&gt;에 대해 학습한 내용을 정리합니다.&lt;/p&gt;
@@ -164,10 +164,10 @@
     
     <item>
       <title>[Javascript] 클로저(Closure)</title>
-      <link>https://cocoball02.github.io/post/closure/</link>
+      <link>https://seokho-ham.github.io/post/closure/</link>
       <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/closure/</guid>
+      <guid>https://seokho-ham.github.io/post/closure/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 24장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -177,10 +177,10 @@
     
     <item>
       <title>[Javascript] 실행 컨텍스트에 대해 알아보자!</title>
-      <link>https://cocoball02.github.io/post/javascript_execution_context/</link>
+      <link>https://seokho-ham.github.io/post/javascript_execution_context/</link>
       <pubDate>Wed, 21 Apr 2021 11:34:34 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_execution_context/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_execution_context/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 23장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -190,10 +190,10 @@
     
     <item>
       <title>[Javascript] this</title>
-      <link>https://cocoball02.github.io/post/javascript-this/</link>
+      <link>https://seokho-ham.github.io/post/javascript-this/</link>
       <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript-this/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript-this/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 22장 this를 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -202,10 +202,10 @@
     
     <item>
       <title>[Javascript] 프로토타입(Prototype)</title>
-      <link>https://cocoball02.github.io/post/javascript_prototype/</link>
+      <link>https://seokho-ham.github.io/post/javascript_prototype/</link>
       <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_prototype/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_prototype/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 19장 프토토타입을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -214,10 +214,10 @@
     
     <item>
       <title>[Javascript] 함수는 일급객체라는데, 일급객체란?</title>
-      <link>https://cocoball02.github.io/post/javascript_first_class_object/</link>
+      <link>https://seokho-ham.github.io/post/javascript_first_class_object/</link>
       <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_first_class_object/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_first_class_object/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 18장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -226,10 +226,10 @@
     
     <item>
       <title>[Javascript] 생성자 함수를 사용해 생성한 객체는 어떻게 다를까?</title>
-      <link>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</link>
+      <link>https://seokho-ham.github.io/post/javascript_difference_of_making_instance_by_newfunc/</link>
       <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_difference_of_making_instance_by_newfunc/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_difference_of_making_instance_by_newfunc/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 17장을 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -238,10 +238,10 @@
     
     <item>
       <title>[Javascript] 스코프(Scope)</title>
-      <link>https://cocoball02.github.io/post/javascript_scope/</link>
+      <link>https://seokho-ham.github.io/post/javascript_scope/</link>
       <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/javascript_scope/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript_scope/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아래 내용은 모던 자바스크립트 DeepDive 13장 스코프를 학습하며 정리한 내용입니다.&lt;/p&gt;
@@ -250,10 +250,10 @@
     
     <item>
       <title>[자료구조] 동적 프로그래밍(DynamicProgramming)</title>
-      <link>https://cocoball02.github.io/post/datastructure_dp/</link>
+      <link>https://seokho-ham.github.io/post/datastructure_dp/</link>
       <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/datastructure_dp/</guid>
+      <guid>https://seokho-ham.github.io/post/datastructure_dp/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 동적 프로그래밍(DynamicProgramming)에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -261,10 +261,10 @@
     
     <item>
       <title>Redux에 대해 알아보자!</title>
-      <link>https://cocoball02.github.io/post/redux/</link>
+      <link>https://seokho-ham.github.io/post/redux/</link>
       <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/redux/</guid>
+      <guid>https://seokho-ham.github.io/post/redux/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 Redux에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -272,10 +272,10 @@
     
     <item>
       <title>React Hooks를 알아보자!</title>
-      <link>https://cocoball02.github.io/post/react_hooks/</link>
+      <link>https://seokho-ham.github.io/post/react_hooks/</link>
       <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/react_hooks/</guid>
+      <guid>https://seokho-ham.github.io/post/react_hooks/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 React에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -283,10 +283,10 @@
     
     <item>
       <title>[자료구조] Stack &amp; Queue</title>
-      <link>https://cocoball02.github.io/post/datastructure_stack_queue/</link>
+      <link>https://seokho-ham.github.io/post/datastructure_stack_queue/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/datastructure_stack_queue/</guid>
+      <guid>https://seokho-ham.github.io/post/datastructure_stack_queue/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 Stack &amp;amp; Queue에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -294,20 +294,20 @@
     
     <item>
       <title>React에 대해 알아보자 - 2편</title>
-      <link>https://cocoball02.github.io/post/react_summary_2/</link>
+      <link>https://seokho-ham.github.io/post/react_summary_2/</link>
       <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/react_summary_2/</guid>
+      <guid>https://seokho-ham.github.io/post/react_summary_2/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.&lt;br&gt;
 오늘은 Inflearn에 있는 김민준 님의 &amp;ldquo;누구든지 하는 React&amp;rdquo; 강의를 통해 학습한 부분을 정리합니다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>React에 대해 알아보자 - 1편</title>
-      <link>https://cocoball02.github.io/post/react_summary_1/</link>
+      <link>https://seokho-ham.github.io/post/react_summary_1/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/react_summary_1/</guid>
+      <guid>https://seokho-ham.github.io/post/react_summary_1/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 React에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>
@@ -315,10 +315,10 @@
     
     <item>
       <title>[자료구조] Linked List</title>
-      <link>https://cocoball02.github.io/post/datastructure_linked_list/</link>
+      <link>https://seokho-ham.github.io/post/datastructure_linked_list/</link>
       <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cocoball02.github.io/post/datastructure_linked_list/</guid>
+      <guid>https://seokho-ham.github.io/post/datastructure_linked_list/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 Linked List에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>

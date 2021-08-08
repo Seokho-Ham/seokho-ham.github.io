@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programmers on 코코볼의 개발 블로그</title>
-    <link>https://cocoball02.github.io/tags/programmers/</link>
-    <description>Recent content in Programmers on 코코볼의 개발 블로그</description>
+    <title>Programmers on 함석호의 개발 블로그</title>
+    <link>https://seokho-ham.github.io/tags/programmers/</link>
+    <description>Recent content in Programmers on 함석호의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021 Cocoball</copyright>
-    <lastBuildDate>Tue, 08 Jun 2021 09:55:29 +0900</lastBuildDate><atom:link href="https://cocoball02.github.io/tags/programmers/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021 Seokho Ham</copyright>
+    <lastBuildDate>Tue, 08 Jun 2021 09:55:29 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/programmers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Programmers] 완전탐색 - 카펫</title>
-      <link>https://cocoball02.github.io/algorithms/programmers_carpet/</link>
+      <link>https://seokho-ham.github.io/algorithms/programmers_carpet/</link>
       <pubDate>Tue, 08 Jun 2021 09:55:29 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/algorithms/programmers_carpet/</guid>
+      <guid>https://seokho-ham.github.io/algorithms/programmers_carpet/</guid>
       <description>&lt;p&gt;프로그래머스의 &amp;ldquo;Programmers_Carpet&amp;quot;을 풀이한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>[Leetcode] Intersections of Two Arrays II</title>
-      <link>https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</link>
+      <link>https://seokho-ham.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</link>
       <pubDate>Fri, 21 May 2021 11:39:04 +0900</pubDate>
       
-      <guid>https://cocoball02.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</guid>
+      <guid>https://seokho-ham.github.io/algorithms/leetcode_intersections_of_two_arrays_ii/</guid>
       <description>&lt;p&gt;Leetcode의 Intersections of Two Arrays II를 풀이한 글입니다.
 &lt;br&gt;&lt;/p&gt;</description>
     </item>
