@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 함석호의 개발 블로그</title>
+    <title>Categories on Cocoball의 개발 블로그</title>
     <link>https://seokho-ham.github.io/categories/</link>
-    <description>Recent content in Categories on 함석호의 개발 블로그</description>
+    <description>Recent content in Categories on Cocoball의 개발 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2021 Seokho Ham</copyright>
-    <lastBuildDate>Fri, 06 Aug 2021 20:00:26 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Sep 2021 20:00:26 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL</title>
       <link>https://seokho-ham.github.io/categories/til/</link>
-      <pubDate>Fri, 06 Aug 2021 20:00:26 +0900</pubDate>
+      <pubDate>Thu, 16 Sep 2021 20:00:26 +0900</pubDate>
       
       <guid>https://seokho-ham.github.io/categories/til/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>개발</title>
       <link>https://seokho-ham.github.io/categories/%EA%B0%9C%EB%B0%9C/</link>
-      <pubDate>Tue, 27 Jul 2021 19:05:57 +0900</pubDate>
+      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
       
       <guid>https://seokho-ham.github.io/categories/%EA%B0%9C%EB%B0%9C/</guid>
       <description></description>

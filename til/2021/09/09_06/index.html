@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [TIL] 9월 6일 | 
+    Cocoball의 개발 블로그
+  
+</title><meta name="description" content="Backend Developer"><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-tomorrow.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.30def14a4b4c06784e58.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://seokho-ham.github.io/til/2021/09/09_06/"><meta property="og:title" content="[TIL] 9월 6일" />
+<meta property="og:description" content="Today I learned
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/til/2021/09/09_06/" /><meta property="og:image" content="https://seokho-ham.github.io/images/TIL.png" /><meta property="article:section" content="TIL" />
+<meta property="article:published_time" content="2021-09-06T20:00:26&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-06T20:00:26&#43;09:00" />
+
+<meta itemprop="name" content="[TIL] 9월 6일">
+<meta itemprop="description" content="Today I learned
+"><meta itemprop="datePublished" content="2021-09-06T20:00:26&#43;09:00" />
+<meta itemprop="dateModified" content="2021-09-06T20:00:26&#43;09:00" />
+<meta itemprop="wordCount" content="179"><meta itemprop="image" content="https://seokho-ham.github.io/images/TIL.png">
+<meta itemprop="keywords" content="TIL," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seokho-ham.github.io/images/TIL.png"/>
+
+<meta name="twitter:title" content="[TIL] 9월 6일"/>
+<meta name="twitter:description" content="Today I learned
+"/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#004eff !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://seokho-ham.github.io">Cocoball의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/til/">TIL</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">[TIL] 9월 6일</h2>
+
+                        <div class="content">
+                            <h3 style='color:#004eff'>Today I learned</h3>
+<br>
+<h4 id="학습한-내용">학습한 내용</h4>
+<hr>
+<ul>
+<li>react-beautiful-dnd 라이브러리 사용해서 카드와 태그별 이동 가능하도록 코드 작성</li>
+<li>모달 라우팅 작성</li>
+</ul>
+<h4 id="지식">지식</h4>
+<hr>
+<h5 id="react-beautiful-dnd">react-beautiful-dnd</h5>
+<hr>
+<ul>
+<li>
+<p>DragDropContext - 드래그 드롭을 할 컨텐츠를 담는 컴포넌트</p>
+<ul>
+<li>앱 자체를 DragDropContext로 감싸는것을 추천한다.</li>
+<li>onDragEnd 함수를 반드시 props로 전달받아야 한다.
+<ul>
+<li>result 인자로부터 드래그하는 데이터와 위치의 정보를 담은 객체를 얻을 수 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Droppable - 드래그 가능한 아이템들을 옮겨놓을 수 있는 공간</p>
+<ul>
+<li>droppableId를 반드시 받아야한다.</li>
+<li>direction props를 통해 방향을 조정할 수 있다.</li>
+<li>children으로 들어오는 값은 React element를 반환하는 함수여야한다.</li>
+<li>해당 함수의 인자로는 provided 과 snapshot이 있다.</li>
+</ul>
+<ol>
+<li>provided</li>
+</ol>
+<ul>
+<li>innerRef: 제대로 동작시키기 위해서는 반드시 최상단의 노드에 ref를 바인딩해줘야한다.</li>
+<li>droppableProps:</li>
+<li>placeholder: 아이템을 드래그할때 해당 아이템이 들어갈 위치에 그만큼의 사이즈가 필요한데, 해당 사이즈 조절을 자동으로 할 수 있도록 하기 위해서는 필요하다.</li>
+</ul>
+<ol start="2">
+<li>snapshot</li>
+</ol>
+<ul>
+<li>Droppable 컴포넌트의 상태들을 참조할 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>Draggable - 컴포넌트를 드래그 할 수 있도록 해주는 컴포넌트</p>
+</li>
+<li>
+<p>Droppable 내에 Droppable이 또 있을 경우 type props를 넘겨주면 해결된다.</p>
+</li>
+<li>
+<p>{&hellip;provided.dragHandleProps} : 해당 props가 있는 태그를 이동시에만 이동이 된다.</p>
+</li>
+<li>
+<p>각 Draggable의 id값은 유니크해야한다.</p>
+</li>
+</ul>
+<h5 id="modal-컴포넌트">Modal 컴포넌트</h5>
+<hr>
+<ul>
+<li>문제: url은 변하지만 새로고침이 되는것이 아닌, 모달창만 화면에 나타내고 싶었다.</li>
+<li>해결: react router에서 제공하는 location을 사용해서 해당 state가 존재할 경우, BoardPage내에서 라우팅 하도록 코드를 추가하였다.</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://seokho-ham.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/Seokho-Ham" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Seokho Ham
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.ef8a332e7804b9e7be27.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

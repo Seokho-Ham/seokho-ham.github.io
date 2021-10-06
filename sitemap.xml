@@ -2,95 +2,155 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://seokho-ham.github.io/til/08_06/</loc>
-    <lastmod>2021-08-06T20:00:26+09:00</lastmod>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_16/</loc>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/categories/</loc>
-    <lastmod>2021-08-06T20:00:26+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/</loc>
-    <lastmod>2021-08-06T20:00:26+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/til/</loc>
-    <lastmod>2021-08-06T20:00:26+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/categories/til/</loc>
-    <lastmod>2021-08-06T20:00:26+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/til/</loc>
-    <lastmod>2021-08-06T20:00:26+09:00</lastmod>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/</loc>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/tags/</loc>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/tags/til/</loc>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/categories/til/</loc>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/</loc>
+    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_15/</loc>
+    <lastmod>2021-09-15T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_10~14/</loc>
+    <lastmod>2021-09-14T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_08/</loc>
+    <lastmod>2021-09-08T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_07/</loc>
+    <lastmod>2021-09-07T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_06/</loc>
+    <lastmod>2021-09-06T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_01/</loc>
+    <lastmod>2021-09-01T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_31/</loc>
+    <lastmod>2021-08-31T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_30/</loc>
+    <lastmod>2021-08-30T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_21/</loc>
+    <lastmod>2021-08-21T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_20/</loc>
+    <lastmod>2021-08-20T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_19/</loc>
+    <lastmod>2021-08-19T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_18/</loc>
+    <lastmod>2021-08-18T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_17/</loc>
+    <lastmod>2021-08-17T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_16/</loc>
+    <lastmod>2021-08-16T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_14/</loc>
+    <lastmod>2021-08-14T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_11/</loc>
+    <lastmod>2021-08-11T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_09/</loc>
+    <lastmod>2021-08-09T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_08/</loc>
+    <lastmod>2021-08-08T20:00:26+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_06/</loc>
     <lastmod>2021-08-06T20:00:26+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/08_04/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_04/</loc>
     <lastmod>2021-08-04T22:13:50+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/08_03/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/08/08_03/</loc>
     <lastmod>2021-08-03T17:38:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_31/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_31/</loc>
     <lastmod>2021-07-31T23:43:15+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_28/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_28/</loc>
     <lastmod>2021-07-28T14:32:06+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/korello_04/</loc>
-    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/javascript/</loc>
-    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/post/</loc>
-    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/react/</loc>
-    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2021-07-27T19:05:57+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/post/korello_03/</loc>
-    <lastmod>2021-07-26T15:48:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/til/07_24/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_24/</loc>
     <lastmod>2021-07-24T15:41:32+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/korello_02/</loc>
-    <lastmod>2021-07-21T22:52:01+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/babel/</loc>
-    <lastmod>2021-07-21T22:52:01+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/webpack/</loc>
-    <lastmod>2021-07-21T22:52:01+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/til/07_21/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_21/</loc>
     <lastmod>2021-07-21T22:46:26+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
+    <loc>https://seokho-ham.github.io/tags/babel/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://seokho-ham.github.io/post/develop_environment_setting/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/tags/javascript/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/post/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/tags/webpack/</loc>
+    <lastmod>2021-07-20T15:11:54+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
     <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -102,7 +162,7 @@
     <lastmod>2021-07-20T13:44:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_20/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_20/</loc>
     <lastmod>2021-07-20T12:09:35+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -118,35 +178,27 @@
     <lastmod>2021-07-18T20:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_18/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_18/</loc>
     <lastmod>2021-07-18T20:22:28+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/korello_01/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</loc>
-    <lastmod>2021-07-17T14:08:24+09:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://seokho-ham.github.io/til/07_17/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_17/</loc>
     <lastmod>2021-07-17T13:27:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_16/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_16/</loc>
     <lastmod>2021-07-16T09:10:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_15/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_15/</loc>
     <lastmod>2021-07-15T10:37:02+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/07_14/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/07/07_14/</loc>
     <lastmod>2021-07-14T13:22:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/06_11/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/06/06_11/</loc>
     <lastmod>2021-06-11T16:15:14+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -166,7 +218,7 @@
     <lastmod>2021-06-10T14:00:33+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/06_04_10/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/06/06_04_10/</loc>
     <lastmod>2021-06-10T11:59:48+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -226,11 +278,11 @@
     <lastmod>2021-06-03T15:34:20+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/06_03/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/06/06_03/</loc>
     <lastmod>2021-06-03T12:31:40+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/06_02/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/06/06_02/</loc>
     <lastmod>2021-06-02T09:35:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -250,11 +302,11 @@
     <lastmod>2021-06-01T15:25:09+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/06_01/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/06/06_01/</loc>
     <lastmod>2021-06-01T09:30:52+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/05_31/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/05/05_31/</loc>
     <lastmod>2021-05-31T14:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -270,11 +322,11 @@
     <lastmod>2021-05-27T13:43:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/05_27/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/05/05_27/</loc>
     <lastmod>2021-05-27T11:48:19+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/05_22_24/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/05/05_22_24/</loc>
     <lastmod>2021-05-26T17:00:53+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -282,7 +334,7 @@
     <lastmod>2021-05-21T11:39:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/05_21/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/05/05_21/</loc>
     <lastmod>2021-05-21T10:37:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -290,11 +342,11 @@
     <lastmod>2021-05-20T12:45:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/05_20/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/05/05_20/</loc>
     <lastmod>2021-05-20T10:31:32+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/til/05_19/</loc>
+    <loc>https://seokho-ham.github.io/til/2021/05/05_19/</loc>
     <lastmod>2021-05-19T18:16:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -492,6 +544,10 @@
   </url><url>
     <loc>https://seokho-ham.github.io/algorithms/programmers_level1_day1/</loc>
     <lastmod>2020-10-28T12:04:46+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/tags/react/</loc>
+    <lastmod>2020-10-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/post/react_summary_2/</loc>
