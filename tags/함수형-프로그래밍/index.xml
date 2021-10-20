@@ -10,10 +10,10 @@
     <lastBuildDate>Thu, 03 Jun 2021 15:34:20 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>함수형 프로그래밍 (Functional Programming)</title>
-      <link>https://seokho-ham.github.io/post/functionalprogramming/</link>
+      <link>https://seokho-ham.github.io/post/javascript/functionalprogramming/</link>
       <pubDate>Thu, 03 Jun 2021 15:34:20 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/functionalprogramming/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/functionalprogramming/</guid>
       <description>&lt;p&gt;함수형 프로그래밍에 대해 학습하고 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>

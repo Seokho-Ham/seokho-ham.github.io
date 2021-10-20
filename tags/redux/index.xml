@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 09 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redux에 대해 알아보자!</title>
-      <link>https://seokho-ham.github.io/post/redux/</link>
+      <link>https://seokho-ham.github.io/post/react/redux/</link>
       <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/redux/</guid>
+      <guid>https://seokho-ham.github.io/post/react/redux/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 &lt;br&gt;
 오늘은 Redux에 대해 학습한 내용을 정리합니다.&lt;/p&gt;</description>

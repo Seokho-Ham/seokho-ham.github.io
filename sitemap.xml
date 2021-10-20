@@ -2,31 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://seokho-ham.github.io/til/2021/09/09_16/</loc>
-    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <loc>https://seokho-ham.github.io/til/2021/10/10_20/</loc>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/categories/</loc>
-    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/</loc>
-    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/tags/</loc>
-    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/tags/til/</loc>
-    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/categories/til/</loc>
-    <lastmod>2021-09-16T20:00:26+09:00</lastmod>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://seokho-ham.github.io/til/</loc>
+    <lastmod>2021-10-20T16:03:11+09:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://seokho-ham.github.io/til/2021/09/09_16/</loc>
     <lastmod>2021-09-16T20:00:26+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -134,7 +138,7 @@
     <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/develop_environment_setting/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</loc>
     <lastmod>2021-07-20T15:11:54+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -158,7 +162,7 @@
     <lastmod>2021-07-20T13:44:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/module_jsmodule/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/module_jsmodule/</loc>
     <lastmod>2021-07-20T13:44:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -174,7 +178,7 @@
     <lastmod>2021-07-18T20:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/jest/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/jest/</loc>
     <lastmod>2021-07-18T20:26:05+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -214,7 +218,7 @@
     <lastmod>2021-06-10T14:00:33+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_engine/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_engine/</loc>
     <lastmod>2021-06-10T14:00:33+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -246,11 +250,11 @@
     <lastmod>2021-06-07T16:44:41+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_hoisting/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_hoisting/</loc>
     <lastmod>2021-06-07T16:44:41+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/os_process_thread/</loc>
+    <loc>https://seokho-ham.github.io/post/computerscience/os_process_thread/</loc>
     <lastmod>2021-06-05T18:17:37+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -274,7 +278,7 @@
     <lastmod>2021-06-03T15:34:20+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/functionalprogramming/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/functionalprogramming/</loc>
     <lastmod>2021-06-03T15:34:20+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -286,7 +290,7 @@
     <lastmod>2021-06-02T09:35:38+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/datastructure_hash_table/</loc>
+    <loc>https://seokho-ham.github.io/post/datastructurealgorithm/datastructure_hash_table/</loc>
     <lastmod>2021-06-01T15:25:09+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -358,7 +362,7 @@
     <lastmod>2021-05-19T17:51:52+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/webpack/</loc>
+    <loc>https://seokho-ham.github.io/post/react/webpack/</loc>
     <lastmod>2021-05-19T17:51:52+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -370,7 +374,7 @@
     <lastmod>2021-05-11T14:04:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/bigo/</loc>
+    <loc>https://seokho-ham.github.io/post/datastructurealgorithm/bigo/</loc>
     <lastmod>2021-05-11T14:04:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -378,7 +382,7 @@
     <lastmod>2021-05-11T14:04:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/closure/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/closure/</loc>
     <lastmod>2021-04-23T13:07:36+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -390,7 +394,7 @@
     <lastmod>2021-04-23T13:07:36+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_execution_context/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_execution_context/</loc>
     <lastmod>2021-04-21T11:34:34+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -398,7 +402,7 @@
     <lastmod>2021-04-21T11:34:34+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript-this/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript-this/</loc>
     <lastmod>2021-04-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -406,19 +410,19 @@
     <lastmod>2021-03-31T12:54:43+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_prototype/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_prototype/</loc>
     <lastmod>2021-03-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_first_class_object/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_first_class_object/</loc>
     <lastmod>2021-03-03T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_difference_of_making_instance_by_newfunc/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_difference_of_making_instance_by_newfunc/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/javascript_scope/</loc>
+    <loc>https://seokho-ham.github.io/post/javascript/javascript_scope/</loc>
     <lastmod>2021-02-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -434,7 +438,7 @@
     <lastmod>2021-02-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/datastructure_dp/</loc>
+    <loc>https://seokho-ham.github.io/post/datastructurealgorithm/datastructure_dp/</loc>
     <lastmod>2021-02-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -462,7 +466,7 @@
     <lastmod>2021-02-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/redux/</loc>
+    <loc>https://seokho-ham.github.io/post/react/redux/</loc>
     <lastmod>2021-02-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -478,7 +482,7 @@
     <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/react_hooks/</loc>
+    <loc>https://seokho-ham.github.io/post/react/react_hooks/</loc>
     <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -510,7 +514,7 @@
     <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/datastructure_stack_queue/</loc>
+    <loc>https://seokho-ham.github.io/post/datastructurealgorithm/datastructure_stack_queue/</loc>
     <lastmod>2021-01-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -550,15 +554,15 @@
     <lastmod>2020-10-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/react_summary_2/</loc>
+    <loc>https://seokho-ham.github.io/post/react/react_summary_2/</loc>
     <lastmod>2020-10-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/react_summary_1/</loc>
+    <loc>https://seokho-ham.github.io/post/react/react_summary_1/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://seokho-ham.github.io/post/datastructure_linked_list/</loc>
+    <loc>https://seokho-ham.github.io/post/datastructurealgorithm/datastructure_linked_list/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>

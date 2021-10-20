@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 20 Jul 2021 15:11:54 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/babel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Babel과 Webpack을 이용한 개발 환경 세팅</title>
-      <link>https://seokho-ham.github.io/post/develop_environment_setting/</link>
+      <link>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</link>
       <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/develop_environment_setting/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</guid>
       <description>&lt;p&gt;이 글은 모던 자바스크립트 Deep Dive 49장 &amp;ldquo;Babel과 Webpack을 이용한 개발환경 세팅&amp;rdquo; 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  
+     [OS] 프로세스와 스레드 | 
+    Cocoball의 개발 블로그
+  
+</title><meta name="author" content="Cocoball">
+<meta name="google-site-verification" content="Bia-27p0-3fy8UordV7NeTrgeZVIS8Un_tMjlvYnDCg" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/favicon-32x32.png " sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c344b">
+<link rel="icon" href="/favicon.ico">
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-tomorrow.min.css">
+    
+
+
+
+    
+        
+            <link rel="stylesheet" href="/dist/main.30def14a4b4c06784e58.min.css">
+        
+    
+
+
+
+
+<link rel="canonical" href="https://seokho-ham.github.io/post/computerscience/os_process_thread/"><meta property="og:title" content="[OS] 프로세스와 스레드" />
+<meta property="og:description" content="네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/post/computerscience/os_process_thread/" /><meta property="og:image" content="https://seokho-ham.github.io/images/os.jpg" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-06-05T18:17:37&#43;09:00" />
+<meta property="article:modified_time" content="2021-06-05T18:17:37&#43;09:00" />
+
+<meta itemprop="name" content="[OS] 프로세스와 스레드">
+<meta itemprop="description" content="네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.
+"><meta itemprop="datePublished" content="2021-06-05T18:17:37&#43;09:00" />
+<meta itemprop="dateModified" content="2021-06-05T18:17:37&#43;09:00" />
+<meta itemprop="wordCount" content="337"><meta itemprop="image" content="https://seokho-ham.github.io/images/os.jpg">
+<meta itemprop="keywords" content="OS,Javascript,process,thread," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seokho-ham.github.io/images/os.jpg"/>
+
+<meta name="twitter:title" content="[OS] 프로세스와 스레드"/>
+<meta name="twitter:description" content="네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.
+"/>
+
+    <style>
+        .nav-item.active .nav-link{
+            color:#004eff !important;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="https://seokho-ham.github.io">Cocoball의 개발 블로그</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/til/">TIL</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                
+                    <li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li>
+                
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+<main class="content-page container pt-7 pb-5">
+    
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="meta text-muted mb-3">
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">June 5, 2021</p>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>337 words</span>
+                            <span><i class="fas fa-clock mr-2"></i>2 mins read</span>
+                        </div>
+
+                        <h1>[OS] 프로세스와 스레드</h1>
+
+                        <ul class="authors list-inline"></ul>
+                    </div>
+                </div><div class="row justify-content-center mb-3" >
+                                <div class="col-lg-10">
+                                    <img data-src="/images/os_hu704efed16b94f74a8a3e90c9975e3ab8_789842_900x500_fit_q75_box.jpg" class="img-fluid rounded mx-auto d-block" alt="[OS] 프로세스와 스레드" width='700px' height="500px">
+                                </div>
+                            </div><div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <p>네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.</p>
+<br>
+<h4 id="프로그램이란">프로그램이란?</h4>
+<hr>
+<p>아직 실행되지 않은(메모리에 올라가 있지 않은) 보조 기억 장치에 저장된 파일(코드)을 의미한다.</p>
+<p>ex) <code>.dmg</code>, <code>.exe</code> 등의 파일</p>
+<br>
+<h4 id="프로세스">프로세스</h4>
+<hr>
+<p>OS로부터 자원(메모리 공간)을 할당받은 하나의 작업을 의미한다. 간단히 말해 <code>실행중인 프로그램</code>을 말한다.</p>
+<p>할당받는 자원에는 <code>CPU 시간</code>, 메모리 영역(Code, Data, Stack, Heap)이 있다.
+메모리 영역 내에는 아래의 데이터들을 저장한다.</p>
+<ul>
+<li>
+<p><strong>Code</strong> : 실행 명령을 포함하는 코드들</p>
+</li>
+<li>
+<p><strong>Data</strong> : 초기화 된 전역 변수, static 변수</p>
+</li>
+<li>
+<p><strong>Stack</strong> : 지역 변수, 매개변수, 반환값등의 일시적인 데이터</p>
+</li>
+<li>
+<p><strong>Heap</strong> : 동적으로 할당된 변수</p>
+<img width="477" alt="스크린샷 2021-06-05 오후 6 57 58" src="https://user-images.githubusercontent.com/57708971/120887819-fa4c5080-c62f-11eb-8224-4c1edca2d405.png">
+</li>
+</ul>
+<br>
+<p>또한 프로세스가 생성될때 프로세스에 대한 정보를 담는 프로세스 제어블록(PCB)이 함께 생성된다.</p>
+<p>다음은 PCB가 담는 데이터의 종류다.</p>
+<ul>
+<li>
+<p><strong>PID</strong> : 프로세스별로 부여된 식별번호</p>
+</li>
+<li>
+<p><strong>프로세스 상태</strong> : 각 프로세스가 가지는 현재 상태</p>
+</li>
+<li>
+<p><strong>프로그램 카운터</strong> : 프로세서가 다음으로 실행할 명령어를 가리키는 값(메모리 주소를 가리키는 값).</p>
+</li>
+<li>
+<p><strong>실행 문맥</strong> : 프로세스가 실행 상태에서 마지막으로 실행한 프로세서의 레지스터 정보.</p>
+</li>
+<li>
+<p><strong>스케줄링 우선순위</strong> : 프로세서에서 실행되는 프로세서의 순서.</p>
+</li>
+<li>
+<p><strong>권한</strong> : 프로세스가 접근할 수 있는 자원의 정보.</p>
+</li>
+<li>
+<p><strong>프로세스의 부모와 자식 프로세스</strong></p>
+</li>
+<li>
+<p><strong>프로세스의 메모리 주소를 가리키는 포인터</strong></p>
+<img width="300" alt="스크린샷 2021-06-05 오후 6 48 39" src="https://user-images.githubusercontent.com/57708971/120887605-d9cfc680-c62e-11eb-859f-b45207342d33.png">
+</li>
+</ul>
+<br>
+<h4 id="프로그램의-동작-과정">프로그램의 동작 과정</h4>
+<hr>
+<p>프로그램을 실행시키면 컴퓨터에서 공간을 할당해 메모리에 코드가 올라가게 된다.
+즉, <code>프로세스</code>가 된다.</p>
+<p>하나의 프로세서(CPU)에서는 한번에 하나의 프로세스만 실행이 가능하다. 그렇다면 어떻게 여러개의 프로그램을 돌릴까?
+<strong>바로 프로세서에서 빠르게(짧은 텀으로) 프로세스를 변경하기 때문이다.</strong> 이렇게 프로세스를 바꾸는 작업을 <code>Context Switching</code>이라고 한다.</p>
+<p>이렇게 바꾸는 작업을 <code>Context Switching</code> 이라고 한다. 이전의 프로세스 상태를 보관하고, 새로운 프로세스의 상태를 복구하는 작업이다.</p>
+<br>
+<h4 id="스레드">스레드</h4>
+<hr>
+<p>프로세스 내에서 실행되는 여러 흐름의 단위를 말한다.</p>
+<p>스레드는 각 프로세스 내에서 Stack만 할당받고 나머지는 공유한다.</p>
+<img width="497" alt="스크린샷 2021-06-05 오후 7 05 20" src="https://user-images.githubusercontent.com/57708971/120888005-0684dd80-c631-11eb-9dd9-20fedd6bdc1c.png">
+<p><br><br></p>
+<h4 id="멀티-프로세스--멀티-스레드">멀티 프로세스 &amp; 멀티 스레드</h4>
+<hr>
+<p><code>멀티 프로세스</code> : 한 앱에서 여러가지 동작을 할 때 여러개의 프로세스를 만들어 해결하는 것.</p>
+<ul>
+<li>장점
+<ul>
+<li>하나의 프로세스에 문제가 생겨도 다른 프로세스에 영향이 적다.<br><br></li>
+</ul>
+</li>
+<li>단점
+<ul>
+<li>Context Switching 과정에서 캐시 메모리 초기화 등의 작업들이 발생하여 비용이 많이 든다.</li>
+<li>프로세스간의 복잡한 통신 기법 → 프로세스들간에 변수 공유가 되지 않는다.</li>
+</ul>
+</li>
+</ul>
+<br>
+<p><code>멀티 스레드</code> : 한 앱에 대한 작업 단위가 나뉘어질 때 여러 쓰레드로 나뉘어지는 것.</p>
+<ul>
+<li>윈도우, 리눅스 등 멀티 프로세싱을 지원하지만 멀티 스레딩을 기본으로 한다.<br><br></li>
+<li>장점
+<ul>
+<li>시스템 자원 소모가 감소된다. → 프로세스를 생성해서 자원을 할당하는 일이 줄어든다.</li>
+<li>Context Switching 비용이 감소된다.<br><br></li>
+</ul>
+</li>
+<li>단점
+<ul>
+<li>하나의 스레드에 문제가 발생할 경우 프로세스 자체에 영향이 간다.</li>
+</ul>
+</li>
+</ul>
+                        </div>
+                        <br><div class="tags my-3"><a class="badge badge-pill badge-light border mr-2" href="/tags/os">
+                                    <i class="fas fa-tag mr-2"></i>OS
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/javascript">
+                                    <i class="fas fa-tag mr-2"></i>Javascript
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/process">
+                                    <i class="fas fa-tag mr-2"></i>process
+                                </a><a class="badge badge-pill badge-light border mr-2" href="/tags/thread">
+                                    <i class="fas fa-tag mr-2"></i>thread
+                                </a></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <script src="https://utteranc.es/client.js"
+                                repo="cocoball02/blog-comments"
+                                issue-term="title"
+                                label="✨💬✨"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+            
+            </article>
+           
+        </div>
+    </div>
+
+    <div class="related-content row mt-5 row-cols-1 row-cols-lg-3"><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/javascript/functionalprogramming/" class="d-block"><img data-src="/images/FP_hud94a7d96f59126a73c75440f2544515a_345603_700x400_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="함수형 프로그래밍 (Functional Programming)"><div class="card-body">
+            <h4 class="card-title">함수형 프로그래밍 (Functional Programming)</h4>
+            <p class="card-text text-muted text-uppercase">June 3, 2021</p>
+            <div class="card-text">
+                <p>함수형 프로그래밍에 대해 학습하고 정리한 글입니다.</p>
+<br>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/datastructurealgorithm/datastructure_hash_table/" class="d-block"><img data-src="/images/datastructure_huee2a4deeb8e9dc0320733d6a1fbc4d5f_29473_700x400_fill_q75_box_smart1.jpg" class="card-img-top mx-auto d-block" alt="[자료구조] 해시 테이블(Hash Table)"><div class="card-body">
+            <h4 class="card-title">[자료구조] 해시 테이블(Hash Table)</h4>
+            <p class="card-text text-muted text-uppercase">June 1, 2021</p>
+            <div class="card-text">
+                <p>해시 테이블(Hash Table)에 대해 학습한 내용을 정리합니다.</p>
+<br>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div><div class="col mb-3">
+                <div class="card h-100">
+    
+    <a href="/post/javascript/closure/" class="d-block"><img data-src="/images/javascript-cover_hucfa44e83c33dd09becbc394a92682200_64424_700x400_fill_box_smart1_2.png" class="card-img-top mx-auto d-block" alt="[Javascript] 클로저(Closure)"><div class="card-body">
+            <h4 class="card-title">[Javascript] 클로저(Closure)</h4>
+            <p class="card-text text-muted text-uppercase">April 23, 2021</p>
+            <div class="card-text">
+                <p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.</p>
+<blockquote>
+<p>아래 내용은 모던 자바스크립트 DeepDive 24장을 학습하며 정리한 내용입니다.</p>
+</blockquote>
+<br>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div></div>
+</main>
+
+
+
+    <footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://seokho-ham.github.io/index.xml" rel="alternate" type="application/rss+xml" class="icons d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a></li><li class="list-inline-item">
+                        <a href="mailto:kaljuice02@gmail.com" class="icons d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li><li class="list-inline-item">
+                            <a href="https://github.com/Seokho-Ham" class="icons d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p class="text-muted">
+                    
+                        Copyright © 2021 Seokho Ham
+                    
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        
+            <script src="/dist/main.ef8a332e7804b9e7be27.min.js"></script>
+        
+    
+
+
+
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178122307-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>

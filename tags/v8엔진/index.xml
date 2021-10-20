@@ -10,10 +10,10 @@
     <lastBuildDate>Thu, 10 Jun 2021 14:00:33 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/v8%EC%97%94%EC%A7%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>자바스크립트 엔진과 구동원리</title>
-      <link>https://seokho-ham.github.io/post/javascript_engine/</link>
+      <link>https://seokho-ham.github.io/post/javascript/javascript_engine/</link>
       <pubDate>Thu, 10 Jun 2021 14:00:33 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/javascript_engine/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/javascript_engine/</guid>
       <description>&lt;p&gt;이 글은 Javascript 엔진인 V8엔진과 Javascript의 런타임에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>

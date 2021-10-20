@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 01 Jun 2021 15:25:09 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/hash-table/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[자료구조] 해시 테이블(Hash Table)</title>
-      <link>https://seokho-ham.github.io/post/datastructure_hash_table/</link>
+      <link>https://seokho-ham.github.io/post/datastructurealgorithm/datastructure_hash_table/</link>
       <pubDate>Tue, 01 Jun 2021 15:25:09 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/datastructure_hash_table/</guid>
+      <guid>https://seokho-ham.github.io/post/datastructurealgorithm/datastructure_hash_table/</guid>
       <description>&lt;p&gt;해시 테이블(Hash Table)에 대해 학습한 내용을 정리합니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>

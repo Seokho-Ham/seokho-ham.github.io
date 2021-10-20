@@ -10,20 +10,20 @@
     <lastBuildDate>Tue, 20 Jul 2021 15:11:54 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Babel과 Webpack을 이용한 개발 환경 세팅</title>
-      <link>https://seokho-ham.github.io/post/develop_environment_setting/</link>
+      <link>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</link>
       <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/develop_environment_setting/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</guid>
       <description>&lt;p&gt;이 글은 모던 자바스크립트 Deep Dive 49장 &amp;ldquo;Babel과 Webpack을 이용한 개발환경 세팅&amp;rdquo; 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>Webpack 학습하기</title>
-      <link>https://seokho-ham.github.io/post/webpack/</link>
+      <link>https://seokho-ham.github.io/post/react/webpack/</link>
       <pubDate>Wed, 19 May 2021 17:51:52 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/webpack/</guid>
+      <guid>https://seokho-ham.github.io/post/react/webpack/</guid>
       <description>&lt;p&gt;Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
 오늘은 Webpack에 대해 학습한 내용을 정리했습니다.&lt;/p&gt;
 &lt;br&gt;</description>

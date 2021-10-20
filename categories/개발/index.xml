@@ -10,30 +10,30 @@
     <lastBuildDate>Tue, 20 Jul 2021 15:11:54 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Babel과 Webpack을 이용한 개발 환경 세팅</title>
-      <link>https://seokho-ham.github.io/post/develop_environment_setting/</link>
+      <link>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</link>
       <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/develop_environment_setting/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/develop_environment_setting/</guid>
       <description>&lt;p&gt;이 글은 모던 자바스크립트 Deep Dive 49장 &amp;ldquo;Babel과 Webpack을 이용한 개발환경 세팅&amp;rdquo; 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>자바스크립트의 모듈 시스템</title>
-      <link>https://seokho-ham.github.io/post/module_jsmodule/</link>
+      <link>https://seokho-ham.github.io/post/javascript/module_jsmodule/</link>
       <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/module_jsmodule/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/module_jsmodule/</guid>
       <description>&lt;p&gt;이 글은 자바스크립트 모듈 시스템에 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
     
     <item>
       <title>테스트 프레임워크 - Jest</title>
-      <link>https://seokho-ham.github.io/post/jest/</link>
+      <link>https://seokho-ham.github.io/post/javascript/jest/</link>
       <pubDate>Sun, 18 Jul 2021 20:26:05 +0900</pubDate>
       
-      <guid>https://seokho-ham.github.io/post/jest/</guid>
+      <guid>https://seokho-ham.github.io/post/javascript/jest/</guid>
       <description>&lt;p&gt;이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;br&gt;</description>
     </item>
