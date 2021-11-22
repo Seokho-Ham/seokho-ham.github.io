@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_engine\/"
-        },"genre": "posts","keywords": "V8엔진, Javascript\u0027, EventLoop","wordcount":  468 ,
+        },"genre": "posts","keywords": "V8엔진, Javascript\u0027, EventLoop","wordcount":  450 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_engine\/","datePublished": "2021-06-10T14:00:33+09:00","dateModified": "2021-06-10T14:00:33+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">자바스크립트 엔진과 구동원리</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-10">2021-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;468 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-10">2021-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;450 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -95,7 +95,6 @@
         <li><a href="#단일-스레드를-가진다">단일 스레드를 가진다</a></li>
         <li><a href="#non-blocking-io">Non-blocking I/O</a></li>
         <li><a href="#javascript-runtime">Javascript Runtime</a></li>
-        <li><a href="#참고-자료">참고 자료</a></li>
       </ul>
     </li>
   </ul>
@@ -190,14 +189,7 @@
 <strong>6. 1초가 지나고 나서 setTimeout에 함께 전달했던 boo함수가 태스크 큐로 이동한다.</strong><br>
 <strong>7. EventLoop가 콜스택이 비어있는것을 확인 후, Task Queue에 대기중인 함수를 콜스택으로 옮긴다.</strong><br>
 <strong>8. 콘솔에 &lsquo;Hello&rsquo;가 출력된다.</strong></p>
-<p>지금까지 Javascript 엔진과 구동 원리에 대해 정리했다.</p>
-<br>
-<h3 id="참고-자료">참고 자료</h3>
-<hr>
-<ul>
-<li><a href="https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine/" target="_blank" rel="noopener noreffer">캡틴 판교님 블로그 - 자바스크립트의 동작원리: 엔진, 런타임, 호출 스택</a></li>
-<li><a href="https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-v8-%EC%97%94%EC%A7%84%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%B5%9C%EC%A0%81%ED%99%94%EB%90%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-%ED%8C%81-6c6f9832c1d9" target="_blank" rel="noopener noreffer">백선기님 블로그 - 자바스크립트는 어떻게 작동하는가</a></li>
-</ul></div><div class="post-footer" id="post-footer">
+<p>지금까지 Javascript 엔진과 구동 원리에 대해 정리했다.</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
