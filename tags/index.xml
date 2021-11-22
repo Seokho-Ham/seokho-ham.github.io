@@ -1,300 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Seokho의 개발 블로그</title>
-    <link>https://seokho-ham.github.io/tags/</link>
-    <description>Recent content in Tags on Seokho의 개발 블로그</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2021 Seokho Ham</copyright>
-    <lastBuildDate>Tue, 02 Nov 2021 22:59:19 +0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>TIL</title>
-      <link>https://seokho-ham.github.io/tags/til/</link>
-      <pubDate>Tue, 02 Nov 2021 22:59:19 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/til/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Babel</title>
-      <link>https://seokho-ham.github.io/tags/babel/</link>
-      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/babel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://seokho-ham.github.io/tags/javascript/</link>
-      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Webpack</title>
-      <link>https://seokho-ham.github.io/tags/webpack/</link>
-      <pubDate>Tue, 20 Jul 2021 15:11:54 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/webpack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>모듈</title>
-      <link>https://seokho-ham.github.io/tags/%EB%AA%A8%EB%93%88/</link>
-      <pubDate>Tue, 20 Jul 2021 13:44:27 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%EB%AA%A8%EB%93%88/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jest</title>
-      <link>https://seokho-ham.github.io/tags/jest/</link>
-      <pubDate>Sun, 18 Jul 2021 20:26:05 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/jest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TDD</title>
-      <link>https://seokho-ham.github.io/tags/tdd/</link>
-      <pubDate>Sun, 18 Jul 2021 20:26:05 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/tdd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>EventLoop</title>
-      <link>https://seokho-ham.github.io/tags/eventloop/</link>
-      <pubDate>Thu, 10 Jun 2021 14:00:33 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/eventloop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>V8엔진</title>
-      <link>https://seokho-ham.github.io/tags/v8%EC%97%94%EC%A7%84/</link>
-      <pubDate>Thu, 10 Jun 2021 14:00:33 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/v8%EC%97%94%EC%A7%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programmers</title>
-      <link>https://seokho-ham.github.io/tags/programmers/</link>
-      <pubDate>Tue, 08 Jun 2021 09:55:29 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/programmers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>알고리즘</title>
-      <link>https://seokho-ham.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
-      <pubDate>Tue, 08 Jun 2021 09:55:29 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>호이스팅</title>
-      <link>https://seokho-ham.github.io/tags/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/</link>
-      <pubDate>Mon, 07 Jun 2021 16:44:41 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OS</title>
-      <link>https://seokho-ham.github.io/tags/os/</link>
-      <pubDate>Sat, 05 Jun 2021 18:17:37 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/os/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>process</title>
-      <link>https://seokho-ham.github.io/tags/process/</link>
-      <pubDate>Sat, 05 Jun 2021 18:17:37 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/process/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thread</title>
-      <link>https://seokho-ham.github.io/tags/thread/</link>
-      <pubDate>Sat, 05 Jun 2021 18:17:37 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/thread/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>함수형 프로그래밍</title>
-      <link>https://seokho-ham.github.io/tags/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link>
-      <pubDate>Thu, 03 Jun 2021 15:34:20 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hash Table</title>
-      <link>https://seokho-ham.github.io/tags/hash-table/</link>
-      <pubDate>Tue, 01 Jun 2021 15:25:09 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/hash-table/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>자료구조</title>
-      <link>https://seokho-ham.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
-      <pubDate>Tue, 01 Jun 2021 15:25:09 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Leetcode</title>
-      <link>https://seokho-ham.github.io/tags/leetcode/</link>
-      <pubDate>Sat, 29 May 2021 12:44:02 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>https://seokho-ham.github.io/tags/frontend/</link>
-      <pubDate>Wed, 19 May 2021 17:51:52 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Big-O</title>
-      <link>https://seokho-ham.github.io/tags/big-o/</link>
-      <pubDate>Tue, 11 May 2021 14:04:43 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/big-o/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>시간복잡도</title>
-      <link>https://seokho-ham.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</link>
-      <pubDate>Tue, 11 May 2021 14:04:43 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>모던 자바스크립트 DeepDive</title>
-      <link>https://seokho-ham.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</link>
-      <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-deepdive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>클로저</title>
-      <link>https://seokho-ham.github.io/tags/%ED%81%B4%EB%A1%9C%EC%A0%80/</link>
-      <pubDate>Fri, 23 Apr 2021 13:07:36 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%ED%81%B4%EB%A1%9C%EC%A0%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>실행 컨텍스트</title>
-      <link>https://seokho-ham.github.io/tags/%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</link>
-      <pubDate>Wed, 21 Apr 2021 11:34:34 +0900</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DynamicProgramming</title>
-      <link>https://seokho-ham.github.io/tags/dynamicprogramming/</link>
-      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/dynamicprogramming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redux</title>
-      <link>https://seokho-ham.github.io/tags/redux/</link>
-      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/redux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React-Hooks</title>
-      <link>https://seokho-ham.github.io/tags/react-hooks/</link>
-      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/react-hooks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>프로그래머스</title>
-      <link>https://seokho-ham.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Queue</title>
-      <link>https://seokho-ham.github.io/tags/queue/</link>
-      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/queue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stack</title>
-      <link>https://seokho-ham.github.io/tags/stack/</link>
-      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>https://seokho-ham.github.io/tags/react/</link>
-      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://seokho-ham.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/</link>
+        <description>Tags - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Javascript</title>
+    <link>https://seokho-ham.github.io/tags/javascript/</link>
+    <pubDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/tags/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>OS</title>
+    <link>https://seokho-ham.github.io/tags/os/</link>
+    <pubDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/tags/os/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>process</title>
+    <link>https://seokho-ham.github.io/tags/process/</link>
+    <pubDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/tags/process/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>thread</title>
+    <link>https://seokho-ham.github.io/tags/thread/</link>
+    <pubDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/tags/thread/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>
