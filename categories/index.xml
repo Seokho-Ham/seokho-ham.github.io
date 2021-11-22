@@ -3,12 +3,75 @@
         <title>Categories - Category - Kale&#39;s DevBlog</title>
         <link>https://seokho-ham.github.io/categories/</link>
         <description>Categories - Category - Kale&#39;s DevBlog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>TIL</title>
+    <link>https://seokho-ham.github.io/categories/til/</link>
+    <pubDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/til/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>사이드 프로젝트</title>
+    <link>https://seokho-ham.github.io/categories/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</link>
+    <pubDate>Tue, 27 Jul 2021 19:05:57 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Frontend</title>
+    <link>https://seokho-ham.github.io/categories/frontend/</link>
+    <pubDate>Tue, 20 Jul 2021 15:11:54 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/frontend/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Javascript</title>
+    <link>https://seokho-ham.github.io/categories/javascript/</link>
+    <pubDate>Tue, 20 Jul 2021 13:44:27 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Test</title>
+    <link>https://seokho-ham.github.io/categories/test/</link>
+    <pubDate>Sun, 18 Jul 2021 20:26:05 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/test/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>회고</title>
+    <link>https://seokho-ham.github.io/categories/%ED%9A%8C%EA%B3%A0/</link>
+    <pubDate>Thu, 08 Jul 2021 14:46:39 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/%ED%9A%8C%EA%B3%A0/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>OS</title>
     <link>https://seokho-ham.github.io/categories/os/</link>
-    <pubDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</pubDate>
+    <pubDate>Sat, 05 Jun 2021 18:17:37 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://seokho-ham.github.io/categories/os/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>자료구조</title>
+    <link>https://seokho-ham.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
+    <pubDate>Tue, 01 Jun 2021 15:25:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Redux</title>
+    <link>https://seokho-ham.github.io/categories/redux/</link>
+    <pubDate>Tue, 09 Feb 2021 15:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/redux/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>React</title>
+    <link>https://seokho-ham.github.io/categories/react/</link>
+    <pubDate>Fri, 05 Feb 2021 15:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/react/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

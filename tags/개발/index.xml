@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>개발 - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/%EA%B0%9C%EB%B0%9C/</link>
+        <description>개발 - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Jul 2021 14:46:39 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/%EA%B0%9C%EB%B0%9C/" rel="self" type="application/rss+xml" /><item>
+    <title>2021 상반기 회고</title>
+    <link>https://seokho-ham.github.io/posts/retrospective/2021_firsthalf/</link>
+    <pubDate>Thu, 08 Jul 2021 14:46:39 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/retrospective/2021_firsthalf/</guid>
+    <description><![CDATA[<p>2021년 상반기 회고글입니다.</p>
+<br>]]></description>
+</item></channel>
+</rss>

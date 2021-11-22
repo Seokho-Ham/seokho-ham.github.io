@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DynamicProgramming - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/dynamicprogramming/</link>
+        <description>DynamicProgramming - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 15 Feb 2021 14:04:43 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/dynamicprogramming/" rel="self" type="application/rss+xml" /><item>
+    <title>[자료구조] 동적 프로그래밍(DynamicProgramming)</title>
+    <link>https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_dp/</link>
+    <pubDate>Mon, 15 Feb 2021 14:04:43 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_dp/</guid>
+    <description><![CDATA[<p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 동적 프로그래밍(DynamicProgramming)에 대해 학습한 내용을 정리합니다.</p>]]></description>
+</item></channel>
+</rss>

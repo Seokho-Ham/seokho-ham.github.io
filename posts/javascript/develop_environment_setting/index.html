@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Babel과 Webpack을 이용한 개발 환경 세팅 - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="Babel과 Webpack을 이용한 개발 환경 세팅" />
+<meta property="og:description" content="이 글은 모던 자바스크립트 Deep Dive 49장 &ldquo;Babel과 Webpack을 이용한 개발환경 세팅&rdquo; 대해 학습한 내용을 정리한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/javascript/develop_environment_setting/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-20T15:11:54&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-20T15:11:54&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Babel과 Webpack을 이용한 개발 환경 세팅"/>
+<meta name="twitter:description" content="이 글은 모던 자바스크립트 Deep Dive 49장 &ldquo;Babel과 Webpack을 이용한 개발환경 세팅&rdquo; 대해 학습한 내용을 정리한 글입니다.
+"/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/javascript/develop_environment_setting/" /><link rel="prev" href="https://seokho-ham.github.io/posts/javascript/module_jsmodule/" /><link rel="next" href="https://seokho-ham.github.io/posts/til/2021/07/07_21/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Babel과 Webpack을 이용한 개발 환경 세팅",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/develop_environment_setting\/"
+        },"genre": "posts","keywords": "Javascript, Webpack, Babel","wordcount":  387 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/develop_environment_setting\/","datePublished": "2021-07-20T15:11:54+09:00","dateModified": "2021-07-20T15:11:54+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Babel과 Webpack을 이용한 개발 환경 세팅</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/frontend/"><i class="far fa-folder fa-fw"></i>Frontend</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-20">2021-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;387 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#babel">Babel</a></li>
+        <li><a href="#설치">설치</a></li>
+        <li><a href="#트랜스파일링">트랜스파일링</a></li>
+        <li><a href="#webpack">Webpack</a></li>
+        <li><a href="#설치-1">설치</a></li>
+        <li><a href="#webpack-설정하기">Webpack 설정하기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>이 글은 모던 자바스크립트 Deep Dive 49장 &ldquo;Babel과 Webpack을 이용한 개발환경 세팅&rdquo; 대해 학습한 내용을 정리한 글입니다.</p>
+<br>
+<p>크롬, 파이어폭스, 사파리 등의 브라우저에서는 대부분 ES6 사양을 지원한다.
+하지만 IE 11의 지원율은 11%다.</p>
+<p>즉, 최신 사양으로 개발된 프로젝트를 구형 브라우저에서 문제없이 동작 시키려면 개발환경을 따로 구축해야한다.</p>
+<p>또한, 모듈을 사용하기 위해서는 모듈 로더도 따로 필요하다. ESM은 대부분의 브라우저에서 사용이 가능하지만 실제로는 주로 사용하지 않는다.</p>
+<p>이유는 아래와 같다.</p>
+<ul>
+<li>IE와 같은 구형 브라우저에서는 지원하지 않는다.</li>
+<li>ESM을 사용하더라도 트랜스파일링이나 번들링은 필요하다.</li>
+<li>ESM이 아직 지원하지 않는 기능들이 있으며 버그도 존재한다.</li>
+</ul>
+<p>그렇기 때문에 주로 Babel과 Webpack을 사용해 트랜스파일링과 번들링 작업을 한다.</p>
+<br>
+<h3 id="babel">Babel</h3>
+<hr>
+<ul>
+<li>ES6이상의 사양을 지원하지 않는 구형 브라우저에서 ES6 이상의 사양으로 작성된 코드를 동작할 수 있도로 ES5 사양의 소스코드로 트랜스파일링 해주는 역할을 한다.</li>
+<li>React에서 사용하는 JSX문법을 브라우저에서 동작할 수 있도록 트랜스파일링 해준다.</li>
+</ul>
+<br>
+<h3 id="설치">설치</h3>
+<hr>
+<ol>
+<li>
+<p><code>npm i -D @babel/core @babel/cli</code> 를 터미널에 입력한다.</p>
+</li>
+<li>
+<p>바벨을 사용할 때 함께 사용되어야 할 플러그인들이 모인 @babel/preset-env 프리셋을 설치해야한다.<br>
+아래는 Babel에서 제공하는 공식 프리셋 목록이다.</p>
+<ul>
+<li>@babel/preset-env</li>
+<li>@babel/preset-flow</li>
+<li>@babel/preset-react</li>
+<li>@babel/preset-typescript
+<br><br></li>
+</ul>
+</li>
+<li>
+<p>브라우저 지원 형식은 .browserlistrc 파일에 상세하게 설정할 수 있다.</p>
+</li>
+<li>
+<p>프로젝트 루트 폴더에 babel.config.json 설정 파일을 생성한다.
+아래 설정을 추가해서 설치한 프리셋을 사용하겠다고 명령한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;preset&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;@babel/preset-env&#34;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<br>
+<h3 id="트랜스파일링">트랜스파일링</h3>
+<hr>
+<ul>
+<li>npm scripts에 babel cli 명령어를 입력해둔다.</li>
+<li><code>babel 타깃폴더 -w -d 결과물 폴더</code></li>
+<li><strong>-w(watch)</strong> : 타깃 폴더에 있는 모든 JS파일들의 변경을 감지하여 자동으로 트랜스파일링한다.</li>
+<li><strong>-d(out-dir)</strong> : 트랜스파일링된 결과물을 저장할 폴더를 지정한다. 없을경우 자동 생성.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;babel src/js -w -d dist/js&#34;</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>node는 CommonJS를 사용하고 있다. 하지만 브라우저에서는 동작하지 않는다. 이것을 위해 웹팩이 필요하다.</li>
+</ul>
+<br>
+<h3 id="webpack">Webpack</h3>
+<hr>
+<ul>
+<li>의존 관계에 있는 자바스크립트, CSS, 이미지 등의 리소스들을 하나(또는 여러 개) 파일로 번들링하는 모듈 번들러다.</li>
+</ul>
+<br>
+<h3 id="설치-1">설치</h3>
+<hr>
+<ol>
+<li>
+<p><code>npm i -D webpack webpack-cli</code> 명령어 입력</p>
+</li>
+<li>
+<p>webpack이 번들링 시 babel을 사용해 트랜스파일링 하도록 하기 위해 Babel 로더를 설치한다
+<code>npm i -D babel-loader</code> 명령어 입력</p>
+</li>
+<li>
+<p>package.json에서 빌드를 Webpack이 하도록 설정</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;webpack -w&#34;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<br>
+<h3 id="webpack-설정하기">Webpack 설정하기</h3>
+<hr>
+<ol>
+<li>
+<p>webpack.config.js 파일을 생성한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">//최초 진입점
+</span><span class="c1"></span>  <span class="nx">entry</span><span class="o">:</span> <span class="s1">&#39;./src/js/main.js&#39;</span><span class="p">,</span>
+  <span class="c1">//번들링 된 js 파일의 이름과 저장될 경로 지정
+</span><span class="c1"></span>  <span class="nx">output</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;dist/js&#39;</span><span class="p">),</span>
+    <span class="nx">filename</span><span class="o">:</span> <span class="s1">&#39;index.js&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.js$/</span><span class="p">,</span>
+        <span class="nx">include</span><span class="o">:</span> <span class="p">[</span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;src/js&#39;</span><span class="p">)],</span>
+        <span class="nx">exclude</span><span class="o">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="nx">use</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;babel-loader&#39;</span><span class="p">,</span>
+          <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">],</span>
+          <span class="p">},</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="nx">devtool</span><span class="o">:</span> <span class="s1">&#39;source-map&#39;</span><span class="p">,</span>
+  <span class="nx">mode</span><span class="o">:</span> <span class="s1">&#39;development&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></li>
+<li>
+<p><code>@babel-polyfill</code> 설치</p>
+<ul>
+<li>Promise, Object.assign, Array.from 등은 ES5사양에서 대체되는것이 없어서 트랜스파일링이 되지 않는다.</li>
+<li>개발환경뿐만 아니라 실제 서비스 환경에서도 사용해야 하기 때문에 Dev-dependencies 대신 dependencies에 설치해야한다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//import를 사용할 경우 webpack 설정의 entry에 다음을 추가한다.
+</span><span class="c1"></span><span class="p">{</span>
+	<span class="nx">entry</span> <span class="o">:</span> <span class="p">[</span><span class="s1">&#39;@babel/polyfill&#39;</span><span class="p">,</span> <span class="s1">&#39;./src/js/main.js&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-07-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/javascript/develop_environment_setting/" data-title="Babel과 Webpack을 이용한 개발 환경 세팅" data-hashtags="Javascript,Webpack,Babel"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/javascript/develop_environment_setting/" data-hashtag="Javascript"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/javascript/develop_environment_setting/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/javascript/develop_environment_setting/" data-title="Babel과 Webpack을 이용한 개발 환경 세팅" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/webpack/">Webpack</a>,&nbsp;<a href="/tags/babel/">Babel</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/javascript/module_jsmodule/" class="prev" rel="prev" title="자바스크립트의 모듈 시스템"><i class="fas fa-angle-left fa-fw"></i>자바스크립트의 모듈 시스템</a>
+            <a href="/posts/til/2021/07/07_21/" class="next" rel="next" title="[TIL] 7월 21일">[TIL] 7월 21일<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-178122307-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-178122307-1" async></script></body>
+</html>

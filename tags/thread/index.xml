@@ -3,23 +3,13 @@
         <title>thread - Tag - Kale&#39;s DevBlog</title>
         <link>https://seokho-ham.github.io/tags/thread/</link>
         <description>thread - Tag - Kale&#39;s DevBlog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/thread/" rel="self" type="application/rss+xml" /><item>
-    <title>11_22</title>
-    <link>https://seokho-ham.github.io/posts/til/11_22/</link>
-    <pubDate>Mon, 22 Nov 2021 17:23:44 &#43;0900</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 05 Jun 2021 18:17:37 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/thread/" rel="self" type="application/rss+xml" /><item>
+    <title>[OS] 프로세스와 스레드</title>
+    <link>https://seokho-ham.github.io/posts/computerscience/os_process_thread/</link>
+    <pubDate>Sat, 05 Jun 2021 18:17:37 &#43;0900</pubDate>
     <author>Author</author>
-    <guid>https://seokho-ham.github.io/posts/til/11_22/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/11_22/gogo.jpg" referrerpolicy="no-referrer">
-            </div>dsdasdssdsdsad]]></description>
-</item><item>
-    <title>First Post</title>
-    <link>https://seokho-ham.github.io/posts/first-post/</link>
-    <pubDate>Mon, 22 Nov 2021 16:38:08 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://seokho-ham.github.io/posts/first-post/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/first-post/gogo.jpg" referrerpolicy="no-referrer">
-            </div>sdsdsdsds]]></description>
+    <guid>https://seokho-ham.github.io/posts/computerscience/os_process_thread/</guid>
+    <description><![CDATA[<p>네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.</p>
+<br>]]></description>
 </item></channel>
 </rss>

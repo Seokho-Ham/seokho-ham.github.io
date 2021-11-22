@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>클로저 - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/%ED%81%B4%EB%A1%9C%EC%A0%80/</link>
+        <description>클로저 - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 23 Apr 2021 13:07:36 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/%ED%81%B4%EB%A1%9C%EC%A0%80/" rel="self" type="application/rss+xml" /><item>
+    <title>[Javascript] 클로저(Closure)</title>
+    <link>https://seokho-ham.github.io/posts/javascript/closure/</link>
+    <pubDate>Fri, 23 Apr 2021 13:07:36 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/javascript/closure/</guid>
+    <description><![CDATA[<p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.</p>
+<blockquote>
+<p>아래 내용은 모던 자바스크립트 DeepDive 24장을 학습하며 정리한 내용입니다.</p>
+</blockquote>
+<br>]]></description>
+</item></channel>
+</rss>

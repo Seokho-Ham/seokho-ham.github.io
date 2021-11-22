@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>테스트 프레임워크 - Jest - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="테스트 프레임워크 - Jest" />
+<meta property="og:description" content="이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/javascript/jest/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-18T20:26:05&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-18T20:26:05&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="테스트 프레임워크 - Jest"/>
+<meta name="twitter:description" content="이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.
+"/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/javascript/jest/" /><link rel="prev" href="https://seokho-ham.github.io/posts/til/2021/07/07_18/" /><link rel="next" href="https://seokho-ham.github.io/posts/til/2021/07/07_20/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "테스트 프레임워크 - Jest",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/jest\/"
+        },"genre": "posts","keywords": "TDD, Jest","wordcount":  385 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/jest\/","datePublished": "2021-07-18T20:26:05+09:00","dateModified": "2021-07-18T20:26:05+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">테스트 프레임워크 - Jest</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/test/"><i class="far fa-folder fa-fw"></i>Test</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-18">2021-07-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;385 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#jest란">Jest란?</a></li>
+        <li><a href="#다른-테스트-라이브러리와의-차이점">다른 테스트 라이브러리와의 차이점</a></li>
+        <li><a href="#사용법">사용법</a></li>
+        <li><a href="#매처">매처</a></li>
+        <li><a href="#비동기-처리">비동기 처리</a></li>
+        <li><a href="#콜백"><strong>콜백</strong></a></li>
+        <li><a href="#프로미스"><strong>프로미스</strong></a></li>
+        <li><a href="#async--await"><strong>Async / Await</strong></a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.</p>
+<br>
+<h3 id="jest란">Jest란?</h3>
+<hr>
+<ul>
+<li>페이스북에서 만든 자바스크립트 테스트 프레임워크다.</li>
+<li>Jasmine을 기반으로 만들었다.</li>
+</ul>
+<br>
+<h3 id="다른-테스트-라이브러리와의-차이점">다른 테스트 라이브러리와의 차이점</h3>
+<hr>
+<p>이전의 라이브러리들은 여러가지를 조합해서 사용해야 했다.
+테스트 러너, 매처, 목을 조합해서 사용하는 방식.</p>
+<ul>
+<li>Jest는 테스트 러너, 매처, 목 프레임워크를 한번에 제공하는 All-in-one 방식이다.</li>
+<li>Babel, Webpack, Typescript 등과 함께 사용 가능하다.</li>
+</ul>
+<br>
+<h3 id="사용법">사용법</h3>
+<hr>
+<ol>
+<li>
+<p>Dev-Dependencies에 jest 설치</p>
+<p><code>npm install -D jest</code></p>
+</li>
+<li>
+<p>test 파일에 test 추가하기</p>
+<ul>
+<li>test메서드
+<ul>
+<li>첫번째 인자 : 테스트 내용을 문장으로 작성</li>
+<li>두번째 인자 : 함수</li>
+</ul>
+</li>
+<li>expect 와 toBe : 결과값과 기대값을 작성.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;sum함수를 사용해서 1+2를 더할경우 3이어야한다.&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></li>
+<li>
+<p>test 실행</p>
+<ul>
+<li>
+<p>package.json에 scripts에 다음을 추가한다.</p>
+<p><code>&quot;test&quot; : &quot;jest&quot;</code></p>
+</li>
+<li>
+<p>test를 실행한다.</p>
+<p><code>npm run test</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<br>
+<h3 id="매처">매처</h3>
+<hr>
+<ul>
+<li>
+<p>기본적으로 정확한 일치비교를 위해 expect - toBe 를 사용한다.</p>
+</li>
+<li>
+<p>expect는 예상되는 객체를 반환한다. 이 이상의 역할은 안한다.</p>
+</li>
+<li>
+<p><strong>toBe가 매처 역할이다.</strong></p>
+<ul>
+<li>객체 내의 필드들을 검사하기 위해서는 <strong>toEqual</strong>을 사용한다. (객체 혹은 배열의 모든 필드를 재귀적으로 확인한다.)</li>
+<li><strong>not.toBe</strong>도 사용 가능.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;sum함수를 사용해서 1+2를 더할경우 3이어야한다.&#39;</span><span class="p">,</span> <span class="p">()=&gt;{</span>
+	<span class="c1">//일반 값
+</span><span class="c1"></span>	<span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="nx">ㄴ</span><span class="p">.</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+	<span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)).</span><span class="nx">not</span><span class="p">.</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+	<span class="c1">//객체
+</span><span class="c1"></span>	<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;kiki&#39;</span><span class="p">};</span>
+	<span class="nx">expect</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;kiki&#39;</span><span class="p">});</span>
+<span class="p">})</span>
+</code></pre></div></li>
+<li>
+<p>toBeNull : null에만 일치</p>
+</li>
+<li>
+<p>toBeUndefined : undefined에만 일치</p>
+</li>
+<li>
+<p>toBeDefined : undefined 아닐경우에만 일치</p>
+</li>
+<li>
+<p>toBeTruthy : true</p>
+</li>
+<li>
+<p>toBeFalsy : false</p>
+</li>
+</ul>
+<p><a href="https://mulder21c.github.io/jest/docs/en/next/using-matchers" target="_blank" rel="noopener noreffer">참고자료</a></p>
+<br>
+<h3 id="비동기-처리">비동기 처리</h3>
+<hr>
+<h3 id="콜백"><strong>콜백</strong></h3>
+<ul>
+<li>done이라는 인자를 사용한다. → 테스트가 끝나기 전에 done 콜백이 호출될 때를 기다린다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the data is peanut butter&#39;</span><span class="p">,</span> <span class="nx">done</span><span class="p">=&gt;{</span>
+	<span class="kd">function</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+		<span class="k">try</span> <span class="p">{</span>
+			<span class="nx">expect</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">&#39;peanut butter&#39;</span><span class="p">);</span>
+			<span class="nx">done</span><span class="p">();</span>
+		<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">done</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="nx">fetchData</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><br>
+<h3 id="프로미스"><strong>프로미스</strong></h3>
+<ul>
+<li>프로미스는 resolve, reject가 있어서 간단하다.</li>
+<li>테스트에서 <strong>프로미스를 반환</strong>시키면 jest는 resolve를 기다린다. → reject되면 실패한 것.</li>
+<li><strong>.resolves / .rejects 매처</strong>를 사용할 수 있다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the data is peanut butter&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">fetchData</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">&#39;peanut butter&#39;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="c1">// .resolves/.rejects 매처를 사용할 경우
+</span><span class="c1"></span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the data is peanut butter&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">expect</span><span class="p">(</span><span class="nx">fetchData</span><span class="p">()).</span><span class="nx">resolves</span><span class="p">.</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">&#39;peanut butter&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the fetch fails with an error&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">expect</span><span class="p">(</span><span class="nx">fetchData</span><span class="p">()).</span><span class="nx">rejects</span><span class="p">.</span><span class="nx">toMatch</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div><br>
+<h3 id="async--await"><strong>Async / Await</strong></h3>
+<ul>
+<li>test 내에서 async/await을 사용할 수 있다.</li>
+<li>test의 두번째 인자에 전달되는 함수에 async 사용.</li>
+<li><strong>.resolves / .rejects 매처</strong>를 사용할 수 있다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the data is peanut butter&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetchData</span><span class="p">();</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">&#39;peanut butter&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the fetch fails with an error&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">expect</span><span class="p">.</span><span class="nx">assertions</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kr">await</span> <span class="nx">fetchData</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">toMatch</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the data is peanut butter&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">await</span> <span class="nx">expect</span><span class="p">(</span><span class="nx">fetchData</span><span class="p">()).</span><span class="nx">resolves</span><span class="p">.</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">&#39;peanut butter&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;the fetch fails with an error&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">await</span> <span class="nx">expect</span><span class="p">(</span><span class="nx">fetchData</span><span class="p">()).</span><span class="nx">rejects</span><span class="p">.</span><span class="nx">toThrow</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div><h3 id="references">References</h3>
+<ul>
+<li><a href="https://jestjs.io/docs/getting-started" target="_blank" rel="noopener noreffer">Jest 공식 문서</a></li>
+<li><a href="https://mulder21c.github.io/jest/docs/en/next/getting-started" target="_blank" rel="noopener noreffer">Jest 공식 문서 번역본</a></li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-07-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/javascript/jest/" data-title="테스트 프레임워크 - Jest" data-hashtags="TDD,Jest"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/javascript/jest/" data-hashtag="TDD"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/javascript/jest/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/javascript/jest/" data-title="테스트 프레임워크 - Jest" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/tdd/">TDD</a>,&nbsp;<a href="/tags/jest/">Jest</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/til/2021/07/07_18/" class="prev" rel="prev" title="[TIL] 7월 18일"><i class="fas fa-angle-left fa-fw"></i>[TIL] 7월 18일</a>
+            <a href="/posts/til/2021/07/07_20/" class="next" rel="next" title="[TIL] 7월 20일">[TIL] 7월 20일<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-178122307-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-178122307-1" async></script></body>
+</html>

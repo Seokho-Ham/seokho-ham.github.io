@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>TDD - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/tdd/</link>
+        <description>TDD - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Jul 2021 20:26:05 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/tdd/" rel="self" type="application/rss+xml" /><item>
+    <title>테스트 프레임워크 - Jest</title>
+    <link>https://seokho-ham.github.io/posts/javascript/jest/</link>
+    <pubDate>Sun, 18 Jul 2021 20:26:05 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/javascript/jest/</guid>
+    <description><![CDATA[<p>이 글은 테스트 라이브러리인 Jest 대해 학습한 내용을 정리한 글입니다.</p>
+<br>]]></description>
+</item></channel>
+</rss>

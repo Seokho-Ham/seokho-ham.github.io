@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>프로젝트 - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</link>
+        <description>프로젝트 - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 17 Jul 2021 14:08:24 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>[Korello 프로젝트] Refactoring Day1</title>
+    <link>https://seokho-ham.github.io/posts/project/korello_01/</link>
+    <pubDate>Sat, 17 Jul 2021 14:08:24 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/project/korello_01/</guid>
+    <description><![CDATA[<p>한달간 기존의 Korello 프로젝트를 새로운 레포를 만들어 처음부터 다시 개발하기로 했다.</p>
+<br>]]></description>
+</item></channel>
+</rss>
