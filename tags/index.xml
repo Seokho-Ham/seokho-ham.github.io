@@ -3,7 +3,14 @@
         <title>Tags - Tag - Kale&#39;s DevBlog</title>
         <link>https://seokho-ham.github.io/tags/</link>
         <description>Tags - Tag - Kale&#39;s DevBlog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>SOLID 원칙</title>
+    <link>https://seokho-ham.github.io/tags/solid-%EC%9B%90%EC%B9%99/</link>
+    <pubDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/tags/solid-%EC%9B%90%EC%B9%99/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>TIL</title>
     <link>https://seokho-ham.github.io/tags/til/</link>
     <pubDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</pubDate>
@@ -65,13 +72,6 @@
     <pubDate>Sat, 17 Jul 2021 14:08:24 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://seokho-ham.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>개발</title>
-    <link>https://seokho-ham.github.io/tags/%EA%B0%9C%EB%B0%9C/</link>
-    <pubDate>Thu, 08 Jul 2021 14:46:39 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://seokho-ham.github.io/tags/%EA%B0%9C%EB%B0%9C/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

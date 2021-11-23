@@ -7,9 +7,18 @@
         <generator>Hugo -- gohugo.io</generator>
         <image>
             <url> https://seokho-ham.github.io/images/profile.jpg </url>
-        </image><language>en</language><lastBuildDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</lastBuildDate>
+        </image><language>en</language><lastBuildDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</lastBuildDate>
         <atom:link href="https://seokho-ham.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>SOLID</title>
+    <link>https://seokho-ham.github.io/posts/patterns/solid/</link>
+    <pubDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/patterns/solid/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/solid-principle.jpeg" referrerpolicy="no-referrer">
+            </div><p>객체지향 설계에서 지켜야 할 5가지 원칙을 말하며 시스템에 변경사항이 발생해도 유연하게 대처하고 확장성 있는 구조를 설계하기 위한 원칙이다.</p>]]></description>
+</item><item>
     <title>[TIL] 11월 22일</title>
     <link>https://seokho-ham.github.io/posts/til/2021/11/11_22/</link>
     <pubDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</pubDate>
@@ -94,16 +103,6 @@
     <pubDate>Wed, 20 Oct 2021 16:03:11 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://seokho-ham.github.io/posts/til/2021/10/10_20/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/TIL.jpeg" referrerpolicy="no-referrer">
-            </div><h1 id="today-i-learned">Today I learned</h1>
-<br>]]></description>
-</item><item>
-    <title>[TIL] 9월 29일</title>
-    <link>https://seokho-ham.github.io/posts/til/2021/09/09_29/</link>
-    <pubDate>Wed, 29 Sep 2021 18:18:09 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://seokho-ham.github.io/posts/til/2021/09/09_29/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/TIL.jpeg" referrerpolicy="no-referrer">
             </div><h1 id="today-i-learned">Today I learned</h1>
