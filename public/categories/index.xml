@@ -3,19 +3,19 @@
         <title>Categories - Category - Kale&#39;s DevBlog</title>
         <link>https://seokho-ham.github.io/categories/</link>
         <description>Categories - Category - Kale&#39;s DevBlog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Nov 2021 09:23:10 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>TIL</title>
+    <link>https://seokho-ham.github.io/categories/til/</link>
+    <pubDate>Thu, 25 Nov 2021 09:23:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/categories/til/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>패턴</title>
     <link>https://seokho-ham.github.io/categories/%ED%8C%A8%ED%84%B4/</link>
     <pubDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://seokho-ham.github.io/categories/%ED%8C%A8%ED%84%B4/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>TIL</title>
-    <link>https://seokho-ham.github.io/categories/til/</link>
-    <pubDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://seokho-ham.github.io/categories/til/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>사이드 프로젝트</title>

@@ -3,19 +3,19 @@
         <title>Tags - Tag - Kale&#39;s DevBlog</title>
         <link>https://seokho-ham.github.io/tags/</link>
         <description>Tags - Tag - Kale&#39;s DevBlog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Nov 2021 09:23:10 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>TIL</title>
+    <link>https://seokho-ham.github.io/tags/til/</link>
+    <pubDate>Thu, 25 Nov 2021 09:23:10 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/tags/til/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>SOLID 원칙</title>
     <link>https://seokho-ham.github.io/tags/solid-%EC%9B%90%EC%B9%99/</link>
     <pubDate>Tue, 23 Nov 2021 12:48:09 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://seokho-ham.github.io/tags/solid-%EC%9B%90%EC%B9%99/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>TIL</title>
-    <link>https://seokho-ham.github.io/tags/til/</link>
-    <pubDate>Mon, 22 Nov 2021 16:14:00 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://seokho-ham.github.io/tags/til/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Javascript</title>
