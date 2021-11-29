@@ -2,13 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://seokho-ham.github.io/posts/til/2021/11/11_29/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://seokho-ham.github.io/categories/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://seokho-ham.github.io/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://seokho-ham.github.io/posts/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://seokho-ham.github.io/tags/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://seokho-ham.github.io/tags/til/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://seokho-ham.github.io/categories/til/</loc><lastmod>2021-11-29T09:16:05&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://seokho-ham.github.io/posts/til/2021/11/11_25/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://seokho-ham.github.io/categories/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://seokho-ham.github.io/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://seokho-ham.github.io/posts/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://seokho-ham.github.io/tags/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://seokho-ham.github.io/tags/til/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://seokho-ham.github.io/categories/til/</loc><lastmod>2021-11-25T09:23:10&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://seokho-ham.github.io/posts/patterns/solid/</loc><lastmod>2021-11-23T12:48:09&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://seokho-ham.github.io/tags/solid-%EC%9B%90%EC%B9%99/</loc><lastmod>2021-11-23T12:48:09&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://seokho-ham.github.io/categories/%ED%8C%A8%ED%84%B4/</loc><lastmod>2021-11-23T12:48:09&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

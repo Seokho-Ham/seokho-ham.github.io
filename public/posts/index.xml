@@ -3,7 +3,16 @@
         <title>All Posts - Kale&#39;s DevBlog</title>
         <link>https://seokho-ham.github.io/posts/</link>
         <description>All Posts | Kale&#39;s DevBlog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Nov 2021 09:23:10 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Nov 2021 09:16:05 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[TIL] 11월 29일</title>
+    <link>https://seokho-ham.github.io/posts/til/2021/11/11_29/</link>
+    <pubDate>Mon, 29 Nov 2021 09:16:05 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/til/2021/11/11_29/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/TIL.jpeg" referrerpolicy="no-referrer">
+            </div><h1 id="today-i-learned">Today I learned</h1>]]></description>
+</item><item>
     <title>[TIL] 11월 25일</title>
     <link>https://seokho-ham.github.io/posts/til/2021/11/11_25/</link>
     <pubDate>Thu, 25 Nov 2021 09:23:10 &#43;0900</pubDate>
@@ -11,9 +20,7 @@
     <guid>https://seokho-ham.github.io/posts/til/2021/11/11_25/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/TIL.jpeg" referrerpolicy="no-referrer">
-            </div>1. 블로그 레포 통합 현재 Hugo를 사용해서 개인 블로그를 운영중인데 글을 작성하고 관리하는 원본 레포와 빌드된 소스가 올라가는 레포 2개로 나뉘어져 있었다. 그러다보니 기존에는 build를 한 뒤 호스팅되는 레포에 push, 원본 레포에 push, 총 2번의 작업을 해야했다. 이걸 한번에 할 수 없을까를 찾아보던 중 Github Action을 통해 한번의 add, commit, push를 통해 호스팅까지 완료하는 방법을 찾았다.
-기존 동작 1. hugo 명령어를 통한 build 2. public 폴더로 이동해서 git add, commit, push 3. 원본 레포에서 git add, commit, push 변경 후 1. 글 작성후 git add, commit, push - 이후 작업은 github action에서 알아서 build를 진행하고 gh-pages 브랜치에 push를 해준다. 참고한 블로그  꿈꾸는 태태태의 공간 - 기술블로그 개편기 (by HUGO) Github-Action으로-hugo블로그-자동-배포하기  2. 이것이 자바다 (학습한 내용은 링크로)
-  7장 상속   8장 인터페이스   9장 중첩 클래스와 중첩 인터페이스   추상 클래스와 인터페이스의 차이   ]]></description>
+            </div><h1 id="today-i-learned">Today I learned</h1>]]></description>
 </item><item>
     <title>SOLID</title>
     <link>https://seokho-ham.github.io/posts/patterns/solid/</link>
@@ -88,16 +95,6 @@
     <pubDate>Tue, 26 Oct 2021 18:03:09 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://seokho-ham.github.io/posts/til/2021/10/10_26/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/TIL.jpeg" referrerpolicy="no-referrer">
-            </div><h1 id="today-i-learned">Today I learned</h1>
-<br>]]></description>
-</item><item>
-    <title>[TIL] 10월 1~2주차 학습 기록</title>
-    <link>https://seokho-ham.github.io/posts/til/2021/10/10_week2/</link>
-    <pubDate>Thu, 21 Oct 2021 18:28:18 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://seokho-ham.github.io/posts/til/2021/10/10_week2/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/TIL.jpeg" referrerpolicy="no-referrer">
             </div><h1 id="today-i-learned">Today I learned</h1>
