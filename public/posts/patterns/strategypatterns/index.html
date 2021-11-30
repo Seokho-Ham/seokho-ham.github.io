@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[디자인 패턴] - Strategy Patterns - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="[디자인 패턴] - Strategy Patterns" />
+<meta property="og:description" content="Strategy 패턴이란?
+객체가 할 수 있는 행위들을 각각의 전략으로 만들어 놓고, 동적으로 행위의 수정이 필요한 경우 전략을 바꾸는 것만으로 행위의 수정이 가능하도록 만든 패턴을 말한다. 
+
+문제를 해결하는 전략을 상황에 따라 쉽게 변경할 수 있다는 장점이 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/patterns/strategypatterns/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-30T17:39:39&#43;09:00" />
+<meta property="article:modified_time" content="2021-11-30T17:39:39&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[디자인 패턴] - Strategy Patterns"/>
+<meta name="twitter:description" content="Strategy 패턴이란?
+객체가 할 수 있는 행위들을 각각의 전략으로 만들어 놓고, 동적으로 행위의 수정이 필요한 경우 전략을 바꾸는 것만으로 행위의 수정이 가능하도록 만든 패턴을 말한다. 
+
+문제를 해결하는 전략을 상황에 따라 쉽게 변경할 수 있다는 장점이 있다."/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/patterns/strategypatterns/" /><link rel="prev" href="https://seokho-ham.github.io/posts/til/2021/11/11_29/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[디자인 패턴] - Strategy Patterns",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/patterns\/strategypatterns\/"
+        },"genre": "posts","keywords": "디자인 패턴, Strategy Patterns","wordcount":  341 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/patterns\/strategypatterns\/","datePublished": "2021-11-30T17:39:39+09:00","dateModified": "2021-11-30T17:39:39+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[디자인 패턴] - Strategy Patterns</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4/"><i class="far fa-folder fa-fw"></i>디자인 패턴</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-30">2021-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;341 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/strategy-pattern.jpeg"
+        data-srcset="/images/strategy-pattern.jpeg, /images/strategy-pattern.jpeg 1.5x, /images/strategy-pattern.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/strategy-pattern.jpeg"
+        title="/images/strategy-pattern.jpeg" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#핵심-디자인-원칙">핵심 디자인 원칙</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#구조">구조</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#example-1---오리-시뮬레이션">Example 1 - 오리 시뮬레이션</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#example-2---자동차-이동">Example 2 - 자동차 이동</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="strategy-패턴이란">Strategy 패턴이란?</h1>
+<p>객체가 할 수 있는 행위들을 각각의 전략으로 만들어 놓고, 동적으로 행위의 수정이 필요한 경우 전략을 바꾸는 것만으로 행위의 수정이 가능하도록 만든 패턴을 말한다. <br>
+<br>
+<strong>문제를 해결하는 전략을 상황에 따라 쉽게 변경할 수 있다는 장점이 있다.</strong></p>
+<br>
+<h2 id="핵심-디자인-원칙">핵심 디자인 원칙</h2>
+<hr>
+<h5 id="1-변하지-않는-부분을-변하지-않는-부분으로부터-변하는-부분을-분리해낸다">1. 변하지 않는 부분을 변하지 않는 부분으로부터 변하는 부분을 분리해낸다.</h5>
+<ul>
+<li>달라지는 부분을 찾아서 <strong>캡슐화</strong>를 진행한다.</li>
+</ul>
+<h5 id="2-구현이-아닌-인터페이스에-맞춰서-프로그래밍-한다">2. 구현이 아닌 인터페이스에 맞춰서 프로그래밍 한다.</h5>
+<ul>
+<li>상위 형식에 맞춰서 프로그래밍을 해서 <strong>다형성</strong> 을 활용한다.</li>
+</ul>
+<h5 id="3-상속보다는-구성을-활용한다">3. 상속보다는 구성을 활용한다.</h5>
+<ul>
+<li>구성이란 두 클래스를 합쳐서 사용하는 방식.</li>
+</ul>
+<br>
+<h2 id="구조">구조</h2>
+<hr>
+<h5 id="1-strategy">1. Strategy</h5>
+<ul>
+<li>인터페이스 혹은 추상 클래스로 공통적으로 사용하는 메서드를 명시한다.</li>
+</ul>
+<h5 id="2-concretestrategy">2. ConcreteStrategy</h5>
+<ul>
+<li>인터페이스의 구현 클래스</li>
+</ul>
+<h5 id="3-context">3. Context</h5>
+<ul>
+<li>strategy 패턴을 이용하는 역할을 수행.</li>
+<li>strategy를 인자로 받아서 필드를 세팅하는 세터 메서드가 존재한다.</li>
+</ul>
+<br>
+<h2 id="example-1---오리-시뮬레이션">Example 1 - 오리 시뮬레이션</h2>
+<hr>
+<h5 id="기능-확장">기능 확장</h5>
+<ul>
+<li>Duck 클래스는 상속을 통해 구현되어 있는데 &ldquo;날다&quot;라는 기능이 필요해짐.</li>
+<li>오리별로 소리를 내는 방식이 달라야함</li>
+</ul>
+<h5 id="문제점">문제점</h5>
+<ul>
+<li>상속관계에 있는 상위 클래스에 추가하게 되면 날 수 없는 오리장난감도 날 수 있게 됨.</li>
+<li>인터페이스를 만들어서 구현하면 모든 날 수 있는 오리 종류에서 기능을 구현해야함.</li>
+</ul>
+<h5 id="개선방법">개선방법</h5>
+<ul>
+<li>&ldquo;날다&rdquo; 와 &ldquo;소리를 내다&rdquo; 라는 행동은 변하지 않는다.</li>
+<li>&ldquo;나는 행위&rdquo;, &ldquo;소리내는 행위&quot;를 Duck으로부터 분리해서 인터페이스로 만든다.</li>
+<li>Duck의 인스턴스 변수에 각각의 행위를 주입받는다.</li>
+</ul>
+<br>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//FlyBehaviorStrategy
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">FlyBehaviorStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">fly</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FlyWithWingsStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">fly</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;날개로 난다&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoWingsStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">fly</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;못난다&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><br>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//QuackBehaviorStrategy
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">QuackBehaviorStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">makeSound</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuackStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">makeSound</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;꽥&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SqueakStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">makeSound</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;뀍&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><br>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//Duck
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Duck</span> <span class="o">{</span>
+    <span class="n">FlyBehaviorStrategy</span> <span class="n">flyBehavior</span><span class="o">;</span>
+    <span class="n">QuackBehaviorStrategy</span> <span class="n">quackbehavior</span><span class="o">;</span>
+
+    <span class="kt">void</span> <span class="nf">setFlyBehavior</span><span class="o">(</span><span class="n">FlyBehaviorStrategy</span> <span class="n">fb</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">flyBehavior</span> <span class="o">=</span> <span class="n">fb</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">setQuackBehavior</span><span class="o">(</span><span class="n">QuackBehaviorStrategy</span> <span class="n">qb</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">QuackBehavior</span> <span class="o">=</span> <span class="n">qb</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h2 id="example-2---자동차-이동">Example 2 - 자동차 이동</h2>
+<hr>
+<h5 id="기존-기능">기존 기능</h5>
+<ul>
+<li>자동차가 랜덤 숫자의 값이 4 이상일 경우에만 이동해야한다.</li>
+</ul>
+<h5 id="기능-변경">기능 변경</h5>
+<ul>
+<li>항상 이동해야한다 혹은 항상 이동하지 말아야 한다로 바뀐다면?</li>
+</ul>
+<br>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//기존 코드
+</span><span class="c1"></span><span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">move</span><span class="o">(</span><span class="kt">int</span> <span class="n">randomNumber</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">randomNumber</span> <span class="o">&gt;=</span> <span class="n">4</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">position</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//수정 코드
+</span><span class="c1"></span><span class="kd">interface</span> <span class="nc">MovingStratagy</span> <span class="o">{</span>
+    <span class="kt">boolean</span> <span class="nf">isMove</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">AlwaysMovingStrategy</span> <span class="kd">implements</span> <span class="n">MovingStrategy</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kt">boolean</span> <span class="nf">isMove</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">move</span><span class="o">(</span><span class="n">MovingStrategy</span> <span class="n">strategy</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">strategy</span><span class="o">.</span><span class="na">isMove</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">position</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-11-30</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/patterns/strategypatterns/" data-title="[디자인 패턴] - Strategy Patterns" data-hashtags="디자인 패턴,Strategy Patterns"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/patterns/strategypatterns/" data-hashtag="디자인 패턴"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/patterns/strategypatterns/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/patterns/strategypatterns/" data-title="[디자인 패턴] - Strategy Patterns" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4/">디자인 패턴</a>,&nbsp;<a href="/tags/strategy-patterns/">Strategy Patterns</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/til/2021/11/11_29/" class="prev" rel="prev" title="[TIL] 11월 29일"><i class="fas fa-angle-left fa-fw"></i>[TIL] 11월 29일</a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-213511127-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-213511127-1" async></script></body>
+</html>
