@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_difference_of_making_instance_by_newfunc\/"
-        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive","wordcount":  537 ,
+        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive","wordcount":  602 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_difference_of_making_instance_by_newfunc\/","datePublished": "2021-03-02T15:11:54+09:00","dateModified": "2021-03-02T15:11:54+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -42,7 +42,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -83,7 +83,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Javascript] 생성자 함수를 사용해 생성한 객체는 어떻게 다를까?</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-02">2021-03-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;537 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-02">2021-03-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;602 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -112,7 +112,29 @@
 <li>new 연산자와 Object 생성자 함수를 함께 호출하면 빈 객체를 반환한다.</li>
 <li>생성자 함수란? ⇒ new 연산자와 함께 호출하여 인스턴스(생성자 함수에 의해 생성된 객체)를 생성하는 함수를 말한다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//아래는 빌트인 객체
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//아래는 빌트인 객체
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> <span class="c1">//{}
 </span><span class="c1"></span><span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;seokho&#39;</span><span class="p">;</span> <span class="c1">//{name: &#39;seokho&#39;}
 </span><span class="c1"></span>
@@ -130,7 +152,9 @@
 </span><span class="c1"></span>
 <span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">//[1,2,3]
-</span></code></pre></div><h3 id="2-생성자-함수">2. 생성자 함수</h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-생성자-함수">2. 생성자 함수</h3>
 <hr>
 <ul>
 <li>인스턴스를 생성하기 위한 템플릿(클래스)으로 동작하며 인스턴스를 초기화하는 역할을 한다.</li>
@@ -138,14 +162,27 @@
 ⇒ new 연산자 없이 호출할 경우 일반 함수로 동작한다.</li>
 <li>일반 함수와 형식적인 차이가 없기 때문에 첫글자를 대문자로 작성한다(파스칼 케이스).</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">=</span> <span class="nx">radius</span><span class="p">;</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">getDiameter</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="p">;</span>
   <span class="p">};</span>
 <span class="p">}</span>
 <span class="kr">const</span> <span class="nx">circle1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-</code></pre></div><blockquote>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>this
 객체 자신의 프로퍼티나 메서드를 참조하기 위한 자기 참조 변수. this 바인딩은 함수 호출 방식에 따라 동적으로 결정된다.
 <strong>1. 일반 함수의 호출</strong> : <em>전역 객체</em><br>
@@ -160,7 +197,23 @@
 만약 명시적으로 다른 반환값을 주면 this는 무시된다. 원시값을 줄경우 원시값을 무시하고 this를 반환.
 생성자 함수 내에서는 return 값을 생략해야 하는 이유다.</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">//(1)
 </span><span class="c1"></span>  <span class="c1">//(2)
 </span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">=</span> <span class="nx">radius</span><span class="p">;</span>
@@ -172,7 +225,9 @@
 </span><span class="c1"></span>  <span class="k">return</span> <span class="mi">123</span><span class="p">;</span> <span class="c1">// =&gt; 원시값이기 때문에 this가 반환된다.
 </span><span class="c1"></span><span class="p">}</span>
 <span class="kr">const</span> <span class="nx">circle1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-</code></pre></div><h3 id="3-생성자-함수를-통해-생성한-객체의-특징">3. 생성자 함수를 통해 생성한 객체의 특징</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-생성자-함수를-통해-생성한-객체의-특징">3. 생성자 함수를 통해 생성한 객체의 특징</h3>
 <hr>
 <ul>
 <li>함수 선언문이나 함수 표현식으로 작성한 함수는 생성자 함수로 사용할 수 있다.</li>
@@ -186,7 +241,23 @@
 <li>constructor : 함수 선언문, 함수 표현식, 클래스</li>
 <li>non-constructor : 메서드(ES6메서드 축약 표현), 화살표 함수</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//constructor
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//constructor
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{}</span>
 <span class="kr">const</span> <span class="nx">func1</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
 <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
@@ -198,7 +269,9 @@
 <span class="kr">const</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">x</span><span class="p">()</span> <span class="p">{},</span>
 <span class="p">};</span>
-</code></pre></div><h3 id="4-newtarget">4. new.target</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="4-newtarget">4. new.target</h3>
 <hr>
 <ul>
 <li>ES6부터 도입되었으면 생성자 함수가 new 연산자 없이 호출될 경우라도 생성자 함수로 동작할 수 있도록 도와주는 역할을 한다.</li>
@@ -207,7 +280,27 @@
 <li>new 연산자를 사용할 경우 : new.target은 함수 자신을 가리킨다.</li>
 <li>new 연산자를 사용하지 않은 경우 : undefined 를 가진다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">new</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">);</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">=</span> <span class="nx">radius</span><span class="p">;</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">getDiameter</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -223,7 +316,9 @@
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="p">;</span>
   <span class="p">};</span>
 <span class="p">}</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

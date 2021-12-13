@@ -35,7 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/closure\/"
-        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive, 클로저","wordcount":  330 ,
+        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive, 클로저","wordcount":  359 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/closure\/","datePublished": "2021-04-23T13:07:36+09:00","dateModified": "2021-04-23T13:07:36+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -44,7 +44,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -85,7 +85,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Javascript] 클로저(Closure)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-23">2021-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;330 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-23">2021-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;359 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -116,7 +116,23 @@
 <br>
 <p>먼저 알아두어야 할것은 자바스크립트에서는 렉시컬 스코프를 따른다.
 렉시컬 스코프란, 함수가 선언되는 시점에 스코프가 정해지는 것이다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">outer</span><span class="p">()</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
@@ -128,7 +144,9 @@
 
 <span class="kr">const</span> <span class="nx">innerFunc</span> <span class="o">=</span> <span class="nx">outer</span><span class="p">();</span>
 <span class="nx">innerFunc</span><span class="p">();</span>
-</code></pre></div><p>위의 코드를 보면 outer함수가 선언되는 시점은 전역코드의 실행,
+</code></pre></td></tr></table>
+</div>
+</div><p>위의 코드를 보면 outer함수가 선언되는 시점은 전역코드의 실행,
 inner 함수가 선언되는 시점은 outer함수 코드가 실행될때다.
 즉, <strong>전역 스코프 &gt; outer &gt; inner</strong> 꼴이 되는것이다.</p>
 <p>이번에는 이전 글에서 알아본 실행 컨텍스트의 개념을 가져와 코드의 실행 순서를 한번 보자.</p>
@@ -162,7 +180,28 @@ inner 함수가 선언되는 시점은 outer함수 코드가 실행될때다.
 <li>상태를 은닉하고 특정 함수에게만 상태 변경을 허용하기 위해.</li>
 </ul>
 <p>아래 코드는 대표적인 예시다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">counter</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">counter</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
   <span class="k">return</span> <span class="p">{</span>
@@ -179,7 +218,9 @@ inner 함수가 선언되는 시점은 outer함수 코드가 실행될때다.
 <span class="nx">counter1</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
 <span class="nx">counter1</span><span class="p">.</span><span class="nx">decrease</span><span class="p">();</span>
 <span class="nx">counter1</span><span class="p">.</span><span class="nx">decrease</span><span class="p">();</span>
-</code></pre></div><p>사용자는 counter 내부에 num에는 직접적으로 접근하거나 수정할 수 없다.
+</code></pre></td></tr></table>
+</div>
+</div><p>사용자는 counter 내부에 num에는 직접적으로 접근하거나 수정할 수 없다.
 오직 increase, decrease 메서드로만 접근할 수 있다.</p>
 <p>이런식으로 정해진 방식 이외의 방법으로 인해 예기치 못한 변경을 막기 위해 클로저를 사용한다.</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">

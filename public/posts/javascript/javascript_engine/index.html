@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_engine\/"
-        },"genre": "posts","keywords": "V8엔진, Javascript\u0027, EventLoop","wordcount":  450 ,
+        },"genre": "posts","keywords": "V8엔진, Javascript\u0027, EventLoop","wordcount":  461 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_engine\/","datePublished": "2021-06-10T14:00:33+09:00","dateModified": "2021-06-10T14:00:33+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">자바스크립트 엔진과 구동원리</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-10">2021-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;450 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-10">2021-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;461 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -169,7 +169,22 @@
 <li>동기적으로 동작하는 함수들이 모두 끝나게 되면 Event Loop가 Queue에 있는 함수들을 순서대로 Call Stack에 넣는다.</li>
 </ol>
 <p>아래의 코드를 예시로 구체적인 동작의 순서를 설명하겠다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">boo</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">boo</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
@@ -180,7 +195,9 @@
 <span class="p">}</span>
 <span class="nx">doo</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Bye&#39;</span><span class="p">);</span>
-</code></pre></div><p>위의 JS파일이 실행되는 순서는 아래와 같다.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>위의 JS파일이 실행되는 순서는 아래와 같다.</p>
 <p><strong>1. 콜스택에 doo의 함수 스택이 쌓인다.</strong><br>
 <strong>2. doo 내에서 foo를 호출 했기 때문에 foo 함수 스택이 쌓인다.</strong><br>
 <strong>3. foo 내의 setTimeout 함수가 스택에 쌓인다.</strong><br>(이때 WebApi에서 타이머가 실행된다.)<br>

@@ -19,7 +19,7 @@
   # LoveIt theme version
 
   version = "0.2.X"
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
     desktopMode = "auto"
@@ -39,6 +39,15 @@
   [params.social]
     GitHub = "seokho-ham"
     Email = "kalejuice02@gmail.com"
+  [params.logo]
+    url = "/images/profile.jpg"
+    width = 127
+    height = 40
+  # Website Image Info just for SEO
+  [params.image]
+    url = "/images/profile.jpg"
+    width = 800
+    height = 600
   [params.page]
     lightgallery = true
     [params.page.share]
@@ -71,7 +80,7 @@
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
-  priority = 1
+  priority = 0.5
 
 [author]
   name = "Kale"
@@ -110,8 +119,16 @@
 
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
 
-  [markup.highlight] # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-  noClasses = false
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
   [markup.goldmark]
     [markup.goldmark.renderer]
         unsafe= true

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/til\/2021\/08\/08_31\/"
-        },"genre": "posts","keywords": "TIL","wordcount":  189 ,
+        },"genre": "posts","keywords": "TIL","wordcount":  193 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/til\/2021\/08\/08_31\/","datePublished": "2021-08-31T20:00:26+09:00","dateModified": "2021-08-31T20:00:26+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[TIL] 8월 31일</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/til/"><i class="far fa-folder fa-fw"></i>TIL</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-31">2021-08-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;189 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-31">2021-08-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;193 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -150,11 +150,21 @@
 <li>
 <p>해결방법은 2가지가 있는데 첫번째는 @types/&hellip; 에 저장되어 있는 라이브러리의 경우 간단하게 설치하면 된다.
 두번째는 없는 경우인데 이럴경우 직접 d.ts파일을 만들어 타입을 지정해줘야한다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">declare</span> <span class="nx">module</span> <span class="s1">&#39;*.jpg&#39;</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">declare</span> <span class="nx">module</span> <span class="s1">&#39;*.jpg&#39;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">content</span>: <span class="kt">any</span><span class="p">;</span>
   <span class="kr">export</span> <span class="k">default</span> <span class="nx">content</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

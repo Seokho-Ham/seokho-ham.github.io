@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/til\/2021\/11\/11_25\/"
-        },"genre": "posts","keywords": "TIL","wordcount":  132 ,
+        },"genre": "posts","keywords": "TIL","wordcount":  137 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/til\/2021\/11\/11_25\/","datePublished": "2021-11-25T09:23:10+09:00","dateModified": "2021-11-25T09:23:10+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -36,7 +36,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[TIL] 11월 25일</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/til/"><i class="far fa-folder fa-fw"></i>TIL</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-25">2021-11-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;132 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-25">2021-11-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;137 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -111,13 +111,30 @@
 push, 원본 레포에 push, 총 2번의 작업을 해야했다. <br>
 이걸 한번에 할 수 없을까를 찾아보던 중 Github Action을 통해 한번의 add, commit, push를 통해 호스팅까지 완료하는 방법을 찾았다.</p>
 <h5 id="기존-동작">기존 동작</h5>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md"><span class="k">1.</span> hugo 명령어를 통한 build
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-md" data-lang="md"><span class="k">1.</span> hugo 명령어를 통한 build
 <span class="k">2.</span> public 폴더로 이동해서 git add, commit, push
 <span class="k">3.</span> 원본 레포에서 git add, commit, push
-</code></pre></div><h5 id="변경-후">변경 후</h5>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md"><span class="k">1.</span> 글 작성후 git add, commit, push
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="변경-후">변경 후</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-md" data-lang="md"><span class="k">1.</span> 글 작성후 git add, commit, push
     <span class="k">-</span> 이후 작업은 github action에서 알아서 build를 진행하고 gh-pages 브랜치에 push를 해준다.
-</code></pre></div><h5 id="참고한-블로그">참고한 블로그</h5>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="참고한-블로그">참고한 블로그</h5>
 <ul>
 <li><a href="https://taetaetae.github.io/posts/blog-reorganization-by-hugo/" target="_blank" rel="noopener noreffer">꿈꾸는 태태태의 공간 - 기술블로그 개편기 (by HUGO)</a></li>
 <li><a href="https://velog.io/@ceres/Github-Action%ec%9c%bc%eb%a1%9c-hugo%eb%b8%94%eb%a1%9c%ea%b7%b8-%ec%9e%90%eb%8f%99-%eb%b0%b0%ed%8f%ac%ed%95%98%ea%b8%b0" target="_blank" rel="noopener noreffer">Github-Action으로-hugo블로그-자동-배포하기</a></li>

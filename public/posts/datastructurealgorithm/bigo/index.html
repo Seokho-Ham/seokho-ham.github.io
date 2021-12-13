@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/bigo\/"
-        },"genre": "posts","keywords": "자료구조, 시간복잡도, Big-O","wordcount":  251 ,
+        },"genre": "posts","keywords": "자료구조, 시간복잡도, Big-O","wordcount":  282 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/bigo\/","datePublished": "2021-05-11T14:04:43+09:00","dateModified": "2021-05-11T14:04:43+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -42,7 +42,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -83,7 +83,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">시간 복잡도(Big-O 표기법)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><i class="far fa-folder fa-fw"></i>자료구조</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-11">2021-05-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;251 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-11">2021-05-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;282 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -121,46 +121,92 @@
 <ul>
 <li>입력받는 데이터의 크기에 상관없이 언제나 일정한 시간이 걸리는 알고리즘</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">constantTime</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">constantTime</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><br/>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <p><strong>2. O(n) - linear time(직선적 시간)</strong></p>
 <ul>
 <li>입력받는 데이터의 크기에 비례해 시간이 걸리는 알고리즘</li>
 <li>ec) 1차원 배열을 for문을 사용해 반복</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">linearTime</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">linearTime</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><br/>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <p><strong>3. O(n^2) - quadratic time (2차 시간)</strong></p>
 <ul>
 <li>입력받는 데이터의 크기의 2제곱의 처리 시간이 걸리는 알고리즘</li>
 <li>ex) 2차원 배열을 for문을 사용해 반복</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">quadraticTime</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">quadraticTime</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span>
 	<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="p">&lt;</span><span class="nt">n.length</span><span class="err">;</span> <span class="na">i</span><span class="err">++)</span><span class="p">{</span>
 		<span class="na">for</span><span class="err">(</span><span class="na">let</span> <span class="na">j</span><span class="o">=</span><span class="na">0</span><span class="err">;</span> <span class="na">j</span><span class="err">&lt;</span><span class="na">n.length</span><span class="err">;</span> <span class="na">j</span><span class="err">++</span><span class="p">{</span>
 			<span class="na">console.log</span><span class="err">(</span><span class="na">n</span><span class="err">[</span><span class="na">i</span><span class="err">][</span><span class="na">j</span><span class="err">]);</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><br/>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <p><strong>4. O(nm) - quadratic time</strong></p>
 <ul>
 <li>n을 m 만큼 돌리는 알고리즘</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">quadraticTime</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">m</span><span class="p">){</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">quadraticTime</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">m</span><span class="p">){</span>
 	<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="p">&lt;</span><span class="nt">n.length</span><span class="err">;</span> <span class="na">i</span><span class="err">++)</span><span class="p">{</span>
 		<span class="na">for</span><span class="err">(</span><span class="na">let</span> <span class="na">j</span><span class="o">=</span><span class="na">0</span><span class="err">;</span> <span class="na">j</span><span class="err">&lt;</span><span class="na">m.length</span><span class="err">;</span> <span class="na">j</span><span class="err">++</span><span class="p">{</span>
 			<span class="na">console.log</span><span class="err">(</span><span class="na">n</span><span class="err">[</span><span class="na">i</span><span class="err">][</span><span class="na">j</span><span class="err">]);</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><br/>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <p><strong>5. O(n^3) - polynimial / cubic time</strong></p>
 <ul>
 <li>3차원 배열과 같은 구조</li>
@@ -176,7 +222,20 @@
 <li>이진 검색</li>
 <li>한번의 처리가 진행될때마다 검색해야하는 데이터의 양이 1/2이 되는 알고리즘</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//arr = [,1,2,3,4,5,6,7,8,9,10]
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//arr = [,1,2,3,4,5,6,7,8,9,10]
 </span><span class="c1">//key = 6;
 </span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">logTime</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">key</span><span class="p">){</span>
@@ -185,7 +244,9 @@
 	<span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">key</span><span class="p">)</span> <span class="k">return</span> <span class="nx">logTime</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">mid</span><span class="p">);</span>
 	<span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">key</span><span class="p">)</span> <span class="k">return</span> <span class="nx">logTime</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">mid</span><span class="p">,</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

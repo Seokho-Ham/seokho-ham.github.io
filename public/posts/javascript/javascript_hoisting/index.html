@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_hoisting\/"
-        },"genre": "posts","keywords": "Javascript, 호이스팅","wordcount":  260 ,
+        },"genre": "posts","keywords": "Javascript, 호이스팅","wordcount":  271 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_hoisting\/","datePublished": "2021-06-07T16:44:41+09:00","dateModified": "2021-06-07T16:44:41+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">호이스팅(Hoisting)과 일시적 사각지대(Temporal Dead Zone</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-07">2021-06-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;260 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-07">2021-06-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;271 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -107,10 +107,19 @@
 <p>Javascript를 학습하다보면 &ldquo;변수의 호이스팅이 발생한다.&rdquo; 라는 말을 한번쯤 들어보았을것이다.
 이 말은 개발자가 선언한 변수가 &ldquo;코드의 최상단에 위치하게 되는것처럼 동작한다&rdquo; 라는 의미다. 자세히 살펴보자.</p>
 <p>아래 코드를 브라우저 콘솔이나 node.js로 실행시켜보면 문제 없이 동작한다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</code></pre></div><p>분명 변수를 선언하기 전에 콘솔에 출력하도록 했는데 num이라는 변수의 값은 10으로 나온다.
+</code></pre></td></tr></table>
+</div>
+</div><p>분명 변수를 선언하기 전에 콘솔에 출력하도록 했는데 num이라는 변수의 값은 10으로 나온다.
 그 이유가 바로 &ldquo;호이스팅&rdquo; 때문이다. 호이스팅이 대해 알기 전 변수의 선언과 초기화, 할당에 대해 알아야한다.</p>
 <br>
 <h3 id="자바스크립트에서의-변수-선언">자바스크립트에서의 변수 선언</h3>
@@ -126,10 +135,19 @@
 <li>선언문을 제외한 소스코드가 실행되는 과정이다.</li>
 </ul>
 <p>아래 코드를 예시로 들어보겠다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</code></pre></div><br>
+</code></pre></td></tr></table>
+</div>
+</div><br>
 <ol>
 <li>평가과정</li>
 </ol>
@@ -149,12 +167,23 @@
 <br>
 <h3 id="var-let-const에서의-호이스팅">var, let, const에서의 호이스팅</h3>
 <hr>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num2</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-</code></pre></div><p>위의 코드를 실행시켜보면 num1은 출력이 되지만 num2는 참조 에러가 발생한다. <br>
+</code></pre></td></tr></table>
+</div>
+</div><p>위의 코드를 실행시켜보면 num1은 출력이 되지만 num2는 참조 에러가 발생한다. <br>
 그 이유는 var 키워드를 사용한 변수는 평가단계에서 선언과 초기화가 동시에 되지만, let const 키워드로 생성한 변수는 선언만 진행되기 때문이다. let, const 변수는 <code>실행단계에서 값을 할당하는 코드를 만나면 그때 값이 초기화 된다</code>. 그렇기 때문에 호이스팅이 발생하지 않는 것처럼 보여진다.</p>
 <p>이렇게 선언단계와 초기화 단계 사이를 <strong>일시적 사각지대(Temporal Dead Zone)</strong> 이라고 부른다.
 그리고 let, const로 선언한 변수는 할당하는 코드를 만나기 전까지 일시적 사각지대에 빠지게 된다.</p></div><div class="post-footer" id="post-footer">

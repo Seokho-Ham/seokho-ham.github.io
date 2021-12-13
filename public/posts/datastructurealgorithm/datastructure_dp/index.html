@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_dp\/"
-        },"genre": "posts","keywords": "자료구조, DynamicProgramming, Javascript","wordcount":  199 ,
+        },"genre": "posts","keywords": "자료구조, DynamicProgramming, Javascript","wordcount":  231 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_dp\/","datePublished": "2021-02-15T14:04:43+09:00","dateModified": "2021-02-15T14:04:43+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -40,7 +40,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -81,8 +81,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[자료구조] 동적 프로그래밍(DynamicProgramming)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><i class="far fa-folder fa-fw"></i>자료구조</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-15">2021-02-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;199 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-15">2021-02-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;231 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -106,7 +106,20 @@
 <p>분할 정복 기법 : 큰문제를 여러개의 작은 단위의 문제들로 만들어서 푸는 방식.</p>
 </blockquote>
 <p>이 과정에서 분할해서 풀다보면 중복이 발생하게 된다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">ex</span><span class="p">)</span> <span class="nx">피보나치</span> <span class="nx">수열</span> <span class="o">:</span> <span class="nx">앞의</span> <span class="nx">두</span> <span class="nx">항을</span> <span class="nx">더한</span> <span class="nx">수로</span> <span class="nx">정의</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">ex</span><span class="p">)</span> <span class="nx">피보나치</span> <span class="nx">수열</span> <span class="o">:</span> <span class="nx">앞의</span> <span class="nx">두</span> <span class="nx">항을</span> <span class="nx">더한</span> <span class="nx">수로</span> <span class="nx">정의</span>
 <span class="nx">fib</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="nx">의</span> <span class="nx">경우</span>
 <span class="o">-</span> <span class="nx">fib</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
   <span class="o">-</span> <span class="nx">fib</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -115,7 +128,9 @@
 <span class="o">-</span> <span class="nx">fib</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
   <span class="o">-</span> <span class="nx">fib</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 	<span class="o">-</span> <span class="nx">fib</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div><p>fib(3)아래로는 중복된다. 즉, 이미 계산했던것을 또 계산해야한다.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>fib(3)아래로는 중복된다. 즉, 이미 계산했던것을 또 계산해야한다.</p>
 <p><strong>동적 프로그래밍</strong>은 그것을 방지하기 위해 작은 단위의 문제를 푼 후 저장해둔 다음 그 값을 재사용하는 방식이다.</p>
 <ul>
 <li>피보나치 수를 구하는 문제(반복이 발생하는 경우)</li>
@@ -126,7 +141,23 @@
 <ul>
 <li>큰 단위부터 작은 단위로 나누어가며 문제를 푸는 방식</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">let</span> <span class="nx">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">let</span> <span class="nx">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 <span class="kd">let</span> <span class="nx">memoization</span> <span class="o">=</span> <span class="nx">n</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fib</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -138,12 +169,29 @@
 
   <span class="k">return</span> <span class="nx">fib</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div><h3 id="bottom-up-방식">Bottom-Up 방식</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="bottom-up-방식">Bottom-Up 방식</h3>
 <hr>
 <ul>
 <li>작은 문제들부터 큰문제로 풀어가는 방식</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">fib</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">fib</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
@@ -154,7 +202,9 @@
   <span class="p">}</span>
   <span class="k">return</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span>
 <span class="p">}</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

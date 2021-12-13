@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_prototype\/"
-        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive","wordcount":  631 ,
+        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive","wordcount":  690 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_prototype\/","datePublished": "2021-03-05T00:00:00+00:00","dateModified": "2021-03-05T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -42,7 +42,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -83,8 +83,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Javascript] 프로토타입(Prototype)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-05">2021-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;631 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-05">2021-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;690 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -125,12 +125,23 @@
 </li>
 <li>
 <p>추상화 : 다양한 속성중에서 프로그램에 필요한 속성을 간추려 내는 것.</p>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//사람이 가진 속성들과 추상화.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">//사람이 가진 속성들과 추상화.
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Seokho&#39;</span><span class="p">,</span>
   <span class="nx">age</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
 <span class="p">};</span>
-</code></pre></div></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h3 id="상속과-프로토타입">상속과 프로토타입</h3>
 <hr>
@@ -138,7 +149,19 @@
 <li>상속 : 특정 객체의 프로퍼티와 메서드를 다른 객체가 그대로 사용할 수 있는 것.</li>
 <li>Javascript는 프로토타입을 기반으로 상속을 구현한다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">=</span> <span class="nx">radius</span><span class="p">;</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">getArea</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">**</span> <span class="mi">2</span><span class="p">;</span>
@@ -146,11 +169,27 @@
 <span class="p">}</span>
 <span class="kr">const</span> <span class="nx">circle1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 <span class="kr">const</span> <span class="nx">circle2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</code></pre></div><ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>위의 코드로 작성할 경우, 생성한 각각의 객체가 getArea라는 메서드를 가지게 된다. ⇒ <strong>코드의 중복이 발생!</strong></li>
 <li>퍼포먼스에도 악영향을 주며, 메모리를 불필요하게 낭비하게 된다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">=</span> <span class="nx">radius</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -160,7 +199,9 @@
 
 <span class="kr">const</span> <span class="nx">circle1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 <span class="kr">const</span> <span class="nx">circle2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</code></pre></div><ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>Circle 생성자 함수가 생성한 모든 인스턴스는 자신의 프로토타입(부모 객체 역할)인 Circle.prototype의 모든 프로퍼티와 메서드를 상속받는다.</li>
 </ul>
 <h3 id="프로토타입-객체">프로토타입 객체</h3>
@@ -178,7 +219,19 @@
 <li>생성자 함수에서는 prototype 프로퍼티를 통해 프로토타입에 접근할 수 있다.</li>
 <li>프로토타입에서는 constructor 프로퍼티를 통해 생성자 함수에 접근할 수 있다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Circle</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">radius</span> <span class="o">=</span> <span class="nx">radius</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="kr">const</span> <span class="nx">circle1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
@@ -186,7 +239,9 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">circle1</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">circle2</span><span class="p">);</span>
-</code></pre></div><p><strong>1. __proto__ 접근자 프로퍼티</strong></p>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>1. __proto__ 접근자 프로퍼티</strong></p>
 <ul>
 <li>접근자 프로퍼티다. (자체적인 값을 가지지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 접근자 함수로 구성된 프로퍼티) - __proto__을 사용해 프로토타입에 접근하면, 내부적으로 getter 함수를 호출해서 프로토타입을 가져온다.</li>
 <li>__proto__에 새로운 프로토타입을 할당하면 내부적으로 setter 함수를 호출해서 값을 저장한다.</li>
@@ -213,13 +268,25 @@ prototype 프로퍼티 : 생성자 함수가 자신이 생성할 인스턴스의
 <li>
 <p>객체의 프로퍼티에 접근시, 해당 객체가 가지고 있지 않다면 객체의 프로토타입에 접근해서 프로퍼티를 순차적으로 검색한다.
 ⇒ <strong>프로토타입 체인이라고 한다.</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Person</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Person</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;coco&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="kr">const</span> <span class="nx">me</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
 
 <span class="nx">me</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span> <span class="c1">// true
-</span></code></pre></div><ol>
+</span></code></pre></td></tr></table>
+</div>
+</div><ol>
 <li>먼저 스코프체인에서 me라는 객체를 검색.</li>
 <li>전역에서 검색된 me 객체에서 hasOwnProperty 메서드를 검색.</li>
 <li>없으면 me의 프로토타입에서 검색.</li>
@@ -245,7 +312,24 @@ prototype 프로퍼티 : 생성자 함수가 자신이 생성할 인스턴스의
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -258,7 +342,9 @@ prototype 프로퍼티 : 생성자 함수가 자신이 생성할 인스턴스의
 </span><span class="c1"></span><span class="nx">me</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hahaha&#39;</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div><h3 id="프로토타입-교체">프로토타입 교체</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="프로토타입-교체">프로토타입 교체</h3>
 <hr>
 <ul>
 <li>동적으로 상속관계를 변경할 수 있다.</li>
@@ -266,7 +352,20 @@ prototype 프로퍼티 : 생성자 함수가 자신이 생성할 인스턴스의
 <li>생성자 함수에 의해 교체하게 되면 생성자 함수의 prototype은 교체된 프로토타입을 가리킨다.</li>
 <li>인스턴스에 의해 교체하게 되면 해당 인스턴스의 프로토타입만 바뀐것이기 때문에 생성자 함수의 prorotype에 매핑해줘야한다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
 	<span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span>
 <span class="p">}</span>
 <span class="c1">//생성자 함수에 의한 교체
@@ -275,7 +374,9 @@ prototype 프로퍼티 : 생성자 함수가 자신이 생성할 인스턴스의
 <span class="kr">const</span> <span class="nx">me</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;coco&#39;</span><span class="p">);</span>
 <span class="c1">// 인스턴스에 의한 교체
 </span><span class="c1"></span><span class="nx">me</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">=</span> <span class="p">{...}</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_linked_list\/"
-        },"genre": "posts","keywords": "자료구조, Javascript","wordcount":  442 ,
+        },"genre": "posts","keywords": "자료구조, Javascript","wordcount":  494 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_linked_list\/","datePublished": "2020-09-02T14:04:43+09:00","dateModified": "2020-09-02T14:04:43+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -40,7 +40,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -81,7 +81,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[자료구조] Linked List</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><i class="far fa-folder fa-fw"></i>자료구조</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-02">2020-09-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;442 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-02">2020-09-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;494 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -123,9 +123,28 @@
 <h2 id="자료구조와-알고리즘의-관계는">자료구조와 알고리즘의 관계는?</h2>
 <p>자료구조는 데이터를 편리하게 사용하기 위한 저장, 조작 방법이라면 알고리즘은 그 데이터와 관계된 문제를 해결하는 방법을 의미한다.
 한가지 예시를 들자면 아래는 <code>배열</code>이라는 자료구조이다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
-</code></pre></div><p>아래는 배열이라는 자료구조를 가지고 원하는 값을 도출해내는 알고리즘이다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//조건 : 짝수만 보여주세요
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>아래는 배열이라는 자료구조를 가지고 원하는 값을 도출해내는 알고리즘이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//조건 : 짝수만 보여주세요
 </span><span class="c1"></span><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
@@ -133,7 +152,9 @@
   <span class="p">}</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-</code></pre></div><p>문제를 해결하기 위한 가장 좋은 알고리즘을 짜기 위해서는 보통은 그에 맞는 자료구조를 먼저 정해야한다. 그렇기 때문에 이 둘은 밀접한 관계를 가지고 있으며 개발자들 사이에서도 필수 요소로 여겨지고 있다.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>문제를 해결하기 위한 가장 좋은 알고리즘을 짜기 위해서는 보통은 그에 맞는 자료구조를 먼저 정해야한다. 그렇기 때문에 이 둘은 밀접한 관계를 가지고 있으며 개발자들 사이에서도 필수 요소로 여겨지고 있다.</p>
 <h2 id="linked-list-란">Linked List 란?</h2>
 <blockquote>
 <p>여러개의 노드로 구성되어 있으며 한줄로 연결되는 방식으로 데이터를 저장하는 자료구조.
@@ -148,7 +169,54 @@
 </ul>
 <h2 id="linked-list-code">Linked List Code</h2>
 <p>이번에는 Javascript를 사용하여 한번 구현해보겠다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//노드 객체를 만들 때 사용하는 클래스
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//노드 객체를 만들 때 사용하는 클래스
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
@@ -191,7 +259,9 @@
   <span class="k">return</span> <span class="nx">list</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="array-list-vs-linked-list">Array List VS Linked List</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="array-list-vs-linked-list">Array List VS Linked List</h3>
 <p>Array는 여러개의 데이터가 순차적으로 저장되어 있고 Linked List는 각자 다른 위치에 있으며 서로 연결되어 있다.</p>
 <p>글의 초반에 이야기한것처럼 각각의 자료구조는 장점과 한계가 있다.<br>
 특정 인덱스가 주어져 관련된 값을 찾아야 하는거라면 Array를 사용할 때 좋은 성능을 나타낼 것이다.<br>

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/til\/2021\/08\/08_17\/"
-        },"genre": "posts","keywords": "TIL","wordcount":  220 ,
+        },"genre": "posts","keywords": "TIL","wordcount":  236 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/til\/2021\/08\/08_17\/","datePublished": "2021-08-17T20:00:26+09:00","dateModified": "2021-08-17T20:00:26+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[TIL] 8월 17일</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/til/"><i class="far fa-folder fa-fw"></i>TIL</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-17">2021-08-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;220 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-17">2021-08-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;236 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -113,7 +113,21 @@
 <li>
 <p><strong>6장 : 뷰 클래스로 코드 구조 개선</strong></p>
 <h5 id="파일-디렉토리-구조">파일 디렉토리 구조</h5>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">src //소스 코드를 배치하는 디렉토리
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-md" data-lang="md">src //소스 코드를 배치하는 디렉토리
 |- core // 공통적으로 사용되는 기능들을 가진 디렉토리
 |- api.ts
 |- router.ts
@@ -123,7 +137,9 @@
 |- news-feed-view.ts
 |- types // 타입, 인터페이스들이 담긴 디렉토리
 |- index.ts
-</code></pre></div></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>7장 : 파일 분리</strong></p>
 </li>
@@ -135,13 +151,25 @@
 <ul>
 <li>전역 공간에서 관리할 경우 어디서든 접근이 가능하기 때문에 예상치 못한 에러를 발생시킬 수 있다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">declare</span> <span class="kr">global</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">declare</span> <span class="kr">global</span> <span class="p">{</span>
   <span class="kr">interface</span> <span class="nx">Window</span> <span class="p">{</span>
     <span class="nx">store</span>: <span class="kt">Store</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="nx">store</span><span class="p">;</span>
-</code></pre></div></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>Store 클래스를 만들어서 관리
 <ul>
 <li>각 속성들은 외부에 노출되지 않도록 private 속성 적용</li>

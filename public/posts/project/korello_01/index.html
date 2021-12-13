@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/project\/korello_01\/"
-        },"genre": "posts","keywords": "Javascript, React, 프로젝트","wordcount":  251 ,
+        },"genre": "posts","keywords": "Javascript, React, 프로젝트","wordcount":  265 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/project\/korello_01\/","datePublished": "2021-07-17T14:08:24+09:00","dateModified": "2021-07-17T14:08:24+09:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Korello 프로젝트] Refactoring Day1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"><i class="far fa-folder fa-fw"></i>사이드 프로젝트</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-17">2021-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;251 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-17">2021-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;265 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -133,7 +133,25 @@
 <h3 id="프로젝트-구조-설계">프로젝트 구조 설계</h3>
 <p>Presentational &amp; Container 패턴과 아토믹 디자인 패턴을 후보에 두고 고민했다.
 프로젝트의 구조가 깔끔하고 작은 단위에서 부터 개발을 해 재사용성이 높은 <strong>아토믹 디자인 패턴</strong>을 사용하기로 했다.</p>
-<pre><code>|-- src
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">|-- src
 |     |- components
 |           |-atoms
 |           |-molecules
@@ -147,7 +165,9 @@
 |     |- index.js
 |-- package.json
 |-- README.MD
-</code></pre><br>
+</code></pre></td></tr></table>
+</div>
+</div><br>
 <h3 id="테스팅-라이브러리">테스팅 라이브러리</h3>
 <p><strong>Jest를 사용한다.</strong></p>
 <p>최근 &ldquo;자바스크립트 패턴과 테스트&quot;를 읽으며 Jasmine을 처음 사용해보았다. 또한 이전 프로젝트에서 Mocha와 Chai를 사용해 테스트를 작성한 경험 또한 있다.

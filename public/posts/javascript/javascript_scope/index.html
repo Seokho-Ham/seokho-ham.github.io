@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_scope\/"
-        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive","wordcount":  341 ,
+        },"genre": "posts","keywords": "Javascript, 모던 자바스크립트 DeepDive","wordcount":  366 ,
         "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/javascript_scope\/","datePublished": "2021-02-24T00:00:00+00:00","dateModified": "2021-02-24T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kale"},"author": {
@@ -42,7 +42,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -83,7 +83,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Javascript] 스코프(Scope)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-24">2021-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;341 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-24">2021-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;366 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -115,7 +115,19 @@
 <ul>
 <li>모든 식별자는 다른 코드에서 자신을 참조할 수 있는 유효범위를 가진다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;local&#39;</span><span class="p">;</span>
@@ -123,7 +135,9 @@
 <span class="p">}</span>
 <span class="nx">foo</span><span class="p">();</span> <span class="c1">//&#39;local&#39;
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">//&#39;global&#39;
-</span></code></pre></div><ul>
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>식별자 결정 : 자바스크립트에서 어떤 변수를 참조해야할지 결정하는 작업 ⇒ 스코프를 통해 이뤄진다.</li>
 <li>var은 같은 스코프 내에서 재선언이 가능한데 이는 예상치 않은 결과를 나타낼 수 있음.</li>
 </ul>
@@ -148,14 +162,27 @@
 <li>모든 지역 스코프의 최상위 스코프는 전역스코프!</li>
 <li>아래 코드의 스코프체인 : 전역 ← outer ← inner</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">outer</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
   <span class="kd">function</span> <span class="nx">inner</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><blockquote>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p><strong>렉시컬 환경 : 코드가 어디서 실행되며 주변에 어떤 코드가 있는지 정의되어 있는 환경.</strong></p>
 </blockquote>
 <p><strong>&lt;동작원리&gt;</strong></p>
@@ -194,7 +221,21 @@
 <ul>
 <li>bar은 전역에서 정의되어 있기때문에 상위스코프로 전역 객체를 가진다.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
   <span class="nx">bar</span><span class="p">();</span>
@@ -204,7 +245,9 @@
 <span class="p">}</span>
 <span class="nx">foo</span><span class="p">();</span> <span class="c1">//1;
 </span><span class="c1"></span><span class="nx">bar</span><span class="p">();</span> <span class="c1">//1;
-</span></code></pre></div></div><div class="post-footer" id="post-footer">
+</span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
