@@ -7,7 +7,7 @@
   # language code
 
   languageCode = "en"
-  title = "Kale's DevBlog"
+  title = "Forky's DevBlog"
 
   # Change the default theme to be use when building the site with Hugo
 
@@ -32,7 +32,7 @@
   [params.home.profile]
       enable = true
       avatarURL = "/images/profile.jpg"
-      subtitle = "기본기를 중요시 하는 개발자가 되고 싶습니다."
+      subtitle = "최고 수준의 퍼포먼스는 경험을 오래한다고 자동으로 얻어지는 것이 아니다."
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -84,7 +84,7 @@
   priority = 0.5
 
 [author]
-  name = "Kale"
+  name = "Forky"
   link = "https://seokho-ham.github.io"
 
 
