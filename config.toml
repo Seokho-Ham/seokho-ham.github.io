@@ -19,7 +19,8 @@
   # LoveIt theme version
 
   version = "0.2.X"
-  defaultTheme = "dark"
+  defaultTheme = "auto"
+
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
     desktopMode = "auto"
