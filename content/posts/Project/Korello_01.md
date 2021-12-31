@@ -3,7 +3,7 @@ title: '[Korello 프로젝트] Refactoring Day1'
 date: 2021-07-17T14:08:24+09:00
 categories: ['사이드 프로젝트']
 tags: ['Javascript', 'React', '프로젝트']
-draft: false
+draft: true
 ---
 
 한달간 기존의 Korello 프로젝트를 새로운 레포를 만들어 처음부터 다시 개발하기로 했다.

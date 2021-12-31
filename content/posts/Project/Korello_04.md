@@ -3,7 +3,7 @@ title: '[Korello 프로젝트] Refactoring Day4'
 date: 2021-07-27T19:05:57+09:00
 categories: ['사이드 프로젝트']
 tags: ['Javascript', 'React']
-draft: false
+draft: true
 ---
 
 Korello 개발 4일차의 기록

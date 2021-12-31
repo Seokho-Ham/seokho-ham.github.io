@@ -3,10 +3,10 @@ title: 'Redux에 대해 알아보자!'
 date: 2021-02-09T15:48:09+09:00
 categories: ['Redux']
 tags: ['Redux', 'Frontend']
-draft: false
+draft: true
 ---
 
-Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
 <br>
 오늘은 Redux에 대해 학습한 내용을 정리합니다.
 

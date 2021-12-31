@@ -3,10 +3,10 @@ title: 'React에 대해 알아보자 - 2편'
 date: 2020-10-19T15:48:09+09:00
 categories: ['React']
 tags: ['React', 'Frontend']
-draft: false
+draft: true
 ---
 
-Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.<br>
+<br>
 오늘은 Inflearn에 있는 김민준 님의 "누구든지 하는 React" 강의를 통해 학습한 부분을 정리합니다.
 
 <!--more-->

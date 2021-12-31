@@ -6,7 +6,7 @@ tags: ['자료구조', 'Stack', 'Queue', 'Javascript']
 draft: false
 ---
 
-Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
 <br>
 오늘은 Stack & Queue에 대해 학습한 내용을 정리합니다.
 

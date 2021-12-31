@@ -3,7 +3,7 @@ title: '[Korello 프로젝트] Refactoring Day2'
 date: 2021-07-21T22:52:01+09:00
 categories: ['사이드 프로젝트']
 tags: ['Javascript', 'React', 'Webpack', 'Babel']
-draft: false
+draft: true
 ---
 
 Korello 프로젝트의 Webpack & Babel 설정을 직접 했다.

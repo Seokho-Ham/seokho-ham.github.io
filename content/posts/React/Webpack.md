@@ -3,10 +3,10 @@ title: 'Webpack 학습하기'
 date: 2021-05-19T17:51:52+09:00
 categories: ['Frontend']
 tags: ['Webpack']
-draft: false
+draft: true
 ---
 
-Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
 오늘은 Webpack에 대해 학습한 내용을 정리했습니다.
 
 <br>

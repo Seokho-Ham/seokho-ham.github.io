@@ -6,7 +6,7 @@ tags: ['자료구조', 'DynamicProgramming', 'Javascript']
 draft: false
 ---
 
-Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
 <br>
 오늘은 동적 프로그래밍(DynamicProgramming)에 대해 학습한 내용을 정리합니다.
 

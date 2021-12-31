@@ -6,7 +6,7 @@ tags: ['Javascript', '모던 자바스크립트 DeepDive', '클로저']
 draft: false
 ---
 
-Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
 
 > 아래 내용은 모던 자바스크립트 DeepDive 24장을 학습하며 정리한 내용입니다.
 
