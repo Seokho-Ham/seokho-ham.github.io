@@ -7,7 +7,7 @@
   # language code
 
   languageCode = "en"
-  title = "Forky's DevBlog"
+  title = "포키의 DevBlog"
 
   # Change the default theme to be use when building the site with Hugo
 
