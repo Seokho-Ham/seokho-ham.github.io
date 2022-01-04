@@ -7,7 +7,7 @@
   # language code
 
   languageCode = "en"
-  title = "포키의 DevBlog"
+  title = "포키의 개발 기록"
 
   # Change the default theme to be use when building the site with Hugo
 
@@ -84,7 +84,7 @@
   priority = 0.5
 
 [author]
-  name = "Forky"
+  name = "포키"
   link = "https://seokho-ham.github.io"
 
 
