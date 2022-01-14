@@ -5,7 +5,7 @@ featuredImage: /images/TIL.jpeg
 categories: ['TIL']
 tags: ['TIL']
 
-draft: false
+draft: true
 ---
 
 # Today I learned
