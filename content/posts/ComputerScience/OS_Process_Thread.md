@@ -1,12 +1,10 @@
 ---
-title: '[OS] 프로세스와 스레드'
-date: 2021-06-05T18:17:37+09:00
-categories: ['OS']
-tags: ['OS', 'Javascript', 'process', 'thread']
+title: '[CS] 프로세스'
+date: 2022-01-18T09:50:30+09:00
+categories: ['CS']
+tags: ['CS','프로세스']
 draft: true
 ---
-
-네이버 특별 심화반 과정을 진행하며 OS에서 프로세스와 스레드에 대해 학습한 내용을 정리한 글입니다.
 
 <br>
 
