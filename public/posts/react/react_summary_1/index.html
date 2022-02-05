@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>React에 대해 알아보자 - 1편 - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="React에 대해 알아보자 - 1편" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 React에 대해 학습한 내용을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/react/react_summary_1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-16T15:48:09&#43;09:00" />
+<meta property="article:modified_time" content="2020-10-16T15:48:09&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React에 대해 알아보자 - 1편"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 React에 대해 학습한 내용을 정리합니다."/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/react/react_summary_1/" /><link rel="prev" href="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/" /><link rel="next" href="https://seokho-ham.github.io/posts/react/react_summary_2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React에 대해 알아보자 - 1편",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/react\/react_summary_1\/"
+        },"genre": "posts","keywords": "React, Frontend","wordcount":  617 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/react\/react_summary_1\/","datePublished": "2020-10-16T15:48:09+09:00","dateModified": "2020-10-16T15:48:09+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">React에 대해 알아보자 - 1편</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/react/"><i class="far fa-folder fa-fw"></i>React</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-16">2020-10-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;617 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#react는-frontend-library"><strong>React는 Frontend Library!</strong></a></li>
+    <li><a href="#react의-virtual-dom"><strong>React의 Virtual DOM</strong></a></li>
+    <li><a href="#webpack--babel"><strong>Webpack &amp; Babel</strong></a></li>
+    <li><a href="#jsx"><strong>JSX</strong></a>
+      <ul>
+        <li><a href="#component"><strong>Component</strong></a></li>
+        <li><a href="#두가지-방식의-장단점">두가지 방식의 장단점</a></li>
+        <li><a href="#props"><strong>Props</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 React에 대해 학습한 내용을 정리합니다.</p>
+<h2 id="react는-frontend-library"><strong>React는 Frontend Library!</strong></h2>
+<p>기존에는 일일이 dom을 가져와서 사용해야 했다. 하지만 서비스의 규모가 커지면 수많은 dom 요소를 필요에 맞게 사용하는 것이 쉽지 않다.
+그래서 Facebook에서는 React를 개발했다.</p>
+<ul>
+<li>DOM 관리, 상태값 업데이트 관리를 최소화 하고 오로지 기능 개발, UI 개발에 집중할 수 있도록 도와준다.</li>
+<li><strong>생산성 향상</strong>과 <strong>유지보수</strong>에 효과적이다!</li>
+</ul>
+<br>
+<h2 id="react의-virtual-dom"><strong>React의 Virtual DOM</strong></h2>
+<ul>
+<li>Virtual DOM이란 Javascript로 이루어진 <strong>가상의 DOM</strong>이다.</li>
+<li>동작 원리
+<ol>
+<li>데이터가 변경되면 Virtual DOM에 렌더링을 한다.</li>
+<li>실제 DOM 과 Virtual DOM 간에 비교가 이루어진다.</li>
+<li>변화가 이루어진 부분만 실제 DOM에 적용시킨다.</li>
+</ol>
+</li>
+</ul>
+<br>
+<h2 id="webpack--babel"><strong>Webpack &amp; Babel</strong></h2>
+<p><strong>Webpack</strong> : 코드를 의존하는 순서대로 번들링 작업을 하도록 도와주는 도구. ex) js파일을 하나(또는 여러개)로 묶어준다.</p>
+<blockquote>
+<p>Bundle이란?
+소프트웨어에서 작동하는데 필요한 모든것의 묶음.</p>
+</blockquote>
+<ul>
+<li>여러개의 파일을 브라우저에서 로딩하는 것은 성능적으로 좋지 않다.</li>
+</ul>
+<p><strong>Babel</strong> : Javascript로 컴파일 해주는 도구. / ex) ES6문법을 지원하지 않는 브라우저에서 기존의 문법으로 변환시켜서 넘겨준다.</p>
+<h2 id="jsx"><strong>JSX</strong></h2>
+<ul>
+<li>HTML 문법과 비슷하지만 지켜야 할 규칙들이 있다.</li>
+</ul>
+<ol>
+<li>
+<p><strong>태그</strong>는 반드시 닫혀 있어야 한다.</p>
+</li>
+<li>
+<p>2개 이상의 엘리먼트는 하나의 엘리먼트 내에 속해야 한다.</p>
+<ul>
+<li>React 16.2부터는 <strong>Fragment</strong>라는 기능이 생겼다.
+→ 여러개의 엘리먼트를 사용할 때 그것들을 묶기 위해 불필요한 div를 사용할 필요가 없어졌다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Hello<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Bye<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+//------------------
+<span class="p">&lt;</span><span class="nt">Fragment</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Hello<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Bye<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">Fragment</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Javascript 문법을 사용할 때는 <strong>중괄호</strong> 내에서 사용해야 한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">class</span> <span class="nx">App</span> <span class="kr">extends</span> <span class="nx">Component</span><span class="p">{</span>
+    <span class="nx">render</span><span class="p">(){</span>
+      <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;coco&#34;</span><span class="p">;</span>
+      <span class="k">return</span><span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>조건부 렌더링</strong></p>
+<ul>
+<li>
+<p>JSX내에서는 If 문을 사용할 수 없다.</p>
+<ul>
+<li><strong>삼항 연산자</strong>를 사용해서 렌더링 내용을 정할 수 있다.</li>
+<li>&ldquo;<strong>&amp;&amp;</strong>&ldquo;를 사용해서 조건에 따라 렌더링을 할 수 있다.
+<ul>
+<li>falsy한 값인 0은 화면에 나타난다.</li>
+</ul>
+</li>
+<li><strong>즉시 실행 함수</strong>를 통해 사용할 수도 있다.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx">            <span class="c1">// 삼항 연산자
+</span><span class="c1"></span>        <span class="p">{</span>
+            <span class="nx">name</span> <span class="o">===</span> <span class="s1">&#39;coco&#39;</span> <span class="o">?</span> <span class="p">(</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">안녕하세요</span> <span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="nx">님</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">회원이</span> <span class="nx">아닙니다</span><span class="p">.&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+
+            <span class="c1">//&amp;&amp;
+</span><span class="c1"></span>        <span class="p">{</span>
+            <span class="nx">name</span> <span class="o">===</span> <span class="s1">&#39;coco&#39;</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">안녕하세요</span> <span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="nx">님</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+        <span class="p">}</span>
+
+            <span class="c1">//즉시 실행 함수
+</span><span class="c1"></span>
+        <span class="p">{</span>
+        <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">name</span> <span class="o">===</span> <span class="s1">&#39;coco&#39;</span><span class="p">){</span>
+                <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="nx">안녕하세요</span> <span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="nx">님</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="nx">회원이</span> <span class="nx">아닙니다</span><span class="p">.&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">})()</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Inline Style</strong>을 사용할 수 있다.</p>
+<ul>
+<li>객체 형태로 넣는다. / value는 문자열로 넣는다.</li>
+<li>속성의 이름은 <strong>camelCase</strong>로 작성한다.</li>
+<li>class → className으로 사용한다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">backgroundColor</span><span class="o">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+  <span class="nx">padding</span><span class="o">:</span> <span class="s1">&#39;16px&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#39;App&#39;</span> <span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}&gt;</span>
+  <span class="nx">Hello</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>주석은 멀티라인으로 작성해야 하며 중괄호로 묶어야 한다.</p>
+</li>
+</ol>
+<h3 id="component"><strong>Component</strong></h3>
+<ol>
+<li>
+<p><strong>함수형 컴포넌트</strong></p>
+<ul>
+<li>보통 props를 받아와서 렌더하기만 할 때 사용한다.</li>
+<li>초기 마운트 속도가 (미세하게) 빠르며 메모리를 덜 사용한다.</li>
+<li>state, lifecycle이 존재하지 않는다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">MyName</span> <span class="o">=</span> <span class="nx">props</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">안녕하세요</span> <span class="nx">저는</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="nx">이라고</span> <span class="nx">합니다</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>클래스 컴포넌트</strong></p>
+<ul>
+<li>state와 lifcycle API가 존재한다.</li>
+<li>반드시 render 메서드를 통해 JSX를 반환해야 한다.</li>
+<li>event를 적용시킬 때 arrow function을 사용하지 않으면 this 바인딩이 필요하다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">class</span> <span class="nx">MyName</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Components</span> <span class="p">{</span>
+  <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;coco&#39;</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">안녕하세요</span> <span class="nx">저는</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="nx">이라고</span> <span class="nx">합니다</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><br>
+</li>
+</ol>
+<h3 id="두가지-방식의-장단점">두가지 방식의 장단점</h3>
+<table>
+<thead>
+<tr>
+<th>장/단</th>
+<th>함수형</th>
+<th>클래스형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>장점</td>
+<td>- 클래스에 비해 선언이 간단하다. <br>- 메모리 자원을 덜 사용한다.</td>
+<td>- state와 lifcycle API가 존재한다</td>
+</tr>
+<tr>
+<td>단점</td>
+<td>-state와 lifcycle API를 사용할 수 없다.<br>(hooks가 나오면서 해결)</td>
+<td>함수형의 장점의 반대</td>
+</tr>
+</tbody>
+</table>
+<h3 id="props"><strong>Props</strong></h3>
+<ul>
+<li>부모 컴포넌트가 자식 컴포넌트에게 값을 전달할 때 사용된다 .</li>
+<li>단방향 데이터 플로우다.</li>
+<li>읽기전용이다.</li>
+<li>컴포넌트를 호출할 때 props를 함께 넘겨준다.</li>
+<li><strong>static defaultProps</strong>를 설정하면 props가 넘어오지 않을 경우를 대비해 기본값을 설정해 둘 수 있다.</li>
+<li><strong>props.children</strong>을 사용하면 컴포넌트 사이에 있는 문자열을 사용할 수 있다.</li>
+<li><strong>propTypes</strong>를 사용해 넘겨 받을 prop의 타입을 미리 지정할 수 있다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">import</span> <span class="nx">PropTypes</span> <span class="nx">from</span> <span class="s1">&#39;prop-types&#39;</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">MyName</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="kr">static</span> <span class="nx">defaultProps</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;basic name&#39;</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="kr">static</span> <span class="nx">propTypes</span><span class="o">=</span><span class="p">{</span>
+    <span class="nx">name</span> <span class="o">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">안녕하세요</span> <span class="nx">저는</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="nx">이라고</span> <span class="nx">합니다</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="p">&lt;</span><span class="nt">MyName</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;coco&#39;</span> <span class="p">/&gt;;</span> <span class="c1">//-&gt; props = {name: &#39;coco&#39;}
+</span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-10-16</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/react/react_summary_1/" data-title="React에 대해 알아보자 - 1편" data-hashtags="React,Frontend"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/react/react_summary_1/" data-hashtag="React"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/react/react_summary_1/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/react/react_summary_1/" data-title="React에 대해 알아보자 - 1편" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/react/">React</a>,&nbsp;<a href="/tags/frontend/">Frontend</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/datastructurealgorithm/datastructure_linked_list/" class="prev" rel="prev" title="[자료구조] Linked List"><i class="fas fa-angle-left fa-fw"></i>[자료구조] Linked List</a>
+            <a href="/posts/react/react_summary_2/" class="next" rel="next" title="React에 대해 알아보자 - 2편">React에 대해 알아보자 - 2편<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-213511127-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-213511127-1" async></script></body>
+</html>

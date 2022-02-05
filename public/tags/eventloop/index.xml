@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>EventLoop - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/eventloop/</link>
+        <description>EventLoop - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Jun 2021 14:00:33 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/eventloop/" rel="self" type="application/rss+xml" /><item>
+    <title>자바스크립트 엔진과 구동원리</title>
+    <link>https://seokho-ham.github.io/posts/javascript/javascript_engine/</link>
+    <pubDate>Thu, 10 Jun 2021 14:00:33 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/javascript/javascript_engine/</guid>
+    <description><![CDATA[<p>이 글은 Javascript 엔진인 V8엔진과 Javascript의 런타임에 대해 학습한 내용을 정리한 글입니다.</p>
+<br>]]></description>
+</item></channel>
+</rss>

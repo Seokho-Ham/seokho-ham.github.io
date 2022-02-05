@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>React - Tag - Kale&#39;s DevBlog</title>
+        <link>https://seokho-ham.github.io/tags/react/</link>
+        <description>React - Tag - Kale&#39;s DevBlog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 27 Jul 2021 19:05:57 &#43;0900</lastBuildDate><atom:link href="https://seokho-ham.github.io/tags/react/" rel="self" type="application/rss+xml" /><item>
+    <title>[Korello 프로젝트] Refactoring Day4</title>
+    <link>https://seokho-ham.github.io/posts/project/korello_04/</link>
+    <pubDate>Tue, 27 Jul 2021 19:05:57 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/project/korello_04/</guid>
+    <description><![CDATA[<p>Korello 개발 4일차의 기록</p>
+<br>]]></description>
+</item><item>
+    <title>[Korello 프로젝트] Refactoring Day3</title>
+    <link>https://seokho-ham.github.io/posts/project/korello_03/</link>
+    <pubDate>Mon, 26 Jul 2021 15:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/project/korello_03/</guid>
+    <description><![CDATA[<p>Korello 개발 3일차의 기록</p>
+<br>]]></description>
+</item><item>
+    <title>[Korello 프로젝트] Refactoring Day2</title>
+    <link>https://seokho-ham.github.io/posts/project/korello_02/</link>
+    <pubDate>Wed, 21 Jul 2021 22:52:01 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/project/korello_02/</guid>
+    <description><![CDATA[<p>Korello 프로젝트의 Webpack &amp; Babel 설정을 직접 했다.</p>
+<p>혼자하다가 막혀서 여러 블로그의 도움을 받았다.</p>
+<br>]]></description>
+</item><item>
+    <title>[Korello 프로젝트] Refactoring Day1</title>
+    <link>https://seokho-ham.github.io/posts/project/korello_01/</link>
+    <pubDate>Sat, 17 Jul 2021 14:08:24 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/project/korello_01/</guid>
+    <description><![CDATA[<p>한달간 기존의 Korello 프로젝트를 새로운 레포를 만들어 처음부터 다시 개발하기로 했다.</p>
+<br>]]></description>
+</item><item>
+    <title>React에 대해 알아보자 - 2편</title>
+    <link>https://seokho-ham.github.io/posts/react/react_summary_2/</link>
+    <pubDate>Mon, 19 Oct 2020 15:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/react/react_summary_2/</guid>
+    <description><![CDATA[<p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.<br>
+오늘은 Inflearn에 있는 김민준 님의 &ldquo;누구든지 하는 React&rdquo; 강의를 통해 학습한 부분을 정리합니다.</p>]]></description>
+</item><item>
+    <title>React에 대해 알아보자 - 1편</title>
+    <link>https://seokho-ham.github.io/posts/react/react_summary_1/</link>
+    <pubDate>Fri, 16 Oct 2020 15:48:09 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://seokho-ham.github.io/posts/react/react_summary_1/</guid>
+    <description><![CDATA[<p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 React에 대해 학습한 내용을 정리합니다.</p>]]></description>
+</item></channel>
+</rss>

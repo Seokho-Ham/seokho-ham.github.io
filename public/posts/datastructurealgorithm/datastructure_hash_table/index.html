@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[자료구조] 해시 테이블(Hash Table) - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="[자료구조] 해시 테이블(Hash Table)" />
+<meta property="og:description" content="해시 테이블(Hash Table)에 대해 학습한 내용을 정리합니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_hash_table/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-01T15:25:09&#43;09:00" />
+<meta property="article:modified_time" content="2021-06-01T15:25:09&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[자료구조] 해시 테이블(Hash Table)"/>
+<meta name="twitter:description" content="해시 테이블(Hash Table)에 대해 학습한 내용을 정리합니다.
+"/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_hash_table/" /><link rel="prev" href="https://seokho-ham.github.io/posts/til/2021/06/06_01/" /><link rel="next" href="https://seokho-ham.github.io/posts/til/2021/06/06_02/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[자료구조] 해시 테이블(Hash Table)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_hash_table\/"
+        },"genre": "posts","keywords": "자료구조, Hash Table, Javascript","wordcount":  653 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_hash_table\/","datePublished": "2021-06-01T15:25:09+09:00","dateModified": "2021-06-01T15:25:09+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[자료구조] 해시 테이블(Hash Table)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><i class="far fa-folder fa-fw"></i>자료구조</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-01">2021-06-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;653 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hash-table이란">Hash Table이란?</a></li>
+        <li><a href="#hash-table-구성">Hash Table 구성</a></li>
+        <li><a href="#hash의-충돌">Hash의 충돌</a></li>
+        <li><a href="#1-체이닝chaining">1. 체이닝(Chaining)</a></li>
+        <li><a href="#2-개방-주소법open-addressing">2. 개방 주소법(Open Addressing)</a></li>
+        <li><a href="#javacript를-사용한-hash-table-구현">Javacript를 사용한 Hash Table 구현</a></li>
+      </ul>
+    </li>
+    <li><a href="#참고자료">참고자료</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>해시 테이블(Hash Table)에 대해 학습한 내용을 정리합니다.</p>
+<br>
+<h3 id="hash-table이란">Hash Table이란?</h3>
+<hr>
+<blockquote>
+<p>연관 배열구조를 이용하여 key에 value를 저장하는 자료구조를 말한다.</p>
+</blockquote>
+<p>만약 직원들의 전화번호를 사용해 직원들의 정보를 저장한다고 예시를 들어보자.
+크게 3가지 방식이 떠오른다.<br><br>
+첫번째, array 혹은 linked list를 사용해 저장하는 방식. 이렇게 저장할 경우 데이터의 접근에는 쉬울 수 있으나 데이터를 추가하거나 삭제할 경우, 어려움이 발생할것이다.<br><br>
+두번째, binary search tree를 사용해 데이터를 저장하는 방식이다. 이 경우 데이터의 접근, 추가, 삭제 모두 O(logN)의 시간복잡도를 가질것이다.<br><br>
+마지막으로 큰 배열을 만들어서 전화번호에 해당하는 인덱스에 정보를 저장하는 것이다. 이렇게 할경우 공간의 낭비가 발생한다.
+<br><br>
+이런 경우 사용할 수 있는게 바로 <strong>해시 테이블</strong> 이다.</p>
+<br>
+<h3 id="hash-table-구성">Hash Table 구성</h3>
+<hr>
+<ol>
+<li>
+<p>Key : 해시 함수의 input 값이 되는 값이다.(때에 따라서는 value와 동일할 수 있다.)</p>
+</li>
+<li>
+<p>Hash Function : key를 hash로 바꿔주는 함수다. 큰 값을 일정한 길이를 가진 값으로 변환해 테이블의 인덱스로 사용할 수 있게 만들어준다.</p>
+</li>
+</ol>
+<ul>
+<li>자주 사용하는 해시 함수
+<ul>
+<li>aritmetic modular : key를 테이블의 크기로 나눈 값의 나머지를 반환한다.</li>
+<li>truncation : key의 일부 값을 반환한다.</li>
+<li>folding : key를 일정 규칙으로 분리해서 분리된 값들을 하나로 합친다. 이후 테이블의 사이즈로 나눈 나머지 등을 반환한다.</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>Hash : 해시 함수를 사요해 나온 결과값. 테이블에 value가 저장되는 인덱스 값이라고 생각해도 된다.</li>
+<li>Value : 실제 테이블에 저장되는 값이다.</li>
+<li>Table(bucket이라고도 부른다) : 배열 형태를 가진 저장소를 말한다.</li>
+</ol>
+<br>
+<h3 id="hash의-충돌">Hash의 충돌</h3>
+<hr>
+<p>해시함수를 통해 해시를 만들다보면 동일한 해시값이 나오는 경우가 발생할 수 있다.<br>
+이런 현상을 <strong>해시의 충돌(Collision)</strong> 이라고 한다.
+이런 현상을 방지하기 위해 해시 함수를 작성할때 최대한 충돌이 발생하지 않도록 작성해야한다. 하지만 완전히 막을 수 없기 때문에 여러가지 방법을 통해 방지해야한다.</p>
+<br>
+<h3 id="1-체이닝chaining">1. 체이닝(Chaining)</h3>
+<ul>
+<li>테이블의 각 셀을 Linked List로 만드는 방식이다. 충돌이 발생할 경우, 해당 셀에 있는 데이터의 Head 혹은 Tail에 데이터를 저장한다.</li>
+<li>Head에 데이터를 저장할 경우 O(1), Tail에 저장할 경우 최소 O(1), 최대 O(N)의 시간복잡도를 가지게 된다.</li>
+<li>키의 개수가 불분명할때 보통 사용한다.</li>
+</ul>
+<h4 id="장점">&lt;장점&gt;</h4>
+<ul>
+<li>해시 테이블이 넘치지 않으며 크기 또한 커지지 않는다.</li>
+<li>해시함수를 만들때 덜 신경써도 된다.</li>
+</ul>
+<h4 id="단점">&lt;단점&gt;</h4>
+<ul>
+<li>공간의 낭비가 발생한다. (절대 사용하지 않게되는 공간이 발생한다.)</li>
+<li>하나의 체인이 길어질 경우, 시간복잡도가 늘어난다.</li>
+<li>links를 위한 추가 공간이 필요하게 된다.</li>
+</ul>
+<br>
+<h3 id="2-개방-주소법open-addressing">2. 개방 주소법(Open Addressing)</h3>
+<ul>
+<li>충돌이 발생할경우 비어있는 다른 셀을 찾아서 데이터를 저장하는 방식.</li>
+<li>데이터의 검색, 추가, 삭제 모두 O(1)~O(N)의 시간 복잡도를 가진다.</li>
+<li>일정한 방법으로 비어있는 위치를 찾는다.</li>
+<li>키의 개수가 분명할때 주로 사용한다.</li>
+</ul>
+<ol>
+<li>선형 탐색 : 다음 비어있는 셀, 혹은 n개 뒤에 비어있는 셀을 사용한다.</li>
+<li>제곱 탐색 : 해시의 제곱을 한 위치에 저장한다.</li>
+<li>이중 해시 : 다른 해시 함수를 한번 더 적용해서 저장한다.</li>
+</ol>
+<h4 id="장점-1">&lt;장점&gt;</h4>
+<ul>
+<li>하나의 셀에 하나의 데이터가 매칭되어 저장된다.</li>
+<li>간단한다.</li>
+</ul>
+<h4 id="단점-1">&lt;단점&gt;</h4>
+<ul>
+<li>데이터가 많을 경우, 테이블이 꽉차서 크기 조정을 해야할수도 있다.</li>
+<li>데이터가 밀집될 수 있다.</li>
+<li>해시 함수의 성능에 따라 해시테이블의 성능이 달라진다.</li>
+</ul>
+<br>
+<h3 id="javacript를-사용한-hash-table-구현">Javacript를 사용한 Hash Table 구현</h3>
+<hr>
+<ul>
+<li>충돌을 방지하기 위해 Linked List를 사용했다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Node</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">next</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">HashTable</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">storage</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">size</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">size</span> <span class="o">=</span> <span class="nx">size</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">dataLength</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">calculateHash</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">key</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">length</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">size</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">add</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">calculateHash</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">])</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">dataLength</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">searchLinks</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">node</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">searchLinks</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">,</span> <span class="nx">key</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">search</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">calculateHash</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">].</span><span class="nx">key</span> <span class="o">===</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">];</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">searchLinks</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">].</span><span class="nx">next</span><span class="p">,</span> <span class="nx">key</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">delete</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">calculateHash</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">].</span><span class="nx">key</span> <span class="o">===</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">].</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">].</span><span class="nx">next</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">[</span><span class="nx">hash</span><span class="p">];</span>
+      <span class="kd">let</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">searchLinks</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">next</span><span class="p">,</span> <span class="nx">key</span><span class="p">);</span>
+      <span class="k">while</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">next</span> <span class="o">!==</span> <span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">getLength</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataLength</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">table</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashTable</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="nx">table</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;ham&#39;</span><span class="p">);</span>
+<span class="nx">table</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">);</span>
+<span class="nx">table</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;asasasasasasasasasas&#39;</span><span class="p">);</span>
+<span class="nx">table</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s1">&#39;asasasasasasasasasas&#39;</span><span class="p">);</span>
+<span class="nx">table</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="s1">&#39;asasasasasasasasasas&#39;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><br>
+<h2 id="참고자료">참고자료</h2>
+<hr>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/hashing-data-structure/" target="_blank" rel="noopener noreffer">GeeksforGeeks</a></li>
+<li><a href="https://www.educative.io/blog/data-strucutres-hash-table-javascript" target="_blank" rel="noopener noreffer">DataStructure101</a></li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-06-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_hash_table/" data-title="[자료구조] 해시 테이블(Hash Table)" data-hashtags="자료구조,Hash Table,Javascript"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_hash_table/" data-hashtag="자료구조"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_hash_table/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_hash_table/" data-title="[자료구조] 해시 테이블(Hash Table)" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a>,&nbsp;<a href="/tags/hash-table/">Hash Table</a>,&nbsp;<a href="/tags/javascript/">Javascript</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/til/2021/06/06_01/" class="prev" rel="prev" title="[TIL] 6월 1일"><i class="fas fa-angle-left fa-fw"></i>[TIL] 6월 1일</a>
+            <a href="/posts/til/2021/06/06_02/" class="next" rel="next" title="[TIL] 6월 2일">[TIL] 6월 2일<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-213511127-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-213511127-1" async></script></body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[자료구조] Linked List - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="[자료구조] Linked List" />
+<meta property="og:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Linked List에 대해 학습한 내용을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-02T14:04:43&#43;09:00" />
+<meta property="article:modified_time" content="2020-09-02T14:04:43&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[자료구조] Linked List"/>
+<meta name="twitter:description" content="Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+
+오늘은 Linked List에 대해 학습한 내용을 정리합니다."/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/" /><link rel="next" href="https://seokho-ham.github.io/posts/react/react_summary_1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[자료구조] Linked List",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_linked_list\/"
+        },"genre": "posts","keywords": "자료구조, Javascript","wordcount":  494 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/datastructurealgorithm\/datastructure_linked_list\/","datePublished": "2020-09-02T14:04:43+09:00","dateModified": "2020-09-02T14:04:43+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[자료구조] Linked List</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><i class="far fa-folder fa-fw"></i>자료구조</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-02">2020-09-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;494 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#자료구조와-알고리즘">자료구조와 알고리즘</a></li>
+    <li><a href="#자료구조란">자료구조란?</a></li>
+    <li><a href="#알고리즘이란">알고리즘이란?</a></li>
+    <li><a href="#자료구조와-알고리즘의-관계는">자료구조와 알고리즘의 관계는?</a></li>
+    <li><a href="#linked-list-란">Linked List 란?</a></li>
+    <li><a href="#노드의-구성">노드의 구성</a></li>
+    <li><a href="#linked-list-code">Linked List Code</a>
+      <ul>
+        <li><a href="#array-list-vs-linked-list">Array List VS Linked List</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Javascript를 제대로 이해하고 사용하는 개발자가 되기 위해 공부중입니다.
+<br>
+오늘은 Linked List에 대해 학습한 내용을 정리합니다.</p>
+<h2 id="자료구조와-알고리즘">자료구조와 알고리즘</h2>
+<p>본격적으로 공부하기에 앞서 프로그래밍을 한다고 하면 필수로 여겨지는 자료구조와 알고리즘이란 무엇일까?</p>
+<h2 id="자료구조란">자료구조란?</h2>
+<blockquote>
+<p>데이터에 편리하게 접근하고 변경하기 위해 데이터를 저장, 조작하는 방법이다.</p>
+</blockquote>
+<ul>
+<li>자료구조의 종류는 여러 종류가 있으며 각각의 장점과 한계를 명확히 알아야한다. 그래야 각 연산에 필요한 자료구조를 사용할 수 있기 때문이다.</li>
+</ul>
+<h2 id="알고리즘이란">알고리즘이란?</h2>
+<blockquote>
+<p>어떠한 문제를 해결하기 위해 정해진 일련의 절차다. 즉, 주어진 값을 사용해 우리가 원하는 결과를 효과적으로 도출해내는 절차를 의미한다.</p>
+</blockquote>
+<!-- more -->
+<h2 id="자료구조와-알고리즘의-관계는">자료구조와 알고리즘의 관계는?</h2>
+<p>자료구조는 데이터를 편리하게 사용하기 위한 저장, 조작 방법이라면 알고리즘은 그 데이터와 관계된 문제를 해결하는 방법을 의미한다.
+한가지 예시를 들자면 아래는 <code>배열</code>이라는 자료구조이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>아래는 배열이라는 자료구조를 가지고 원하는 값을 도출해내는 알고리즘이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//조건 : 짝수만 보여주세요
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>문제를 해결하기 위한 가장 좋은 알고리즘을 짜기 위해서는 보통은 그에 맞는 자료구조를 먼저 정해야한다. 그렇기 때문에 이 둘은 밀접한 관계를 가지고 있으며 개발자들 사이에서도 필수 요소로 여겨지고 있다.</p>
+<h2 id="linked-list-란">Linked List 란?</h2>
+<blockquote>
+<p>여러개의 노드로 구성되어 있으며 한줄로 연결되는 방식으로 데이터를 저장하는 자료구조.
+이 설명만 봐서는 감이 잡히지 않을것이다. 더 간단한 그림을 통해 알아보자.
+위 그림과 같이 가장 첫번째 노드를 가리키는 <code>Head</code>와 마지막 노드를 가리키는 <code>Tail</code>이 존재하며 각 노드들이 다음 노드를 가리킨다. *객체 지향 언어에서는 객체를 사용하여 표현한다.</p>
+</blockquote>
+<h2 id="노드의-구성">노드의 구성</h2>
+<p>각 노드는 <code>Data Field</code>와 <code>Link Field</code>로 구성된다.</p>
+<ul>
+<li>Data Field : 실제 데이터가 담겨있다.</li>
+<li>Link Field : 다음 노드를 가리킨다.</li>
+</ul>
+<h2 id="linked-list-code">Linked List Code</h2>
+<p>이번에는 Javascript를 사용하여 한번 구현해보겠다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//노드 객체를 만들 때 사용하는 클래스
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">LinkedList</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="nx">list</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="nx">list</span><span class="p">.</span><span class="nx">tail</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="nx">list</span><span class="p">.</span><span class="nx">addToTail</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">head</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">tail</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">no</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+      <span class="nx">list</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="nx">no</span><span class="p">;</span>
+      <span class="nx">list</span><span class="p">.</span><span class="nx">tail</span> <span class="o">=</span> <span class="nx">no</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">tail</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+      <span class="nx">list</span><span class="p">.</span><span class="nx">tail</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="nx">list</span><span class="p">.</span><span class="nx">removeHead</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+    <span class="nx">list</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">list</span><span class="p">.</span><span class="nx">contains</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">cur</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">cur</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">cur</span><span class="p">.</span><span class="nx">value</span> <span class="o">===</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">cur</span> <span class="o">=</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="nx">list</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="array-list-vs-linked-list">Array List VS Linked List</h3>
+<p>Array는 여러개의 데이터가 순차적으로 저장되어 있고 Linked List는 각자 다른 위치에 있으며 서로 연결되어 있다.</p>
+<p>글의 초반에 이야기한것처럼 각각의 자료구조는 장점과 한계가 있다.<br>
+특정 인덱스가 주어져 관련된 값을 찾아야 하는거라면 Array를 사용할 때 좋은 성능을 나타낼 것이다.<br>
+데이터를 중간에 추가하거나 삭제할 경우 Array를 사용하면 삭제한 후 일일이 데이터를 빈자리없이 앞으로 끌어와야 할것이다. 하지만 이때 Linked List를 사용한다면 그럴 필요 없이 데이터를 삭제해주고 나머지 데이터를 연결만 해주면 된다.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-09-02</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/" data-title="[자료구조] Linked List" data-hashtags="자료구조,Javascript"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/" data-hashtag="자료구조"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/datastructurealgorithm/datastructure_linked_list/" data-title="[자료구조] Linked List" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a>,&nbsp;<a href="/tags/javascript/">Javascript</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/react/react_summary_1/" class="next" rel="next" title="React에 대해 알아보자 - 1편">React에 대해 알아보자 - 1편<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-213511127-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-213511127-1" async></script></body>
+</html>

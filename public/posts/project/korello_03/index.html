@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[Korello 프로젝트] Refactoring Day3 - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="[Korello 프로젝트] Refactoring Day3" />
+<meta property="og:description" content="Korello 개발 3일차의 기록
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/project/korello_03/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-26T15:48:09&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-26T15:48:09&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Korello 프로젝트] Refactoring Day3"/>
+<meta name="twitter:description" content="Korello 개발 3일차의 기록
+"/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/project/korello_03/" /><link rel="prev" href="https://seokho-ham.github.io/posts/til/2021/07/07_24/" /><link rel="next" href="https://seokho-ham.github.io/posts/project/korello_04/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Korello 프로젝트] Refactoring Day3",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/project\/korello_03\/"
+        },"genre": "posts","keywords": "Javascript, React","wordcount":  238 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/project\/korello_03\/","datePublished": "2021-07-26T15:48:09+09:00","dateModified": "2021-07-26T15:48:09+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[Korello 프로젝트] Refactoring Day3</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"><i class="far fa-folder fa-fw"></i>사이드 프로젝트</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-26">2021-07-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;238 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#카카오-로그인-동작-원리">카카오 로그인 동작 원리</a>
+      <ul>
+        <li><a href="#동작-원리">동작 원리</a></li>
+      </ul>
+    </li>
+    <li><a href="#global-styles">global styles</a></li>
+    <li><a href="#삽질">삽질</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Korello 개발 3일차의 기록</p>
+<br>
+<h2 id="카카오-로그인-동작-원리">카카오 로그인 동작 원리</h2>
+<p>Korello는 카카오 로그인을 사용하여 로그인을 구현했다. 하지만 대부분의 작업은 서버에서 이루어지기 때문에 내가 직접 관여하는 부분은 적다.<br>
+그래서 동작원리를 명확하게 이해하기 위해 kakao developers 사이트를 통해 학습했다.</p>
+<p>두가지 방식으로 나뉜다. 카카오 sdk를 사용한 방식과 RestAPI를 사용한 방식. 이중에서 Korello는 RestAPI방식을 사용했다.</p>
+<br>
+<p><br><br></p>
+<h3 id="동작-원리">동작 원리</h3>
+<ol>
+<li>유저가 카카오 로그인 버튼을 누르면 로그인 페이지로 이동한다.</li>
+<li>로그인 정보가 맞을 경우 카카오 인증 서버에서 Korello 서버로 인증코드를 전송한다.</li>
+<li>Korello서버에서는 해당 인증코드를 가지고 카카오 인증서버에 토큰을 요청한다.</li>
+<li>카카오 서버에서는 코드를 확인한 후, 일치할 경우 토큰을 반환한다.</li>
+<li>Korello 서버는 해당 토큰으로 사용자 정보를 받아온 후, 사용자 정보를 사용해 자체 토큰을 생성해 프론트로 전송한다.</li>
+</ol>
+<br>
+<h2 id="global-styles">global styles</h2>
+<ul>
+<li>
+<p>목업 디자인 및 각 화면별 레이아웃 작업</p>
+</li>
+<li>
+<p>styled-components에서 전역 스타일 설정 → 중복되는 속성설정을 줄일 수 있다.</p>
+<ul>
+<li>createGlobalStyle 사용. 최상위 컴포넌트에 컴포넌트 작성.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">import</span> <span class="p">{</span><span class="nx">createGlobalStyle</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;styled-components&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">GlobalStyle</span> <span class="o">=</span> <span class="nx">createGlobalStyle</span><span class="sb">`
+</span><span class="sb">	...
+</span><span class="sb">`</span>
+
+<span class="c1">// App.js
+</span><span class="c1"></span>
+<span class="k">return</span><span class="p">(</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">GlobalStyles</span><span class="p">/&gt;</span>
+	<span class="p">...</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<br>
+<h2 id="삽질">삽질</h2>
+<ul>
+<li>
+<p>react-router-dom 사용시 브라우저에서 해당 url로 get 요청을 보내 not found화면이 나왔다.</p>
+<p>해결 : webpack devserver에 historyApiFall 옵션을 true로 설정.</p>
+<ul>
+<li>historyApiFall이란 : HTML5의 History API를 사용하는 경우에 설정해놓은 url 이외의 url 경로로 접근했을때 404 responses를 받게 되는데 이때도 index.html을 서빙할지 결정하는 옵션이다.<br><br>
+<blockquote>
+<p>react-router-dom이 내부적으로 HTML5 History API를 사용하므로 미지정 경로로 이동했을때, 있는 경로지만 그 상태에서 refresh를 했을때와 같은 경우에도 애플리케이션이 적절히 서빙될 수 있어서 유용한 옵션이다.<br><br></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>url에 파라미터를 붙이면 notfound 반환..</p>
+<ul>
+<li>webpack.config.js 에 output에 <code>publicpath : '/'</code> 속성을 추가해주니까 해결.</li>
+</ul>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-07-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/project/korello_03/" data-title="[Korello 프로젝트] Refactoring Day3" data-hashtags="Javascript,React"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/project/korello_03/" data-hashtag="Javascript"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/project/korello_03/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/project/korello_03/" data-title="[Korello 프로젝트] Refactoring Day3" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/react/">React</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/til/2021/07/07_24/" class="prev" rel="prev" title="[TIL] 7월 24일"><i class="fas fa-angle-left fa-fw"></i>[TIL] 7월 24일</a>
+            <a href="/posts/project/korello_04/" class="next" rel="next" title="[Korello 프로젝트] Refactoring Day4">[Korello 프로젝트] Refactoring Day4<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-213511127-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-213511127-1" async></script></body>
+</html>

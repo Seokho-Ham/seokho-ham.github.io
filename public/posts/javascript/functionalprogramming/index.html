@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>함수형 프로그래밍 (Functional Programming) - Kale&#39;s DevBlog</title><meta name="Description" content=""><meta property="og:title" content="함수형 프로그래밍 (Functional Programming)" />
+<meta property="og:description" content="함수형 프로그래밍에 대해 학습하고 정리한 글입니다.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seokho-ham.github.io/posts/javascript/functionalprogramming/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-03T15:34:20&#43;09:00" />
+<meta property="article:modified_time" content="2021-06-03T15:34:20&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="함수형 프로그래밍 (Functional Programming)"/>
+<meta name="twitter:description" content="함수형 프로그래밍에 대해 학습하고 정리한 글입니다.
+"/>
+<meta name="application-name" content="Kale&#39;s DevBlog">
+<meta name="apple-mobile-web-app-title" content="Kale&#39;s DevBlog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seokho-ham.github.io/posts/javascript/functionalprogramming/" /><link rel="prev" href="https://seokho-ham.github.io/posts/til/2021/06/06_03/" /><link rel="next" href="https://seokho-ham.github.io/posts/computerscience/os_process_thread/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "함수형 프로그래밍 (Functional Programming)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seokho-ham.github.io\/posts\/javascript\/functionalprogramming\/"
+        },"genre": "posts","keywords": "Javascript, 함수형 프로그래밍","wordcount":  421 ,
+        "url": "https:\/\/seokho-ham.github.io\/posts\/javascript\/functionalprogramming\/","datePublished": "2021-06-03T15:34:20+09:00","dateModified": "2021-06-03T15:34:20+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Kale"},"author": {
+                "@type": "Person",
+                "name": "Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kale&#39;s DevBlog">Kale&#39;s DevBlog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">함수형 프로그래밍 (Functional Programming)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://seokho-ham.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/javascript/"><i class="far fa-folder fa-fw"></i>Javascript</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-03">2021-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;421 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#프로그래밍-패러다임">프로그래밍 패러다임</a></li>
+        <li><a href="#함수형-프로그래밍이란">함수형 프로그래밍이란?</a></li>
+        <li><a href="#순수함수를-사용하여-데이터의-불변성을-지키고-사이드-이펙트를-방지한-소프트웨어를-만드는-프로그래밍-방식">순수함수를 사용하여 데이터의 불변성을 지키고, 사이드 이펙트를 방지한 소프트웨어를 만드는 프로그래밍 방식</a></li>
+        <li><a href="#반드시-알아야-할-개념">반드시 알아야 할 개념</a></li>
+        <li><a href="#함수형-프로그래밍의-장점">함수형 프로그래밍의 장점</a></li>
+        <li><a href="#함수형-프로그래밍의-특징">함수형 프로그래밍의 특징</a></li>
+        <li><a href="#javascript를-사용해-만든-예시">Javascript를 사용해 만든 예시</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>함수형 프로그래밍에 대해 학습하고 정리한 글입니다.</p>
+<br>
+<h3 id="프로그래밍-패러다임">프로그래밍 패러다임</h3>
+<hr>
+<p>프로그래밍 방식은 크게 2가지로 나눌 수 있다.<br>
+명령형 프로그래밍과 선언형 프로그래밍이다.</p>
+<h4 id="명령형-프로그래밍--어떻게-동작을-할것인지-단계를-차례대로-작성하는-방식">명령형 프로그래밍 : 어떻게 동작을 할것인지 단계를 차례대로 작성하는 방식.</h4>
+<ul>
+<li>절차지향 프로그래밍, 객체지향 프로그래밍</li>
+<li>주로 구문을 사용한다. ex) if, switch, for&hellip;</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kr">const</span> <span class="nx">addOne</span> <span class="o">=</span> <span class="nx">arr</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nx">addOne</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [2,3,4,5,6];
+</span></code></pre></td></tr></table>
+</div>
+</div><br>
+<h4 id="선언형-프로그래밍--동작-흐름을-작성하기보다는-데이터를-사용해-무엇을-할것인지를-작성하는-방식">선언형 프로그래밍 : 동작 흐름을 작성하기보다는 데이터를 사용해 무엇을 할것인지를 작성하는 방식.</h4>
+<ul>
+<li>함수형 프로그래밍</li>
+<li>주로 표현식을 사용한다. ex) 함수 호출, 연산자&hellip;</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kr">const</span> <span class="nx">addOne</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">el</span> <span class="p">=&gt;</span> <span class="nx">el</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//[2,3,4,5,6]
+</span></code></pre></td></tr></table>
+</div>
+</div><br>
+<h3 id="함수형-프로그래밍이란">함수형 프로그래밍이란?</h3>
+<hr>
+<h3 id="순수함수를-사용하여-데이터의-불변성을-지키고-사이드-이펙트를-방지한-소프트웨어를-만드는-프로그래밍-방식">순수함수를 사용하여 데이터의 불변성을 지키고, 사이드 이펙트를 방지한 소프트웨어를 만드는 프로그래밍 방식</h3>
+<br>
+<h3 id="반드시-알아야-할-개념">반드시 알아야 할 개념</h3>
+<hr>
+<ol>
+<li><strong>순수 함수(Pure Function)</strong>
+<ul>
+<li>외부의 상태값에 의존하거나 변경하지 않는 함수</li>
+<li>동일한 input에 동일한 output을 반환하는 함수</li>
+</ul>
+</li>
+</ol>
+<br>
+<ol start="2">
+<li><strong>불변성(Immutable)</strong>
+<ul>
+<li>전달된 외부의 데이터를 변경하는 것이 아닌, 새로운 결과값을 만들어서 반환해야한다.</li>
+<li>함수형 프로그래밍에서는 이런 불변성을 꼭 지켜야한다.</li>
+</ul>
+</li>
+</ol>
+<br>
+<ol start="3">
+<li><strong>비상태(Stateless)</strong>
+<ul>
+<li>불변성과 비슷한 맥락으로 외부의 상태를 참조하고 있으면 안된다.</li>
+</ul>
+</li>
+</ol>
+<br>
+<h3 id="함수형-프로그래밍의-장점">함수형 프로그래밍의 장점</h3>
+<hr>
+<ol>
+<li>
+<p>코드가 간결해지며 예측이 가능해진다.</p>
+</li>
+<li>
+<p>side effect를 방지할 수 있다.</p>
+</li>
+</ol>
+<ul>
+<li>side effect : 함수를 호출하면 상태가 변경되거나 예기치 못한 에러가 발생하는 등의 현상</li>
+<li>대표적인 사이드 이펙트 : 외부 변수, 객체의 속성 수정</li>
+</ul>
+<br>
+<h3 id="함수형-프로그래밍의-특징">함수형 프로그래밍의 특징</h3>
+<hr>
+<ol>
+<li>선언형 프로그래밍이다.</li>
+</ol>
+<br>
+<ol start="2">
+<li>함수를 값으로 바라본다.
+<ul>
+<li>Javascript에서 함수는 1급 객체다.</li>
+<li>즉, 함수를 인자로 여기거나, 리턴값으로 반환하거나, 할당할 수 있다.</li>
+<li>결과값이 예측이 되기때문에 값처럼 여기고 사용한다.</li>
+</ul>
+</li>
+</ol>
+<br>
+<ol start="3">
+<li>고차함수를 사용한다.
+<ul>
+<li>다른 함수를 인자로 받아 결과를 내거나 함수를 반환하는 함수를 말한다.</li>
+<li>예를 들어서, Array의 map메서드가 있다. map메서드는 인자로 함수를 받는다.</li>
+</ul>
+</li>
+</ol>
+<br>
+<h3 id="javascript를-사용해-만든-예시">Javascript를 사용해 만든 예시</h3>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user1&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;강남구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user2&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;노원구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user3&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;노원구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user4&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">32</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;강남구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user5&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">45</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;강동구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user6&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">37</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;강서구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user7&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;노원구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user8&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">29</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;강북구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user9&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;강남구&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;user10&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;서초구&#39;</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// 요구사항 : 나이가 20살 이상인 사람들 중 주소가 노원구인 사람들의 이름을 나이가 적은 순서대로 배열에 담아 반환하라
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">users</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">el</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">age</span> <span class="o">&gt;=</span> <span class="mi">20</span> <span class="o">&amp;&amp;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">address</span> <span class="o">===</span> <span class="s1">&#39;노원구&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">el</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-06-03</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://seokho-ham.github.io/posts/javascript/functionalprogramming/" data-title="함수형 프로그래밍 (Functional Programming)" data-hashtags="Javascript,함수형 프로그래밍"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://seokho-ham.github.io/posts/javascript/functionalprogramming/" data-hashtag="Javascript"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://seokho-ham.github.io/posts/javascript/functionalprogramming/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://seokho-ham.github.io/posts/javascript/functionalprogramming/" data-title="함수형 프로그래밍 (Functional Programming)" data-description=""><i class="fab fa-blogger fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/javascript/">Javascript</a>,&nbsp;<a href="/tags/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">함수형 프로그래밍</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/til/2021/06/06_03/" class="prev" rel="prev" title="[TIL] 6월 3일"><i class="fas fa-angle-left fa-fw"></i>[TIL] 6월 3일</a>
+            <a href="/posts/computerscience/os_process_thread/" class="next" rel="next" title="[OS] 프로세스와 스레드">[OS] 프로세스와 스레드<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://seokho-ham.github.io" target="_blank">Kale</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":500},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"seokho-ham/blog-comments"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-213511127-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-213511127-1" async></script></body>
+</html>
