@@ -2,7 +2,7 @@
 main:
   # - title: "Home"
   #   url: /
-  - title: "Categories"
+  - title: "Category"
     url: /categories/
   - title: "Tags"
     url: /tags/

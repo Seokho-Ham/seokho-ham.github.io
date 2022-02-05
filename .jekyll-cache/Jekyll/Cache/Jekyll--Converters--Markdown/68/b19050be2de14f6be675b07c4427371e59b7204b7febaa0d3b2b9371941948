@@ -1,0 +1,78 @@
+I"�
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/jvm" rel="permalink">JVM이란?
+</a>
+      
+    </h2>
+    <!-- 
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+ -->
+    
+    <p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> December 24 2021</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">JVM이란?
+</p>
+  </article>
+</div>
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/pattern" rel="permalink">[디자인 패턴] - Strategy Patterns
+</a>
+      
+    </h2>
+    <!-- 
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+ -->
+    
+    <p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> November 30 2021</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Strategy 패턴이란?
+</p>
+  </article>
+</div>
+
+:ET

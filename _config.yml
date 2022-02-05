@@ -25,7 +25,7 @@ url                      : "https://Seokho-Ham.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Seokho-Ham/blog-comments"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/forky.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -86,10 +86,10 @@ analytics:
 # Site Author
 author:
   name             : "함석호"
-  avatar           : "/assets/images/forky.png"
+  avatar           : "/assets/images/profile-image.jpg"
   bio              : "코드스쿼드 백엔드 마스터즈 코스 진행중"
   # location         : "서울"
-  email            : "kalejuice02@gmail.com"
+  # email            : "kalejuice02@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -270,3 +270,4 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar_main: true
