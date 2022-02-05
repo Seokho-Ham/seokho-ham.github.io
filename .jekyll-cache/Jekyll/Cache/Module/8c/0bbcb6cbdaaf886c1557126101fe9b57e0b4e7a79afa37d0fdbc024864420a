@@ -1,4 +1,4 @@
-I"�
+I"�
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -10,7 +10,9 @@
           <span class="site-subtitle">백엔드 개발자로 자라는중🌱</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
             </li></ul>
         
         <button class="search__toggle" type="button">

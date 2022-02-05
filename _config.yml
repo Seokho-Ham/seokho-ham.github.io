@@ -23,7 +23,7 @@ name                     : "함석호"
 description              : "포키의 개발 블로그"
 url                      : "https://Seokho-Ham.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "Seokho-Ham/Seokho-Ham.github.io"
+repository               : "Seokho-Ham/blog-comments"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -32,8 +32,16 @@ words_per_minute         : 200
 comments:
   provider               : "utterances"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                : "github-light"
+    issue_term           : "pathname"
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+reCaptcha:
+  siteKey                :
+  secret                 :
+atom_feed:
+  path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : true
 search_provider          : # lunr (default), algolia, google
@@ -59,7 +67,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/forky.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -80,12 +88,15 @@ author:
   name             : "함석호"
   avatar           : "/assets/images/forky.png"
   bio              : "코드스쿼드 백엔드 마스터즈 코스 진행중"
-  location         : "서울"
+  # location         : "서울"
   email            : "kalejuice02@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:kalejuice02@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Seokho-Ham"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   # url: "https://your-website.com"
@@ -95,9 +106,6 @@ author:
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
     #   # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/Seokho-Ham"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   # url: "https://instagram.com/"
@@ -105,14 +113,14 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   # url:
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
     #   # url:
     # - label: "GitLab"
     #   icon: "fab fa-fw fa-gitlab"
@@ -193,8 +201,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: "Asia/Seoul"
 
 # Plugins (previously gems:)
 plugins:
