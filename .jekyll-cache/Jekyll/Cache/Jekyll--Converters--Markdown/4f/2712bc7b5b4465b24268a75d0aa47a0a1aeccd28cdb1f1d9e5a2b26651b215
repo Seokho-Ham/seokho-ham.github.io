@@ -1,0 +1,191 @@
+I"�%<h1 id="strategy-패턴이란">Strategy 패턴이란?</h1>
+
+<p>객체가 할 수 있는 행위들을 각각의 전략으로 만들어 놓고, 동적으로 행위의 수정이 필요한 경우 전략을 바꾸는 것만으로 행위의 수정이 가능하도록 만든 패턴을 말한다. <br />
+<br />
+<strong>문제를 해결하는 전략을 상황에 따라 쉽게 변경할 수 있다는 장점이 있다.</strong></p>
+
+<!--more-->
+
+<p><br /></p>
+
+<h2 id="핵심-디자인-원칙">핵심 디자인 원칙</h2>
+
+<hr />
+
+<h5 id="1-변하지-않는-부분을-변하지-않는-부분으로부터-변하는-부분을-분리해낸다">1. 변하지 않는 부분을 변하지 않는 부분으로부터 변하는 부분을 분리해낸다.</h5>
+
+<ul>
+  <li>달라지는 부분을 찾아서 <strong>캡슐화</strong>를 진행한다.</li>
+</ul>
+
+<h5 id="2-구현이-아닌-인터페이스에-맞춰서-프로그래밍-한다">2. 구현이 아닌 인터페이스에 맞춰서 프로그래밍 한다.</h5>
+
+<ul>
+  <li>상위 형식에 맞춰서 프로그래밍을 해서 <strong>다형성</strong> 을 활용한다.</li>
+</ul>
+
+<h5 id="3-상속보다는-구성을-활용한다">3. 상속보다는 구성을 활용한다.</h5>
+
+<ul>
+  <li>구성이란 두 클래스를 합쳐서 사용하는 방식.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="구조">구조</h2>
+
+<hr />
+
+<h5 id="1-strategy">1. Strategy</h5>
+
+<ul>
+  <li>인터페이스 혹은 추상 클래스로 공통적으로 사용하는 메서드를 명시한다.</li>
+</ul>
+
+<h5 id="2-concretestrategy">2. ConcreteStrategy</h5>
+
+<ul>
+  <li>인터페이스의 구현 클래스</li>
+</ul>
+
+<h5 id="3-context">3. Context</h5>
+
+<ul>
+  <li>strategy 패턴을 이용하는 역할을 수행.</li>
+  <li>strategy를 인자로 받아서 필드를 세팅하는 세터 메서드가 존재한다.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="example-1---오리-시뮬레이션">Example 1 - 오리 시뮬레이션</h2>
+
+<hr />
+
+<h5 id="기능-확장">기능 확장</h5>
+
+<ul>
+  <li>Duck 클래스는 상속을 통해 구현되어 있는데 “날다”라는 기능이 필요해짐.</li>
+  <li>오리별로 소리를 내는 방식이 달라야함</li>
+</ul>
+
+<h5 id="문제점">문제점</h5>
+
+<ul>
+  <li>상속관계에 있는 상위 클래스에 추가하게 되면 날 수 없는 오리장난감도 날 수 있게 됨.</li>
+  <li>인터페이스를 만들어서 구현하면 모든 날 수 있는 오리 종류에서 기능을 구현해야함.</li>
+</ul>
+
+<h5 id="개선방법">개선방법</h5>
+
+<ul>
+  <li>“날다” 와 “소리를 내다” 라는 행동은 변하지 않는다.</li>
+  <li>“나는 행위”, “소리내는 행위”를 Duck으로부터 분리해서 인터페이스로 만든다.</li>
+  <li>Duck의 인스턴스 변수에 각각의 행위를 주입받는다.</li>
+</ul>
+
+<p><br /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//FlyBehaviorStrategy</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">FlyBehaviorStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">fly</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FlyWithWingsStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">fly</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"날개로 난다"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoWingsStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">fly</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"못난다"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//QuackBehaviorStrategy</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">QuackBehaviorStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">makeSound</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuackStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">makeSound</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"꽥"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SqueakStrategy</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">makeSound</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"뀍"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Duck</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Duck</span> <span class="o">{</span>
+    <span class="nc">FlyBehaviorStrategy</span> <span class="n">flyBehavior</span><span class="o">;</span>
+    <span class="nc">QuackBehaviorStrategy</span> <span class="n">quackbehavior</span><span class="o">;</span>
+
+    <span class="kt">void</span> <span class="nf">setFlyBehavior</span><span class="o">(</span><span class="nc">FlyBehaviorStrategy</span> <span class="n">fb</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">flyBehavior</span> <span class="o">=</span> <span class="n">fb</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">setQuackBehavior</span><span class="o">(</span><span class="nc">QuackBehaviorStrategy</span> <span class="n">qb</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">QuackBehavior</span> <span class="o">=</span> <span class="n">qb</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="example-2---자동차-이동">Example 2 - 자동차 이동</h2>
+
+<hr />
+
+<h5 id="기존-기능">기존 기능</h5>
+
+<ul>
+  <li>자동차가 랜덤 숫자의 값이 4 이상일 경우에만 이동해야한다.</li>
+</ul>
+
+<h5 id="기능-변경">기능 변경</h5>
+
+<ul>
+  <li>항상 이동해야한다 혹은 항상 이동하지 말아야 한다로 바뀐다면?</li>
+</ul>
+
+<p><br /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//기존 코드</span>
+<span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">move</span><span class="o">(</span><span class="kt">int</span> <span class="n">randomNumber</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">randomNumber</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">position</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//수정 코드</span>
+<span class="kd">interface</span> <span class="nc">MovingStratagy</span> <span class="o">{</span>
+    <span class="kt">boolean</span> <span class="nf">isMove</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">AlwaysMovingStrategy</span> <span class="kd">implements</span> <span class="nc">MovingStrategy</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kt">boolean</span> <span class="nf">isMove</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">move</span><span class="o">(</span><span class="nc">MovingStrategy</span> <span class="n">strategy</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">strategy</span><span class="o">.</span><span class="na">isMove</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">position</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+:ET
