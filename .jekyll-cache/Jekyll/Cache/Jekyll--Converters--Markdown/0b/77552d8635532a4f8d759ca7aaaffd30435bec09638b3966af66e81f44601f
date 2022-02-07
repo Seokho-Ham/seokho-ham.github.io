@@ -1,0 +1,39 @@
+I"d<!--more-->
+
+<h2 id="-학습-과정">👨‍💻 학습 과정</h2>
+
+<h3 id="도커">도커</h3>
+
+<p>오늘은 도커를 통해 mysql을 설치해서 사용하는 미션이 나왔고 구현에 앞서<code class="language-plaintext highlighter-rouge">노리</code>가 공유해준 <a href="">생활코딩의 도커 강의</a>와 <a href="">우테코 테코톡</a>를 보면서 도커에 대해 학습하는 시간을 가졌다.</p>
+
+<ul>
+  <li><a href="https://kale02.notion.site/Docker-0eeed1d05ec24377975cd18a6e9aa01a">📝 도커 정리 링크</a></li>
+</ul>
+
+<p>거의 2년전에 오라클 DB를 설치해보려고 도커를 사용했던 경험이 있다. 그 당시 개발 자체가 처음이어서 도커에 대해 찾아봤지만 무슨말인지 이해를 못하고 그냥 블로그를 찾아보며 코드만 따라쳐서 겨우 설치했었다. 하지만 이번 cs과정을 거쳐오면서 컴퓨터의 구조, 프로세스 등에 대해서 알게 되었고 그 덕분인지 도커의 탄생 배경, 컨테이너와 이미지가 무엇인지 쉽게 이해할 수 있었다.</p>
+
+<p>이후 실제로 사용하면서 컨테이너를 띄우는 작업까지는 비교적 수월하게 했는데 locale을 설정하는 부분에서 막혔는데 아래와 같은 이유 때문이었다.</p>
+<blockquote>
+  <p><em>도커의 공식 이미지는 데비안이 사용되고 있었기 때문에 <code class="language-plaintext highlighter-rouge">local-gen</code> 스크립트를 통해서 locale이 생성되지 않는다.</em></p>
+  <ul>
+    <li><a href="https://www.44bits.io/ko/post/setup_linux_locale_on_ubuntu_and_debian_container">참고한 44Bits 블로그</a></li>
+  </ul>
+</blockquote>
+
+<p>오후 시간부터는 쿼리 문법을 익히고 SQL 스크립트를 작성하느라 도커를 더 깊게 학습하지는 못했는데 나중에 꼭 도커 학습을 해야겠다.</p>
+
+<p>###</p>
+
+<h2 id="-좋았던-점">🟢 좋았던 점</h2>
+
+<ul>
+  <li>십자인대를 다친 이후로 거의 처음 근력운동을 시작했다. 건강해지자.</li>
+  <li></li>
+</ul>
+
+<h2 id="-개선점">🟡 개선점</h2>
+
+<ul>
+  <li>학습하면서</li>
+</ul>
+:ET
