@@ -268,7 +268,7 @@
 
   &:before {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: -11px;
     left: calc(50% - 10px);
@@ -285,7 +285,7 @@
 
   &:after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: -10px;
     left: calc(50% - 10px);
@@ -320,6 +320,7 @@
     text-decoration: none;
 
     &:hover {
+      color: #d1ac56;
       text-decoration: underline;
     }
   }
@@ -351,4 +352,3 @@
     margin-right: initial;
   }
 }
-

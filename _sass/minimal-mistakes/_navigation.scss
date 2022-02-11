@@ -238,7 +238,7 @@
       position: relative;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: 0;
@@ -268,8 +268,7 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
     background: $background-color;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(#000, 0.16),
-      0 2px 10px 0 rgba(#000, 0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
     box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
 
     &.hidden {
@@ -288,7 +287,7 @@
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: -11px;
       right: 10px;
@@ -301,7 +300,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: -10px;
       right: 10px;
@@ -341,7 +340,7 @@
 .nav__list {
   margin-bottom: 1.5em;
 
-  input[type="checkbox"],
+  input[type='checkbox'],
   label {
     display: none;
   }
@@ -363,7 +362,7 @@
 
       &:before,
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         right: 1em;
         top: 1.25em;
@@ -443,6 +442,11 @@
 
   a {
     color: inherit;
+
+    &:hover {
+      color: #d1ac56;
+      text-decoration: underline;
+    }
   }
 
   .active {
@@ -568,6 +572,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }
