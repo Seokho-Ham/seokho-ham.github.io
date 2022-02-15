@@ -1,0 +1,66 @@
+I"+<!--more-->
+
+<h2 id="-학습-과정">👨‍💻 학습 과정</h2>
+
+<h3 id="java에는-call-by-reference가-없다">Java에는 Call By Reference가 없다.</h3>
+
+<p>자바에는 사실 Call By Reference가 없다고 한다.</p>
+
+<p>난 여태까지 기본형 타입은 call by value, 참조형 타입은 call by reference 로 동작하는줄 알고 있었다. 하지만 스크럼때 제리가 알려줘서 해당 자료에 대해 찾아보게 됐다. 다행히 여러 블로그들에 잘 설명되어 있어서 쉽게 이해할 수 있었다.
+블로그를 보고 코드를 따라 쳐보았다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Member</span> <span class="n">member1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+        <span class="nc">Member</span> <span class="n">member2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"member1의 age: "</span> <span class="o">+</span> <span class="n">member1</span><span class="o">.</span><span class="na">age</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"member2의 age: "</span> <span class="o">+</span> <span class="n">member2</span><span class="o">.</span><span class="na">age</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"======================"</span><span class="o">);</span>
+
+        <span class="n">swap</span><span class="o">(</span><span class="n">member1</span><span class="o">,</span> <span class="n">member2</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"member1의 age: "</span> <span class="o">+</span> <span class="n">member1</span><span class="o">.</span><span class="na">age</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"member2의 age: "</span> <span class="o">+</span> <span class="n">member2</span><span class="o">.</span><span class="na">age</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="o">(</span><span class="nc">Member</span> <span class="n">member1</span><span class="o">,</span> <span class="nc">Member</span> <span class="n">member2</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Member</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">member1</span><span class="o">;</span>
+        <span class="n">member1</span> <span class="o">=</span> <span class="n">member2</span><span class="o">;</span>
+        <span class="n">member2</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Member</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">Member</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>위의 <code class="language-plaintext highlighter-rouge">swap</code>메서드를 보면 인자로 들어온 멤버변수가 바라보는 객체를 서로 바꿔주는 작업처럼 보인다. 하지만 아래의 출력 결과를 보면 알겠지만 값이 그대로다.</p>
+
+<p><img width="388" src="https://user-images.githubusercontent.com/57708971/154017530-b30e7d99-55c7-4b05-97fd-120f8482943b.png" />
+<img width="230" src="https://user-images.githubusercontent.com/57708971/154017307-549e29d5-4cd8-44a1-ae9f-9a14ea705c52.png" /></p>
+
+<blockquote>
+  <p>메서드의 인자로 참조형 타입을 넘겨주게 되면 해당 객체의 주소값을 그대로 넘겨주는것이 아닌, <strong>해당 객체를 바라보는 새로운 주소값</strong>을 만들어서 넘겨준다. 그렇기 때문에 정확하게 표현하면 Java에서 Call By Reference는 존재하지 않는다고 한다.</p>
+</blockquote>
+
+<h3 id="미션-2단계">미션 2단계</h3>
+<p>오늘은 어제 구현한 미션을 리팩토링하는 미션이 주어졌다. 구현한 미션 자체의 사이즈가 작아서 사실 건드릴게 많이 없었다.<br />
+리팩토링을 하면서 고민했던 부분은 <strong>사용자의 입력에 대한 검증의 책임은 어디서 가져야 하는가?</strong>였다.</p>
+
+<h2 id="-좋았던-점">🟢 좋았던 점</h2>
+
+<ul>
+  <li></li>
+</ul>
+
+<h2 id="-개선점">🟡 개선점</h2>
+
+<blockquote>
+
+</blockquote>
+:ET
