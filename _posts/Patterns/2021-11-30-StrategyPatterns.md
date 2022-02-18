@@ -1,6 +1,6 @@
 ---
 title: '[디자인 패턴] - Strategy Patterns'
-permalink: /java/pattern
+permalink: /java/pattern/strategy-pattern
 categories:
   - java
   - pattern
@@ -16,14 +16,12 @@ toc_sticky: true
 
 객체가 할 수 있는 행위들을 각각의 전략으로 만들어 놓고, 동적으로 행위의 수정이 필요한 경우 전략을 바꾸는 것만으로 행위의 수정이 가능하도록 만든 패턴을 말한다. <br>
 <br>
+
 > **문제를 해결하는 전략을 상황에 따라 쉽게 변경할 수 있다는 장점이 있다.**
 
 <!--more-->
 
-
-
 ## 핵심 디자인 원칙
-
 
 ### 1. 변하지 않는 부분을 변하지 않는 부분으로부터 변하는 부분을 분리해낸다.
 
@@ -37,9 +35,7 @@ toc_sticky: true
 
 - 구성이란 두 클래스를 합쳐서 사용하는 방식.
 
-
 ## 구조
-
 
 ### 1. Strategy
 
@@ -57,7 +53,6 @@ toc_sticky: true
 <br>
 
 ## Example 1 - 오리 시뮬레이션
-
 
 ### 기능 확장
 
