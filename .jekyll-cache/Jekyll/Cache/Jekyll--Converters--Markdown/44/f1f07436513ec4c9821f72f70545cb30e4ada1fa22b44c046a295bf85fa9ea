@@ -1,0 +1,28 @@
+I"�<!--more-->
+
+<h2 id="️-beclass-2주차-마무리">🙇🏻‍♂️ BEClass 2주차 마무리</h2>
+
+<h3 id="로또-미션--짝프로그래밍-마지막-날">로또 미션 &amp; 짝프로그래밍 마지막 날</h3>
+
+<p>7시까지 필과 3단계를 구현하고 제출을 완료하며 로또 미션과 짝 프로그래밍이 끝났다.<br />
+짧으면서도 길었던 5일동안 함께 맞춰가면서 미션을 진행한 필에게 감사하다.</p>
+
+<p>이번 주 짝 프로그래밍을 진행하면서 그동안 <strong>습관적으로(?) 코드를 작성하는 부분이 있었다는걸 깨달았다.</strong>
+혼자였다면 항상 하던대로 코드를 작성했을텐데 이번주는 짝에게 내 생각을 설명하거나 짝의 생각을 듣는 시간이 있어서 내 방식이 맞는지 다시한번 생각해볼 수 있었다다.
+특히 내 생각을 이야기하다 보면 내가 놓친 부분들이나 잘못 알고 있던 지식들을 발견하게 되는것 같다.</p>
+
+<p>하지만 단점은 <strong>체력적으로 너무 힘들다.</strong><br />
+변수명, 메서드명부터 시작해서 모든걸 계속 이야기하면서 정하다보니 할때는 모르는데 끝나고나면 녹초가 된다. 오늘도 7시 땡하자마자 더이상 학습은 어렵겠다 싶었다.
+(웹서버 미션은 2주반이라는데…😇)</p>
+
+<h2 id="-주말-계획">📜 주말 계획</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />사다리 5단계 pr 제출</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />무료 스프링 입문 강의 완강</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />스프링 기본편 강의 듣기</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />자바 객체 지향의 원리와 이해 4장, 5장</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 읽어보기</li>
+</ul>
+
+:ET
