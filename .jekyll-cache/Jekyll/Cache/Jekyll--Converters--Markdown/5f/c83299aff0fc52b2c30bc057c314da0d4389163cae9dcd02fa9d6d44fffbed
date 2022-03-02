@@ -1,4 +1,4 @@
-I"�<!--more-->
+I"�<!--more-->
 
 <h2 id="️-beclass-2주차-마무리">🙇🏻‍♂️ BEClass 2주차 마무리</h2>
 
@@ -26,7 +26,7 @@
 <h2 id="-주말-계획">📜 주말 계획</h2>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />사다리 5단계 pr 제출</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />사다리 5단계 pr 제출</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />무료 스프링 입문 강의 완강</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />스프링 기본편 강의 듣기</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />자바 객체 지향의 원리와 이해 4장, 5장</li>
