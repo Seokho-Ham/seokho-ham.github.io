@@ -264,6 +264,10 @@ defaults:
       path: ""
       type: posts
     values:
+      header:
+        overlay_image: /assets/images/header_image.jpg
+        overlay_filter: 0.5
+        show_overlay_excerpt: false
       layout: single
       author_profile: true
       read_time: true
@@ -271,3 +275,19 @@ defaults:
       share: true
       related: true
       sidebar_main: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      header:
+        overlay_image: /assets/images/header_image.jpg
+        overlay_filter: 0.5
+        show_overlay_excerpt: false
+      show_date: true
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+      related: false
