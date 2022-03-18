@@ -1,0 +1,72 @@
+I"�<!--more-->
+
+<h2 id="-하루-일과">🛎 하루 일과</h2>
+
+<blockquote>
+  <p>10:00 ~ 10:30 데일리 스크럼<br />
+10:30 ~ 13:00 마스터 클래스<br />
+15:00 ~ 16:00 미션 3단계 구현<br />
+21:00 ~ 01:30 미션 3단계 구현 및 배포 도전<br />
+01:30 ~ 2:00 회고 작성</p>
+</blockquote>
+
+<h2 id="-학습-회고">👨‍💻 학습 회고</h2>
+
+<h3 id="카페-미션-3단계-구현">카페 미션 3단계 구현</h3>
+
+<ul>
+  <li>h2 DB 연동 작업</li>
+  <li>테스트 케이스 수정</li>
+</ul>
+
+<h4 id="헤맸던-부분">헤맸던 부분</h4>
+
+<ul>
+  <li>
+    <p>아티클을 저장한 뒤 자동생성된 아이템의 키가 필요했는데 어떻게 가져와야할지 고민하다가 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/simple/SimpleJdbcInsert.html">SimpleJdbcInsert</a>라는 클래스가 제공되는걸 발견해서 사용했다. 특별히 쿼리문을 작성하지 않아도 간편하게 데이터를 insert할 수 있게 제공되는 클래스다.</p>
+  </li>
+  <li>
+    <p>Repository를 테스트하는데 생성자를 통해서는 의존성이 주입이 되지 않았다. 쿠킴의 도움을 받아 필드에 @Autowired를 붙여줘야 의존성 주입이 된다는걸 알게 되어서 해결했다. 문제 해결과 별개로 어떤 이유인지 찾아보았다.</p>
+  </li>
+</ul>
+
+<h3 id="test에서는-왜-autowired-없이는-의존성-주입이-안될까">Test에서는 왜 @Autowired 없이는 의존성 주입이 안될까?</h3>
+
+<p>SpringApplication의 경우 빈을 주입해주는 역할을 스프링이 담당한다.
+Test의 경우 Junit(Jupiter 엔진)에 의해 객체를 주입하게 된다. 이때 JUnit은 ParameterResolver를 사용해서 주입을 한다.</p>
+
+<h4 id="parameter-resolver">Parameter Resolver</h4>
+
+<ul>
+  <li>테스트에 동적으로 parameter를 주입할 수 있도록 junit에서 제공하는 인터페이스</li>
+  <li><code class="language-plaintext highlighter-rouge">xxxExtension</code> 를 구현체로 보통 사용하며 <code class="language-plaintext highlighter-rouge">supportsParameter()</code> , <code class="language-plaintext highlighter-rouge">resolveParameter()</code> 메서드를 구현해야한다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">supportsParameter()</code> : 주입할 수 있는 타입 여부를 boolean으로 리턴한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">resolveParameter()</code> : 주입할 타입의 객체를 반환한다.</li>
+    </ul>
+  </li>
+  <li>사용하려면 @ExtendWith(xxxExtension.class)를 테스트 위에 붙여야 한다.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">@SpringBootTest</code>, <code class="language-plaintext highlighter-rouge">@JdbcTest</code>내부에는 <code class="language-plaintext highlighter-rouge">@ExtendWith(SpringExtension.class)</code>를 사용하고 있으며, SpringExtension은 ParameterResolver를 구현한 구현체다.
+SpringExtension 클래스의 supportParameter 메서드에서는 스프링 컨테이너에서 가져올 수 있는 빈 타입 여부를 @AutoWired 어노테이션이 있는지를 가지고 판단한다.</p>
+
+<p>Junit에서 @Autowired를 사용하지 않으면 SpringExtension은 해당 타입의 객체를 제공할 수 없다고 응답하게 되고, Junit은 해당 타입을 처리할 ParameterResolver가 없다고 에러를 발생시키게 된다.
+그래서 @AutoWired가 없이는 객체의 주입이 불가능하다.</p>
+
+<p><strong>참고자료</strong></p>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/66671846/why-does-springboottest-need-autowired-in-constructor-injection">Why does @SpringBootTest need @Autowired in constructor injection</a></li>
+  <li><a href="https://www.baeldung.com/junit-5-parameters">Inject Parameters into JUnit Jupiter Unit Tests</a></li>
+</ul>
+
+<h3 id="transactional은-어떻게-사용하는걸까">@Transactional은 어떻게 사용하는걸까?</h3>
+
+<h2 id="️-개선점">🙋🏻‍♂️ 개선점</h2>
+
+<ul>
+  <li>저녁이 되서야 학습을 할 수 있었다.</li>
+  <li>오전에 마스터 클래스가 있는 날은 거의 학습이 어려운…</li>
+</ul>
+:ET
