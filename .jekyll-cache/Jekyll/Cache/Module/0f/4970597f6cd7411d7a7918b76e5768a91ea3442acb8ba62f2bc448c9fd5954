@@ -1,4 +1,4 @@
-I"s
+I")
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -9,7 +9,7 @@
         
         <a class="site-title" href="/">
           개발 포크
-          <span class="site-subtitle">백엔드 개발자로 자라는중🌱</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/categories/">Category</a>
