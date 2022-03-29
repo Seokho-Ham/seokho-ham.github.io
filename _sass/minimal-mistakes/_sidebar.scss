@@ -37,7 +37,7 @@
   }
 
   @include breakpoint($x-large) {
-    width: calc(#{$right-sidebar-width} - 1em);
+    width: calc(#{$right-sidebar-width} - 0.8em);
   }
 
   > * {
@@ -316,11 +316,11 @@
     padding-top: 2px;
     padding-bottom: 2px;
     color: inherit;
-    font-size: $type-size-5;
+    font-size: 0.8rem;
     text-decoration: none;
 
     &:hover {
-      color: #d1ac56;
+      color: #60c28a80;
       text-decoration: underline;
     }
   }

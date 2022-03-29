@@ -84,19 +84,20 @@
       border-radius: 0;
 
       &:hover {
-        color: $link-color-hover;
+        // color: $link-color-hover;
       }
 
       &.current,
       &.current.disabled {
-        color: #fff;
-        background: $primary-color;
+        // color: #fff;
+  
+        background: rgb(224, 224, 224);
       }
 
       &.disabled {
-        color: rgba($muted-text-color, 0.5);
-        pointer-events: none;
-        cursor: not-allowed;
+        // color: rgba($muted-text-color, 0.5);
+        // pointer-events: none;
+        // cursor: not-allowed;
       }
     }
 
@@ -340,6 +341,7 @@
 .nav__list {
   margin-bottom: 1.5em;
 
+
   input[type='checkbox'],
   label {
     display: none;
@@ -438,13 +440,13 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 
   a {
     color: inherit;
 
     &:hover {
-      color: #d1ac56;
+      color: #60c28a80;
       text-decoration: underline;
     }
   }
@@ -517,7 +519,7 @@
   box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
+    color: $text-color;
     font-size: $type-size-6;
     background: $primary-color;
     border-top-left-radius: $border-radius;
