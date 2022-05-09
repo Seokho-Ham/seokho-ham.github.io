@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-category-template-js",
-    "path": "/posts/프로젝트",
-    "result": {"pageContext":{"currentCategory":"프로젝트","categories":["All","프로젝트","TIL","스프링","자바"],"edges":[{"node":{"id":"8598ebf8-40d9-51b8-930d-59242f548eef","excerpt":"주제 : Todolist 기간 : 04.04 ~ 04.15 (2주) 멤버 : IOS - 데일, 샐리 / BE - 데이브, 포키 저장소 : Github 레포 코드스쿼드에서 진행한 첫번째 그룹 프로젝트는 todolist였다. 작업 내용 Swagger를 사용한 api 문서화 DB 설계 카드에 조회, 등록, 수정, 삭제 기능 구현 카드에 대한 작업이 발생할때, 작업에 대한 이벤트를 DB에 등록하는 기능 구현 aws ec2 서버에 배포 문제 및 고민 1. Controller에서 요청에 body로 넘어온 값을 를 사용해 Dto객체로 매핑하는 과정에서 기본 생성자가 없으면 매핑이 되지 않았다. 문제를 해결하기 위해 검색을 하던 중 ObjectMapper가 기본 생성자를 통해 객체를 생성하고 getter 혹은 setter를 사용해 프로퍼티명들을 읽어와서 객체에 값을 설정해준다는 사실을 알게 되었다. 하지만 이전에 했던 프로젝트에서는 Dto에 기본 생성자 대신 파라미터를 갖는 생성자가 있으면 문제…","fields":{"slug":"/project/todolist-project/"},"frontmatter":{"categories":"프로젝트","title":"[1차 프로젝트] todolist 회고","date":"May 08, 2022"}},"next":{"fields":{"slug":"/til/04/2022-04-15-til/"}},"previous":null}]}},
-    "staticQueryHashes": ["1073350324","1956554647","2938748437"]}
