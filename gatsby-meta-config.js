@@ -6,7 +6,7 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: `seokho-ham/seokho-ham.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `seokho-ham/blog-comments`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: 'UA-213511127-1', // Google Analytics Tracking ID
