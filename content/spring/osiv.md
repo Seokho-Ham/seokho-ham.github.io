@@ -128,3 +128,6 @@ OSIV를 사용하는것에 대해 좋고 나쁘고는 없는것 같다. OSIV를 
 - [Baeldung - A Guide to Spring’s Open Session In View](https://www.baeldung.com/spring-open-session-in-view)
 - [킹뽀대님의 Spring - Open Session In View](https://kingbbode.tistory.com/27)
 - [영속성 관리](https://stylishc.tistory.com/150)
+
+```toc
+```
