@@ -9,7 +9,7 @@ module.exports = {
       repo: `seokho-ham/blog-comments`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
-  ga: 'UA-213511127-1', // Google Analytics Tracking ID
+  ga: 'G-CB1VRBHVBC', // Google Analytics Tracking ID
   author: {
     name: `함석호`,
     bio: {
