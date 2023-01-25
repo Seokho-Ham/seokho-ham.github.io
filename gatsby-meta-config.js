@@ -1,6 +1,6 @@
 module.exports = {
-  title: `forky-dev`,
-  description: `포키의 개발 블로그`,
+  title: `forkyy-algoritm`,
+  description: `포키의 알고리즘 블로그`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://seokho-ham.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
@@ -14,12 +14,12 @@ module.exports = {
     name: `함석호`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      description: ['책임감을 가지고 일하는', '함께하는것을 좋아하는', '이로운 것을 만드는'],
       thumbnail: 'profile-image.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/seokho-ham`, // `https://github.com/zoomKoding`,
-      linkedIn: `https://www.linkedin.com/in/%EC%84%9D%ED%98%B8-%ED%95%A8-12b050224/`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      linkedIn: '',//`https://www.linkedin.com/in/%EC%84%9D%ED%98%B8-%ED%95%A8-12b050224/`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: `forkyy.dev@gmail.com`, // `zoomkoding@gmail.com`,
     },
   },
