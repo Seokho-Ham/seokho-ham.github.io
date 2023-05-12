@@ -17,16 +17,16 @@
 .bio {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 100px;
+  margin-bottom: 80px;
 
   color: var(--primary-text-color);
 
   @include md {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .introduction {
@@ -56,7 +56,7 @@
       }
 
       @include md {
-        font-size: 40px;
+        font-size: 35px;
 
         .title {
           .react-rotating-text-cursor {

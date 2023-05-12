@@ -1,6 +1,6 @@
 module.exports = {
-  title: `forkyy-algoritm`,
-  description: `포키의 알고리즘 블로그`,
+  title: `@forkyy`,
+  description: `@forkyy`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://seokho-ham.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
@@ -14,7 +14,7 @@ module.exports = {
     name: `함석호`,
     bio: {
       role: `개발자`,
-      description: ['책임감을 가지고 일하는', '함께하는것을 좋아하는', '이로운 것을 만드는'],
+      description: ['꾸준히 성장하는', '함께 일하고 싶은', '실패를 두려워 하지 않는'],
       thumbnail: 'profile-image.png', // Path to the image in the 'asset' folder
     },
     social: {

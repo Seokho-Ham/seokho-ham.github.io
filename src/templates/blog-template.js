@@ -22,14 +22,14 @@ function BlogTemplate({ data }) {
     const namespace = siteUrl.replace(/(^\w+:|^)\/\//, '');
     const key = curPost.slug.replace(/\//g, '');
 
-    fetch(
-      `https://api.countapi.xyz/${
-        process.env.NODE_ENV === 'development' ? 'get' : 'hit'
-      }/${namespace}/${key}`,
-    ).then(async (result) => {
-      const data = await result.json();
-      setViewCount(data.value);
-    });
+    // fetch(
+    //   `https://api.countapi.xyz/${
+    //     process.env.NODE_ENV === 'development' ? 'get' : 'hit'
+    //   }/${namespace}/${key}`,
+    // ).then(async (result) => {
+    //   const data = await result.json();
+    //   setViewCount(data.value);
+    // });
   }, [siteUrl, curPost.slug]);
 
   return (

@@ -1,17 +1,12 @@
 ---
-emoji: 🧮
-title: "[platform] title"
+emoji: 🌱
+title: "[title]"
 date: '2023-01-25 10:00:00'
-author: 포키
-categories: Algorithms
+author: "@forkyy"
+categories: Spring
 ---
 
-### 문제
+## 서론
 
-### 입력
-
-#### 제약 조건
-
-### 풀이
-
-### 깨달은 점
+```toc
+```

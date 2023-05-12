@@ -2,7 +2,7 @@
 @use '../../styles/mixins'as *;
 
 .post-card-wrapper {
-  min-height: 150px;
+  min-height: 170px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
     width: 100%;
     max-width: $content-max-width;
     border: 1px solid var(--post-card-border-color);
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
 
@@ -34,7 +34,7 @@
     }
 
     .title {
-      font-size: 18px;
+      font-size: 21px;
       font-weight: 600;
       margin-bottom: 7px;
       line-height: 1.4;
@@ -42,7 +42,7 @@
 
     .description {
       font-size: 13px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       line-height: 20px;
       color: var(--primary-text-color);
 
