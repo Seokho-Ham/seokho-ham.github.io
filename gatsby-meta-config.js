@@ -1,5 +1,5 @@
 module.exports = {
-  title: `@forkyy`,
+  title: `서코코의 개발일지`,
   description: `@forkyy`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://seokho-ham.github.io`,
@@ -9,17 +9,21 @@ module.exports = {
       repo: `seokho-ham/blog-comments`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
-  ga: 'G-CB1VRBHVBC', // Google Analytics Tracking ID
+  ga: "G-CB1VRBHVBC", // Google Analytics Tracking ID
   author: {
     name: `함석호`,
     bio: {
       role: `개발자`,
-      description: ['꾸준히 성장하는', '함께 일하고 싶은', '실패를 두려워 하지 않는'],
-      thumbnail: 'profile-image.png', // Path to the image in the 'asset' folder
+      description: [
+        "꾸준히 성장하는",
+        "함께 일하고 싶은",
+        "실패를 두려워 하지 않는",
+      ],
+      thumbnail: "profile-image.png", // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/seokho-ham`, // `https://github.com/zoomKoding`,
-      linkedIn: '',//`https://www.linkedin.com/in/%EC%84%9D%ED%98%B8-%ED%95%A8-12b050224/`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      linkedIn: "", //`https://www.linkedin.com/in/%EC%84%9D%ED%98%B8-%ED%95%A8-12b050224/`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: `forkyy.dev@gmail.com`, // `zoomkoding@gmail.com`,
     },
   },
@@ -30,21 +34,21 @@ module.exports = {
       // =====       [Timestamp Sample and Structure]      =====
       // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
       {
-        date: '',
-        activity: '',
+        date: "",
+        activity: "",
         links: {
-          github: '',
-          post: '',
-          googlePlay: '',
-          appStore: '',
-          demo: '',
+          github: "",
+          post: "",
+          googlePlay: "",
+          appStore: "",
+          demo: "",
         },
       },
       // ========================================================
       // ========================================================
       {
-        date: '2022.01.03 ~ 2022.07.01',
-        activity: '코드스쿼드 마스터즈 코스 (백엔드)',
+        date: "2022.01.03 ~ 2022.07.01",
+        activity: "코드스쿼드 마스터즈 코스 (백엔드)",
         // links: {
         //   post: '/gatsby-starter-zoomkoding-introduction',
         //   github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
@@ -57,16 +61,16 @@ module.exports = {
       // =====        [Project Sample and Structure]        =====
       // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
       {
-        title: '',
-        description: '',
-        techStack: ['', ''],
-        thumbnailUrl: '',
+        title: "",
+        description: "",
+        techStack: ["", ""],
+        thumbnailUrl: "",
         links: {
-          post: '',
-          github: '',
-          googlePlay: '',
-          appStore: '',
-          demo: '',
+          post: "",
+          github: "",
+          googlePlay: "",
+          appStore: "",
+          demo: "",
         },
       },
       // ========================================================

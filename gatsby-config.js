@@ -1,6 +1,6 @@
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
-const metaConfig = require('./gatsby-meta-config');
+const metaConfig = require("./gatsby-meta-config");
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -24,15 +24,17 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: encodeURI(site.siteMetadata.siteUrl + edge.node.fields.slug),
+                  url: encodeURI(
+                    site.siteMetadata.siteUrl + edge.node.fields.slug
+                  ),
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -74,24 +76,24 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         resolveEnv: () => NETLIFY_ENV,
-        sitemap: 'https://seokho-ham.github.io/sitemap-pages.xml',
-        policy: [{ userAgent: '*', allow: ['/'] }],
+        sitemap: "https://seokho-ham.github.io/sitemap-pages.xml",
+        policy: [{ userAgent: "*", allow: ["/"] }],
         env: {
           production: {
-            policy: [{ userAgent: '*' }],
+            policy: [{ userAgent: "*" }],
           },
-          'branch-deploy': {
-            policy: [{ userAgent: '*', allow: ['/'] }],
-            sitemap: 'https://seokho-ham.github.io/sitemap-pages.xml',
-            host: 'https://seokho-ham.github.io',
+          "branch-deploy": {
+            policy: [{ userAgent: "*", allow: ["/"] }],
+            sitemap: "https://seokho-ham.github.io/sitemap-pages.xml",
+            host: "https://seokho-ham.github.io",
           },
-          'deploy-preview': {
-            policy: [{ userAgent: '*', allow: ['/'] }],
-            sitemap: 'https://seokho-ham.github.io/sitemap-pages.xml',
-            host: 'https://seokho-ham.github.io',
+          "deploy-preview": {
+            policy: [{ userAgent: "*", allow: ["/"] }],
+            sitemap: "https://seokho-ham.github.io/sitemap-pages.xml",
+            host: "https://seokho-ham.github.io",
           },
         },
       },
@@ -125,32 +127,32 @@ module.exports = {
             options: {
               maxWidth: 720,
               linkImagesToOriginal: false,
-              backgroundColor: 'transparent',
+              backgroundColor: "transparent",
             },
           },
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
-              exclude: 'Table of Contents',
+              exclude: "Table of Contents",
               tight: false,
               ordered: false,
               fromHeading: 2,
               toHeading: 6,
-              className: 'table-of-contents',
+              className: "table-of-contents",
             },
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
               languageExtensions: [
                 {
-                  language: 'superscript',
-                  extend: 'javascript',
+                  language: "superscript",
+                  extend: "javascript",
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -162,8 +164,8 @@ module.exports = {
                 },
               ],
               prompt: {
-                user: 'root',
-                host: 'localhost',
+                user: "root",
+                host: "localhost",
                 global: false,
               },
               escapeEntities: {},
