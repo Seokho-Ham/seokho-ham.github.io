@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import './style.scss';
+import { Link } from "gatsby";
+import React from "react";
+import "./style.scss";
 
-function PostHeader({ post, viewCount }) {
+function PostHeader({ post }) {
   return (
     <header className="post-header">
       {post.emoji && <div className="emoji">{post.emoji}</div>}
@@ -20,9 +20,8 @@ function PostHeader({ post, viewCount }) {
       <div className="info">
         <div className="author">
           posted by <strong>{post.author}</strong>,
-        </div>{' '}
+        </div>{" "}
         {post.date}
-        {viewCount && ` · ${viewCount} views`}
       </div>
     </header>
   );

@@ -35,7 +35,8 @@
     word-break: keep-all;
 
     .react-rotating-text-cursor {
-      animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+      animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
+        infinite;
     }
 
     strong {
@@ -65,12 +66,10 @@
           }
         }
       }
-
-
     }
 
     &.english {
-      font-family: 'montserrat';
+      font-family: "montserrat";
       font-size: 25px;
       line-height: 1.2;
 
@@ -107,8 +106,8 @@
       display: block;
     }
 
-    .gatsby-image-wrapper{
-      border-radius: 10px;
+    .gatsby-image-wrapper {
+      border-radius: 50%;
     }
   }
 }

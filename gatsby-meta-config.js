@@ -1,6 +1,6 @@
 module.exports = {
   title: `서코코의 개발일지`,
-  description: `@forkyy`,
+  description: `서코코`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://seokho-ham.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
@@ -13,13 +13,9 @@ module.exports = {
   author: {
     name: `함석호`,
     bio: {
-      role: `개발자`,
-      description: [
-        "꾸준히 성장하는",
-        "함께 일하고 싶은",
-        "실패를 두려워 하지 않는",
-      ],
-      thumbnail: "profile-image.png", // Path to the image in the 'asset' folder
+      role: `백엔드 개발자`,
+      description: ["함께 일하고 싶은", "클린 코드를 지향하는"],
+      thumbnail: "new-profile-image.png", // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/seokho-ham`, // `https://github.com/zoomKoding`,
