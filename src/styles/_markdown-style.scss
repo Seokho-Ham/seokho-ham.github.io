@@ -54,7 +54,7 @@
 .markdown h6:hover .anchor .octicon-link:before {
   width: 16px;
   height: 16px;
-  content: ' ';
+  content: " ";
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
 }
@@ -66,7 +66,7 @@
   color: var(--content-text-color);
   font-family: $font-family;
   text-align: justify;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   word-wrap: break-word;
@@ -126,7 +126,7 @@
   overflow: visible;
 }
 
-.markdown [type='checkbox'] {
+.markdown [type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -168,7 +168,7 @@
 .markdown hr:after,
 .markdown hr:before {
   display: table;
-  content: '';
+  content: "";
 }
 
 .markdown hr:after {
@@ -193,7 +193,7 @@
   display: inline-block;
   padding: 3px 5px;
   font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  line-height: 10px;
+  line-height: 13px;
   color: #444d56;
   vertical-align: middle;
   background-color: #fafbfc;
@@ -213,12 +213,12 @@
 }
 
 .markdown h1 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .markdown h1,
 .markdown h2 {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .markdown h2 {
@@ -295,9 +295,9 @@
   padding: 0.2em 0.4em;
 }
 
-.markdown :not(pre)>code.language-text {
+.markdown :not(pre) > code.language-text {
   background: rgba(135, 131, 120, 0.15);
-  color: #EB5757;
+  color: #eb5757;
   overflow-wrap: break-word;
 }
 
@@ -313,7 +313,7 @@
   appearance: none;
 }
 
-.markdown :checked+.radio-label {
+.markdown :checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #0366d6;
@@ -468,7 +468,7 @@
 }
 
 .markdown .pl-c2:before {
-  content: '^M';
+  content: "^M";
 }
 
 .markdown .pl-sr .pl-cce {
@@ -629,18 +629,18 @@
 .markdown:after,
 .markdown:before {
   display: table;
-  content: '';
+  content: "";
 }
 
 .markdown:after {
   clear: both;
 }
 
-.markdown> :first-child {
+.markdown > :first-child {
   margin-top: 0 !important;
 }
 
-.markdown> :last-child {
+.markdown > :last-child {
   margin-bottom: 0 !important;
 }
 
@@ -675,11 +675,11 @@
   border-left: 0.25em solid var(--markdown-blockquote-border-color);
 }
 
-.markdown blockquote> :first-child {
+.markdown blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown blockquote> :last-child {
+.markdown blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -722,7 +722,7 @@
 
 .markdown ol,
 .markdown ul {
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .markdown ol ol,
@@ -747,11 +747,11 @@
   text-align: -webkit-match-parent;
 }
 
-.markdown li>p {
+.markdown li > p {
   margin-top: 16px;
 }
 
-.markdown li+li {
+.markdown li + li {
   margin-top: 0.25em;
 }
 
@@ -804,11 +804,11 @@
   background-color: transparent;
 }
 
-.markdown img[align='right'] {
+.markdown img[align="right"] {
   padding-left: 20px;
 }
 
-.markdown img[align='left'] {
+.markdown img[align="left"] {
   padding-right: 20px;
 }
 
@@ -824,7 +824,7 @@
   word-wrap: normal;
 }
 
-.markdown pre>code {
+.markdown pre > code {
   padding: 0;
   margin: 0;
   font-size: 83%;
@@ -937,62 +937,62 @@
   background: #ffea7f;
 }
 
-.markdown .tab-size[data-tab-size='1'] {
+.markdown .tab-size[data-tab-size="1"] {
   -moz-tab-size: 1;
   tab-size: 1;
 }
 
-.markdown .tab-size[data-tab-size='2'] {
+.markdown .tab-size[data-tab-size="2"] {
   -moz-tab-size: 2;
   tab-size: 2;
 }
 
-.markdown .tab-size[data-tab-size='3'] {
+.markdown .tab-size[data-tab-size="3"] {
   -moz-tab-size: 3;
   tab-size: 3;
 }
 
-.markdown .tab-size[data-tab-size='4'] {
+.markdown .tab-size[data-tab-size="4"] {
   -moz-tab-size: 4;
   tab-size: 4;
 }
 
-.markdown .tab-size[data-tab-size='5'] {
+.markdown .tab-size[data-tab-size="5"] {
   -moz-tab-size: 5;
   tab-size: 5;
 }
 
-.markdown .tab-size[data-tab-size='6'] {
+.markdown .tab-size[data-tab-size="6"] {
   -moz-tab-size: 6;
   tab-size: 6;
 }
 
-.markdown .tab-size[data-tab-size='7'] {
+.markdown .tab-size[data-tab-size="7"] {
   -moz-tab-size: 7;
   tab-size: 7;
 }
 
-.markdown .tab-size[data-tab-size='8'] {
+.markdown .tab-size[data-tab-size="8"] {
   -moz-tab-size: 8;
   tab-size: 8;
 }
 
-.markdown .tab-size[data-tab-size='9'] {
+.markdown .tab-size[data-tab-size="9"] {
   -moz-tab-size: 9;
   tab-size: 9;
 }
 
-.markdown .tab-size[data-tab-size='10'] {
+.markdown .tab-size[data-tab-size="10"] {
   -moz-tab-size: 10;
   tab-size: 10;
 }
 
-.markdown .tab-size[data-tab-size='11'] {
+.markdown .tab-size[data-tab-size="11"] {
   -moz-tab-size: 11;
   tab-size: 11;
 }
 
-.markdown .tab-size[data-tab-size='12'] {
+.markdown .tab-size[data-tab-size="12"] {
   -moz-tab-size: 12;
   tab-size: 12;
 }
@@ -1001,7 +1001,7 @@
   list-style-type: none;
 }
 
-.markdown .task-list-item+.task-list-item {
+.markdown .task-list-item + .task-list-item {
   margin-top: 3px;
 }
 
@@ -1012,13 +1012,13 @@
 
 // added for toc
 .markdown .table-of-contents {
-  // &::before {
-  //   padding-left: 35px;
-  //   content: 'Table of Contents';
-  //   font-weight: 500;
-  //   font-size: 15px;
-  //   margin-bottom: 3px;
-  // }
+  &::before {
+    padding-left: 35px;
+    // content: "Table of Contents";
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
 
   @media (max-width: 1300px) {
     display: none;
@@ -1045,7 +1045,7 @@
         height: 30px;
         padding: 6px 2px;
         color: var(--secondary-text-color);
-        font-size: 12px;
+        font-size: 14px;
         border-bottom: none;
       }
     }
@@ -1073,7 +1073,7 @@
 }
 
 // caption
-.markdown .gatsby-resp-image-wrapper+em {
+.markdown .gatsby-resp-image-wrapper + em {
   display: block;
   text-align: center;
   font-style: italic;

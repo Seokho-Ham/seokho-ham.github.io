@@ -17,10 +17,10 @@
 .bio {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: left;
   width: 100%;
   margin-top: 100px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 
   color: var(--primary-text-color);
 
@@ -51,13 +51,13 @@
 
       .title {
         .react-rotating-text-cursor {
-          font-size: 35px;
+          font-size: 25px;
           line-height: 35px;
         }
       }
 
       @include md {
-        font-size: 35px;
+        font-size: 32px;
 
         .title {
           .react-rotating-text-cursor {
@@ -101,6 +101,7 @@
 
   .thumbnail-wrapper {
     display: none;
+    margin-right: 30px;
 
     @include md {
       display: block;
