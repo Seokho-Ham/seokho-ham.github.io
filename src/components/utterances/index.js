@@ -1,36 +1,36 @@
-import React, { createRef, useEffect, useRef } from 'react';
+import React, { createRef, useEffect, useRef } from "react";
+import Giscus from "@giscus/react";
 
-const src = 'https://utteranc.es/client.js';
-const branch = 'master';
+const src = "https://utteranc.es/client.js";
+const branch = "master";
 
-function Utterances({ repo, path }) {
+function Comment({ repo, path }) {
   const rootElm = createRef();
   const isUtterancesLoaded = useRef(false);
-
+  let storedIsDarkMode = false;
   useEffect(() => {
     if (!rootElm.current || isUtterancesLoaded.current) return;
-    const storedIsDarkMode = localStorage.getItem('isDarkMode');
-
-    const utterances = document.createElement('script');
-    const utterancesConfig = {
-      src,
-      repo,
-      branch,
-      theme: JSON.parse(storedIsDarkMode) ? 'photon-dark' : 'github-light',
-      label: 'comment',
-      async: true,
-      'issue-term': 'pathname',
-      crossorigin: 'anonymous',
-    };
-
-    Object.keys(utterancesConfig).forEach((configKey) => {
-      utterances.setAttribute(configKey, utterancesConfig[configKey]);
-    });
-    rootElm.current.appendChild(utterances);
+    storedIsDarkMode = localStorage.getItem("isDarkMode");
     isUtterancesLoaded.current = true;
-  }, [repo, rootElm, path]);
+  }, [rootElm, path]);
+  // return <div className="utterances" ref={rootElm} />;
 
-  return <div className="utterances" ref={rootElm} />;
+  return (
+    <Giscus
+      id="comments"
+      repo="seokho-ham/seokho-ham.github.io"
+      repoId="MDEwOlJlcG9zaXRvcnkzNTk1MDExNjk="
+      category="General"
+      categoryId="DIC_kwDOFW2Ncc4Cc-vS"
+      mapping="title"
+      strict="0"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="bottom"
+      theme={JSON.parse(storedIsDarkMode) ? "dark" : "light"}
+      lang="en"
+    />
+  );
 }
 
-export default Utterances;
+export default Comment;

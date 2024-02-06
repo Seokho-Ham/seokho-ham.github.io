@@ -5,6 +5,7 @@
   "version": "3.0.0",
   "author": "forky <kalejuice02@gmail.com>",
   "dependencies": {
+    "@giscus/react": "^2.4.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
     "gatsby": "^4.20.0",
