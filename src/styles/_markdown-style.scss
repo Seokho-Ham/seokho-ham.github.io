@@ -162,7 +162,8 @@
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid var(--markdown-blockquote-border-color);
+  // border-bottom: 1px solid var(--markdown-blockquote-border-color);
+  border-bottom: 1px solid var(--post-card-border-color);
 }
 
 .markdown hr:after,
@@ -662,7 +663,7 @@
 }
 
 .markdown hr {
-  height: 0.25em;
+  height: 0.06em;
   padding: 0;
   margin: 24px 0;
   background-color: var(--markdown-border-color);

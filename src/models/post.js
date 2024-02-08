@@ -1,3 +1,6 @@
+import moment from "moment/moment";
+import "moment/locale/ko";
+
 export default class Post {
   constructor(node) {
     const { id, html, excerpt, frontmatter, fields } = node;
@@ -11,7 +14,7 @@ export default class Post {
     this.slug = slug;
     this.title = title;
     this.author = author;
-    this.date = date;
-    this.categories = categories.split(' ');
+    this.date = moment(date).format("ll");
+    this.categories = categories.split(" ");
   }
 }

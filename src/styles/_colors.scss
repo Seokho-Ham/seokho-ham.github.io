@@ -13,11 +13,12 @@ html {
   --tab-selected-background-color: rgba(13, 12, 34, 0.05);
 
   --bio-link-icon-color: rgba(0, 0, 0, 0.54);
-  --about-link-icon-color: #a8a8a8;
+  --about-link-icon-color: #858585;
 
   --chip-background-color: #f3f3f4;
   --link-text-color: rgb(55 53 47 / 70%);
   --post-card-border-color: rgba(0, 0, 0, 0.12);
+  --category-chip-bg-color: #dadada;
 
   --markdown-table-even-cell-background-color: #f6f8fa;
   --markdown-table-border-color: #dfe2e5;
@@ -26,7 +27,7 @@ html {
 }
 
 // dark mode colors
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --background-color: #232326;
   --primary-text-color: #e6e6e6;
   --secondary-text-color: #768390;
@@ -42,6 +43,7 @@ html[data-theme='dark'] {
   --chip-background-color: #323a42;
   --bio-link-icon-color: #e6e6e6;
   --about-link-icon-color: #a8a8a8;
+  --category-chip-bg-color: #414141;
 
   --link-text-color: #90b0ec;
   --post-card-border-color: #363f47;
