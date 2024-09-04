@@ -1,3 +1,4 @@
 User-agent: *
-Sitemap: https://seokho-ham.github.io/sitemap-pages.xml
+Allow: /
+Sitemap: https://seokho-ham.github.io/sitemap-index.xml
 Host: https://seokho-ham.github.io
