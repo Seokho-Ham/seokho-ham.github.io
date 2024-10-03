@@ -2,7 +2,7 @@
 emoji: 🌱
 title: "OSIV란?"
 date: "2022-06-23 10:00:00"
-author: "@seokhoho"
+author: "서코코"
 categories: Spring
 ---
 

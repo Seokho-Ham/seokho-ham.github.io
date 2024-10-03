@@ -17,16 +17,16 @@
 .bio {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: space-between;
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 70px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 
   color: var(--primary-text-color);
 
   @include md {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .introduction {
@@ -51,13 +51,13 @@
 
       .title {
         .react-rotating-text-cursor {
-          font-size: 25px;
+          font-size: 35px;
           line-height: 35px;
         }
       }
 
       @include md {
-        font-size: 32px;
+        font-size: 40px;
 
         .title {
           .react-rotating-text-cursor {
@@ -101,14 +101,9 @@
 
   .thumbnail-wrapper {
     display: none;
-    margin-right: 30px;
 
     @include md {
       display: block;
-    }
-
-    .gatsby-image-wrapper {
-      border-radius: 50%;
     }
   }
 }

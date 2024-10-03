@@ -2,7 +2,7 @@
 emoji: 🌱
 title: "SpringSecurity가 OAuth 로그인을 처리하는 과정 파헤치기"
 date: "2023-03-05 10:00:00"
-author: "@seokhoho"
+author: "서코코"
 categories: Spring
 ---
 

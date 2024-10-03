@@ -2,7 +2,7 @@
 emoji: 🌱
 title: "테스트에서 Wiremock을 이용해서 외부 의존성 줄이기"
 date: "2022-08-21 10:00:00"
-author: "@seokhoho"
+author: "서코코"
 categories: Spring
 ---
 

@@ -2,7 +2,7 @@
 emoji: 🌱
 title: "프로젝트에 Feign Client를 적용해보자"
 date: "2022-08-13 10:00:00"
-author: "@seokhoho"
+author: "서코코"
 categories: Spring
 ---
 

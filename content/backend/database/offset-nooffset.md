@@ -2,7 +2,7 @@
 emoji: 🌱
 title: "offset과 no offset을 사용한 페이징 성능 차이 분석"
 date: "2023-01-06 10:00:00"
-author: "@seokhoho"
+author: "서코코"
 categories: Database
 ---
 

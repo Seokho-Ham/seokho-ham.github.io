@@ -65,12 +65,10 @@
   line-height: 1.5;
   color: var(--content-text-color);
   font-family: $font-family;
-  text-align: justify;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
   word-wrap: break-word;
-  word-break: break-all;
 }
 
 .markdown details {
@@ -87,6 +85,7 @@
 
 .markdown a:active,
 .markdown a:hover {
+  background-color: var(--link-text-color);
   outline-width: 0;
 }
 
@@ -108,7 +107,7 @@
 .markdown kbd,
 .markdown pre {
   font-family: monospace, monospace;
-  font-size: 1em;
+  font-size: 10px;
 }
 
 .markdown hr {
@@ -142,9 +141,9 @@
 }
 
 .markdown a {
-  color: var(--link-text-color);
+  color: var(--content-text-color);
   text-decoration: none;
-  border-bottom: 0.05em solid;
+  border-bottom: 0.15em solid;
   border-color: var(--link-text-color);
 }
 
@@ -153,7 +152,7 @@
 }
 
 .markdown strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .markdown hr {
@@ -162,8 +161,7 @@
   overflow: hidden;
   background: transparent;
   border: 0;
-  // border-bottom: 1px solid var(--markdown-blockquote-border-color);
-  border-bottom: 1px solid var(--post-card-border-color);
+  border-bottom: 1px solid var(--markdown-blockquote-border-color);
 }
 
 .markdown hr:after,
@@ -194,7 +192,7 @@
   display: inline-block;
   padding: 3px 5px;
   font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  line-height: 13px;
+  line-height: 10px;
   color: #444d56;
   vertical-align: middle;
   background-color: #fafbfc;
@@ -214,12 +212,12 @@
 }
 
 .markdown h1 {
-  font-size: 34px;
+  font-size: 32px;
 }
 
 .markdown h1,
 .markdown h2 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .markdown h2 {
@@ -663,7 +661,7 @@
 }
 
 .markdown hr {
-  height: 0.06em;
+  height: 0.25em;
   padding: 0;
   margin: 24px 0;
   background-color: var(--markdown-border-color);
@@ -723,7 +721,7 @@
 
 .markdown ol,
 .markdown ul {
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 .markdown ol ol,
@@ -828,7 +826,7 @@
 .markdown pre > code {
   padding: 0;
   margin: 0;
-  font-size: 83%;
+  font-size: 85%;
   word-break: normal;
   white-space: pre;
   background: transparent;
@@ -1013,13 +1011,13 @@
 
 // added for toc
 .markdown .table-of-contents {
-  &::before {
-    padding-left: 35px;
-    // content: "Table of Contents";
-    font-weight: 500;
-    font-size: 16px;
-    margin-bottom: 3px;
-  }
+  // &::before {
+  //   padding-left: 35px;
+  //   content: 'Table of Contents';
+  //   font-weight: 500;
+  //   font-size: 15px;
+  //   margin-bottom: 3px;
+  // }
 
   @media (max-width: 1300px) {
     display: none;
@@ -1029,12 +1027,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  text-align: left;
-  padding-left: 15px;
-  width: 320px;
+  width: 340px;
   position: fixed;
-  top: 110px;
-  right: 20px;
+  top: 75px;
+  right: 0px;
 
   ul {
     cursor: pointer;

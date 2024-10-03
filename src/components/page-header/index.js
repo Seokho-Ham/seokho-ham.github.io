@@ -39,9 +39,11 @@ function PageHeader({ siteTitle }) {
               <Link className="link" to="/posts">
                 posts
               </Link>
-              {/* <PostSearch
-                posts={data.allMarkdownRemark.edges.map(({ node }) => new Post(node, true))}
-              /> */}
+              <PostSearch
+                posts={data.allMarkdownRemark.edges.map(
+                  ({ node }) => new Post(node, true)
+                )}
+              />
             </div>
           </div>
         </header>

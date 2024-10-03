@@ -13,8 +13,12 @@ module.exports = {
   author: {
     name: `함석호`,
     bio: {
-      role: `백엔드 개발자`,
-      description: ["함께 일하고 싶은", "클린 코드를 지향하는"],
+      role: `개발자`,
+      description: [
+        "함께 일하고 싶은",
+        "견고한 서비스를 만들고 싶은",
+        "즐겁게 일하고 싶은",
+      ],
       thumbnail: "new-profile-image.png", // Path to the image in the 'asset' folder
     },
     social: {

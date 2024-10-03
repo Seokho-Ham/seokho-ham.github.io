@@ -2,7 +2,7 @@
 emoji: 🌱
 title: "여러 플랫폼에 대응할 수 있는 OAuth 코드로 개선하기"
 date: "2023-06-04 10:00:00"
-author: "@seokhoho"
+author: "서코코"
 categories: Spring
 ---
 

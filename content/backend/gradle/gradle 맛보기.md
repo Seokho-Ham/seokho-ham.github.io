@@ -2,8 +2,8 @@
 emoji: 🌱
 title: "Gradle 맛보기"
 date: "2022-11-20 10:00:00"
-author: "@seokhoho"
-categories: Review
+author: "서코코"
+categories: Gradle
 ---
 
 이번에 식도락 프로젝트를 진행하는 과정에서 빌드 시 submodule의 파일들을 복사하는 task를 추가하는 작업을 맡았습니다.
